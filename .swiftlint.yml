@@ -1,0 +1,23 @@
+excluded:
+   - gdk*
+   - tools
+   - Pods
+   - aqauios/GreenApplication.swift
+   - aquaios/CustomViews/SlidingButton.swift
+   - aquaios/CustomClasses/DGElasticPullToRefresh*
+
+identifier_name:
+   severity: warning
+   validates_start_with_lowercase: false
+   min_length: 1
+
+cyclomatic_complexity:
+   ignores_case_statements: true
+
+disabled_rules:
+   - force_try
+   - line_length
+   - type_body_length
+   - function_body_length
+   - file_length
+   - implicit_getter

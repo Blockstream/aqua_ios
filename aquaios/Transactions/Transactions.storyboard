@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tx-->
+        <scene sceneID="4VF-Lb-vKU">
+            <objects>
+                <viewController storyboardIdentifier="TransactionsViewController" id="Uwo-Ff-k4y" customClass="TransactionsViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Csd-2c-AJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-FQ-Haf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                                <color key="tintColor" name="tiffanyBlue"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                        <constraints>
+                            <constraint firstItem="xlV-FQ-Haf" firstAttribute="leading" secondItem="Vg3-Oa-BlT" secondAttribute="leading" id="4sH-R8-kuP"/>
+                            <constraint firstItem="xlV-FQ-Haf" firstAttribute="trailing" secondItem="Vg3-Oa-BlT" secondAttribute="trailing" id="FxZ-Aw-zuA"/>
+                            <constraint firstItem="xlV-FQ-Haf" firstAttribute="bottom" secondItem="Vg3-Oa-BlT" secondAttribute="bottom" id="qAg-xJ-aC9"/>
+                            <constraint firstItem="xlV-FQ-Haf" firstAttribute="top" secondItem="Vg3-Oa-BlT" secondAttribute="top" id="yvs-SY-HXv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vg3-Oa-BlT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tx" image="tx_icon" id="obX-ab-dI3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="xlV-FQ-Haf" id="YlA-aw-Ush"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Pf-r4-itg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155.07246376811597" y="177.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tx_icon" width="28" height="25"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tiffanyBlue">
+            <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

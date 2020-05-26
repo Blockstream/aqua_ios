@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Buy-->
+        <scene sceneID="efN-8F-Kd3">
+            <objects>
+                <viewController storyboardIdentifier="BuyViewController" id="nuA-Tx-K8e" customClass="BuyViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7rF-EA-n6L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH1-oY-uCX">
+                                <rect key="frame" x="20" y="730" width="374" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vw4-Io-CWj">
+                                <rect key="frame" x="20" y="730" width="374" height="53"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-tU-7hF">
+                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="BTC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" name="tiffanyBlue"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" name="tiffanyBlue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="nuA-Tx-K8e" eventType="touchUpInside" id="gn6-Vr-o3v"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sij-wX-AEw">
+                                        <rect key="frame" x="186.5" y="9.5" width="1" height="34"/>
+                                        <color key="backgroundColor" name="tiffanyBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="hyh-Zq-Nmt"/>
+                                            <constraint firstAttribute="height" constant="34" id="jtd-px-bQz"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-Fx-4cd">
+                                        <rect key="frame" x="187.5" y="0.0" width="186.5" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="fQn-Lp-iPm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="L-BTC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" name="tiffanyBlue"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" name="tiffanyBlue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="nuA-Tx-K8e" eventType="touchUpInside" id="Fhf-1b-vB0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sij-wX-AEw" firstAttribute="centerY" secondItem="vw4-Io-CWj" secondAttribute="centerY" id="4Kp-qG-4zG"/>
+                                    <constraint firstItem="9Dh-Fx-4cd" firstAttribute="width" secondItem="rtM-tU-7hF" secondAttribute="width" id="CII-Zk-xIB"/>
+                                    <constraint firstItem="9Dh-Fx-4cd" firstAttribute="height" secondItem="rtM-tU-7hF" secondAttribute="height" id="u28-eZ-ZOf"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy with Debit Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgR-az-qh1">
+                                <rect key="frame" x="131" y="438" width="152.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vw4-Io-CWj" firstAttribute="leading" secondItem="7rF-EA-n6L" secondAttribute="leading" constant="20" id="8ZQ-FZ-BPn"/>
+                            <constraint firstItem="NH1-oY-uCX" firstAttribute="trailing" secondItem="vw4-Io-CWj" secondAttribute="trailing" id="CeI-1T-kqj"/>
+                            <constraint firstItem="Boq-V6-JWe" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" constant="30" id="Cmy-x5-xjX"/>
+                            <constraint firstItem="GgR-az-qh1" firstAttribute="centerX" secondItem="7rF-EA-n6L" secondAttribute="centerX" id="LJQ-2Y-Cre"/>
+                            <constraint firstItem="NH1-oY-uCX" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" id="Lop-bk-ifO"/>
+                            <constraint firstItem="Boq-V6-JWe" firstAttribute="trailing" secondItem="vw4-Io-CWj" secondAttribute="trailing" constant="20" id="Wp6-wf-Lk9"/>
+                            <constraint firstItem="GgR-az-qh1" firstAttribute="centerY" secondItem="7rF-EA-n6L" secondAttribute="centerY" id="fO7-Gt-YPD"/>
+                            <constraint firstItem="NH1-oY-uCX" firstAttribute="leading" secondItem="vw4-Io-CWj" secondAttribute="leading" id="h1H-DD-bTo"/>
+                            <constraint firstItem="NH1-oY-uCX" firstAttribute="top" secondItem="vw4-Io-CWj" secondAttribute="top" id="n11-jK-ATK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Boq-V6-JWe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buy" image="buy_icon" id="KmE-Hf-bcT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="actionStackBackgroundView" destination="sij-wX-AEw" id="15K-fg-PlZ"/>
+                        <outlet property="actionStackView" destination="vw4-Io-CWj" id="cO4-jZ-VwL"/>
+                        <outlet property="btcButton" destination="rtM-tU-7hF" id="1Ma-zf-SRJ"/>
+                        <outlet property="infoLabel" destination="GgR-az-qh1" id="H7s-ad-7dR"/>
+                        <outlet property="lbtcButton" destination="9Dh-Fx-4cd" id="wMj-KP-2J4"/>
+                        <segue destination="0D1-ki-87B" kind="presentation" identifier="buy_wyre" id="BVG-l9-8p7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEN-Mf-PyX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="132"/>
+        </scene>
+        <!--Wyre Widget View Controller-->
+        <scene sceneID="0AF-qf-Br4">
+            <objects>
+                <viewController id="0D1-ki-87B" customClass="WyreWidgetViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yhl-Gd-Zd9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0A-YK-Mmf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="P0A-YK-Mmf" secondAttribute="bottom" id="0UL-t7-dMK"/>
+                            <constraint firstItem="P0A-YK-Mmf" firstAttribute="trailing" secondItem="Blc-jH-swh" secondAttribute="trailing" id="YBy-sA-21f"/>
+                            <constraint firstItem="P0A-YK-Mmf" firstAttribute="leading" secondItem="Blc-jH-swh" secondAttribute="leading" id="lT1-jm-RXW"/>
+                            <constraint firstItem="P0A-YK-Mmf" firstAttribute="top" secondItem="Blc-jH-swh" secondAttribute="top" id="p7I-Ib-iZZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Blc-jH-swh"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="P0A-YK-Mmf" id="PZR-uZ-Fkg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfp-wN-zY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="131.91964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buy_icon" width="24" height="28"/>
+        <namedColor name="tiffanyBlue">
+            <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

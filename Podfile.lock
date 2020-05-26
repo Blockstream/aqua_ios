@@ -1,0 +1,28 @@
+PODS:
+  - PromiseKit (6.10.0):
+    - PromiseKit/CorePromise (= 6.10.0)
+    - PromiseKit/Foundation (= 6.10.0)
+    - PromiseKit/UIKit (= 6.10.0)
+  - PromiseKit/CorePromise (6.10.0)
+  - PromiseKit/Foundation (6.10.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.10.0):
+    - PromiseKit/CorePromise
+  - SwiftLint (0.35.0)
+
+DEPENDENCIES:
+  - PromiseKit (= 6.10.0)
+  - SwiftLint (= 0.35.0)
+
+SPEC REPOS:
+  trunk:
+    - PromiseKit
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+
+PODFILE CHECKSUM: e4f2d9f4f57020d8b70d984aa5d0de539200bcfb
+
+COCOAPODS: 1.9.2
