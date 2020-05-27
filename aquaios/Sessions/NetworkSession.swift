@@ -96,13 +96,13 @@ class NetworkSession {
         return try JSONDecoder().decode(RawTransaction.self, from: jsonData)
     }
 
-    func createTransaction(_ addressee: Addressee) throws -> RawTransaction {
+    func createTransaction(_ addressee: Addressee, max: Bool = false) throws -> RawTransaction {
         guard let s = session else {
             throw TransactionError.generic("")
         }
         let defaultFee = getDefaultFees()
         let inputAddressee = try JSONSerialization.jsonObject(with: JSONEncoder().encode(addressee), options: .allowFragments) as? [String: Any]
-        let input = ["addressees": [inputAddressee], "fee_rate": defaultFee, "subaccount": 0] as [String: Any]
+        let input = ["addressees": [inputAddressee], "fee_rate": defaultFee, "subaccount": 0, "send_all": max] as [String: Any]
         let call = try s.createTransaction(details: input)
         let data = try DummyResolve(call: call)
         let result = data["result"] as? [String: Any]

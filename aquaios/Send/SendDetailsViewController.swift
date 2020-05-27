@@ -14,6 +14,7 @@ class SendDetailsViewController: BaseViewController {
     var addressee: Addressee?
     private var amount: String = ""
     private var asset: Asset?
+    private var sendAll: Bool = false
 
     private var balance: UInt64 {
         if let tag = addressee?.assetTag, tag != "btc" {
@@ -61,7 +62,8 @@ class SendDetailsViewController: BaseViewController {
     }
 
     @IBAction func maxButtonTapped(_ sender: Any) {
-        amount = asset?.string() ?? ""
+        self.sendAll = !self.sendAll
+        amount = self.sendAll ? asset?.string() ?? "" : ""
         reload()
     }
 
@@ -75,7 +77,7 @@ class SendDetailsViewController: BaseViewController {
             self.startAnimating()
             return Guarantee()
         }.compactMap(on: bgq) {
-            let tx = try self.sharedNetwork.createTransaction(addressee)
+            let tx = try self.sharedNetwork.createTransaction(addressee, max: self.sendAll)
             if let error = tx.error, !error.isEmpty {
                 throw TransactionError.generic(error)
             }
