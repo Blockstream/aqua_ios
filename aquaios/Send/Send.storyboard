@@ -334,8 +334,12 @@
                                             <constraint firstAttribute="height" constant="38" id="VYx-uo-3fq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="tintColor" name="topaz"/>
                                         <state key="normal" title="Max">
                                             <color key="titleColor" name="topaz"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="maxButtonTapped:" destination="ygw-8U-pDp" eventType="touchUpInside" id="tNn-Im-ETM"/>
@@ -396,6 +400,7 @@
                         <outlet property="continueButton" destination="jdQ-L4-hH7" id="8pR-zT-29j"/>
                         <outlet property="deleteButton" destination="gsd-rv-tWb" id="N3C-j4-EVg"/>
                         <outlet property="fiatLabel" destination="GAy-0x-0lh" id="HQt-H4-k1h"/>
+                        <outlet property="sendAllButton" destination="bky-1i-2cg" id="Ygb-X5-hum"/>
                         <outletCollection property="padKeys" destination="4OE-aT-zRO" collectionClass="NSMutableArray" id="kl1-dS-VVA"/>
                         <outletCollection property="padKeys" destination="yPE-jh-Px7" collectionClass="NSMutableArray" id="tyb-zz-ySQ"/>
                         <outletCollection property="padKeys" destination="P3T-WK-pzr" collectionClass="NSMutableArray" id="qsa-uE-WHC"/>

@@ -10,6 +10,7 @@ class SendDetailsViewController: BaseViewController {
     @IBOutlet weak var amountBackgroundView: UIView!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
+    @IBOutlet weak var sendAllButton: UIButton!
 
     var addressee: Addressee?
     private var amount: String = ""
@@ -63,6 +64,7 @@ class SendDetailsViewController: BaseViewController {
 
     @IBAction func maxButtonTapped(_ sender: Any) {
         self.sendAll = !self.sendAll
+        sendAllButton.isSelected = self.sendAll
         amount = self.sendAll ? asset?.string() ?? "" : ""
         reload()
     }
