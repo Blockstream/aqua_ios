@@ -94,7 +94,7 @@ class AssetDetailViewController: BaseViewController {
             self.stopAnimating()
         }.done { transactions in
             self.transactions = transactions.filter { $0.satoshi.contains { $0.key == self.asset!.tag } }
-            self.transactions.sort(by: { $0.blockHeight > $1.blockHeight })
+            self.transactions.sort(by: { $0.createdAt > $1.createdAt })
             self.tableView.reloadData()
         }.catch { _ in
             let alert = UIAlertController(title: "Error", message: "No Transactions Found", preferredStyle: .alert)

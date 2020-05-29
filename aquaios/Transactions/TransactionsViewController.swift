@@ -61,7 +61,7 @@ class TransactionsViewController: BaseViewController {
             when(fulfilled: self.txsPromise(Bitcoin.shared), self.txsPromise(Liquid.shared))
         }.done { bitcoin, liquid in
             self.transactions = bitcoin + liquid
-            self.transactions.sort(by: { $0.blockHeight > $1.blockHeight })
+            self.transactions.sort(by: { $0.createdAt > $1.createdAt })
             self.tableView.reloadData()
         }.catch { _ in
             self.showError("Failure on fetch balance")
