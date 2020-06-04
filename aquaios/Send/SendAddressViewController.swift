@@ -47,7 +47,12 @@ class SendAddressViewController: BaseViewController {
                 self.pasteButton.isHidden = false
             }.catch { err in
                 if let error = err as? TransactionError {
-                    self.showError(error)
+                    if case .generic(let desc) = error {
+                        self.addressLabel.text = desc == "id_invalid_address" ? "Clipboard content is not a valid address\n" : desc
+                    }
+                    self.pasteFromClipboardView.isHidden = false
+                    self.pasteButton.isHidden = false
+                    self.pasteButton.isEnabled = false
                 }
             }
         }
