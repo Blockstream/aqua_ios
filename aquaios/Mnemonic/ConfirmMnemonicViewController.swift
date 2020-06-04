@@ -20,8 +20,8 @@ class ConfirmMnemonicViewController: BaseViewController {
         }
     }
 
-    private var selectedWords = [String?](repeating: nil, count: 4)
-    private var expectedWords = [String?](repeating: nil, count: 4)
+    private var quiz = [Int]()
+    private var score = [Int](repeating: 0, count: 4)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,17 @@ class ConfirmMnemonicViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-        confirmationButtons.forEach { (button) in
-            button.round(radius: 18)
+        quiz = generateQuiz()
+        var buttonsWords = [String]()
+        for i in 0..<4 {
+            buttonsWords.append(contentsOf: generateButtonRowWords(answerIndex: quiz[i]))
+            confirmationLabels[i].text = String(format: "Select word #%d", quiz[i]+1)
+        }
+        for i in 0..<confirmationButtons.count {
+            confirmationButtons[i].round(radius: 18)
+            confirmationButtons[i].setTitle(buttonsWords[i], for: .normal)
         }
         completeButton.round(radius: 24)
-        expectedWords = generateRandomWords()
     }
 
     @IBAction func firstRowSelect(_ sender: UIButton) {
@@ -58,27 +64,53 @@ class ConfirmMnemonicViewController: BaseViewController {
             button.backgroundColor = .lighterBlueGray
         }
         selected.backgroundColor = .teal
-        selectedWords[position] = selected.titleLabel?.text ?? ""
+        let selectedWord = selected.titleLabel?.text ?? ""
+        if selectedWord == String(mnemonic[quiz[position]]) {
+            score[position] = 1
+        } else {
+            score[position] = 0
+        }
     }
 
-    func generateRandomWords() -> [String] {
-        var wordNumbers: [Int] = [Int](repeating: 0, count: 4)
+    func generateQuiz() -> [Int] {
+        var indeces: [Int] = [Int](repeating: 0, count: 4)
         repeat {
-            wordNumbers = wordNumbers.map { (_) -> Int in getIndexFromUniformUInt32(count: 11) }
-        } while Set(wordNumbers).count != 4
-        var words: [String] = [String](repeating: "", count: 4)
+            indeces = indeces.map { (_) -> Int in getIndexFromUniformUInt32(count: 11) }
+        } while Set(indeces).count != 4
+        return indeces
+    }
+    func generateButtonRowWords(answerIndex: Int) -> [String] {
+        var words: [String] = [String]()
+        var wordNumbers = [Int]()
+        wordNumbers.append(answerIndex)
+        while Set(wordNumbers).count != 3 {
+            let index = getIndexFromUniformUInt32(count: 11)
+            if !wordNumbers.contains(index) { wordNumbers.append(index) }
+        }
         for i in wordNumbers {
             words.append(String(mnemonic[i]))
         }
-        return words
+        return words.shuffled()
     }
 
     func getIndexFromUniformUInt32(count: Int) -> Int {
         return Int(try! getUniformUInt32(upper_bound: UInt32(count)))
     }
 
+    func isComplete() -> Bool {
+        let sum = score.reduce(0, {$0 + $1})
+        return sum == 4
+    }
+
     @IBAction func completeButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "complete", sender: nil)
+        if isComplete() {
+            performSegue(withIdentifier: "complete", sender: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Select the correct words to continue", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
+        }
     }
 
     // MARK: - Navigation
