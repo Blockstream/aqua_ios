@@ -22,7 +22,7 @@ class AssetView: UIView {
     func configure(with asset: Asset, bgColor: UIColor, radius: CGFloat, hiddenBalance: Bool = false) {
         round(radius: radius)
         backgroundColor = bgColor
-        iconImageView.image = asset.icon
+        iconImageView.image = asset.icon ?? UIImage(named: "asset_unknown")
         assetNameLabel.text = asset.name
         assetTickerLabel.text = asset.ticker
         balanceLabel.text = asset.string() ?? ""
