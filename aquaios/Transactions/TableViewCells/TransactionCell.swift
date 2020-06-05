@@ -27,7 +27,7 @@ class TransactionCell: UITableViewCell {
         dateLabel.text = AquaService.date(from: tx.createdAt)
         notesLabel.text = tx.memo
         let fiat = Fiat.from(amount ?? 0)
-        fiatLabel.text = "\(prefix)\(Fiat.currency() ?? "") \(fiat ?? "")"
+        fiatLabel.text = asset.isBTC || asset.isLBTC ? "\(prefix)\(Fiat.currency() ?? "") \(fiat ?? "")" : ""
         iconImageView.image = UIImage(named: tx.type)
         selectionStyle = .none
     }
