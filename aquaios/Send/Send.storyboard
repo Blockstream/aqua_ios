@@ -461,11 +461,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU0-gR-lIK">
                                         <rect key="frame" x="20" y="40" width="85" height="48"/>
-                                        <color key="backgroundColor" name="teal"/>
+                                        <color key="backgroundColor" name="lighterBlueGray"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="B1J-Sw-enw"/>
                                             <constraint firstAttribute="width" constant="85" id="ulq-Jh-ea4"/>
                                         </constraints>
+                                        <color key="tintColor" name="lighterBlueGray"/>
                                         <state key="normal" title="$ 0.01">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -479,6 +480,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="NVt-Iw-NwU"/>
                                         </constraints>
+                                        <color key="tintColor" name="lighterBlueGray"/>
                                         <state key="normal" title="I'm in a rush! $ 0.01">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

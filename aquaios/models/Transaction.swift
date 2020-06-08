@@ -55,7 +55,7 @@ struct RawTransaction: Codable {
 
     let subaccount: UInt64 = 0
     let fee: UInt64?
-    let feeRate: UInt64
+    var feeRate: UInt64
     let sendAll: Bool = false
     var addressees: [Addressee]
     var error: String?

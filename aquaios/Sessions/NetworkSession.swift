@@ -72,6 +72,16 @@ class NetworkSession {
         return list ?? []
     }
 
+    func getDefaultFees() -> UInt64 {
+        let fees = try? session?.getFeeEstimates()?["fees"] as? [UInt64]
+        return fees?.last ?? 1000
+    }
+
+    func getFastFees() -> UInt64 {
+        let fees = try? session?.getFeeEstimates()?["fees"] as? [UInt64]
+        return fees?[1] ?? 1000
+    }
+
     func createTransaction(_ address: String) throws -> RawTransaction {
         let addressee = Addressee(address: address, satoshi: 0, assetTag: nil)
         return try createTransaction(addressee)
@@ -90,10 +100,9 @@ class NetworkSession {
         guard let s = session else {
             throw TransactionError.generic("")
         }
-        let fees = try s.getFeeEstimates()?["fees"] as? [UInt64]
-        let minFee = fees?.first ?? 1000
+        let defaultFee = getDefaultFees()
         let inputAddressee = try JSONSerialization.jsonObject(with: JSONEncoder().encode(addressee), options: .allowFragments) as? [String: Any]
-        let input = ["addressees": [inputAddressee], "fee_rate": minFee, "subaccount": 0] as [String: Any]
+        let input = ["addressees": [inputAddressee], "fee_rate": defaultFee, "subaccount": 0] as [String: Any]
         let call = try s.createTransaction(details: input)
         let data = try DummyResolve(call: call)
         let result = data["result"] as? [String: Any]

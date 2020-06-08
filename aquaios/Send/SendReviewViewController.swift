@@ -37,6 +37,10 @@ class SendReviewViewController: BaseViewController {
         feeUpdateView.round(radius: 18)
         defaultFeeButton.round(radius: 24)
         rushFeeButton.round(radius: 24)
+        defaultFeeButton.setBackgroundColor(color: .teal, for: .selected)
+        rushFeeButton.setBackgroundColor(color: .teal, for: .selected)
+        defaultFeeButton.isSelected = true
+        rushFeeButton.isSelected = false
 
         // Fill transaction data
         let addressee = tx.addressees.first!
@@ -53,6 +57,8 @@ class SendReviewViewController: BaseViewController {
             let fiat = Fiat.from(fee)
             feeLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }
+        // Disable fee buttons for liquid
+        networkFeeButton.isEnabled = asset.isBTC
     }
 
     override func viewDidLayoutSubviews() {
@@ -71,10 +77,41 @@ class SendReviewViewController: BaseViewController {
         feeUpdateViewHidden = !feeUpdateViewHidden
     }
 
+    func updateTransaction(tx: RawTransaction) {
+        let bgq = DispatchQueue.global(qos: .background)
+        firstly {
+            self.startAnimating()
+            return Guarantee()
+        }.compactMap(on: bgq) {
+            return try self.sharedNetwork.createTransaction(tx)
+        }.ensure {
+            self.stopAnimating()
+        }.done { res in
+            self.tx = res
+            if let fee = self.tx.fee {
+                self.feeLabel.text = "\(Fiat.currency() ?? "") \( Fiat.from(fee) ?? "")"
+            }
+            self.defaultFeeButton.isSelected = !self.defaultFeeButton.isSelected
+            self.rushFeeButton.isSelected = !self.rushFeeButton.isSelected
+        }.catch { err in
+            if let error = err as? TransactionError {
+                self.showError(error)
+            }
+        }
+    }
+
     @IBAction func defaultFeeButtonTapped(_ sender: Any) {
+        if defaultFeeButton.isSelected { return }
+        var newTx = self.tx
+        newTx!.feeRate = sharedNetwork.getDefaultFees()
+        updateTransaction(tx: newTx!)
     }
 
     @IBAction func rushFeeButtonTapped(_ sender: Any) {
+        if rushFeeButton.isSelected { return }
+        var newTx = self.tx
+        newTx!.feeRate = sharedNetwork.getFastFees()
+        updateTransaction(tx: newTx!)
     }
 }
 
