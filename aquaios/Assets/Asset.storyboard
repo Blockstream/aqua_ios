@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--QRCodeViewController-->
+        <!--QRCodeNavigationController-->
         <scene sceneID="vwg-XE-V2x">
             <objects>
-                <viewControllerPlaceholder storyboardName="QRCode" referencedIdentifier="QRCodeViewController" id="kbh-tZ-j4y" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="QRCode" referencedIdentifier="QRCodeNavigationController" id="kbh-tZ-j4y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tva-cB-B1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3682" y="-461"/>
@@ -123,9 +123,7 @@
                         <outlet property="tableView" destination="5dz-kb-6zd" id="etp-yp-oLJ"/>
                         <segue destination="OoX-Ts-uUT" kind="presentation" identifier="add_asset" id="B8b-Tr-4Tm"/>
                         <segue destination="kbh-tZ-j4y" kind="presentation" identifier="qrcode" id="lUf-2b-Ejy"/>
-                        <segue destination="xC8-Uu-zRH" kind="presentation" identifier="select_asset" id="Y3m-qi-Gdw"/>
                         <segue destination="Fhi-1g-0IR" kind="show" identifier="asset_detail" id="KrR-v7-Mn9"/>
-                        <segue destination="aj3-U0-v5a" kind="presentation" identifier="send" id="KJf-HR-izt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJr-7k-Gob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -400,83 +398,15 @@
             </objects>
             <point key="canvasLocation" x="3681.1594202898555" y="6.6964285714285712"/>
         </scene>
-        <!--Select Asset View Controller-->
-        <scene sceneID="wzJ-lo-7qj">
-            <objects>
-                <viewController storyboardIdentifier="SelectAssetViewController" id="yZa-d8-5gT" customClass="SelectAssetViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e3n-Q6-FhP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-ff-7OM">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
-                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
-                        <constraints>
-                            <constraint firstItem="Ika-ff-7OM" firstAttribute="leading" secondItem="Ucj-eu-gPR" secondAttribute="leading" id="IbQ-tm-zCN"/>
-                            <constraint firstItem="Ika-ff-7OM" firstAttribute="trailing" secondItem="Ucj-eu-gPR" secondAttribute="trailing" id="O14-V6-NG2"/>
-                            <constraint firstItem="Ika-ff-7OM" firstAttribute="top" secondItem="Ucj-eu-gPR" secondAttribute="top" id="uRb-ZR-Vvx"/>
-                            <constraint firstItem="Ika-ff-7OM" firstAttribute="bottom" secondItem="Ucj-eu-gPR" secondAttribute="bottom" id="v00-Xf-LgI"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ucj-eu-gPR"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="y7x-Gr-BHj"/>
-                    <connections>
-                        <outlet property="tableView" destination="Ika-ff-7OM" id="2rt-1O-ckU"/>
-                        <segue destination="8vT-qr-PG8" kind="show" identifier="select_receive" id="lxh-9w-Maa"/>
-                        <segue destination="wfK-ng-g95" kind="show" identifier="select_send" id="qZC-BZ-OJJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ls5-Ky-7E2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5505.7971014492759" y="-204.24107142857142"/>
-        </scene>
-        <!--SendDetailsViewController-->
-        <scene sceneID="ha4-6Y-6o2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Send" referencedIdentifier="SendDetailsViewController" id="wfK-ng-g95" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="UR1-QR-j9R"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m9L-z8-inu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6240" y="-248"/>
-        </scene>
-        <!--ReceiveNavigationController-->
+        <!--ReceiveViewController-->
         <scene sceneID="lVN-u9-BgH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Receive" referencedIdentifier="ReceiveNavigationController" id="8vT-qr-PG8" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5es-8z-awH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Receive" referencedIdentifier="ReceiveViewController" id="8vT-qr-PG8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MBM-Ut-AMW"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5es-8z-awH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6247" y="-204"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="NIt-JV-HL7">
-            <objects>
-                <navigationController storyboardIdentifier="SelectAssetNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="xC8-Uu-zRH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dd3-Wt-3Nq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yZa-d8-5gT" kind="relationship" relationship="rootViewController" id="gF5-IU-V2V"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ig1-fG-GCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4734.7826086956529" y="-203.57142857142856"/>
         </scene>
         <!--SendNavigationController-->
         <scene sceneID="zeL-Eu-adB">

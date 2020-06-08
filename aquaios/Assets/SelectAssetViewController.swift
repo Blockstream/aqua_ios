@@ -86,15 +86,8 @@ class SelectAssetViewController: BaseViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nav = segue.destination as? UINavigationController
-        if let dest = nav?.topViewController as? ReceiveViewController {
+        if let dest = segue.destination as? ReceiveViewController {
             dest.asset = sender as? Asset
-        } else if let dest = segue.destination as? ReceiveViewController {
-            dest.asset = sender as? Asset
-        } else if let dest = nav?.topViewController as? SendDetailsViewController {
-            let asset = sender as? Asset
-            addressee?.assetTag = asset!.tag
-            dest.addressee = addressee
         } else if let dest = segue.destination as? SendDetailsViewController {
             let asset = sender as? Asset
             addressee?.assetTag = asset!.tag

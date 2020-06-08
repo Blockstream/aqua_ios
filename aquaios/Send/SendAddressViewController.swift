@@ -137,7 +137,6 @@ class SendAddressViewController: BaseViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? QRCodeViewController {
-            dest.scannerDelegate = self
             dest.hideActionButton = true
             dest.asset = asset
         } else if let dest = segue.destination as? SelectAssetViewController {
@@ -155,18 +154,5 @@ extension SendAddressViewController: UITextFieldDelegate {
             performSendSegue(with: string)
         }
         return true
-    }
-}
-
-// MARK: - QR Scanning
-
-extension SendAddressViewController: QRScannerDelegate {
-    func didScanQRCode(with address: String) {
-        addressTextField.text = address
-        performSendSegue(with: address)
-    }
-
-    func scanningFailed(with error: Error) {
-        showError("Scanning Failed")
     }
 }

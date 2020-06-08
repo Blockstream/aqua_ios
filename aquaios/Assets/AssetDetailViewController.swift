@@ -107,12 +107,9 @@ class AssetDetailViewController: BaseViewController {
         if let nav = segue.destination as? UINavigationController,
             let dest = nav.topViewController as? SendAddressViewController {
             dest.asset = sender as? Asset
-        }
-        if let nav = segue.destination as? UINavigationController,
-            let dest = nav.topViewController as? ReceiveViewController {
+        } else if let dest = segue.destination as? ReceiveViewController {
             dest.asset = sender as? Asset
-        }
-        if let nav = segue.destination as? UINavigationController,
+        } else if let nav = segue.destination as? UINavigationController,
             let dest = nav.topViewController as? AssetInfoViewController {
             dest.asset = sender as? Asset
         }

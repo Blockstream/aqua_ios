@@ -124,18 +124,12 @@ class AssetListViewController: BaseViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.presentationController?.delegate = self
-        if let nav = segue.destination as? UINavigationController,
-            let dest = nav.topViewController as? SelectAssetViewController {
-            dest.presentationController?.delegate = self
-            dest.flow = sender as? TxFlow
-        }
         if let dest = segue.destination as? OnboardingLandingViewController {
             dest.presentationController?.delegate = self
-        }
-        if let dest = segue.destination as? AssetDetailViewController {
+        } else if let dest = segue.destination as? AssetDetailViewController {
             dest.asset = sender as? Asset
         }
+
     }
 }
 

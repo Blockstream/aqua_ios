@@ -3,7 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-xj-eIu">
-                                <rect key="frame" x="28" y="72" width="28" height="28"/>
+                                <rect key="frame" x="28" y="116" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="BB7-ce-WVU"/>
                                     <constraint firstAttribute="height" constant="28" id="o1X-FR-NGj"/>
@@ -46,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgD-Q2-VuL">
-                                <rect key="frame" x="332" y="69" width="54" height="34"/>
+                                <rect key="frame" x="332" y="113" width="54" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Album">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,51 +117,113 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g6E-dG-7Mv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="M6x-7p-qS0"/>
                     <connections>
                         <outlet property="actionButton" destination="r2b-7v-5QI" id="cOu-AZ-bn0"/>
                         <outlet property="actionButtonBackgroundView" destination="yeI-gM-b5u" id="cwW-KE-gMD"/>
                         <outlet property="scannerPreviewView" destination="VCu-vN-TOB" id="Ia9-AZ-B0A"/>
-                        <segue destination="hwR-HN-6w2" kind="presentation" identifier="select_asset_receive" id="Hdg-R7-SQn"/>
-                        <segue destination="dY9-Hr-fXN" kind="presentation" identifier="select_asset_send" id="IBS-NX-ybN"/>
-                        <segue destination="wOD-bu-DVp" kind="presentation" identifier="send_details" id="2NL-TK-O1P"/>
+                        <segue destination="wOD-bu-DVp" kind="show" identifier="send_details" id="2NL-TK-O1P"/>
+                        <segue destination="HgM-f7-44A" kind="show" identifier="select_asset_send" id="wc9-Ts-oBQ"/>
+                        <segue destination="HgM-f7-44A" kind="show" identifier="select_asset_receive" id="Nl2-qr-1Rt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3t-9U-xoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="115"/>
-        </scene>
-        <!--SelectAssetNavigationController-->
-        <scene sceneID="Do2-AJ-N15">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Asset" referencedIdentifier="SelectAssetNavigationController" id="hwR-HN-6w2" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="1tr-Nk-S1X"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vte-rp-gBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="909" y="115"/>
-        </scene>
-        <!--SelectAssetNavigationController-->
-        <scene sceneID="Pp2-Yi-F6h">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Asset" referencedIdentifier="SelectAssetNavigationController" id="dY9-Hr-fXN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dUv-UU-NOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="909" y="182"/>
+            <point key="canvasLocation" x="1139.1304347826087" y="114.50892857142857"/>
         </scene>
         <!--SendDetailsViewController-->
         <scene sceneID="su2-Ho-ifC">
             <objects>
-                <viewControllerPlaceholder storyboardName="Send" referencedIdentifier="SendDetailsViewController" id="wOD-bu-DVp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Send" referencedIdentifier="SendDetailsViewController" id="wOD-bu-DVp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Guv-Q0-aWk"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAH-W8-oqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="243"/>
+            <point key="canvasLocation" x="1792.0289855072465" y="242.41071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H63-J8-4zX">
+            <objects>
+                <navigationController storyboardIdentifier="QRCodeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="0xm-tH-Ofa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IKM-xF-HF0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6i5-e4-jOY" kind="relationship" relationship="rootViewController" id="FAF-QV-ttf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YLF-18-G0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.98550724637684" y="114.50892857142857"/>
+        </scene>
+        <!--Select Asset View Controller-->
+        <scene sceneID="wNA-4j-zlY">
+            <objects>
+                <viewController storyboardIdentifier="SelectAssetViewController" id="HgM-f7-44A" customClass="SelectAssetViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zxs-1j-zlA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GxV-vd-THl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                        <constraints>
+                            <constraint firstItem="GxV-vd-THl" firstAttribute="leading" secondItem="TZf-7N-sWV" secondAttribute="leading" id="Uye-we-fBH"/>
+                            <constraint firstItem="GxV-vd-THl" firstAttribute="bottom" secondItem="TZf-7N-sWV" secondAttribute="bottom" id="sNM-sx-KUc"/>
+                            <constraint firstItem="GxV-vd-THl" firstAttribute="trailing" secondItem="TZf-7N-sWV" secondAttribute="trailing" id="srl-hx-FdI"/>
+                            <constraint firstItem="GxV-vd-THl" firstAttribute="top" secondItem="TZf-7N-sWV" secondAttribute="top" id="xJd-eM-ced"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TZf-7N-sWV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v6s-x8-Fxf"/>
+                    <connections>
+                        <outlet property="tableView" destination="GxV-vd-THl" id="84i-vE-Fox"/>
+                        <segue destination="NbN-05-Mpt" kind="show" identifier="select_receive" id="8Xl-ur-hTY"/>
+                        <segue destination="W1t-lD-1tZ" kind="show" identifier="select_send" id="a3a-LR-7mm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKm-vv-tmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="115"/>
+        </scene>
+        <!--ReceiveViewController-->
+        <scene sceneID="ltu-Fb-cCr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receive" referencedIdentifier="ReceiveViewController" id="NbN-05-Mpt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Ie-fR-tTY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9d-jg-f79" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3537" y="205"/>
+        </scene>
+        <!--SendDetailsViewController-->
+        <scene sceneID="V7I-nr-gqF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Send" referencedIdentifier="SendDetailsViewController" id="W1t-lD-1tZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bpV-70-2cO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPo-kX-1Ul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3537" y="4"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nl2-qr-1Rt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="close" width="14" height="14"/>
         <image name="close_selected" width="28" height="28"/>
         <image name="qrboundary" width="198" height="198"/>
         <image name="qrcode" width="24" height="24"/>
         <image name="qrcode_selected" width="24" height="24"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

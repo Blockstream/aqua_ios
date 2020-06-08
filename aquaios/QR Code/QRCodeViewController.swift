@@ -155,28 +155,14 @@ class QRCodeViewController: BaseViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nav = segue.destination as? UINavigationController
         let id = segue.identifier
-        if id == "select_asset_receive" {
-            if let dest = nav?.topViewController as? SelectAssetViewController {
+        if let dest = segue.destination as? SelectAssetViewController, id == "select_asset_receive" {
                 dest.flow = TxFlow.receive
-            } else if let dest = segue.destination as? SelectAssetViewController {
-                dest.flow = TxFlow.receive
-            }
-        } else if id == "select_asset_send" {
-            if let dest = nav?.topViewController as? SelectAssetViewController {
+        } else if let dest = segue.destination as? SelectAssetViewController, id == "select_asset_send" {
                 dest.flow = TxFlow.send
                 dest.addressee = sender as? Addressee
-            } else if let dest = segue.destination as? SelectAssetViewController {
-                dest.flow = TxFlow.send
+        } else if let dest = segue.destination as? SendDetailsViewController, id == "send_details" {
                 dest.addressee = sender as? Addressee
-            }
-        } else if id == "send_details" {
-            if let dest = nav?.topViewController as? SendDetailsViewController {
-                dest.addressee = sender as? Addressee
-            } else if let dest = segue.destination as? SendDetailsViewController {
-                dest.addressee = sender as? Addressee
-            }
         }
     }
 }
