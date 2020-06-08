@@ -103,21 +103,14 @@ class ConfirmMnemonicViewController: BaseViewController {
     }
 
     @IBAction func completeButtonTapped(_ sender: Any) {
-        if isComplete() {
-            performSegue(withIdentifier: "complete", sender: nil)
-        } else {
-            let alert = UIAlertController(title: "Error", message: "Select the correct words to continue", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-
-            self.present(alert, animated: true)
-        }
+        performSegue(withIdentifier: "complete", sender: nil)
     }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? BackupCompleteViewController {
-            dest.success = true
+            dest.success = isComplete()
         }
     }
 }
