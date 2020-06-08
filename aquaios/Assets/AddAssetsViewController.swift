@@ -14,14 +14,14 @@ class AddAssetsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //configureSearch()
-        configureTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        saveButton.round(radius: 26.5, borderWidth: 2, borderColor: .tiffanyBlue)
+        saveButton.round(radius: 26.5)
         reloadData()
+        configureTableView()
+        configureSearch()
     }
 
     func configureTableView() {
@@ -32,8 +32,8 @@ class AddAssetsViewController: BaseViewController {
         tableView.estimatedSectionHeaderHeight = 44
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.separatorColor = .black
-        tableView.backgroundColor = .white
-        tableView.backgroundView?.backgroundColor = .white
+        tableView.backgroundColor = .aquaBackgroundBlue
+        tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
         let nib = UINib(nibName: "AddAssetCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "AddAssetCell")
     }
@@ -44,8 +44,8 @@ class AddAssetsViewController: BaseViewController {
             searchController.configureBar(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48),
                                           placeholder: "Search assets...",
                                           font: UIFont.systemFont(ofSize: 18, weight: .medium),
-                                          textColor: .black,
-                                          tintColor: .white)
+                                          textColor: .auroMetalSaurus,
+                                          tintColor: .aquaBackgroundBlue)
             searchController.searchResultsUpdater = self
             searchController.obscuresBackgroundDuringPresentation = false
             tableView.tableHeaderView = searchController.aquaSearchBar

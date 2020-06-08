@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -347,17 +347,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to portfolio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4Z-Am-Vx5">
                                 <rect key="frame" x="59" y="30" width="296" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zh-ti-gwv">
                                 <rect key="frame" x="20" y="735" width="374" height="53"/>
+                                <color key="backgroundColor" name="teal"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="F2E-bs-poe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="paleLilac"/>
                                 </state>
                                 <connections>
                                     <action selector="saveTapped:" destination="OoX-Ts-uUT" eventType="touchUpInside" id="Iki-kV-ciM"/>
@@ -368,11 +369,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="tiffanyBlue"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" name="aquaBackgroundBlue"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="ehb-wk-bWR" firstAttribute="trailing" secondItem="M4Z-Am-Vx5" secondAttribute="trailing" constant="59" id="0g7-Aj-gzK"/>
                             <constraint firstItem="ehb-wk-bWR" firstAttribute="trailing" secondItem="2Zh-ti-gwv" secondAttribute="trailing" constant="20" id="6Nm-b6-ezh"/>
@@ -507,10 +508,6 @@
             <point key="canvasLocation" x="5506" y="479"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="KJf-HR-izt"/>
-        <segue reference="cN0-FK-sQ5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="add_asset" width="22" height="22"/>
         <image name="add_asset_selected" width="28" height="28"/>
@@ -547,4 +544,8 @@
             <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KJf-HR-izt"/>
+        <segue reference="cN0-FK-sQ5"/>
+    </inferredMetricsTieBreakers>
 </document>

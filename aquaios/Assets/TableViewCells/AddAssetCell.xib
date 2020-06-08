@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,16 +19,16 @@
                     <rect key="frame" x="345" y="20.5" width="51" height="31"/>
                 </switch>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Asset Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-d0-q4m">
-                    <rect key="frame" x="20" y="12" width="100" height="22"/>
+                    <rect key="frame" x="68" y="12" width="100" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="w0M-t7-Cus"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="paleLilac"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TICKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-Hn-5MW">
-                    <rect key="frame" x="20" y="43" width="49" height="17"/>
+                    <rect key="frame" x="68" y="43" width="49" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="R4D-lI-i5t"/>
                     </constraints>
@@ -36,21 +36,31 @@
                     <color key="textColor" name="auroMetalSaurus"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asset_unknown" translatesAutoresizingMaskIntoConstraints="NO" id="TcM-iS-ygN">
+                    <rect key="frame" x="16" y="18" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="X0S-ey-fy9"/>
+                        <constraint firstAttribute="width" constant="36" id="vZX-Tq-brf"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="aquaBackgroundBlue"/>
             <color key="tintColor" name="tiffanyBlue"/>
             <constraints>
+                <constraint firstItem="TcM-iS-ygN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0UG-cD-Pob"/>
+                <constraint firstItem="VYN-d0-q4m" firstAttribute="leading" secondItem="TcM-iS-ygN" secondAttribute="trailing" constant="16" id="C51-1e-yKd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FdN-Hn-5MW" secondAttribute="bottom" constant="12" id="LqU-Ml-4Rh"/>
                 <constraint firstItem="VYN-d0-q4m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="XPQ-dw-JrV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xzd-Vg-50r" secondAttribute="trailing" constant="20" id="aVj-Ga-S8h"/>
                 <constraint firstItem="FdN-Hn-5MW" firstAttribute="top" secondItem="VYN-d0-q4m" secondAttribute="bottom" constant="9" id="aZ6-g6-1EG"/>
-                <constraint firstItem="FdN-Hn-5MW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="byU-2u-C56"/>
-                <constraint firstItem="VYN-d0-q4m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dda-9F-0df"/>
+                <constraint firstItem="FdN-Hn-5MW" firstAttribute="leading" secondItem="TcM-iS-ygN" secondAttribute="trailing" constant="16" id="h1A-l6-Ayj"/>
                 <constraint firstItem="Xzd-Vg-50r" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oDf-nB-cPS"/>
+                <constraint firstItem="TcM-iS-ygN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="rxJ-nf-1HP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="assetIconImageView" destination="TcM-iS-ygN" id="ikW-WL-8uv"/>
                 <outlet property="assetNameLabel" destination="VYN-d0-q4m" id="Kb3-PE-Zqq"/>
                 <outlet property="enableSwitch" destination="Xzd-Vg-50r" id="yYj-Ao-C3q"/>
                 <outlet property="tickerLabel" destination="FdN-Hn-5MW" id="Yle-JE-h4r"/>
@@ -59,8 +69,15 @@
         </view>
     </objects>
     <resources>
+        <image name="asset_unknown" width="32" height="32"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="auroMetalSaurus">
             <color red="0.41960784313725491" green="0.45098039215686275" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleLilac">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tiffanyBlue">
             <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
