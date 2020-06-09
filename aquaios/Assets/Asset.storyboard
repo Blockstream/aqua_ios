@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-0D-IsG" customClass="RadialGradientView" customModule="Aqua" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="oC3-wa-Ruu">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oC3-wa-Ruu">
                                         <rect key="frame" x="154.66666666666666" y="79.666666666666671" width="104.99999999999997" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="kpA-kd-Hja"/>
@@ -518,7 +518,7 @@
         <image name="close_selected" width="28" height="28"/>
         <image name="curlyarrow" width="23" height="43"/>
         <image name="homeqr" width="30" height="29"/>
-        <image name="logo-2" width="79" height="33"/>
+        <image name="logo" width="117" height="30"/>
         <image name="nocoiners" width="375" height="362"/>
         <image name="qrcode_selected" width="24" height="24"/>
         <image name="wallet_icon" width="28" height="24"/>
