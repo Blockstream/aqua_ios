@@ -54,6 +54,8 @@ class AddAssetsViewController: BaseViewController {
 
     func reloadData() {
         self.assets = AquaService.allAssets()
+            .filter({ $0.icon != nil })
+            .sorted(by: { $0.name ?? "" < $1.name ?? "" })
         self.tableView.reloadData()
     }
 
