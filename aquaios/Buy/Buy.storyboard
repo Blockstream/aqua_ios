@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH1-oY-uCX">
-                                <rect key="frame" x="20" y="730" width="374" height="53"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="553" width="374" height="140"/>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vw4-Io-CWj">
-                                <rect key="frame" x="20" y="730" width="374" height="53"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vw4-Io-CWj">
+                                <rect key="frame" x="20" y="553" width="374" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-tU-7hF">
-                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="53"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="BTC">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-tU-7hF">
+                                        <rect key="frame" x="115" y="0.0" width="144" height="53"/>
+                                        <color key="backgroundColor" name="aquaShadowBlue"/>
+                                        <state key="normal" title="Buy bitcoin">
+                                            <color key="titleColor" name="paleLilac"/>
                                         </state>
                                         <state key="selected">
                                             <color key="titleColor" name="tiffanyBlue"/>
@@ -41,21 +41,21 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sij-wX-AEw">
-                                        <rect key="frame" x="186.5" y="9.5" width="1" height="34"/>
-                                        <color key="backgroundColor" name="tiffanyBlue"/>
+                                        <rect key="frame" x="186.5" y="53" width="1" height="34"/>
+                                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="hyh-Zq-Nmt"/>
                                             <constraint firstAttribute="height" constant="34" id="jtd-px-bQz"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-Fx-4cd">
-                                        <rect key="frame" x="187.5" y="0.0" width="186.5" height="53"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-Fx-4cd">
+                                        <rect key="frame" x="115" y="87" width="144" height="53"/>
+                                        <color key="backgroundColor" name="aquaShadowBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="fQn-Lp-iPm"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="L-BTC">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Buy Liquid bitcoin">
+                                            <color key="titleColor" name="paleLilac"/>
                                         </state>
                                         <state key="selected">
                                             <color key="titleColor" name="tiffanyBlue"/>
@@ -78,15 +78,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy with Debit Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgR-az-qh1">
                                 <rect key="frame" x="131" y="438" width="152.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="vw4-Io-CWj" firstAttribute="leading" secondItem="7rF-EA-n6L" secondAttribute="leading" constant="20" id="8ZQ-FZ-BPn"/>
                             <constraint firstItem="NH1-oY-uCX" firstAttribute="trailing" secondItem="vw4-Io-CWj" secondAttribute="trailing" id="CeI-1T-kqj"/>
-                            <constraint firstItem="Boq-V6-JWe" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" constant="30" id="Cmy-x5-xjX"/>
+                            <constraint firstItem="Boq-V6-JWe" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" constant="120" id="Cmy-x5-xjX"/>
                             <constraint firstItem="GgR-az-qh1" firstAttribute="centerX" secondItem="7rF-EA-n6L" secondAttribute="centerX" id="LJQ-2Y-Cre"/>
                             <constraint firstItem="NH1-oY-uCX" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" id="Lop-bk-ifO"/>
                             <constraint firstItem="Boq-V6-JWe" firstAttribute="trailing" secondItem="vw4-Io-CWj" secondAttribute="trailing" constant="20" id="Wp6-wf-Lk9"/>
@@ -148,6 +148,15 @@
     </scenes>
     <resources>
         <image name="buy_icon" width="24" height="28"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aquaShadowBlue">
+            <color red="0.074509803921568626" green="0.11372549019607843" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleLilac">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="tiffanyBlue">
             <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

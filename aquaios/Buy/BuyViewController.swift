@@ -16,22 +16,19 @@ class BuyViewController: BaseViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        actionStackView.isHidden = true
-        actionStackBackgroundView.isHidden = true
-        btcButton.isHidden = true //enable when btc session is available
         actionStackBackgroundView.round(radius: 21, borderWidth: 2, borderColor: .tiffanyBlue)
         infoLabel.text = "Checking availability..."
         wyreService.getWidget()
     }
 
     @IBAction func actionButtonTapped(_ sender: UIButton) {
-        let ticker = sender.titleLabel?.text
-        performSegue(withIdentifier: "buy_wyre", sender: ticker)
+        let buyBtc = sender.titleLabel?.text == "Buy bitcoin"
+        performSegue(withIdentifier: "buy_wyre", sender: buyBtc)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? WyreWidgetViewController {
-            dest.ticker = sender as? String
+            dest.buyBtc = sender as? Bool
         }
     }
 }

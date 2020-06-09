@@ -5,8 +5,8 @@ class WyreWidgetViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
 
-    var ticker: String?
-    private var btcAddress = "3KL9B4232SW35SaRywrTTEbrWWbnpvfc1c"
+    var buyBtc: Bool?
+    private var btcAddress = Bitcoin.shared.address ?? ""
     private var lbtcAddress = Liquid.shared.address ?? ""
     private var successURLString = "aquaios:wyresuccess"
     private var failureURLString = "aquaios:wyrefailure"
@@ -18,9 +18,9 @@ class WyreWidgetViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let address = ticker == "BTC" ? btcAddress : lbtcAddress
-        let destCurrency = ticker == "L-BTC" ? "LBTC" : ticker
-        if let url = URL(string: "https://pay.sendwyre.com/purchase?destCurrency=\(destCurrency ?? "BTC")&dest=\(address)&redirectUrl=\(successURLString)&failureRedirectUrl=\(failureURLString)") {
+        let address = buyBtc ?? true ? btcAddress : lbtcAddress
+        let destCurrency = buyBtc ?? true ? "BTC" : "LBTC"
+        if let url = URL(string: "https://pay.sendwyre.com/purchase?destCurrency=\(destCurrency )&dest=\(address)&redirectUrl=\(successURLString)&failureRedirectUrl=\(failureURLString)") {
             let request = URLRequest(url: url)
             webView.load(request)
             startAnimating()
