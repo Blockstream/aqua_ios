@@ -8,7 +8,7 @@ class AddAssetCell: UITableViewCell {
 
     func configure(with asset: Asset) {
         backgroundColor = .aquaBackgroundBlue
-        assetNameLabel.text = asset.name ?? ""
+        assetNameLabel.text = asset.name ?? "Unregistered asset"
         tickerLabel.text = asset.ticker ?? ""
         assetIconImageView.image = asset.icon ?? UIImage(named: "asset_unknown")
     }

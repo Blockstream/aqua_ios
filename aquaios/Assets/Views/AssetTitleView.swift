@@ -16,7 +16,7 @@ class AssetTitleView: UIView {
     }
 
     func configure(with asset: Asset) {
-        titleLabel.text = asset.name ?? ""
-        iconImageView.image = asset.icon
+        titleLabel.text = asset.name ?? "Unregistered Asset"
+        iconImageView.image = asset.icon ?? UIImage(named: "asset_unknown")
     }
 }
