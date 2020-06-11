@@ -25,7 +25,10 @@ class AssetListViewController: BaseViewController {
         tableView.register(nib, forCellReuseIdentifier: "AssetListCell")
         if hasWallet {
             loginInProgress = true
-            login { (success) in
+            guard let mnemonic = try? Mnemonic.read() else {
+                return showError("Invalid mnemonic")
+            }
+            login(mnemonic) { (success) in
                 guard success == true else { return }
                 self.loginInProgress = false
                 self.configure()

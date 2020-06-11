@@ -22,7 +22,10 @@ class TermsOfServiceViewController: BaseViewController {
     }
 
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        register(mnemonic: try! generateMnemonic12())
+        guard let mnemonic = try? Mnemonic.generate() else {
+            return showError("No mnemonic generated")
+        }
+        register(mnemonic: mnemonic)
     }
 
     func register(mnemonic: String) {
@@ -36,16 +39,12 @@ class TermsOfServiceViewController: BaseViewController {
         }.map(on: bgq) {
             try Liquid.shared.connect()
             try Bitcoin.shared.connect()
-        }.map(on: bgq) {
-            try Liquid.shared.register(mnemonic)
-            try Bitcoin.shared.register(mnemonic)
         }.ensure {
             self.stopAnimating()
         }.done { _ in
-            UserDefaults.standard.set(mnemonic, forKey: Constants.Keys.mnemonic)
-            self.login { (success) in
+            self.login(mnemonic) { (success) in
                 guard success == true else { return }
-                self.navigationController?.topViewController?.dismissModal(animated: true)
+                self.performSegue(withIdentifier: "next", sender: nil)
             }
         }.catch { error in
             let message: String

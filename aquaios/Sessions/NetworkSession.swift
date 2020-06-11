@@ -14,11 +14,6 @@ class NetworkSession {
         try session?.disconnect()
     }
 
-    func register(_ mnemonic: String) throws {
-        let call = try session?.registerUser(mnemonic: mnemonic)
-        _ = try DummyResolve(call: call!)
-    }
-
     func login(_ mnemonic: String) throws {
         let call = try session?.login(mnemonic: mnemonic, password: "", hw_device: [:])
         _ = try DummyResolve(call: call!)

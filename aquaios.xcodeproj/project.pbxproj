@@ -89,6 +89,8 @@
 		812A122F2448A9A400129EDE /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A122C2448A9A400129EDE /* Alerts.storyboard */; };
 		812A12302448A9A400129EDE /* BackupAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A122D2448A9A400129EDE /* BackupAlertViewController.swift */; };
 		812A12322448AA7100129EDE /* DropAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A12312448AA7100129EDE /* DropAlert.swift */; };
+		8174BBB4249285D600929D4E /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174BBB3249285D600929D4E /* Mnemonic.swift */; };
+		8174BBB824928B5F00929D4E /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174BBB724928B5F00929D4E /* AuthenticationViewController.swift */; };
 		817F86C1243E7B4E000545C7 /* TransactionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F86C0243E7B4E000545C7 /* TransactionError.swift */; };
 		818439F6246ACC03006BF3BF /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818439F5246ACC03006BF3BF /* NetworkSession.swift */; };
 		818439F9246ACCDC006BF3BF /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818439F8246ACCDC006BF3BF /* Bitcoin.swift */; };
@@ -201,6 +203,8 @@
 		812A122C2448A9A400129EDE /* Alerts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
 		812A122D2448A9A400129EDE /* BackupAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupAlertViewController.swift; sourceTree = "<group>"; };
 		812A12312448AA7100129EDE /* DropAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAlert.swift; sourceTree = "<group>"; };
+		8174BBB3249285D600929D4E /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mnemonic.swift; path = aquaios/models/Mnemonic.swift; sourceTree = SOURCE_ROOT; };
+		8174BBB724928B5F00929D4E /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		817F86C0243E7B4E000545C7 /* TransactionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionError.swift; path = aquaios/models/TransactionError.swift; sourceTree = SOURCE_ROOT; };
 		818439F5246ACC03006BF3BF /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkSession.swift; path = aquaios/Sessions/NetworkSession.swift; sourceTree = SOURCE_ROOT; };
 		818439F8246ACCDC006BF3BF /* Bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				8192528B2428DD6900203C44 /* Transaction.swift */,
 				817F86C0243E7B4E000545C7 /* TransactionError.swift */,
 				81A6ABD324741BC200599556 /* Fiat.swift */,
+				8174BBB3249285D600929D4E /* Mnemonic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -509,6 +514,7 @@
 			children = (
 				6DF14834246227D600F30DFB /* OnboardingLandingViewController.swift */,
 				6DF148362462280000F30DFB /* TermsOfServiceViewController.swift */,
+				8174BBB724928B5F00929D4E /* AuthenticationViewController.swift */,
 				6DF148302462278B00F30DFB /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
@@ -763,6 +769,7 @@
 				8192528C2428DD6900203C44 /* Transaction.swift in Sources */,
 				6DC69E7E23E12F0600DCD7CB /* GreenAddress.swift in Sources */,
 				6DF1482C2460F9CC00F30DFB /* DGElasticPullToRefreshLoadingView.swift in Sources */,
+				8174BBB824928B5F00929D4E /* AuthenticationViewController.swift in Sources */,
 				6DF148292460F9CC00F30DFB /* DGElasticPullToRefreshView.swift in Sources */,
 				6D0B6754243FD2AC00776289 /* WyreWidgetViewController.swift in Sources */,
 				6DB9FCE924186B0500E266DB /* BaseViewController.swift in Sources */,
@@ -784,6 +791,7 @@
 				6D1592D024060A5200F15BCD /* AquaSearchBar.swift in Sources */,
 				6D1592C82405D0DE00F15BCD /* AddAssetsViewController.swift in Sources */,
 				6DF148212460EEB400F30DFB /* RadialGradient.swift in Sources */,
+				8174BBB4249285D600929D4E /* Mnemonic.swift in Sources */,
 				6D0771F8242A828B009DEA9B /* TransactionsHeaderCell.swift in Sources */,
 				6D482FD2246A08EB0054AC84 /* BackupCompleteViewController.swift in Sources */,
 				6DA69A32240F30BA000F626E /* QRScreenshotReader.swift in Sources */,

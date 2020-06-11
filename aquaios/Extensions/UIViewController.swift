@@ -5,7 +5,7 @@ extension UIViewController {
 
     var hasWallet: Bool {
         get {
-            return UserDefaults.standard.object(forKey: Constants.Keys.mnemonic) != nil
+            return Mnemonic.exist()
         }
     }
 
@@ -28,10 +28,7 @@ extension UIViewController {
         return modalPresenting || navigationPresenting || tabBarPresenting
     }
 
-    func login(completion: @escaping (_ success: Bool) -> Void) {
-        guard let mnemonic = UserDefaults.standard.string(forKey: Constants.Keys.mnemonic) else {
-            fatalError("No mnemonic selected")
-        }
+    func login(_ mnemonic: String, completion: @escaping (_ success: Bool) -> Void) {
         let bgq = DispatchQueue.global(qos: .background)
         firstly {
             self.startAnimating()
@@ -53,7 +50,7 @@ extension UIViewController {
             completion(true)
         }.catch { _ in
             let alert = UIAlertController(title: "Error", message: "Login failure.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.login(completion: completion) }))
+            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.login(mnemonic, completion: completion) }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in completion(false) }))
             self.present(alert, animated: true)
         }

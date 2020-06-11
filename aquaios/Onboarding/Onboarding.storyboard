@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -69,7 +69,7 @@
                         <outlet property="messageLabel" destination="CUk-fo-isy" id="yf0-sD-iOG"/>
                         <outlet property="nextButton" destination="pMr-SL-XMk" id="eZ3-PN-OZz"/>
                         <outlet property="titleLabel" destination="t1d-L8-rNu" id="xZX-zG-w28"/>
-                        <segue destination="tRb-tc-NGx" kind="push" identifier="tos" id="Fwn-Bi-Dx1"/>
+                        <segue destination="tRb-tc-NGx" kind="show" identifier="tos" id="Fwn-Bi-Dx1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccn-6A-r0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,11 +155,69 @@
                         <outlet property="agreementLabel" destination="EwB-b2-b4B" id="3xC-lt-BXn"/>
                         <outlet property="confirmButton" destination="xe6-eU-RLy" id="kgw-eZ-XqK"/>
                         <outlet property="tosWebView" destination="oY0-ni-TVY" id="fLY-Vn-a0u"/>
+                        <segue destination="ZsU-xv-hTa" kind="show" identifier="next" id="nFK-zg-pdd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vau-Tp-780" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2952.1739130434785" y="129.91071428571428"/>
+        </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="KKH-yQ-Ub6">
+            <objects>
+                <viewController id="ZsU-xv-hTa" customClass="AuthenticationViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yvC-j0-WeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVM-UV-bgc">
+                                <rect key="frame" x="24" y="706" width="366" height="53"/>
+                                <color key="backgroundColor" name="teal"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Icl-VX-Tu7"/>
+                                    <constraint firstAttribute="height" constant="53" id="J5Q-JH-64F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Enable">
+                                    <color key="titleColor" name="paleLilac"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonTapped:" destination="tRb-tc-NGx" eventType="touchUpInside" id="3Ur-eC-Gmv"/>
+                                    <action selector="enable:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="pz2-xu-b6z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-Lm-BZb">
+                                <rect key="frame" x="24" y="779" width="366" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="04o-Gt-bD5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Y3v-dz-z7U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" name="paleLilac"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonTapped:" destination="tRb-tc-NGx" eventType="touchUpInside" id="Cm6-w3-QgH"/>
+                                    <action selector="skip:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="Tgb-3C-0oG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="darkBlueGray"/>
+                        <constraints>
+                            <constraint firstItem="JVM-UV-bgc" firstAttribute="leading" secondItem="ZEf-7e-6bC" secondAttribute="leading" constant="24" id="ELD-A1-pvF"/>
+                            <constraint firstItem="mi4-Lm-BZb" firstAttribute="top" secondItem="JVM-UV-bgc" secondAttribute="bottom" constant="20" id="Rxw-EV-dhv"/>
+                            <constraint firstItem="ZEf-7e-6bC" firstAttribute="bottom" secondItem="mi4-Lm-BZb" secondAttribute="bottom" constant="30" id="UXd-oT-cKe"/>
+                            <constraint firstItem="ZEf-7e-6bC" firstAttribute="trailing" secondItem="mi4-Lm-BZb" secondAttribute="trailing" constant="24" id="mVf-5R-Q1y"/>
+                            <constraint firstItem="mi4-Lm-BZb" firstAttribute="leading" secondItem="ZEf-7e-6bC" secondAttribute="leading" constant="24" id="mgP-qj-g28"/>
+                            <constraint firstItem="ZEf-7e-6bC" firstAttribute="trailing" secondItem="JVM-UV-bgc" secondAttribute="trailing" constant="24" id="nrw-jm-pDh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZEf-7e-6bC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C3j-k5-RlJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zW-Yl-rdo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3786" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="acN-fG-maD">
