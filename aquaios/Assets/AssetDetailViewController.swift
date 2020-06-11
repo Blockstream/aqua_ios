@@ -49,7 +49,6 @@ class AssetDetailViewController: BaseViewController {
             let titleView = AssetTitleView(frame: CGRect(x: 0, y: 0, width: 100, height: 22))
             titleView.configure(with: asset)
             navigationItem.titleView = titleView
-            tableView.isHidden = asset.sats == 0
             buyButton.isHidden = !(asset.isBTC || asset.isLBTC)
             balanceLabel.text = "\(asset.string() ?? "")"
             tickerLabel.text = asset.ticker ?? ""
@@ -95,6 +94,7 @@ class AssetDetailViewController: BaseViewController {
         }.done { transactions in
             self.transactions = transactions.filter { $0.satoshi.contains { $0.key == self.asset!.tag } }
             self.transactions.sort(by: { $0.createdAt > $1.createdAt })
+            self.tableView.isHidden = self.transactions.count == 0
             self.tableView.reloadData()
         }.catch { _ in
             let alert = UIAlertController(title: "Error", message: "No Transactions Found", preferredStyle: .alert)
