@@ -55,7 +55,10 @@ class SendReviewViewController: BaseViewController {
         }
         if let fee = tx.fee {
             let fiat = Fiat.from(fee)
-            feeLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
+            let fiatFees = "\(Fiat.currency() ?? "") \( fiat ?? "")"
+            feeLabel.text = fiatFees
+            defaultFeeButton.setTitle(fiatFees, for: .normal)
+            rushFeeButton.setTitle("I'm on a rush!", for: .normal)
         }
         // Disable fee buttons for liquid
         networkFeeButton.isEnabled = asset.isBTC
