@@ -42,7 +42,7 @@ class TransactionsViewController: BaseViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .aquaBackgroundBlue
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
-        tableView.separatorColor = .black
+        tableView.separatorColor = .aquaShadowBlue
         let nib = UINib(nibName: "TransactionCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TransactionCell")
     }
