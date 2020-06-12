@@ -41,6 +41,7 @@ class AssetDetailViewController: BaseViewController {
     }
 
     func onNewTransaction(_ notification: Notification) {
+        self.reloadBalance()
         self.reloadData()
     }
 
@@ -80,6 +81,22 @@ class AssetDetailViewController: BaseViewController {
         tableView.separatorColor = .aquaShadowBlue
         let cellNib = UINib(nibName: "TransactionCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "TransactionCell")
+    }
+
+    func reloadBalance() {
+        let bgq = DispatchQueue.global(qos: .background)
+        firstly {
+            return Guarantee()
+        }.compactMap(on: bgq) {
+            return self.asset?.isBTC ?? false ? Bitcoin.shared.balance : Liquid.shared.balance
+        }.done { balance in
+            self.asset = AquaService.assets(for: balance.filter({ $0.key == self.asset?.info?.assetId })).first
+            self.balanceLabel.text = "\(self.asset?.string() ?? "")"
+        }.catch { _ in
+            let alert = UIAlertController(title: "Error", message: "No balance found", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.reloadData() }))
+            self.present(alert, animated: true)
+        }
     }
 
     func reloadData() {
