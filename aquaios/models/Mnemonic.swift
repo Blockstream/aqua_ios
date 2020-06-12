@@ -71,7 +71,7 @@ class Mnemonic {
 
         var item: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &item)
-        if status == errSecInteractionNotAllowed {
+        if status == errSecSuccess || status == errSecInteractionNotAllowed {
             return true
         } else if status == errSecItemNotFound {
             return false
@@ -79,6 +79,20 @@ class Mnemonic {
             print("status: \(status)")
             return false
         }
+    }
+
+    /// Check if stored mnemonic is protected by userPresence
+    static func protected() -> Bool {
+        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                    kSecAttrLabel as String: Constants.Keys.mnemonic,
+                                    kSecUseAuthenticationUI as String: kSecUseAuthenticationUIFail]
+
+        var item: CFTypeRef?
+        let status = SecItemCopyMatching(query as CFDictionary, &item)
+        if status == errSecSuccess {
+            return false
+        }
+        return true
     }
 
     /// Deletes mnemonic

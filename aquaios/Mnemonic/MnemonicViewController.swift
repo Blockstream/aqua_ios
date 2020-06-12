@@ -9,7 +9,7 @@ class MnemonicViewController: BaseViewController {
     @IBOutlet weak var confirmButton: UIButton!
     private var mnemonic: [Substring] {
         get {
-            guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
+            guard let mnemonic = try? Mnemonic.read() else {
                 return []
             }
             return mnemonic.split(separator: " ")

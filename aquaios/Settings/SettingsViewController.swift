@@ -35,6 +35,7 @@ class SettingsViewController: BaseViewController {
         let alert = UIAlertController(title: "Warning", message: "Are you sure to remove your wallet? The operation is not reversible and the app will be closed.", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
+            try? Mnemonic.delete()
             exit(0)
         })
         self.present(alert, animated: true, completion: nil)
@@ -44,7 +45,11 @@ class SettingsViewController: BaseViewController {
         let alert = UIAlertController(title: "Warning", message: "Enable access protection?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
-
+            guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
+                return self.showError("Invalid mnemonic")
+            }
+            try? Mnemonic.delete()
+            try? Mnemonic.write(mnemonic, safe: true)
         })
         self.present(alert, animated: true, completion: nil)
     }
@@ -53,9 +58,21 @@ class SettingsViewController: BaseViewController {
         let alert = UIAlertController(title: "Warning", message: "Disable access protection?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
-
+            guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
+                return self.showError("Invalid mnemonic")
+            }
+            try? Mnemonic.delete()
+            try? Mnemonic.write(mnemonic, safe: false)
         })
         self.present(alert, animated: true, completion: nil)
+    }
+
+    @objc func switchStateDidChange(_ sender: UISwitch) {
+        if sender.isOn {
+            enableSafeMnemonic()
+        } else {
+            disableSafeMnemonic()
+        }
     }
 }
 
@@ -70,7 +87,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         cell?.textLabel?.text = labels[indexPath.row]
         if indexPath.row == 2 {
             let switcher = UISwitch()
-            switcher.isOn = true
+            switcher.isOn = Mnemonic.protected()
+            switcher.addTarget(self, action: #selector(switchStateDidChange(_:)), for: .valueChanged)
             cell?.accessoryView = switcher
         }
         return cell ?? UITableViewCell()
