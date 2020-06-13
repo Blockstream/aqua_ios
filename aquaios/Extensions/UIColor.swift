@@ -49,11 +49,11 @@ extension UIColor {
         return UIColor(named: "aquaShadowBlue")!
     }
 
-    open class var gradientGreen: UIColor {
-        return UIColor(named: "gradientGreen")!
+    open class var gradientDark: UIColor {
+        return UIColor(named: "gradientDark")!
     }
 
-    open class var gradientBlue: UIColor {
-        return UIColor(named: "gradientBlue")!
+    open class var gradientLight: UIColor {
+        return UIColor(named: "gradientLight")!
     }
 }
