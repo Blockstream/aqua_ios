@@ -7,14 +7,12 @@ class MnemonicViewController: BaseViewController {
     @IBOutlet weak var mnemonicBackgroundView: UIView!
     @IBOutlet var mnemonicLabels: [UILabel]!
     @IBOutlet weak var confirmButton: UIButton!
-    private var mnemonic: [Substring] {
-        get {
-            guard let mnemonic = try? Mnemonic.read() else {
-                return []
-            }
-            return mnemonic.split(separator: " ")
+    private var mnemonic: [Substring] = {
+        guard let mnemonic = try? Mnemonic.read() else {
+            return []
         }
-    }
+        return mnemonic.split(separator: " ")
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
