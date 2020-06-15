@@ -12,6 +12,10 @@ struct KeychainError: Error {
 
 class Mnemonic {
 
+    static func supportsPasscodeAuthentication() -> Bool {
+        return LAContext().canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
+    }
+
     static func generate() throws -> String {
         return try generateMnemonic12()
     }

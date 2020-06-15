@@ -21,6 +21,10 @@ class MnemonicViewController: BaseViewController {
     }
 
     func populateLabels() {
+        if !Mnemonic.supportsPasscodeAuthentication() {
+            showError("Enable passcode in iPhone settings to continue")
+            return
+        }
         guard let mnemonic = try? Mnemonic.read() else {
             let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: "Access failure", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("id_back", comment: ""), style: .cancel) { _ in
@@ -29,8 +33,9 @@ class MnemonicViewController: BaseViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
-        if mnemonic.count > 0 && mnemonic.count == mnemonicLabels.count {
-            for(label, word) in zip(mnemonicLabels, mnemonic) {
+        let words = mnemonic.split(separator: " ")
+        if words.count > 0 && words.count == mnemonicLabels.count {
+            for(label, word) in zip(mnemonicLabels, words) {
                 label.text = String(word)
             }
         }

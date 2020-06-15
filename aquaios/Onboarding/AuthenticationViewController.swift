@@ -11,11 +11,16 @@ class AuthenticationViewController: BaseViewController {
     }
 
     func storeMnemonic(safe: Bool) {
+        if !Mnemonic.supportsPasscodeAuthentication() {
+            showError("Enable passcode in iPhone settings to continue")
+            return
+        }
         guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
             return showError("Invalid mnemonic")
         }
         do {
             try Mnemonic.write(mnemonic, safe: safe)
+            self.navigationController?.topViewController?.dismissModal(animated: true)
         } catch {
             return showError(error.localizedDescription)
         }
@@ -23,11 +28,9 @@ class AuthenticationViewController: BaseViewController {
 
     @IBAction func enable(_ sender: Any) {
         storeMnemonic(safe: true)
-        self.navigationController?.topViewController?.dismissModal(animated: true)
     }
 
     @IBAction func skip(_ sender: Any) {
         storeMnemonic(safe: false)
-        self.navigationController?.topViewController?.dismissModal(animated: true)
     }
 }
