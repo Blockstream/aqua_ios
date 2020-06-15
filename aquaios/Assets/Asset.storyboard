@@ -395,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="3681.1594202898555" y="6.6964285714285712"/>
         </scene>
-        <!--ReceiveViewController-->
+        <!--ReceiveNavigationController-->
         <scene sceneID="lVN-u9-BgH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Receive" referencedIdentifier="ReceiveViewController" id="8vT-qr-PG8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Receive" referencedIdentifier="ReceiveNavigationController" id="8vT-qr-PG8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MBM-Ut-AMW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5es-8z-awH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -122,13 +122,14 @@ class AssetDetailViewController: BaseViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nav = segue.destination as? UINavigationController,
-            let dest = nav.topViewController as? SendAddressViewController {
+        guard let nav = segue.destination as? UINavigationController else {
+            return
+        }
+        if let dest = nav.topViewController as? SendAddressViewController {
             dest.asset = sender as? Asset
-        } else if let dest = segue.destination as? ReceiveViewController {
+        } else if let dest = nav.topViewController as? ReceiveViewController {
             dest.asset = sender as? Asset
-        } else if let nav = segue.destination as? UINavigationController,
-            let dest = nav.topViewController as? AssetInfoViewController {
+        } else if let dest = nav.topViewController as? AssetInfoViewController {
             dest.asset = sender as? Asset
         }
     }
