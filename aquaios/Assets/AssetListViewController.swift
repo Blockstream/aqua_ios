@@ -24,15 +24,7 @@ class AssetListViewController: BaseViewController {
         let nib = UINib(nibName: "AssetListCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "AssetListCell")
         if hasWallet {
-            loginInProgress = true
-            guard let mnemonic = try? Mnemonic.read() else {
-                return showError("Invalid mnemonic")
-            }
-            login(mnemonic) { (success) in
-                guard success == true else { return }
-                self.loginInProgress = false
-                self.configure()
-            }
+            load()
         }
     }
 
@@ -58,6 +50,22 @@ class AssetListViewController: BaseViewController {
         }
     }
 
+    func load() {
+        loginInProgress = true
+        guard let mnemonic = try? Mnemonic.read() else {
+            let alert = UIAlertController(title: "Error", message: "Access failure", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.load() }))
+            self.present(alert, animated: true)
+            return
+        }
+        login(mnemonic) { (success) in
+            guard success == true else { return }
+            self.loginInProgress = false
+            self.configure()
+            self.showBackupIfNeeded()
+        }
+    }
+
     func onNewTransaction(_ notification: Notification) {
         self.reloadData()
     }
@@ -68,7 +76,6 @@ class AssetListViewController: BaseViewController {
             self.qrButton.isHidden = false
             self.tableView.isHidden = false
             self.reloadData()
-            self.showBackupIfNeeded()
         } else {
             tableView.isHidden = true
             qrButton.isHidden = true

@@ -7,12 +7,6 @@ class MnemonicViewController: BaseViewController {
     @IBOutlet weak var mnemonicBackgroundView: UIView!
     @IBOutlet var mnemonicLabels: [UILabel]!
     @IBOutlet weak var confirmButton: UIButton!
-    private var mnemonic: [Substring] = {
-        guard let mnemonic = try? Mnemonic.read() else {
-            return []
-        }
-        return mnemonic.split(separator: " ")
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +21,14 @@ class MnemonicViewController: BaseViewController {
     }
 
     func populateLabels() {
+        guard let mnemonic = try? Mnemonic.read() else {
+            let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: "Access failure", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_back", comment: ""), style: .cancel) { _ in
+                self.dismissModal(animated: true)
+            })
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         if mnemonic.count > 0 && mnemonic.count == mnemonicLabels.count {
             for(label, word) in zip(mnemonicLabels, mnemonic) {
                 label.text = String(word)
@@ -37,15 +39,4 @@ class MnemonicViewController: BaseViewController {
     @IBAction func completeButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "confirm", sender: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
