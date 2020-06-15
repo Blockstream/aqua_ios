@@ -20,7 +20,7 @@ class Mnemonic {
     static func write(_ mnemonic: String, safe: Bool = false) throws {
         // Create an access control instance that dictates how the item can be read later.
         let access = SecAccessControlCreateWithFlags(nil, // Use the default allocator.
-                                                     kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly, // the item isn’t eligible for the iCloud keychain and won’t be included if the user restores a device backup to a new device.
+                                                     kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, // the item isn’t eligible for the iCloud keychain and won’t be included if the user restores a device backup to a new device.
                                                      .userPresence, // request biometric authentication, or to fall back on the device passcode, whenever the item is later read from the keychain.
                                                      nil) // Ignore any error.
 
