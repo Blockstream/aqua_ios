@@ -70,7 +70,7 @@ class AssetListViewController: BaseViewController {
                 self?.tableView.dg_stopLoading()
             })
         }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(.gradientDark)
+        tableView.dg_setPullToRefreshFillColor(.deepTeal)
         if let backgroundColor = tableView.backgroundColor {
             tableView.dg_setPullToRefreshBackgroundColor(backgroundColor)
         }

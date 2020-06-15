@@ -4,8 +4,8 @@ class RadialGradient: CALayer {
 
     var center: CGPoint = CGPoint(x: 0, y: 0)
     var radius: CGFloat = 192
-    var colors = [UIColor.gradientLight.cgColor,
-                  UIColor.gradientDark.cgColor]
+    var colors = [UIColor.topaz.cgColor,
+                  UIColor.deepTeal.cgColor]
 
     override init() {
         super.init()

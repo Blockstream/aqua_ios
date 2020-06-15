@@ -29,6 +29,10 @@ extension UIColor {
         return UIColor(named: "topaz")!
     }
 
+    open class var deepTeal: UIColor {
+        return UIColor(named: "deepTeal")!
+    }
+
     open class var lightPeriwinkle: UIColor {
         return UIColor(named: "lightPeriwinkle")!
     }
@@ -47,13 +51,5 @@ extension UIColor {
 
     open class var aquaShadowBlue: UIColor {
         return UIColor(named: "aquaShadowBlue")!
-    }
-
-    open class var gradientDark: UIColor {
-        return UIColor(named: "gradientDark")!
-    }
-
-    open class var gradientLight: UIColor {
-        return UIColor(named: "gradientLight")!
     }
 }
