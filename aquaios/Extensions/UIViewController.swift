@@ -56,6 +56,12 @@ extension UIViewController {
         }
     }
 
+    func showBackupIfNotified() {
+        if !hasBackedUp {
+                showBackupAlert()
+            }
+        }
+
     func showBackupNag() {
         let storyboard = UIStoryboard(name: "Alerts", bundle: .main)
         let nagAlert = storyboard.instantiateViewController(withIdentifier: "BackupNagViewController")

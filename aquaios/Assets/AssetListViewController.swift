@@ -48,6 +48,7 @@ class AssetListViewController: BaseViewController {
 
     func onNewTransaction(_ notification: Notification) {
         self.reloadData()
+        self.showBackupIfNotified()
     }
 
     func configure() {

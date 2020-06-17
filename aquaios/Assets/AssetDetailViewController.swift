@@ -43,6 +43,7 @@ class AssetDetailViewController: BaseViewController {
     func onNewTransaction(_ notification: Notification) {
         self.reloadBalance()
         self.reloadData()
+        self.showBackupIfNotified()
     }
 
     func configureView() {
