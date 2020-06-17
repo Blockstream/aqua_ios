@@ -23,13 +23,6 @@ class AssetListViewController: BaseViewController {
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
         let nib = UINib(nibName: "AssetListCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "AssetListCell")
-        if !Mnemonic.supportsPasscodeAuthentication() {
-            showError("Enable passcode in iPhone settings to continue")
-            return
-        }
-        if hasWallet {
-            load()
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +37,13 @@ class AssetListViewController: BaseViewController {
         super.viewDidAppear(animated)
         if !loginInProgress {
             configure()
+        }
+        if !Mnemonic.supportsPasscodeAuthentication() {
+            showError("Enable passcode in iPhone settings to continue")
+            return
+        }
+        if hasWallet {
+            load()
         }
     }
 
