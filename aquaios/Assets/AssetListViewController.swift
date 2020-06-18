@@ -8,7 +8,6 @@ class AssetListViewController: BaseViewController {
     @IBOutlet weak var assetsTitleLabel: UILabel!
     @IBOutlet weak var qrButton: UIButton!
 
-    private var loginInProgress: Bool = false
     private var assets: [Asset] = []
     private var transactionToken: NSObjectProtocol?
 
@@ -35,9 +34,8 @@ class AssetListViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !loginInProgress {
-            configure()
-        }
+        configure()
+
         if !Mnemonic.supportsPasscodeAuthentication() {
             showError("Enable passcode in iPhone settings to continue")
             return
@@ -55,7 +53,6 @@ class AssetListViewController: BaseViewController {
     }
 
     func load() {
-        loginInProgress = true
         guard let mnemonic = try? Mnemonic.read() else {
             let alert = UIAlertController(title: "Error", message: "Access failure", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.load() }))
@@ -64,8 +61,7 @@ class AssetListViewController: BaseViewController {
         }
         login(mnemonic) { (success) in
             guard success == true else { return }
-            self.loginInProgress = false
-            self.configure()
+            self.reloadData()
             self.showBackupIfNeeded()
         }
     }
@@ -79,7 +75,6 @@ class AssetListViewController: BaseViewController {
             hideCreateWalletView()
             self.qrButton.isHidden = false
             self.tableView.isHidden = false
-            self.reloadData()
         } else {
             tableView.isHidden = true
             qrButton.isHidden = true
