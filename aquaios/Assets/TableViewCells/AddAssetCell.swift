@@ -11,5 +11,6 @@ class AddAssetCell: UITableViewCell {
         assetNameLabel.text = asset.name ?? "Unregistered asset"
         tickerLabel.text = asset.ticker ?? ""
         assetIconImageView.image = asset.icon ?? UIImage(named: "asset_unknown")
+        enableSwitch.onTintColor = .teal
     }
 }

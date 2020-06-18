@@ -14,6 +14,10 @@ struct Asset {
         return tag == Liquid.shared.policyAsset
     }
 
+    var isUSDt: Bool {
+        return tag == "ce091c998b83c78bb71a632313ba3760f1763d9cfcffae02258ffa9865a37bd2"
+    }
+
     var name: String? {
         return info?.name
     }
@@ -21,6 +25,10 @@ struct Asset {
     var ticker: String? {
         return info?.ticker
     }
+
+    var selectable: Bool {
+            return !isBTC || !isLBTC || !isUSDt
+        }
 
     func string() -> String? {
         string(sats ?? 0)
@@ -56,5 +64,14 @@ struct Asset {
         formatter.maximumFractionDigits = precision
         formatter.minimumFractionDigits = 0
         return formatter
+    }
+}
+
+extension Asset: Equatable {
+    static func == (lhs: Asset, rhs: Asset) -> Bool {
+        return
+            lhs.name == rhs.name &&
+            lhs.ticker == rhs.ticker &&
+            lhs.tag == rhs.tag
     }
 }

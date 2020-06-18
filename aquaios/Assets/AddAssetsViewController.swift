@@ -9,6 +9,7 @@ class AddAssetsViewController: BaseViewController {
 
     private var assets: [Asset] = []
     private var filteredAssets: [Asset] = []
+    private var pinnedAssets = [String]()
     private var searchController: AquaSearchController?
     private var showSearchResults = false
 
@@ -56,7 +57,9 @@ class AddAssetsViewController: BaseViewController {
         self.assets = AquaService.allAssets()
             .filter({ $0.icon != nil })
             .sorted(by: { $0.name ?? "" < $1.name ?? "" })
+        self.pinnedAssets = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
         self.tableView.reloadData()
+
     }
 
     @IBAction override func dismissTapped(_ sender: Any) {
@@ -64,8 +67,23 @@ class AddAssetsViewController: BaseViewController {
     }
 
     @IBAction func saveTapped(_ sender: Any) {
+        UserDefaults.standard.set(self.pinnedAssets, forKey: Constants.Keys.pinnedAssets)
         dismissModal(animated: true)
+        }
+
+    @objc func switchChanged(sender: UISwitch) {
+        let row = sender.tag
+        let tappedAsset = assets[row]
+        if tappedAsset.selectable {
+            if !pinnedAssets.contains(tappedAsset.info!.assetId) && sender.isOn {
+                pinnedAssets.append(tappedAsset.info!.assetId)
+            } else {
+                let index = pinnedAssets.firstIndex(of: tappedAsset.info!.assetId)!
+                pinnedAssets.remove(at: index)
+            }
+        }
     }
+
 }
 
 extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -94,6 +112,9 @@ extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
         let asset = assets[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "AddAssetCell") as? AddAssetCell {
             cell.configure(with: asset)
+            cell.enableSwitch.tag = indexPath.row
+            cell.enableSwitch.isOn = self.pinnedAssets.contains(asset.info?.assetId ?? "")
+            cell.enableSwitch.addTarget(self, action: #selector(switchChanged(sender:)), for: .valueChanged)
             return cell
         }
         return UITableViewCell()

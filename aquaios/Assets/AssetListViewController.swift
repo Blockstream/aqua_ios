@@ -10,6 +10,19 @@ class AssetListViewController: BaseViewController {
 
     private var assets: [Asset] = []
     private var transactionToken: NSObjectProtocol?
+    private var pinnedAssets: [String: UInt64] {
+        get {
+            if let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] {
+                return pinned.reduce([String: UInt64]()) { (dict, asset) -> [String: UInt64] in
+                    var dict = dict
+                    dict[asset] = 0
+                    return dict
+                }
+            }
+            return [:]
+        }
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +108,7 @@ class AssetListViewController: BaseViewController {
             when(fulfilled: self.balancePromise(Bitcoin.shared), self.balancePromise(Liquid.shared))
         }.done { bitcoin, liquid in
             let balance = bitcoin.merging(liquid) { (_, new) in new }
-            self.assets = AquaService.assets(for: balance)
+            self.assets = AquaService.assets(for: balance.merging(self.pinnedAssets) {(current, _) in current})
             self.tableView.reloadData()
         }.catch { _ in
             let alert = UIAlertController(title: "Error", message: "Failure on fetch balance", preferredStyle: .alert)
