@@ -28,34 +28,6 @@ extension UIViewController {
         return modalPresenting || navigationPresenting || tabBarPresenting
     }
 
-    func login(_ mnemonic: String, completion: @escaping (_ success: Bool) -> Void) {
-        let bgq = DispatchQueue.global(qos: .background)
-        firstly {
-            self.startAnimating()
-            return Guarantee()
-        }.map(on: bgq) {
-            try Liquid.shared.disconnect()
-            try Bitcoin.shared.disconnect()
-        }.map(on: bgq) {
-            try Liquid.shared.connect()
-            try Bitcoin.shared.connect()
-        }.map(on: bgq) {
-            try Liquid.shared.login(mnemonic)
-            try Bitcoin.shared.login(mnemonic)
-        }.compactMap(on: bgq) {
-            try? Registry.shared.refresh(Liquid.shared.session!)
-        }.ensure {
-            self.stopAnimating()
-        }.done { _ in
-            completion(true)
-        }.catch { _ in
-            let alert = UIAlertController(title: "Error", message: "Login failure.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.login(mnemonic, completion: completion) }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in completion(false) }))
-            self.present(alert, animated: true)
-        }
-    }
-
     func dismissModal(animated: Bool, completion: (() -> Void)? = nil) {
         if #available(iOS 13.0, *) {
             if let presentationController = presentationController {

@@ -39,13 +39,15 @@ class TermsOfServiceViewController: BaseViewController {
         }.map(on: bgq) {
             try Liquid.shared.connect()
             try Bitcoin.shared.connect()
+        }.map() {
+            try Liquid.shared.login(mnemonic)
+            try Bitcoin.shared.login(mnemonic)
+        }.compactMap(on: bgq) {
+            try? Registry.shared.refresh(Liquid.shared.session!)
         }.ensure {
             self.stopAnimating()
         }.done { _ in
-            self.login(mnemonic) { (success) in
-                guard success == true else { return }
-                self.performSegue(withIdentifier: "next", sender: nil)
-            }
+            self.performSegue(withIdentifier: "next", sender: nil)
         }.catch { error in
             let message: String
             if let err = error as? GaError, err != GaError.GenericError {

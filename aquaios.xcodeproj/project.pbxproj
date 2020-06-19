@@ -94,6 +94,7 @@
 		817F86C1243E7B4E000545C7 /* TransactionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F86C0243E7B4E000545C7 /* TransactionError.swift */; };
 		818439F6246ACC03006BF3BF /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818439F5246ACC03006BF3BF /* NetworkSession.swift */; };
 		818439F9246ACCDC006BF3BF /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818439F8246ACCDC006BF3BF /* Bitcoin.swift */; };
+		81851993249C84EF002EDEB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81851992249C84EF002EDEB5 /* LoginViewController.swift */; };
 		8192528C2428DD6900203C44 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192528B2428DD6900203C44 /* Transaction.swift */; };
 		81A6ABD424741BC200599556 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6ABD324741BC200599556 /* Fiat.swift */; };
 		81D9E4702405E6E0005DD867 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E46F2405E6E0005DD867 /* Network.swift */; };
@@ -208,6 +209,7 @@
 		817F86C0243E7B4E000545C7 /* TransactionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionError.swift; path = aquaios/models/TransactionError.swift; sourceTree = SOURCE_ROOT; };
 		818439F5246ACC03006BF3BF /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkSession.swift; path = aquaios/Sessions/NetworkSession.swift; sourceTree = SOURCE_ROOT; };
 		818439F8246ACCDC006BF3BF /* Bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
+		81851992249C84EF002EDEB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8192528B2428DD6900203C44 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = aquaios/models/Transaction.swift; sourceTree = SOURCE_ROOT; };
 		81A6ABD324741BC200599556 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fiat.swift; path = aquaios/models/Fiat.swift; sourceTree = SOURCE_ROOT; };
 		81D9E46F2405E6E0005DD867 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				6DF148362462280000F30DFB /* TermsOfServiceViewController.swift */,
 				8174BBB724928B5F00929D4E /* AuthenticationViewController.swift */,
 				6DF148302462278B00F30DFB /* Onboarding.storyboard */,
+				81851992249C84EF002EDEB5 /* LoginViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 				6D4A4C4924045CBE0002BA93 /* BuyViewController.swift in Sources */,
 				6D1592D024060A5200F15BCD /* AquaSearchBar.swift in Sources */,
 				6D1592C82405D0DE00F15BCD /* AddAssetsViewController.swift in Sources */,
+				81851993249C84EF002EDEB5 /* LoginViewController.swift in Sources */,
 				6DF148212460EEB400F30DFB /* RadialGradient.swift in Sources */,
 				8174BBB4249285D600929D4E /* Mnemonic.swift in Sources */,
 				6D0771F8242A828B009DEA9B /* TransactionsHeaderCell.swift in Sources */,

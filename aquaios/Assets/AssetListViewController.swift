@@ -22,6 +22,8 @@ class AssetListViewController: BaseViewController {
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
         let nib = UINib(nibName: "AssetListCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "AssetListCell")
+        tableView.isHidden = true
+        qrButton.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,34 +37,12 @@ class AssetListViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         configure()
-
-        if !Mnemonic.supportsPasscodeAuthentication() {
-            showError("Enable passcode in iPhone settings to continue")
-            return
-        }
-        if hasWallet {
-            load()
-        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let token = transactionToken {
             NotificationCenter.default.removeObserver(token)
-        }
-    }
-
-    func load() {
-        guard let mnemonic = try? Mnemonic.read() else {
-            let alert = UIAlertController(title: "Error", message: "Access failure", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.load() }))
-            self.present(alert, animated: true)
-            return
-        }
-        login(mnemonic) { (success) in
-            guard success == true else { return }
-            self.reloadData()
-            self.showBackupIfNeeded()
         }
     }
 
@@ -75,9 +55,8 @@ class AssetListViewController: BaseViewController {
             hideCreateWalletView()
             self.qrButton.isHidden = false
             self.tableView.isHidden = false
+            reloadData()
         } else {
-            tableView.isHidden = true
-            qrButton.isHidden = true
             showCreateWalletView(delegate: self)
         }
     }
