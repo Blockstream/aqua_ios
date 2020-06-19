@@ -24,7 +24,7 @@ class Mnemonic {
     static func write(_ mnemonic: String, safe: Bool = false) throws {
         // Create an access control instance that dictates how the item can be read later.
         let access = SecAccessControlCreateWithFlags(nil, // Use the default allocator.
-                                                     kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, // the item isn’t eligible for the iCloud keychain and won’t be included if the user restores a device backup to a new device.
+                                                     kSecAttrAccessibleWhenUnlockedThisDeviceOnly, // the item isn’t eligible for the iCloud keychain and won’t be included if the user restores a device backup to a new device.
                                                      .userPresence, // request biometric authentication, or to fall back on the device passcode, whenever the item is later read from the keychain.
                                                      nil) // Ignore any error.
 
@@ -41,7 +41,11 @@ class Mnemonic {
             query[kSecUseAuthenticationContext as String] = context
         }
 
-        let status = SecItemAdd(query as CFDictionary, nil)
+        var status = SecItemAdd(query as CFDictionary, nil)
+        if status == errSecDuplicateItem {
+            status = SecItemDelete(query as CFDictionary)
+            status = SecItemAdd(query as CFDictionary, nil)
+        }
         guard status == errSecSuccess else { throw KeychainError(status: status) }
     }
 
@@ -80,7 +84,8 @@ class Mnemonic {
         } else if status == errSecItemNotFound {
             return false
         } else {
-            print("status: \(status)")
+            let message = SecCopyErrorMessageString(status, nil)
+            print("status: \(message ?? "Unknown error." as CFString)")
             return false
         }
     }
