@@ -22,7 +22,11 @@ class AuthenticationViewController: BaseViewController {
             try Mnemonic.write(mnemonic, safe: safe)
             self.navigationController?.topViewController?.dismissModal(animated: true)
         } catch {
-            return showError(error.localizedDescription)
+            if let err = error as? KeychainError {
+                showError(err.localizedDescription)
+            } else {
+                showError(error.localizedDescription)
+            }
         }
     }
 
