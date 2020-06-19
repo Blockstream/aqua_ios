@@ -39,7 +39,7 @@ class TermsOfServiceViewController: BaseViewController {
         }.map(on: bgq) {
             try Liquid.shared.connect()
             try Bitcoin.shared.connect()
-        }.map() {
+        }.map(on: bgq) {
             try Liquid.shared.login(mnemonic)
             try Bitcoin.shared.login(mnemonic)
         }.compactMap(on: bgq) {
