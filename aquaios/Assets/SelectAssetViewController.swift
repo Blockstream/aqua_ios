@@ -16,14 +16,14 @@ class SelectAssetViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.title = flow == .send ?  "Choose Asset" : "Select Asset"
+        navigationController?.setNavigationBarHidden(false, animated: false)
         if flow == .receive {
             showCloseButton(on: .left)
         }
-        reloadData()
         configureTableView()
         configureSearch()
+        reloadData()
     }
 
     func configureTableView() {

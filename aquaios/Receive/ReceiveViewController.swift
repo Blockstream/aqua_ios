@@ -41,7 +41,6 @@ class ReceiveViewController: BaseViewController {
             button?.setBackgroundColor(color: .teal, for: .highlighted)
         }
         addressBackgroundView.round(radius: 6)
-        showCloseButton(on: .left)
     }
 
     func reloadData() {
