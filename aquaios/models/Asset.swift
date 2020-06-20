@@ -27,7 +27,7 @@ struct Asset {
     }
 
     var selectable: Bool {
-            return !isBTC || !isLBTC || !isUSDt
+            return !isBTC && !isLBTC && !isUSDt
         }
 
     func string() -> String? {
@@ -73,5 +73,18 @@ extension Asset: Equatable {
             lhs.name == rhs.name &&
             lhs.ticker == rhs.ticker &&
             lhs.tag == rhs.tag
+    }
+}
+
+extension Array where Element == Asset {
+    func sort() -> [Asset] {
+        var out = [Asset]()
+        if let btc = first(where: { $0.isBTC }) { out.append(btc) }
+        if let lbtc = first(where: { $0.isLBTC }) { out.append(lbtc) }
+        let withName = filter { !$0.isBTC && !$0.isLBTC && $0.name != nil }.sorted(by: {$0.name! < $1.name! })
+        out.append(contentsOf: withName)
+        let noNamed = filter { !$0.isBTC && !$0.isLBTC && $0.name == nil }
+        out.append(contentsOf: noNamed)
+        return out
     }
 }

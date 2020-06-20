@@ -3,19 +3,6 @@ import UIKit
 
 struct AquaService {
 
-    static func allAssets() -> [Asset] {
-        let allInfos = sort(Registry.shared.infos)
-        var assets: [Asset] = []
-        for item in allInfos {
-            var asset = Asset()
-            asset.tag = item.key
-            asset.info = Registry.shared.infos[item.key]
-            asset.icon = Registry.shared.image(for: item.key)
-            assets.append(asset)
-        }
-        return assets
-    }
-
     static func assets(for balance: [String: UInt64]) -> [Asset] {
         let satoshi = sort(balance)
         var assets: [Asset] = []

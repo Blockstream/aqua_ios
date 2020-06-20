@@ -7,6 +7,14 @@ class Registry: Codable {
     var infos = [String: AssetInfo]()
     var icons: [String: String]!
 
+    var list: [String] {
+        return ["btc"] + Array(infos.keys)
+    }
+
+    var assets: [Asset] {
+        return list.map { asset(for: $0) }
+    }
+
     func refresh(_ session: Session) throws -> [String: AssetInfo]? {
         let data = try session.refreshAssets(params: ["icons": true, "assets": true, "refresh": true])
         var infosData = data?["assets"] as? [String: Any]
@@ -37,5 +45,13 @@ class Registry: Codable {
             return UIImage(base64: icon)
         }
         return UIImage(named: "default_asset_icon")
+    }
+
+    func asset(for key: String) -> Asset {
+        var asset = Asset()
+        asset.tag = key
+        asset.info = Registry.shared.info(for: key)
+        asset.icon = Registry.shared.image(for: key)
+        return asset
     }
 }
