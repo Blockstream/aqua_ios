@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 extension UISearchBar {
-    
+
     func appearance() {
         barStyle = .default
         isTranslucent = true
