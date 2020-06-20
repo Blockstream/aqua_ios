@@ -119,6 +119,7 @@ extension SelectAssetViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let asset = assets[indexPath.row]
+        self.searchController.isActive = false
         switch flow {
         case .send:
             performSegue(withIdentifier: "select_send", sender: asset)

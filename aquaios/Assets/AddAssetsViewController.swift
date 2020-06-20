@@ -51,11 +51,13 @@ class AddAssetsViewController: BaseViewController {
     }
 
     @IBAction override func dismissTapped(_ sender: Any) {
+        self.searchController.isActive = false
         dismissModal(animated: true)
     }
 
     @IBAction func saveTapped(_ sender: Any) {
         UserDefaults.standard.set(self.pinnedAssets, forKey: Constants.Keys.pinnedAssets)
+        self.searchController.isActive = false
         dismissModal(animated: true)
     }
 
