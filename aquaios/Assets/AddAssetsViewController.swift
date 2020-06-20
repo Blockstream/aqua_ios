@@ -7,15 +7,14 @@ class AddAssetsViewController: BaseViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
-    private var assets: [Asset] = []
-    private var filteredAssets: [Asset] = []
+    private var assets = [Asset]()
     private var pinnedAssets = [String]()
     private var searchController: AquaSearchController?
     private var showSearchResults = false
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private var allAssets = {
+        Registry.shared.assets.sort()
+    }()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,12 +53,9 @@ class AddAssetsViewController: BaseViewController {
     }
 
     func reloadData() {
-        self.assets = AquaService.allAssets()
-            .filter({ $0.icon != nil })
-            .sorted(by: { $0.name ?? "" < $1.name ?? "" })
+        self.assets = allAssets.filter({ $0.icon != nil })
         self.pinnedAssets = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
         self.tableView.reloadData()
-
     }
 
     @IBAction override func dismissTapped(_ sender: Any) {
@@ -69,21 +65,19 @@ class AddAssetsViewController: BaseViewController {
     @IBAction func saveTapped(_ sender: Any) {
         UserDefaults.standard.set(self.pinnedAssets, forKey: Constants.Keys.pinnedAssets)
         dismissModal(animated: true)
-        }
+    }
 
     @objc func switchChanged(sender: UISwitch) {
         let row = sender.tag
         let tappedAsset = assets[row]
-        if tappedAsset.selectable {
-            if !pinnedAssets.contains(tappedAsset.info!.assetId) && sender.isOn {
-                pinnedAssets.append(tappedAsset.info!.assetId)
-            } else {
-                let index = pinnedAssets.firstIndex(of: tappedAsset.info!.assetId)!
-                pinnedAssets.remove(at: index)
+        if sender.isOn {
+            if !pinnedAssets.contains(tappedAsset.tag) {
+                pinnedAssets.append(tappedAsset.tag)
             }
+        } else {
+            pinnedAssets.removeAll(where: { $0 == tappedAsset.tag })
         }
     }
-
 }
 
 extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -101,11 +95,7 @@ extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if showSearchResults {
-            return filteredAssets.count
-        } else {
-            return assets.count
-        }
+        return assets.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,7 +103,8 @@ extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "AddAssetCell") as? AddAssetCell {
             cell.configure(with: asset)
             cell.enableSwitch.tag = indexPath.row
-            cell.enableSwitch.isOn = self.pinnedAssets.contains(asset.info?.assetId ?? "")
+            cell.enableSwitch.isEnabled = asset.selectable
+            cell.enableSwitch.isOn = !asset.selectable || self.pinnedAssets.contains(asset.tag ?? "")
             cell.enableSwitch.addTarget(self, action: #selector(switchChanged(sender:)), for: .valueChanged)
             return cell
         }
@@ -121,27 +112,17 @@ extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension AddAssetsViewController: AquaSearchDelegate {
-    func didTapSearch() {
-    }
-
-    func didStartSearch() {
-    }
-
-    func didTapCancel() {
-    }
-
-    func didChangeSearchTet() {
-    }
-}
-
 extension AddAssetsViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        filteredAssets = assets.filter({ (asset: Asset) -> Bool in
-            if let name = asset.name, let searchString = searchController.searchBar.text {
-                return name.range(of: searchString) != nil
-            }
-            return true
-        })
+        if let searchText = searchController.searchBar.text,
+                !searchText.isEmpty {
+            assets = allAssets.filter {
+                $0.tag.contains(searchText) ||
+                ($0.name?.contains(searchText) ?? false) ||
+                ($0.ticker?.contains(searchText) ?? false) }
+        } else {
+            assets = allAssets.filter({ $0.icon != nil })
+        }
+        tableView.reloadData()
     }
 }
