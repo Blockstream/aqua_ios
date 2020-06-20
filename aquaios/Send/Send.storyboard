@@ -693,7 +693,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nw2-oR-xio">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nw2-oR-xio">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                             </tableView>
@@ -841,7 +841,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="K3V-hj-l69"/>
-        <segue reference="vIV-aw-Uyb"/>
+        <segue reference="Llh-hN-Z5g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow_down" width="9" height="5"/>
