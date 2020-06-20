@@ -20,8 +20,6 @@
 		6D0B6756243FDA7800776289 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0B6755243FDA7800776289 /* WebKit.framework */; };
 		6D1592C82405D0DE00F15BCD /* AddAssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1592C72405D0DE00F15BCD /* AddAssetsViewController.swift */; };
 		6D1592CE2405E7F800F15BCD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1592CD2405E7F800F15BCD /* UIViewController.swift */; };
-		6D1592D024060A5200F15BCD /* AquaSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1592CF24060A5200F15BCD /* AquaSearchBar.swift */; };
-		6D1592D42406DE7400F15BCD /* AquaSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1592D32406DE7400F15BCD /* AquaSearchController.swift */; };
 		6D2513E1246CAE0E005D4EDC /* AssetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2513E0246CAE0E005D4EDC /* AssetInfoViewController.swift */; };
 		6D2551852465E7A1000D4782 /* CreateWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2551842465E7A1000D4782 /* CreateWalletView.swift */; };
 		6D2551872465E7AF000D4782 /* CreateWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2551862465E7AF000D4782 /* CreateWalletView.xib */; };
@@ -103,6 +101,7 @@
 		81D9E4802406A3E1005DD867 /* AquaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E47F2406A3E1005DD867 /* AquaTests.swift */; };
 		81D9E4882406BA9F005DD867 /* Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E4872406BA9F005DD867 /* Registry.swift */; };
 		81D9E48A2406BAEF005DD867 /* AssetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E4892406BAEF005DD867 /* AssetInfo.swift */; };
+		81FDC6EE249E151500E7F6F8 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FDC6ED249E151500E7F6F8 /* UISearchBar.swift */; };
 		DC02C5F53739EDFBFBA12642 /* Pods_aquaios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B8F4D9A4188E7C86615620 /* Pods_aquaios.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,8 +132,6 @@
 		6D0B6755243FDA7800776289 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6D1592C72405D0DE00F15BCD /* AddAssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetsViewController.swift; sourceTree = "<group>"; };
 		6D1592CD2405E7F800F15BCD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		6D1592CF24060A5200F15BCD /* AquaSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaSearchBar.swift; sourceTree = "<group>"; };
-		6D1592D32406DE7400F15BCD /* AquaSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaSearchController.swift; sourceTree = "<group>"; };
 		6D2513E0246CAE0E005D4EDC /* AssetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetInfoViewController.swift; sourceTree = "<group>"; };
 		6D2551842465E7A1000D4782 /* CreateWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletView.swift; sourceTree = "<group>"; };
 		6D2551862465E7AF000D4782 /* CreateWalletView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateWalletView.xib; sourceTree = "<group>"; };
@@ -220,6 +217,7 @@
 		81D9E4812406A3E1005DD867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D9E4872406BA9F005DD867 /* Registry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registry.swift; sourceTree = "<group>"; };
 		81D9E4892406BAEF005DD867 /* AssetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetInfo.swift; sourceTree = "<group>"; };
+		81FDC6ED249E151500E7F6F8 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		A7B8F4D9A4188E7C86615620 /* Pods_aquaios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aquaios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -456,8 +454,6 @@
 			children = (
 				6DF148222460F9CC00F30DFB /* DGElasticPullToRefresh */,
 				6DCF98E424774DF500737B42 /* Constants.swift */,
-				6D1592CF24060A5200F15BCD /* AquaSearchBar.swift */,
-				6D1592D32406DE7400F15BCD /* AquaSearchController.swift */,
 				6DD7273F2404481A005D982D /* AquaTabBarController.swift */,
 				6DB9FCE824186B0500E266DB /* BaseViewController.swift */,
 				812A12312448AA7100129EDE /* DropAlert.swift */,
@@ -475,6 +471,7 @@
 				6D700BB3240D678D00A95074 /* UIView.swift */,
 				6DD8D979243BF4C100A6F560 /* UIImage.swift */,
 				6DD676482447D0D800A5651B /* UIButton.swift */,
+				81FDC6ED249E151500E7F6F8 /* UISearchBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -791,7 +788,6 @@
 				6D1592CE2405E7F800F15BCD /* UIViewController.swift in Sources */,
 				6DA69A382410803C000F626E /* SelectAssetViewController.swift in Sources */,
 				6D4A4C4924045CBE0002BA93 /* BuyViewController.swift in Sources */,
-				6D1592D024060A5200F15BCD /* AquaSearchBar.swift in Sources */,
 				6D1592C82405D0DE00F15BCD /* AddAssetsViewController.swift in Sources */,
 				81851993249C84EF002EDEB5 /* LoginViewController.swift in Sources */,
 				6DF148212460EEB400F30DFB /* RadialGradient.swift in Sources */,
@@ -806,10 +802,10 @@
 				6DD8D97A243BF4C100A6F560 /* UIImage.swift in Sources */,
 				6DD727402404481A005D982D /* AquaTabBarController.swift in Sources */,
 				6D2513E1246CAE0E005D4EDC /* AssetInfoViewController.swift in Sources */,
+				81FDC6EE249E151500E7F6F8 /* UISearchBar.swift in Sources */,
 				6DA69A2A240F29FE000F626E /* ReceiveViewController.swift in Sources */,
 				6DF148282460F9CC00F30DFB /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				818439F9246ACCDC006BF3BF /* Bitcoin.swift in Sources */,
-				6D1592D42406DE7400F15BCD /* AquaSearchController.swift in Sources */,
 				6D4A4C4B24045CCF0002BA93 /* SettingsViewController.swift in Sources */,
 				6D4C9A302433DE22003EF3DE /* SlidingButton.swift in Sources */,
 				812A12322448AA7100129EDE /* DropAlert.swift in Sources */,

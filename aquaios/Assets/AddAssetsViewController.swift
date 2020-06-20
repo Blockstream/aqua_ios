@@ -9,8 +9,7 @@ class AddAssetsViewController: BaseViewController {
 
     private var assets = [Asset]()
     private var pinnedAssets = [String]()
-    private var searchController: AquaSearchController?
-    private var showSearchResults = false
+    private let searchController = UISearchController(searchResultsController: nil)
 
     private var allAssets = {
         Registry.shared.assets.sort()
@@ -39,17 +38,10 @@ class AddAssetsViewController: BaseViewController {
     }
 
     func configureSearch() {
-        searchController = AquaSearchController(searchResultsController: nil, delegate: self)
-        if let searchController = searchController {
-            searchController.configureBar(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48),
-                                          placeholder: "Search assets...",
-                                          font: UIFont.systemFont(ofSize: 18, weight: .medium),
-                                          textColor: .auroMetalSaurus,
-                                          tintColor: .aquaBackgroundBlue)
-            searchController.searchResultsUpdater = self
-            searchController.obscuresBackgroundDuringPresentation = false
-            tableView.tableHeaderView = searchController.aquaSearchBar
-        }
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.appearance()
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     func reloadData() {
