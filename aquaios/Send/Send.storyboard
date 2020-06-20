@@ -736,8 +736,8 @@
                                     <constraint firstAttribute="height" constant="28" id="zXP-oq-HZE"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
-                                <state key="selected" image="close_selected"/>
-                                <state key="highlighted" image="close_selected"/>
+                                <state key="selected" image="close"/>
+                                <state key="highlighted" image="close"/>
                                 <connections>
                                     <action selector="dismissButtonTapped:" destination="ags-Tq-plb" eventType="touchUpInside" id="yGp-nX-9jr"/>
                                 </connections>
@@ -848,7 +848,6 @@
         <image name="arrow_right" width="20" height="16"/>
         <image name="clipboard" width="18" height="24"/>
         <image name="close" width="14" height="14"/>
-        <image name="close_selected" width="128" height="128"/>
         <image name="erase" width="20" height="15"/>
         <image name="qrboundary" width="198" height="198"/>
         <image name="qrcode" width="24" height="24"/>

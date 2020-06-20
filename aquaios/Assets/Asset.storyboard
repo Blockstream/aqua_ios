@@ -333,8 +333,8 @@
                                     <constraint firstAttribute="height" constant="28" id="ZNJ-lB-3uY"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
-                                <state key="selected" image="close_selected"/>
-                                <state key="highlighted" image="close_selected"/>
+                                <state key="selected" image="close"/>
+                                <state key="highlighted" image="close"/>
                                 <connections>
                                     <action selector="dismissTapped:" destination="OoX-Ts-uUT" eventType="touchUpInside" id="rP7-bR-UVB"/>
                                 </connections>
@@ -438,7 +438,6 @@
         <image name="add_asset" width="22" height="22"/>
         <image name="add_asset_selected" width="28" height="28"/>
         <image name="close" width="14" height="14"/>
-        <image name="close_selected" width="28" height="28"/>
         <image name="curlyarrow" width="23" height="43"/>
         <image name="homeqr" width="30" height="29"/>
         <image name="logo" width="117" height="30"/>
