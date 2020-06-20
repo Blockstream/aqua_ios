@@ -1,12 +1,17 @@
 import UIKit
 import PromiseKit
 
+protocol AssetsProtocol: class {
+    func update()
+}
+
 class AddAssetsViewController: BaseViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
+    weak var delegate: AssetsProtocol?
     private var assets = [Asset]()
     private var pinnedAssets = [String]()
     private let searchController = UISearchController(searchResultsController: nil)
@@ -57,7 +62,8 @@ class AddAssetsViewController: BaseViewController {
 
     @IBAction func saveTapped(_ sender: Any) {
         UserDefaults.standard.set(self.pinnedAssets, forKey: Constants.Keys.pinnedAssets)
-        self.searchController.isActive = false
+        searchController.isActive = false
+        delegate?.update()
         dismissModal(animated: true)
     }
 

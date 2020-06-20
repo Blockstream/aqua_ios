@@ -130,8 +130,9 @@ class AssetListViewController: BaseViewController {
             dest.presentationController?.delegate = self
         } else if let dest = segue.destination as? AssetDetailViewController {
             dest.asset = sender as? Asset
+        } else if let dest = segue.destination as? AddAssetsViewController {
+            dest.delegate = self
         }
-
     }
 }
 
@@ -178,5 +179,12 @@ extension AssetListViewController: UIAdaptivePresentationControllerDelegate {
 
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         configure()
+    }
+}
+
+extension AssetListViewController: AssetsProtocol {
+
+    func update() {
+        reloadData()
     }
 }
