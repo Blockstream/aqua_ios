@@ -7,14 +7,12 @@ class SelectAssetViewController: BaseViewController {
 
     var flow: TxFlow!
     var addressee: Addressee?
-    private var assets: [Asset] = []
-    private var filteredAssets: [Asset] = []
-    private var searchController: AquaSearchController?
-    private var showSearchResults = false
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private var assets = [Asset]()
+    private var sendAssets = [Asset]()
+    private var receivedAssets = [Asset]()
+    private var balance = [String: UInt64]()
+    private let searchController = UISearchController(searchResultsController: nil)
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,17 +39,10 @@ class SelectAssetViewController: BaseViewController {
     }
 
     func configureSearch() {
-        searchController = AquaSearchController(searchResultsController: nil, delegate: self)
-        if let searchController = searchController {
-            searchController.configureBar(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48),
-                                          placeholder: "Search assets...",
-                                          font: UIFont.systemFont(ofSize: 18, weight: .medium),
-                                          textColor: .auroMetalSaurus,
-                                          tintColor: .aquaBackgroundBlue)
-            searchController.searchResultsUpdater = self
-            searchController.obscuresBackgroundDuringPresentation = false
-            tableView.tableHeaderView = searchController.aquaSearchBar
-        }
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.appearance()
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     func balancePromise(_ sharedNetwork: NetworkSession) -> Promise<[String: UInt64]> {
@@ -70,11 +61,17 @@ class SelectAssetViewController: BaseViewController {
         }.ensure {
             self.stopAnimating()
         }.done { bitcoin, liquid in
-            var balance = liquid
-            if self.flow == TxFlow.receive {
-                balance = bitcoin.merging(liquid) { (_, new) in new }
+            if self.flow! == .send {
+                self.sendAssets = AquaService.assets(for: liquid).sort()
+                self.assets = self.sendAssets
+            } else {
+                let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
+                let all = Registry.shared.list.map { ($0, UInt64(0)) }
+                var list = bitcoin.merging(liquid) { (_, new) in new }
+                list = list.merging(all) { (old, _) in old }
+                self.receivedAssets = AquaService.assets(for: list).sort()
+                self.assets = self.receivedAssets.filter { $0.isBTC || $0.isLBTC || $0.sats ?? 0 > 0 || pinned.contains($0.tag) }
             }
-            self.assets = AquaService.assets(for: balance)
             self.tableView.reloadData()
         }.catch { _ in
             let alert = UIAlertController(title: "Error", message: "Failure on fetch balance", preferredStyle: .alert)
@@ -133,27 +130,21 @@ extension SelectAssetViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension SelectAssetViewController: AquaSearchDelegate {
-    func didTapSearch() {
-    }
-
-    func didStartSearch() {
-    }
-
-    func didTapCancel() {
-    }
-
-    func didChangeSearchTet() {
-    }
-}
-
 extension SelectAssetViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        filteredAssets = assets.filter({ (asset: Asset) -> Bool in
-            if let name = asset.name, let searchString = searchController.searchBar.text {
-                return name.range(of: searchString) != nil
-            }
-            return true
-        })
+        let list = flow! == .receive ? receivedAssets : sendAssets
+        if let searchText = searchController.searchBar.text,
+                !searchText.isEmpty {
+            assets = list.filter {
+                $0.tag.contains(searchText) ||
+                ($0.name?.contains(searchText) ?? false) ||
+                ($0.ticker?.contains(searchText) ?? false) }
+        } else if flow! == .send {
+            assets = list
+        } else {
+            let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
+            assets = self.receivedAssets.filter { $0.isBTC || $0.isLBTC || $0.sats ?? 0 > 0 || pinned.contains($0.tag) }
+        }
+        tableView.reloadData()
     }
 }
