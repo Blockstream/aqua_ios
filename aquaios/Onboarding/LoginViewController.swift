@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
 
     func configure() {
         let gl = CAGradientLayer()
-        gl.colors = [UIColor.topaz.cgColor, UIColor.teal.cgColor]
+        gl.colors = [UIColor.topaz.cgColor, UIColor.deepTeal.cgColor]
         gl.locations = [0.0, 1.0]
         gl.frame = wallpaper.frame
         wallpaper.layer.insertSublayer(gl, at: 0)
