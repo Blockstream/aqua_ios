@@ -12,6 +12,8 @@ class AddAssetsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
 
     weak var delegate: AssetsProtocol?
+    var balance = [Asset]()
+
     private var assets = [Asset]()
     private var pinnedAssets = [String]()
     private let searchController = UISearchController(searchResultsController: nil)
@@ -103,8 +105,9 @@ extension AddAssetsViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "AddAssetCell") as? AddAssetCell {
             cell.configure(with: asset)
             cell.enableSwitch.tag = indexPath.row
-            cell.enableSwitch.isEnabled = asset.selectable
-            cell.enableSwitch.isOn = !asset.selectable || self.pinnedAssets.contains(asset.tag ?? "")
+            let isBalance = balance.filter { $0.tag == asset.tag}.first != nil
+            cell.enableSwitch.isEnabled = asset.selectable && !isBalance
+            cell.enableSwitch.isOn = !asset.selectable || isBalance || self.pinnedAssets.contains(asset.tag ?? "")
             cell.enableSwitch.addTarget(self, action: #selector(switchChanged(sender:)), for: .valueChanged)
             return cell
         }

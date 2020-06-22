@@ -132,6 +132,7 @@ class AssetListViewController: BaseViewController {
             dest.asset = sender as? Asset
         } else if let dest = segue.destination as? AddAssetsViewController {
             dest.delegate = self
+            dest.balance = assets
         }
     }
 }
