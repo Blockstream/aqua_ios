@@ -16,6 +16,7 @@ class ReceiveViewController: BaseViewController {
     @IBOutlet weak var feedbackView: UIView!
 
     var asset: Asset?
+    var showCloseButton = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,9 @@ class ReceiveViewController: BaseViewController {
     func configure() {
         assetView.configure(with: asset!, bgColor: .lighterBlueGray, radius: 18, hiddenBalance: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
-
+        if showCloseButton {
+            showCloseButton(on: .left)
+        }
         title = String(format: "Receive")
         tabBarController?.tabBar.isHidden = !isModalPresenting
         feedbackView.alpha = 0.0

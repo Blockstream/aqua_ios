@@ -129,6 +129,7 @@ class AssetDetailViewController: BaseViewController {
             dest.asset = sender as? Asset
         } else if let dest = nav.topViewController as? ReceiveViewController {
             dest.asset = sender as? Asset
+            dest.showCloseButton = true
         } else if let dest = nav.topViewController as? AssetInfoViewController {
             dest.asset = sender as? Asset
         }
