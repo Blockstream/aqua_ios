@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tx-->
+        <!--Transactions View Controller-->
         <scene sceneID="4VF-Lb-vKU">
             <objects>
                 <viewController storyboardIdentifier="TransactionsViewController" id="Uwo-Ff-k4y" customClass="TransactionsViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vg3-Oa-BlT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tx" image="tx_icon" id="obX-ab-dI3"/>
+                    <tabBarItem key="tabBarItem" title="" image="tx_icon" id="obX-ab-dI3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="xlV-FQ-Haf" id="YlA-aw-Ush"/>

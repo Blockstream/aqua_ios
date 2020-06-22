@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="ExK-LT-78j">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="ji8-a7-ckM" customClass="SettingsViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H5L-kg-hLt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings_icon" id="wsL-3u-rsT"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings_icon" id="wsL-3u-rsT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="removeLabel" destination="Xub-be-fmy" id="i7A-Cy-Tmp"/>

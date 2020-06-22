@@ -57,16 +57,19 @@
             </objects>
             <point key="canvasLocation" x="-836" y="139"/>
         </scene>
-        <!--Aqua Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="gJS-Ij-iMP">
             <objects>
-                <tabBarController storyboardIdentifier="AquaTabBarController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fzK-DR-MUf" customClass="AquaTabBarController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fzK-DR-MUf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BCE-aN-v1m"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ijv-5N-DKX">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Ijv-5N-DKX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                        <color key="tintColor" name="auroMetalSaurus"/>
+                        <color key="barTintColor" name="aquaBackgroundBlue"/>
+                        <color key="selectedImageTintColor" name="topaz"/>
                     </tabBar>
                     <connections>
                         <segue destination="lbK-LE-9MI" kind="relationship" relationship="viewControllers" id="yNP-rK-3HB"/>
@@ -206,8 +209,17 @@
     </scenes>
     <resources>
         <image name="splashlogo" width="148" height="124"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auroMetalSaurus">
+            <color red="0.41960784313725491" green="0.45098039215686275" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="tiffanyBlue">
             <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="topaz">
+            <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

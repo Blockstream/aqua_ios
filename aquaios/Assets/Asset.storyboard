@@ -111,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xfc-v9-VBA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wallet" image="wallet_icon" id="s92-bJ-oXx"/>
+                    <tabBarItem key="tabBarItem" title="" image="wallet_icon" id="s92-bJ-oXx"/>
                     <navigationItem key="navigationItem" title="Aqua" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="t5a-HI-Sa8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
