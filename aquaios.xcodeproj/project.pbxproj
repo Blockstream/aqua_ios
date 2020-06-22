@@ -65,7 +65,6 @@
 		6DC69E7E23E12F0600DCD7CB /* GreenAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC69E7D23E12F0500DCD7CB /* GreenAddress.swift */; };
 		6DCF98E524774DF500737B42 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF98E424774DF500737B42 /* Constants.swift */; };
 		6DD676492447D0D800A5651B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD676482447D0D800A5651B /* UIButton.swift */; };
-		6DD727402404481A005D982D /* AquaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD7273F2404481A005D982D /* AquaTabBarController.swift */; };
 		6DD7274624044A3A005D982D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD7274524044A3A005D982D /* UIColor.swift */; };
 		6DD8D977243BD34100A6F560 /* ProgressIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8D975243BD34100A6F560 /* ProgressIndicator.xib */; };
 		6DD8D978243BD34100A6F560 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD8D976243BD34100A6F560 /* ProgressIndicator.swift */; };
@@ -179,7 +178,6 @@
 		6DC69E7D23E12F0500DCD7CB /* GreenAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GreenAddress.swift; path = "gdk-iphone/share/gdk/GreenAddress.swift"; sourceTree = SOURCE_ROOT; };
 		6DCF98E424774DF500737B42 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6DD676482447D0D800A5651B /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		6DD7273F2404481A005D982D /* AquaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaTabBarController.swift; sourceTree = "<group>"; };
 		6DD7274524044A3A005D982D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		6DD8D975243BD34100A6F560 /* ProgressIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressIndicator.xib; sourceTree = "<group>"; };
 		6DD8D976243BD34100A6F560 /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
@@ -454,7 +452,6 @@
 			children = (
 				6DF148222460F9CC00F30DFB /* DGElasticPullToRefresh */,
 				6DCF98E424774DF500737B42 /* Constants.swift */,
-				6DD7273F2404481A005D982D /* AquaTabBarController.swift */,
 				6DB9FCE824186B0500E266DB /* BaseViewController.swift */,
 				812A12312448AA7100129EDE /* DropAlert.swift */,
 				6DD8D976243BD34100A6F560 /* ProgressIndicator.swift */,
@@ -800,7 +797,6 @@
 				6D3103E92425819800CA17CF /* AssetDetailViewController.swift in Sources */,
 				81A6ABD424741BC200599556 /* Fiat.swift in Sources */,
 				6DD8D97A243BF4C100A6F560 /* UIImage.swift in Sources */,
-				6DD727402404481A005D982D /* AquaTabBarController.swift in Sources */,
 				6D2513E1246CAE0E005D4EDC /* AssetInfoViewController.swift in Sources */,
 				81FDC6EE249E151500E7F6F8 /* UISearchBar.swift in Sources */,
 				6DA69A2A240F29FE000F626E /* ReceiveViewController.swift in Sources */,
