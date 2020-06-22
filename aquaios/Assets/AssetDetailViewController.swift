@@ -55,7 +55,7 @@ class AssetDetailViewController: BaseViewController {
             balanceLabel.text = "\(asset.string() ?? "")"
             tickerLabel.text = asset.ticker ?? ""
             fiatLabel.text = ""
-            if asset.isBTC || asset.isLBTC {
+            if !asset.selectable {
                 let fiat = Fiat.from(asset.sats ?? 0)
                 fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
             }

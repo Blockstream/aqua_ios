@@ -14,10 +14,6 @@ struct Asset {
         return tag == Liquid.shared.policyAsset
     }
 
-    var isUSDt: Bool {
-        return tag == "ce091c998b83c78bb71a632313ba3760f1763d9cfcffae02258ffa9865a37bd2"
-    }
-
     var name: String? {
         return info?.name
     }
@@ -27,7 +23,7 @@ struct Asset {
     }
 
     var selectable: Bool {
-            return !isBTC && !isLBTC && !isUSDt
+            return !isBTC && !isLBTC
         }
 
     func string() -> String? {

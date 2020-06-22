@@ -49,7 +49,7 @@ class SendReviewViewController: BaseViewController {
         let amount = tx.sendAll ? "All" : asset.string(addressee.satoshi)
         amountLabel.text = "\(amount ?? "") \(asset.ticker ?? "")"
         addressLabel.text = addressee.address
-        if asset.isBTC || asset.isLBTC {
+        if !asset.selectable {
             let fiat = Fiat.from(addressee.satoshi)
             fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }
