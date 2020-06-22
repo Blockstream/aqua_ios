@@ -11,7 +11,6 @@ class SelectAssetViewController: BaseViewController {
     private var assets = [Asset]()
     private var sendAssets = [Asset]()
     private var receivedAssets = [Asset]()
-    private var balance = [String: UInt64]()
     private let searchController = UISearchController(searchResultsController: nil)
 
     override func viewWillAppear(_ animated: Bool) {
@@ -66,11 +65,11 @@ class SelectAssetViewController: BaseViewController {
                 self.assets = self.sendAssets
             } else {
                 let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
-                let all = Registry.shared.list.map { ($0, UInt64(0)) }
+                let pinnedAssets = pinned.map { ($0, UInt64(0)) }
                 var list = bitcoin.merging(liquid) { (_, new) in new }
-                list = list.merging(all) { (old, _) in old }
+                list = list.merging(pinnedAssets) { (old, _) in old }
                 self.receivedAssets = AquaService.assets(for: list).sort()
-                self.assets = self.receivedAssets.filter { $0.isBTC || $0.isLBTC || $0.sats ?? 0 > 0 || pinned.contains($0.tag) }
+                self.assets = self.receivedAssets
             }
             self.tableView.reloadData()
         }.catch { _ in
@@ -111,6 +110,9 @@ extension SelectAssetViewController: UITableViewDelegate, UITableViewDataSource 
         let asset = assets[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetCell") as? AssetCell {
             cell.configure(with: asset)
+            if flow! == .receive {
+                cell.hideAmounts()
+            }
             return cell
         }
         return UITableViewCell()
@@ -133,18 +135,17 @@ extension SelectAssetViewController: UITableViewDelegate, UITableViewDataSource 
 
 extension SelectAssetViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        let list = flow! == .receive ? receivedAssets : sendAssets
         if let searchText = searchController.searchBar.text,
                 !searchText.isEmpty {
+            let list = flow! == .receive ? Registry.shared.assets : sendAssets
             assets = list.filter {
                 $0.tag.contains(searchText) ||
                 ($0.name?.contains(searchText) ?? false) ||
                 ($0.ticker?.contains(searchText) ?? false) }
         } else if flow! == .send {
-            assets = list
+            assets = self.sendAssets
         } else {
-            let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
-            assets = self.receivedAssets.filter { $0.isBTC || $0.isLBTC || $0.sats ?? 0 > 0 || pinned.contains($0.tag) }
+            assets = self.receivedAssets
         }
         tableView.reloadData()
     }

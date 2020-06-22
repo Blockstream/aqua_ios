@@ -22,4 +22,9 @@ class AssetCell: UITableViewCell {
             fiatValueLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }
     }
+
+    func hideAmounts() {
+        balanceLabel.isHidden = true
+        fiatValueLabel.isHidden = true
+    }
 }
