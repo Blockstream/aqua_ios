@@ -20,7 +20,7 @@
         <!--Aqua-->
         <scene sceneID="XXD-TJ-Lml">
             <objects>
-                <viewController storyboardIdentifier="AssetListViewController" title="Aqua" modalPresentationStyle="fullScreen" id="4Oy-Ab-8Uq" customClass="AssetListViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssetListViewController" title="Aqua" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="4Oy-Ab-8Uq" customClass="AssetListViewController" customModule="Aqua" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yv6-ya-X0D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
