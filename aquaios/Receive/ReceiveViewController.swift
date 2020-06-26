@@ -59,8 +59,8 @@ class ReceiveViewController: BaseViewController {
             self.addressLabel.text = address
             self.qrImageView.image = QRImageGenerator.imageForTextWhite(text: address, frame: self.qrImageView.frame)
         }.catch { _ in
-            let alert = UIAlertController(title: "Error", message: "Address Generation Failure", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.reloadData() }))
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString("id_address_generation_failed", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.reloadData() }))
             self.present(alert, animated: true)
         }
     }

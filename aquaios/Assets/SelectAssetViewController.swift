@@ -73,8 +73,8 @@ class SelectAssetViewController: BaseViewController {
             }
             self.tableView.reloadData()
         }.catch { _ in
-            let alert = UIAlertController(title: "Error", message: "Failure on fetch balance", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.reloadData() }))
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: "Failure on fetch balance", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.reloadData() }))
             self.present(alert, animated: true)
         }
     }

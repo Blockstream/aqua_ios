@@ -5,9 +5,9 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var removeLabel: UILabel!
 
-    var labels = ["Contact support",
-                  "View my recovery phrase",
-                  "Device authorization"]
+    var labels = [NSLocalizedString("id_support", comment: ""),
+                  NSLocalizedString("id_view_my_recovery_phrase", comment: ""),
+                  NSLocalizedString("id_device_authorization", comment: "")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class SettingsViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = NSLocalizedString("Settings", comment: "")
+        navigationItem.title = NSLocalizedString("id_settings", comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
@@ -32,7 +32,7 @@ class SettingsViewController: BaseViewController {
     }
 
     @objc func removeWallet(_ sender: Any?) {
-        let alert = UIAlertController(title: "Warning", message: "Are you sure to remove your wallet? The operation is not reversible and the app will be closed.", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_doublecheck_that_you_have_a", comment: ""), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
             try? Mnemonic.delete()
@@ -42,11 +42,11 @@ class SettingsViewController: BaseViewController {
     }
 
     func enableSafeMnemonic() {
-        let alert = UIAlertController(title: "Warning", message: "Enable access protection?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_do_you_want_to_enable_s", comment: ""), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
             guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-                return self.showError("Invalid mnemonic")
+                return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
             }
             try? Mnemonic.delete()
             try? Mnemonic.write(mnemonic, safe: true)
@@ -55,11 +55,11 @@ class SettingsViewController: BaseViewController {
     }
 
     func disableSafeMnemonic() {
-        let alert = UIAlertController(title: "Warning", message: "Disable access protection?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_do_you_want_to_disable_s", comment: ""), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
             guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-                return self.showError("Invalid mnemonic")
+                return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
             }
             try? Mnemonic.delete()
             try? Mnemonic.write(mnemonic, safe: false)

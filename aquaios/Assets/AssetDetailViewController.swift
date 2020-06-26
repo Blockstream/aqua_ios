@@ -98,8 +98,8 @@ class AssetDetailViewController: BaseViewController {
             let fiat = Fiat.from(self.asset?.sats ?? 0)
             self.fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }.catch { _ in
-            let alert = UIAlertController(title: "Error", message: "No balance found", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.reloadData() }))
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: "No balance found", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.reloadData() }))
             self.present(alert, animated: true)
         }
     }
@@ -119,8 +119,8 @@ class AssetDetailViewController: BaseViewController {
             self.tableView.isHidden = self.transactions.count == 0
             self.tableView.reloadData()
         }.catch { _ in
-            let alert = UIAlertController(title: "Error", message: "No Transactions Found", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.reloadData() }))
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: "No Transactions Found", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.reloadData() }))
             self.present(alert, animated: true)
         }
     }

@@ -20,6 +20,7 @@ class SendAddressViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.title = NSLocalizedString("id_send_to", comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.largeTitleDisplayMode = .never
         configureView()
@@ -37,7 +38,7 @@ class SendAddressViewController: BaseViewController {
             let sharedNetwork = asset?.isBTC ?? false ? Bitcoin.shared : Liquid.shared
             Guarantee().compactMap(on: bgq) {_ -> RawTransaction in
                 let tx = try sharedNetwork.createTransaction(address)
-                if let error = tx.error, !error.isEmpty && error != "id_invalid_amount" {
+                if let error = tx.error, !error.isEmpty && error != NSLocalizedString("id_invalid_amount", comment: "") {
                     throw TransactionError.generic(error)
                 }
                 return tx
@@ -79,7 +80,7 @@ class SendAddressViewController: BaseViewController {
     func createTransactionPromise(_ networkSession: NetworkSession, address: String) -> Promise<RawTransaction> {
         return Promise<RawTransaction> { seal in
             let tx = try networkSession.createTransaction(address)
-            if let error = tx.error, error == "id_invalid_address" {
+            if let error = tx.error, error == NSLocalizedString("id_invalid_address", comment: "") {
                 seal.reject(TransactionError.generic(error))
             }
             seal.fulfill(tx)
@@ -99,7 +100,7 @@ class SendAddressViewController: BaseViewController {
                 return self.createTransactionPromise(Liquid.shared, address: address)
             }
         }.done { tx in
-            if let error = tx.error, !error.isEmpty && error != "id_invalid_amount" {
+            if let error = tx.error, !error.isEmpty && error != NSLocalizedString("id_invalid_amount", comment: "") {
                 throw TransactionError.generic(error)
             }
             var addressee = tx.addressees.first
@@ -110,20 +111,20 @@ class SendAddressViewController: BaseViewController {
                     addressee?.assetTag = inputTag
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
-                    self.showError("Invalid Liquid address for Bitcoin") // how to hit this error?
+                    self.showError(NSLocalizedString("id_liquid_addresses_are_invalid", comment: ""))
                 }
             } else if network == Liquid.networkName {
                 if inputTag != "btc" && (txTag != nil && txTag != "btc") {
                     if inputTag == txTag {
                         self.performSegue(withIdentifier: "send_details", sender: addressee)
                     } else {
-                        self.showError("Assets don't match")
+                        self.showError(NSLocalizedString("id_assets_dont_match", comment: ""))
                     }
                 } else if inputTag != "btc" && txTag == nil {
                     addressee?.assetTag = inputTag
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
-                    self.showError("Invalid Bitcoin address for Liquid")
+                    self.showError(NSLocalizedString("id_bitcoin_addresses_are_invalid", comment: ""))
                 }
             }
         }.catch { err in

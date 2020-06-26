@@ -15,7 +15,7 @@ class TransactionsViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = NSLocalizedString("Transactions", comment: "")
+        navigationItem.title = NSLocalizedString(NSLocalizedString("id_transactions", comment: ""), comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
         if hasWallet {
             reloadData()

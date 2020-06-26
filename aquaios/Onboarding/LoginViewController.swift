@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
         super.viewDidAppear(animated)
 
         if !Mnemonic.supportsPasscodeAuthentication() {
-            showError("Enable passcode in iPhone settings to continue")
+            showError(NSLocalizedString("id_enable_passcode_in_ios_settings", comment: ""))
             return
         }
         if hasWallet {
@@ -38,8 +38,8 @@ class LoginViewController: UIViewController {
 
     func load() {
         guard let mnemonic = try? Mnemonic.read() else {
-            let alert = UIAlertController(title: "Error", message: "Access failure", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.load() }))
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString("id_authentication_failed", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.load() }))
             self.present(alert, animated: true)
             return
         }
@@ -76,8 +76,8 @@ class LoginViewController: UIViewController {
         }.done { _ in
             self.performSegue(withIdentifier: "next", sender: nil)
         }.catch { _ in
-            let alert = UIAlertController(title: "Error", message: "Login failure.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.login(mnemonic) }))
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString("id_login_failed", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.login(mnemonic) }))
             self.present(alert, animated: true)
         }
     }
