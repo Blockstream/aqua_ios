@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -388,6 +388,7 @@
                     <connections>
                         <outlet property="amountBackgroundView" destination="8UP-Ou-dHX" id="Ufr-c8-KMn"/>
                         <outlet property="amountLabel" destination="v6F-C0-fS2" id="4SI-x8-JSP"/>
+                        <outlet property="amountTitleLabel" destination="wBy-eL-cIb" id="XPp-iC-BJF"/>
                         <outlet property="assetView" destination="eX1-a9-jd9" id="ZqN-mx-nvN"/>
                         <outlet property="continueButton" destination="jdQ-L4-hH7" id="8pR-zT-29j"/>
                         <outlet property="deleteButton" destination="gsd-rv-tWb" id="N3C-j4-EVg"/>
@@ -601,6 +602,7 @@
                         <outlet property="rushFeeButton" destination="xAx-3t-3kO" id="B0O-zR-2NE"/>
                         <outlet property="sendLabel" destination="DY3-BR-a0B" id="i82-uk-RwA"/>
                         <outlet property="slidingButton" destination="pbB-H8-MeL" id="MrT-ts-y1O"/>
+                        <outlet property="toLabel" destination="fg6-W5-7vk" id="Mlt-xd-veF"/>
                         <segue destination="yJX-dI-zrf" kind="show" identifier="success" id="BJ2-wL-3dp"/>
                     </connections>
                 </viewController>
@@ -661,6 +663,7 @@
                     <navigationItem key="navigationItem" id="WnF-Ta-rO8"/>
                     <connections>
                         <outlet property="doneButton" destination="RAx-GZ-1NP" id="TgB-RE-D5x"/>
+                        <outlet property="successLabel" destination="W1t-Lr-hXX" id="VTQ-dU-Eax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPK-dC-LCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -839,10 +842,6 @@
             <point key="canvasLocation" x="2190" y="655"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="K3V-hj-l69"/>
-        <segue reference="Llh-hN-Z5g"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow_down" width="9" height="5"/>
         <image name="arrow_right" width="20" height="16"/>
@@ -888,4 +887,8 @@
             <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ghx-RP-A4H"/>
+        <segue reference="jrK-Hx-PgH"/>
+    </inferredMetricsTieBreakers>
 </document>

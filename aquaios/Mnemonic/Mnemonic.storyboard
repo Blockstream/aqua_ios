@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -688,7 +688,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="UUG-f8-nui"/>
                     <connections>
-                        <outlet property="completeButton" destination="MTT-JS-ltT" id="X5H-KO-HX4"/>
+                        <outlet property="completeButton" destination="MTT-JS-ltT" id="WMq-PT-GPz"/>
+                        <outlet property="confirmTitle" destination="dcY-UC-6bF" id="1lg-yI-AY4"/>
                         <outletCollection property="confirmationLabels" destination="o66-6h-Olx" collectionClass="NSMutableArray" id="rDY-uW-G7P"/>
                         <outletCollection property="confirmationLabels" destination="JMJ-tu-ATx" collectionClass="NSMutableArray" id="aX2-cX-IS6"/>
                         <outletCollection property="confirmationLabels" destination="xoz-nS-xI3" collectionClass="NSMutableArray" id="nie-5O-t7y"/>

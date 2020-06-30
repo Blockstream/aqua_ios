@@ -9,6 +9,7 @@ class CreateWalletView: UIView {
 
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var restoreButton: UIButton!
+    @IBOutlet weak var existingWalletLabel: UILabel!
 
     weak var delegate: CreateWalletDelegate?
     static let tag = 0x70726F67726574C0
@@ -35,6 +36,9 @@ class CreateWalletView: UIView {
         createButton.round(radius: 24)
         createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
         restoreButton.addTarget(self, action: #selector(restoreButtonTapped), for: .touchUpInside)
+        createButton.setTitle(NSLocalizedString("id_create_a_new_wallet", comment: ""), for: .normal)
+        restoreButton.setTitle(NSLocalizedString("id_restore_an_aqua_wallet", comment: ""), for: .normal)
+        existingWalletLabel.text = NSLocalizedString("id_already_have_a_wallet", comment: "")
     }
 
     @objc func createButtonTapped() {

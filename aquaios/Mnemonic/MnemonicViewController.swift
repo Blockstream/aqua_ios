@@ -17,16 +17,19 @@ class MnemonicViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         mnemonicBackgroundView.round(radius: 18)
         confirmButton.round(radius: 24)
+        titleLabel.text = NSLocalizedString("id_write_down_your_recovery_phrase", comment: "")
+        messageLabel.text = NSLocalizedString("id_the_12word_recovery_phrase_is", comment: "")
         populateLabels()
+        confirmButton.setTitle("id_confirm_backup", for: .normal)
     }
 
     func populateLabels() {
         if !Mnemonic.supportsPasscodeAuthentication() {
-            showError("Enable passcode in iPhone settings to continue")
+            showError(NSLocalizedString("id_enable_passcode_in_ios_settings", comment: ""))
             return
         }
         guard let mnemonic = try? Mnemonic.read() else {
-            let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: "Access failure", preferredStyle: .alert)
+            let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_authentication_failed", comment: ""), preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("id_back", comment: ""), style: .cancel) { _ in
                 self.dismissModal(animated: true)
             })

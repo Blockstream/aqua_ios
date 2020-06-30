@@ -44,6 +44,9 @@ class ReceiveViewController: BaseViewController {
             button?.setBackgroundColor(color: .teal, for: .highlighted)
         }
         addressBackgroundView.round(radius: 6)
+        copyButton.setTitle(NSLocalizedString("id_copy", comment: ""), for: .normal)
+        setAmountButton.setTitle(NSLocalizedString("id_set_amount", comment: ""), for: .normal)
+        shareButton.setTitle(NSLocalizedString("id_share", comment: ""), for: .normal)
     }
 
     func reloadData() {

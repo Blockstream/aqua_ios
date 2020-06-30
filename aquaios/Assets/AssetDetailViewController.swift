@@ -69,6 +69,8 @@ class AssetDetailViewController: BaseViewController {
         buyButton.round(radius: 24, borderWidth: 2, borderColor: .auroMetalSaurus)
         sendButton.round(radius: 24)
         receiveButton.round(radius: 24)
+        sendButton.setTitle(NSLocalizedString("id_send", comment: ""), for: .normal)
+        receiveButton.setTitle(NSLocalizedString("id_receive", comment: ""), for: .normal)
 
         // Hidden for beta one
         for view in [exchangePromptLabel, curlyArrow, buyButton] {

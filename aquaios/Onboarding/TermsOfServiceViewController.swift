@@ -7,6 +7,7 @@ class TermsOfServiceViewController: BaseViewController {
     @IBOutlet weak var tosWebView: WKWebView!
     @IBOutlet weak var agreementLabel: UIView!
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var acceptTermsLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,8 @@ class TermsOfServiceViewController: BaseViewController {
             tosWebView.load(request)
         }
         navigationController?.setNavigationBarHidden(false, animated: false)
+        acceptTermsLabel.text = NSLocalizedString("id_i_have_read_and_agree_to_the", comment: "")
+        confirmButton.setTitle(NSLocalizedString("id_confirm", comment: ""), for: .normal)
     }
 
     @IBAction func confirmButtonTapped(_ sender: Any) {
@@ -31,7 +34,7 @@ class TermsOfServiceViewController: BaseViewController {
     func register(mnemonic: String) {
         let bgq = DispatchQueue.global(qos: .background)
         firstly {
-            self.startAnimating(message: NSLocalizedString("id_logging_in", comment: ""))
+            self.startAnimating(message: NSLocalizedString("id_creating_wallet", comment: ""))
             return Guarantee()
         }.map(on: bgq) {
             try Liquid.shared.disconnect()

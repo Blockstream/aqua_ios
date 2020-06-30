@@ -5,6 +5,7 @@ import LocalAuthentication
 class AuthenticationViewController: BaseViewController {
 
     @IBOutlet weak var enableButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var authIcon: UIImageView!
     @IBOutlet weak var authLabel: UILabel!
     @IBOutlet weak var authDescriptionLabel: UILabel!
@@ -16,29 +17,32 @@ class AuthenticationViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         enableButton.round(radius: 26.5)
+        enableButton.setTitle(NSLocalizedString("id_enable", comment: ""), for: .normal)
+        skipButton.setTitle(NSLocalizedString("id_skip", comment: ""), for: .normal)
+
         switch authType() {
         case .touchID:
-            authLabel.text = "Enable Touch ID"
-            authDescriptionLabel.text = "Secure your aqua wallet with a simple thumb press"
+            authLabel.text = NSLocalizedString("id_enable_touch_id", comment: "")
+            authDescriptionLabel.text = NSLocalizedString("id_secure_your_aqua_wallet_with_a", comment: "")
             authIcon.image = UIImage(named: "touchid")
         case .faceID:
-            authLabel.text = "Enable Face ID"
-            authDescriptionLabel.text = "The fastest wasy to secure your AQUA wallet"
+            authLabel.text = NSLocalizedString("id_enable_face_id", comment: "")
+            authDescriptionLabel.text = NSLocalizedString("id_the_fastest_way_to_secure_your", comment: "")
             authIcon.image = UIImage(named: "faceid")
         default:
-            authLabel.text = "Enable Passcode"
-            authDescriptionLabel.text = "A quick and easy way to secure your AQUA wallet"
+            authLabel.text = NSLocalizedString("id_enable_passcode", comment: "")
+            authDescriptionLabel.text = NSLocalizedString("id_a_quick_and_easy_way_to_secure", comment: "")
             authIcon.image = UIImage(named: "passcode")
         }
     }
 
     func storeMnemonic(safe: Bool) {
         if !Mnemonic.supportsPasscodeAuthentication() {
-            showError("Enable passcode in iPhone settings to continue")
+            showError(NSLocalizedString("id_enable_passcode_in_ios_settings", comment: ""))
             return
         }
         guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-            return showError("Invalid mnemonic")
+            return showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
         }
         do {
             try Mnemonic.write(mnemonic, safe: safe)

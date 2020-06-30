@@ -20,7 +20,6 @@ class SendAddressViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = "Send to"
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.largeTitleDisplayMode = .never
         configureView()
@@ -48,7 +47,7 @@ class SendAddressViewController: BaseViewController {
             }.catch { err in
                 if let error = err as? TransactionError {
                     if case .generic(let desc) = error {
-                        self.addressLabel.text = desc == "id_invalid_address" ? "Clipboard content is not a valid address\n" : desc
+                        self.addressLabel.text = desc == "id_invalid_address" ? NSLocalizedString("id_clipboard_content_is_not_a", comment: "") : desc
                     }
                     self.pasteFromClipboardView.isHidden = false
                     self.pasteButton.isHidden = false
@@ -61,6 +60,7 @@ class SendAddressViewController: BaseViewController {
     func configureView() {
         textFieldBackgroundView.round(radius: 12)
         pasteFromClipboardView.round(radius: 18)
+        pasteViewTitleLabel.text = NSLocalizedString("id_paste_from_clipboard", comment: "")
         addressTextField.tintColor = .topaz
     }
 
@@ -110,7 +110,7 @@ class SendAddressViewController: BaseViewController {
                     addressee?.assetTag = inputTag
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
-                    self.showError("Invalid Liquid address for Bitcoin")
+                    self.showError("Invalid Liquid address for Bitcoin") // how to hit this error?
                 }
             } else if network == Liquid.networkName {
                 if inputTag != "btc" && (txTag != nil && txTag != "btc") {

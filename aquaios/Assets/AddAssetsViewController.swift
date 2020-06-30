@@ -25,6 +25,8 @@ class AddAssetsViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         saveButton.round(radius: 26.5)
+        saveButton.setTitle(NSLocalizedString("id_save", comment: ""), for: .normal)
+        titleLabel.text = NSLocalizedString("id_add_to_wallet", comment: "")
         reloadData()
         configureTableView()
         configureSearch()

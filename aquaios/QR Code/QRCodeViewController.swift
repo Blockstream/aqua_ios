@@ -11,6 +11,7 @@ class QRCodeViewController: BaseViewController {
 
     @IBOutlet weak var scannerPreviewView: UIView!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var scanQrLabel: UILabel!
     @IBOutlet weak var actionButtonBackgroundView: UIView!
 
     var asset: Asset?
@@ -31,6 +32,8 @@ class QRCodeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         startScanner()
+        scanQrLabel.text = NSLocalizedString("id_scan_qr_code", comment: "")
+        actionButton.setTitle(NSLocalizedString("id_my_qr", comment: ""), for: .normal)
         actionButton.isHidden = hideActionButton
         actionButtonBackgroundView.isHidden = hideActionButton
         actionButtonBackgroundView.round(radius: 12)

@@ -11,6 +11,9 @@ class BackupNagViewController: UIViewController {
         super.viewWillAppear(animated)
         continueButton.round(radius: 24, borderWidth: 2, borderColor: .topaz)
         backgroundView.round(radius: 18)
+        titleLabel.text = "🤓 " + NSLocalizedString("id_its_time_to_back_up_your_wallet", comment: "")
+        messageLabel.text = NSLocalizedString("id_if_you_lose_or_break_your", comment: "")
+        continueButton.setTitle(NSLocalizedString("id_continue", comment: ""), for: .normal)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -22,13 +22,16 @@ class BackupAlertViewController: UIViewController {
         dismissButton.round(radius: dismissButton.frame.height / 2,
                             borderWidth: 1, borderColor: .white)
         backgroundView.round(radius: 18)
+        laterButton.setTitle(NSLocalizedString("id_maybe_later", comment: ""), for: .normal)
+        backupButton.setTitle(NSLocalizedString("id_back_up_now", comment: ""), for: .normal)
         configureLabels()
     }
 
     func configureLabels() {
-        firstLabel.text = "\u{2022} It's important to backup your wallet by writing down your recovery phrase"
-        secondLabel.text = "\u{2022} Without your recovery phrase, there is no way to recover your assets if you lose or break your device"
-        let attributedString = NSMutableAttributedString(string: "\u{2022} 80% of users back up their wallet on first-time use!\n", attributes: [
+        titleLabel.text = "🤓" + NSLocalizedString("id_safety_first", comment: "")
+        firstLabel.text = "\u{2022} " + NSLocalizedString("id_its_important_to_back_up_your", comment: "")
+        secondLabel.text = "\u{2022} " + NSLocalizedString("id_without_your_recovery_phrase", comment: "")
+        let attributedString = NSMutableAttributedString(string: "\u{2022} " + NSLocalizedString("id_80_of_users_back_up_their", comment: ""), attributes: [
             .font: UIFont.systemFont(ofSize: 15),
             .foregroundColor: UIColor.paleLilac
         ])

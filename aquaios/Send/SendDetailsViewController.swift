@@ -8,6 +8,7 @@ class SendDetailsViewController: BaseViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var assetView: AssetView!
     @IBOutlet weak var amountBackgroundView: UIView!
+    @IBOutlet weak var amountTitleLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
     @IBOutlet weak var sendAllButton: UIButton!
@@ -60,6 +61,9 @@ class SendDetailsViewController: BaseViewController {
         amountBackgroundView.round(radius: 18)
         amountLabel.isHidden = amount.count == 0
         continueButton.round(radius: 26.5)
+        amountTitleLabel.text = NSLocalizedString("id_amount", comment: "")
+        sendAllButton.setTitle(NSLocalizedString("id_max", comment: ""), for: .normal)
+        continueButton.setTitle(NSLocalizedString("id_continue", comment: ""), for: .normal)
     }
 
     @IBAction func maxButtonTapped(_ sender: Any) {

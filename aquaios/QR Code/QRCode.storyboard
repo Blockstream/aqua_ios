@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -121,6 +121,7 @@
                     <connections>
                         <outlet property="actionButton" destination="r2b-7v-5QI" id="cOu-AZ-bn0"/>
                         <outlet property="actionButtonBackgroundView" destination="yeI-gM-b5u" id="cwW-KE-gMD"/>
+                        <outlet property="scanQrLabel" destination="p2P-nR-zj8" id="Szx-Qy-JHw"/>
                         <outlet property="scannerPreviewView" destination="VCu-vN-TOB" id="Ia9-AZ-B0A"/>
                         <segue destination="wOD-bu-DVp" kind="show" identifier="send_details" id="2NL-TK-O1P"/>
                         <segue destination="HgM-f7-44A" kind="show" identifier="select_asset_send" id="wc9-Ts-oBQ"/>
@@ -213,9 +214,6 @@
             <point key="canvasLocation" x="3537" y="4"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nl2-qr-1Rt"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="close" width="14" height="14"/>
         <image name="qrboundary" width="198" height="198"/>
@@ -225,4 +223,7 @@
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nl2-qr-1Rt"/>
+    </inferredMetricsTieBreakers>
 </document>

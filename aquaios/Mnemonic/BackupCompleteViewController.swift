@@ -27,6 +27,9 @@ class BackupCompleteViewController: BaseViewController {
         quitButton.round(radius: 24)
         retryButton.round(radius: 24)
         doneButton.round(radius: 24)
+        quitButton.setTitle(NSLocalizedString("id_quit", comment: ""), for: .normal)
+        retryButton.setTitle(NSLocalizedString("id_retry", comment: ""), for: .normal)
+        doneButton.setTitle(NSLocalizedString("id_done", comment: ""), for: .normal)
 
         retryStackView.isHidden = success
         failedImageView.isHidden = success
@@ -35,8 +38,8 @@ class BackupCompleteViewController: BaseViewController {
         doneButton.isHidden = !success
         messageLabel.isHidden = !success
 
-        titleLabel.text = success ? "Your wallet is now backed up" :
-                                    "Oops. Make sure you have written down the words correctly"
+        titleLabel.text = success ? NSLocalizedString("id_congratulations_youve_just_made", comment: "") : NSLocalizedString("id_oops_make_sure_you_have_written", comment: "")
+        messageLabel.text = NSLocalizedString("id_remember_keep_your_recovery", comment: "")
     }
 
     @IBAction func retryButtonTapped(_ sender: Any) {

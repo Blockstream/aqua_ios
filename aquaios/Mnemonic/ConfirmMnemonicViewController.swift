@@ -2,10 +2,10 @@ import UIKit
 
 class ConfirmMnemonicViewController: BaseViewController {
 
+    @IBOutlet weak var confirmTitle: UILabel!
     @IBOutlet var confirmationLabels: [UILabel]!
     @IBOutlet var confirmationButtons: [UIButton]!
-    @IBOutlet var completeButton: UIView!
-
+    @IBOutlet weak var completeButton: UIButton!
     @IBOutlet var firstRowButtons: [UIButton]!
     @IBOutlet var secondRowButtons: [UIButton]!
     @IBOutlet var thirdRowButtons: [UIButton]!
@@ -34,13 +34,15 @@ class ConfirmMnemonicViewController: BaseViewController {
         var buttonsWords = [String]()
         for i in 0..<4 {
             buttonsWords.append(contentsOf: generateButtonRowWords(answerIndex: quiz[i]))
-            confirmationLabels[i].text = String(format: "Select word #%d", quiz[i]+1)
+            confirmationLabels[i].text = String(format: NSLocalizedString("id_select_word_d", comment: ""), quiz[i]+1)
         }
         for i in 0..<confirmationButtons.count {
             confirmationButtons[i].round(radius: 18)
             confirmationButtons[i].setTitle(buttonsWords[i], for: .normal)
         }
+        confirmTitle.text = NSLocalizedString("id_confirm_backup", comment: "")
         completeButton.round(radius: 24)
+        completeButton.setTitle(NSLocalizedString("id_complete", comment: ""), for: .normal)
     }
 
     @IBAction func firstRowSelect(_ sender: UIButton) {

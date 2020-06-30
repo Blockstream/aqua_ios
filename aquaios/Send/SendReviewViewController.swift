@@ -7,6 +7,7 @@ class SendReviewViewController: BaseViewController {
     @IBOutlet weak var sendLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
+    @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var feeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var networkFeeButton: UIButton!
@@ -47,7 +48,9 @@ class SendReviewViewController: BaseViewController {
         let info = Registry.shared.info(for: addressee.assetTag ?? "btc")
         let asset = Asset(info: info, tag: addressee.assetTag)
         let amount = tx.sendAll ? "All" : asset.string(addressee.satoshi)
+        sendLabel.text = NSLocalizedString("id_send", comment: "")
         amountLabel.text = "\(amount ?? "") \(asset.ticker ?? "")"
+        toLabel.text = NSLocalizedString("id_to", comment: "")
         addressLabel.text = addressee.address
         if !asset.selectable {
             let fiat = Fiat.from(addressee.satoshi)
@@ -58,10 +61,12 @@ class SendReviewViewController: BaseViewController {
             let fiatFees = "\(Fiat.currency() ?? "") \( fiat ?? "")"
             feeLabel.text = fiatFees
             defaultFeeButton.setTitle(fiatFees, for: .normal)
-            rushFeeButton.setTitle("I'm on a rush!", for: .normal)
+            rushFeeButton.setTitle(NSLocalizedString("id_its_urgent", comment: ""), for: .normal)
         }
+        networkFeeButton.setTitle(NSLocalizedString("id_network_fee", comment: ""), for: .normal)
         // Disable fee buttons for liquid
         networkFeeButton.isEnabled = asset.isBTC
+        slidingButton.buttonText = NSLocalizedString("id_slide_to_send", comment: "")
     }
 
     override func viewDidLayoutSubviews() {

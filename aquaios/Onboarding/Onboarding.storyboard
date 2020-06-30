@@ -152,6 +152,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kmy-3l-vk3"/>
                     <connections>
+                        <outlet property="acceptTermsLabel" destination="WfS-bA-vtT" id="nKp-AW-E4S"/>
                         <outlet property="agreementLabel" destination="EwB-b2-b4B" id="3xC-lt-BXn"/>
                         <outlet property="confirmButton" destination="xe6-eU-RLy" id="kgw-eZ-XqK"/>
                         <outlet property="tosWebView" destination="oY0-ni-TVY" id="fLY-Vn-a0u"/>
@@ -245,7 +246,8 @@
                         <outlet property="authDescriptionLabel" destination="Yed-kl-PPH" id="J3u-h3-1pX"/>
                         <outlet property="authIcon" destination="jwa-tM-uyf" id="3eX-Wm-dqp"/>
                         <outlet property="authLabel" destination="qEb-fg-iY4" id="3dd-ZW-kuN"/>
-                        <outlet property="enableButton" destination="JVM-UV-bgc" id="s1e-11-WFI"/>
+                        <outlet property="enableButton" destination="JVM-UV-bgc" id="Oxn-cB-gW2"/>
+                        <outlet property="skipButton" destination="mi4-Lm-BZb" id="O7K-vL-4Sa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zW-Yl-rdo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

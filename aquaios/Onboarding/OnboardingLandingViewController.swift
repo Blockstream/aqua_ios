@@ -15,6 +15,8 @@ class OnboardingLandingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         nextButton.round(radius: 0.5 * nextButton.bounds.width)
+        titleLabel.text = NSLocalizedString("id_digital_finance_at_its_most", comment: "")
+        messageLabel.text = NSLocalizedString("id_manage_your_bitcoin_and_liquid", comment: "")
     }
 
     @IBAction func nextButtonTapped(_ sender: Any) {
