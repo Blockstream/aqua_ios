@@ -70,6 +70,7 @@ class AssetListViewController: BaseViewController {
             self.qrButton.isHidden = false
             self.tableView.isHidden = false
             reloadData()
+            showBackupIfNeeded()
         } else {
             showCreateWalletView(delegate: self)
         }
