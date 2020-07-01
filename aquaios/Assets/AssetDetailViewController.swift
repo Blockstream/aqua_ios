@@ -93,6 +93,8 @@ class AssetDetailViewController: BaseViewController {
         }.done { balance in
             self.asset = AquaService.assets(for: balance.filter({ $0.key == self.asset?.info?.assetId })).first
             self.balanceLabel.text = "\(self.asset?.string() ?? "")"
+            let fiat = Fiat.from(self.asset?.sats ?? 0)
+            self.fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }.catch { _ in
             let alert = UIAlertController(title: "Error", message: "No balance found", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in self.reloadData() }))
