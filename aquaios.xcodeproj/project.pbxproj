@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A6A96F24AE35DE009E0210 /* Restore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A96E24AE35DE009E0210 /* Restore.storyboard */; };
+		20A6A97124AE3756009E0210 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6A97024AE3756009E0210 /* RestoreViewController.swift */; };
+		20A6A97324AE376D009E0210 /* RestoreWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6A97224AE376D009E0210 /* RestoreWordsViewController.swift */; };
 		6D0771F8242A828B009DEA9B /* TransactionsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0771F6242A828B009DEA9B /* TransactionsHeaderCell.swift */; };
 		6D0771F9242A828B009DEA9B /* TransactionsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0771F7242A828B009DEA9B /* TransactionsHeaderCell.xib */; };
 		6D077203242ACC0C009DEA9B /* Send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D077202242ACC0C009DEA9B /* Send.storyboard */; };
@@ -110,6 +113,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A6A96E24AE35DE009E0210 /* Restore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restore.storyboard; sourceTree = "<group>"; };
+		20A6A97024AE3756009E0210 /* RestoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
+		20A6A97224AE376D009E0210 /* RestoreWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWordsViewController.swift; sourceTree = "<group>"; };
 		266A114AFDB2B069F7CAE597 /* Pods-aquaios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aquaios.debug.xcconfig"; path = "Target Support Files/Pods-aquaios/Pods-aquaios.debug.xcconfig"; sourceTree = "<group>"; };
 		4D6BEF3CB30ADD6858F090D0 /* Pods-aquaios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aquaios.release.xcconfig"; path = "Target Support Files/Pods-aquaios/Pods-aquaios.release.xcconfig"; sourceTree = "<group>"; };
 		549AD5F60E0D9F05BF21B919 /* Pods_aquaios_AquaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aquaios_AquaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +235,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20A6A96D24AE35BD009E0210 /* Restore */ = {
+			isa = PBXGroup;
+			children = (
+				20A6A96E24AE35DE009E0210 /* Restore.storyboard */,
+				20A6A97024AE3756009E0210 /* RestoreViewController.swift */,
+				20A6A97224AE376D009E0210 /* RestoreWordsViewController.swift */,
+			);
+			path = Restore;
+			sourceTree = "<group>";
+		};
 		6D077201242ACB98009DEA9B /* Send */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +427,7 @@
 		6DC69E6523DB446600DCD7CB /* aquaios */ = {
 			isa = PBXGroup;
 			children = (
+				20A6A96D24AE35BD009E0210 /* Restore */,
 				6DC69E6623DB446600DCD7CB /* AppDelegate.swift */,
 				6DC69E7D23E12F0500DCD7CB /* GreenAddress.swift */,
 				6DF1482F2462276200F30DFB /* Onboarding */,
@@ -635,6 +652,7 @@
 				6D4A4C4724045CB20002BA93 /* Buy.storyboard in Resources */,
 				6D4A4C43240459DB0002BA93 /* Asset.storyboard in Resources */,
 				6DC69E7023DB446700DCD7CB /* Assets.xcassets in Resources */,
+				20A6A96F24AE35DE009E0210 /* Restore.storyboard in Resources */,
 				6DA69A2D240F2B7F000F626E /* QRCode.storyboard in Resources */,
 				6D077203242ACC0C009DEA9B /* Send.storyboard in Resources */,
 				6DE35A5024492AC700005783 /* AssetListCell.xib in Resources */,
@@ -747,6 +765,7 @@
 				6D407BFC2404A56800EE06EB /* Asset.swift in Sources */,
 				6DC69E6B23DB446600DCD7CB /* AssetListViewController.swift in Sources */,
 				6DD676492447D0D800A5651B /* UIButton.swift in Sources */,
+				20A6A97324AE376D009E0210 /* RestoreWordsViewController.swift in Sources */,
 				6DA69A36240F3CB1000F626E /* QRScanner.swift in Sources */,
 				6DE3BC8D2433DA5A00E2B011 /* SendReviewViewController.swift in Sources */,
 				6D4A4C41240458480002BA93 /* TransactionsViewController.swift in Sources */,
@@ -778,6 +797,7 @@
 				6D4C9A302433DE22003EF3DE /* SlidingButton.swift in Sources */,
 				812A12322448AA7100129EDE /* DropAlert.swift in Sources */,
 				6DF148372462280000F30DFB /* TermsOfServiceViewController.swift in Sources */,
+				20A6A97124AE3756009E0210 /* RestoreViewController.swift in Sources */,
 				6D09E8202406F9EF0052CD35 /* AddAssetCell.swift in Sources */,
 				6D700BB4240D678D00A95074 /* UIView.swift in Sources */,
 				6D482FCC246A08310054AC84 /* BackupIntroViewController.swift in Sources */,
