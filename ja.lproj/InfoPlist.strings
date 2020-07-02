@@ -1,7 +1,2 @@
-/* 
-  InfoPlist.strings
-  aquaios
-
-  Created by Domenico Gabriele on 02/07/2020.
-  Copyright © 2020 Blockstream. All rights reserved.
-*/
+NSFaceIDUsageDescription = "Aqua uses biometric authentication to allow easy access to the wallet";
+NSCameraUsageDescription = "We use the camera to scan QR codes";
