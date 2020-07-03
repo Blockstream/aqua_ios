@@ -74,11 +74,6 @@
 		6DE35A5024492AC700005783 /* AssetListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE35A4E24492AC700005783 /* AssetListCell.xib */; };
 		6DE3BC8D2433DA5A00E2B011 /* SendReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3BC8C2433DA5A00E2B011 /* SendReviewViewController.swift */; };
 		6DF148212460EEB400F30DFB /* RadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148202460EEB400F30DFB /* RadialGradient.swift */; };
-		6DF148282460F9CC00F30DFB /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148232460F9CC00F30DFB /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
-		6DF148292460F9CC00F30DFB /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148242460F9CC00F30DFB /* DGElasticPullToRefreshView.swift */; };
-		6DF1482A2460F9CC00F30DFB /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148252460F9CC00F30DFB /* DGElasticPullToRefreshConstants.swift */; };
-		6DF1482B2460F9CC00F30DFB /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148262460F9CC00F30DFB /* DGElasticPullToRefreshExtensions.swift */; };
-		6DF1482C2460F9CC00F30DFB /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148272460F9CC00F30DFB /* DGElasticPullToRefreshLoadingView.swift */; };
 		6DF148312462278B00F30DFB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF148302462278B00F30DFB /* Onboarding.storyboard */; };
 		6DF14835246227D600F30DFB /* OnboardingLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF14834246227D600F30DFB /* OnboardingLandingViewController.swift */; };
 		6DF148372462280000F30DFB /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF148362462280000F30DFB /* TermsOfServiceViewController.swift */; };
@@ -187,11 +182,6 @@
 		6DE35A4E24492AC700005783 /* AssetListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetListCell.xib; sourceTree = "<group>"; };
 		6DE3BC8C2433DA5A00E2B011 /* SendReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReviewViewController.swift; sourceTree = "<group>"; };
 		6DF148202460EEB400F30DFB /* RadialGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradient.swift; sourceTree = "<group>"; };
-		6DF148232460F9CC00F30DFB /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
-		6DF148242460F9CC00F30DFB /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
-		6DF148252460F9CC00F30DFB /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
-		6DF148262460F9CC00F30DFB /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
-		6DF148272460F9CC00F30DFB /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		6DF148302462278B00F30DFB /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		6DF14834246227D600F30DFB /* OnboardingLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLandingViewController.swift; sourceTree = "<group>"; };
 		6DF148362462280000F30DFB /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewController.swift; sourceTree = "<group>"; };
@@ -450,7 +440,6 @@
 		6DD7273E240447E9005D982D /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
-				6DF148222460F9CC00F30DFB /* DGElasticPullToRefresh */,
 				6DCF98E424774DF500737B42 /* Constants.swift */,
 				6DB9FCE824186B0500E266DB /* BaseViewController.swift */,
 				812A12312448AA7100129EDE /* DropAlert.swift */,
@@ -491,18 +480,6 @@
 				6D2551862465E7AF000D4782 /* CreateWalletView.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		6DF148222460F9CC00F30DFB /* DGElasticPullToRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				6DF148232460F9CC00F30DFB /* DGElasticPullToRefreshLoadingViewCircle.swift */,
-				6DF148242460F9CC00F30DFB /* DGElasticPullToRefreshView.swift */,
-				6DF148252460F9CC00F30DFB /* DGElasticPullToRefreshConstants.swift */,
-				6DF148262460F9CC00F30DFB /* DGElasticPullToRefreshExtensions.swift */,
-				6DF148272460F9CC00F30DFB /* DGElasticPullToRefreshLoadingView.swift */,
-			);
-			path = DGElasticPullToRefresh;
 			sourceTree = "<group>";
 		};
 		6DF1482F2462276200F30DFB /* Onboarding */ = {
@@ -748,7 +725,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF1482B2460F9CC00F30DFB /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				6DE35A4F24492AC700005783 /* AssetListCell.swift in Sources */,
 				6D077205242ACC30009DEA9B /* SendAddressViewController.swift in Sources */,
 				812A12302448A9A400129EDE /* BackupAlertViewController.swift in Sources */,
@@ -765,13 +741,10 @@
 				6DD8D978243BD34100A6F560 /* ProgressIndicator.swift in Sources */,
 				8192528C2428DD6900203C44 /* Transaction.swift in Sources */,
 				6DC69E7E23E12F0600DCD7CB /* GreenAddress.swift in Sources */,
-				6DF1482C2460F9CC00F30DFB /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				8174BBB824928B5F00929D4E /* AuthenticationViewController.swift in Sources */,
-				6DF148292460F9CC00F30DFB /* DGElasticPullToRefreshView.swift in Sources */,
 				6D0B6754243FD2AC00776289 /* WyreWidgetViewController.swift in Sources */,
 				6DB9FCE924186B0500E266DB /* BaseViewController.swift in Sources */,
 				6D407BFC2404A56800EE06EB /* Asset.swift in Sources */,
-				6DF1482A2460F9CC00F30DFB /* DGElasticPullToRefreshConstants.swift in Sources */,
 				6DC69E6B23DB446600DCD7CB /* AssetListViewController.swift in Sources */,
 				6DD676492447D0D800A5651B /* UIButton.swift in Sources */,
 				6DA69A36240F3CB1000F626E /* QRScanner.swift in Sources */,
@@ -800,7 +773,6 @@
 				6D2513E1246CAE0E005D4EDC /* AssetInfoViewController.swift in Sources */,
 				81FDC6EE249E151500E7F6F8 /* UISearchBar.swift in Sources */,
 				6DA69A2A240F29FE000F626E /* ReceiveViewController.swift in Sources */,
-				6DF148282460F9CC00F30DFB /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				818439F9246ACCDC006BF3BF /* Bitcoin.swift in Sources */,
 				6D4A4C4B24045CCF0002BA93 /* SettingsViewController.swift in Sources */,
 				6D4C9A302433DE22003EF3DE /* SlidingButton.swift in Sources */,

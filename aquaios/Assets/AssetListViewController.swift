@@ -42,7 +42,6 @@ class AssetListViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         qrButton.round(radius: 0.5 * qrButton.bounds.width)
-        configureElasticPull()
 
         transactionToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "transaction"), object: nil, queue: .main, using: onNewTransaction)
     }
@@ -74,25 +73,6 @@ class AssetListViewController: BaseViewController {
         } else {
             showCreateWalletView(delegate: self)
         }
-    }
-
-    func configureElasticPull() {
-        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = .white
-        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
-                self?.tableView.dg_stopLoading()
-            })
-        }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(.deepTeal)
-        if let backgroundColor = tableView.backgroundColor {
-            tableView.dg_setPullToRefreshBackgroundColor(backgroundColor)
-        }
-    }
-
-    deinit {
-        tableView.dg_removePullToRefresh()
     }
 
     func balancePromise(_ sharedNetwork: NetworkSession) -> Promise<[String: UInt64]> {
