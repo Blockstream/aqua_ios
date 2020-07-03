@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-kb-6zd">
-                                <rect key="frame" x="0.0" y="142" width="414" height="671"/>
+                                <rect key="frame" x="0.0" y="172" width="414" height="641"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <color key="tintColor" name="tiffanyBlue"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,7 +37,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEn-sE-uzG">
-                                            <rect key="frame" x="366" y="78" width="28" height="28"/>
+                                            <rect key="frame" x="362" y="84" width="28" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="28" id="NFh-Zy-JNF"/>
                                                 <constraint firstAttribute="height" constant="28" id="kd8-7x-4fO"/>
@@ -50,7 +50,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssx-I4-68A">
-                                            <rect key="frame" x="20" y="75.333333333333329" width="87" height="33.666666666666671"/>
+                                            <rect key="frame" x="24" y="81.333333333333329" width="87" height="33.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                             <color key="textColor" name="paleLilac"/>
                                             <nil key="highlightedColor"/>
@@ -58,10 +58,10 @@
                                     </subviews>
                                     <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                     <constraints>
-                                        <constraint firstItem="ssx-I4-68A" firstAttribute="leading" secondItem="bfD-bG-gCS" secondAttribute="leading" constant="20" id="YYn-Nl-sbl"/>
+                                        <constraint firstItem="ssx-I4-68A" firstAttribute="leading" secondItem="bfD-bG-gCS" secondAttribute="leading" constant="24" id="YYn-Nl-sbl"/>
                                         <constraint firstItem="WEn-sE-uzG" firstAttribute="centerY" secondItem="ssx-I4-68A" secondAttribute="centerY" id="ZI3-Ly-pqb"/>
-                                        <constraint firstAttribute="bottom" secondItem="WEn-sE-uzG" secondAttribute="bottom" constant="24" id="en1-e6-tpC"/>
-                                        <constraint firstAttribute="trailing" secondItem="WEn-sE-uzG" secondAttribute="trailing" constant="20" id="xzg-4y-iT6"/>
+                                        <constraint firstAttribute="bottom" secondItem="WEn-sE-uzG" secondAttribute="bottom" constant="18" id="en1-e6-tpC"/>
+                                        <constraint firstAttribute="trailing" secondItem="WEn-sE-uzG" secondAttribute="trailing" constant="24" id="xzg-4y-iT6"/>
                                     </constraints>
                                 </view>
                             </tableView>
@@ -103,7 +103,7 @@
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="bottom" secondItem="xfc-v9-VBA" secondAttribute="bottom" id="NAt-DY-1jt"/>
                             <constraint firstItem="oC3-wa-Ruu" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="67" id="RHc-EM-HZD"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" id="WYK-nX-iEP"/>
-                            <constraint firstItem="5dz-kb-6zd" firstAttribute="top" secondItem="2Nu-0D-IsG" secondAttribute="bottom" constant="-50" id="aQK-Y8-NQP"/>
+                            <constraint firstItem="5dz-kb-6zd" firstAttribute="top" secondItem="2Nu-0D-IsG" secondAttribute="bottom" constant="-20" id="aQK-Y8-NQP"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="trailing" secondItem="xfc-v9-VBA" secondAttribute="trailing" id="cwX-k4-fOe"/>
                             <constraint firstItem="zxS-51-fpL" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" constant="24" id="uJr-22-iwl"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" id="w9A-YJ-bq3"/>

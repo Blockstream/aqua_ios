@@ -3,7 +3,7 @@ import UIKit
 class RadialGradient: CALayer {
 
     var center: CGPoint = CGPoint(x: 0, y: 0)
-    var radius: CGFloat = 192
+    var radius: CGFloat = 304
     var colors = [UIColor.topaz.cgColor,
                   UIColor.deepTeal.cgColor]
 
@@ -50,8 +50,8 @@ class RadialGradientView: UIView {
 
         let path = createPath()
         gradient.frame = path.bounds
-        gradient.center = CGPoint(x: self.center.x, y: 0)
-        gradient.radius = min(bounds.width / 2.0, bounds.height)
+        gradient.center = CGPoint(x: self.center.x, y: -112)
+        gradient.radius = 304
 
         let shapeMask = CAShapeLayer()
         shapeMask.path = path.cgPath
