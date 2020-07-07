@@ -10,6 +10,9 @@ class ReceiveViewController: BaseViewController {
     @IBOutlet weak var copyButton: UIButton!
     @IBOutlet weak var setAmountButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var copyLabel: UILabel!
+    @IBOutlet weak var shareLabel: UILabel!
+    @IBOutlet weak var setAmountLabel: UILabel!
 
     @IBOutlet weak var addressBackgroundView: UIView!
     @IBOutlet weak var qrImageBackgroundView: UIView!
@@ -44,9 +47,9 @@ class ReceiveViewController: BaseViewController {
             button?.setBackgroundColor(color: .teal, for: .highlighted)
         }
         addressBackgroundView.round(radius: 6)
-        copyButton.setTitle(NSLocalizedString("id_copy", comment: ""), for: .normal)
-        setAmountButton.setTitle(NSLocalizedString("id_set_amount", comment: ""), for: .normal)
-        shareButton.setTitle(NSLocalizedString("id_share", comment: ""), for: .normal)
+        copyLabel.text = NSLocalizedString("id_copy", comment: "")
+        setAmountLabel.text = NSLocalizedString("id_set_amount", comment: "")
+        shareLabel.text = NSLocalizedString("id_share", comment: "")
     }
 
     func reloadData() {

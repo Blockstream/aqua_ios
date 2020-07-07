@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -199,11 +199,14 @@
                         <outlet property="addressLabel" destination="umX-3c-vYS" id="Znj-Qb-U9c"/>
                         <outlet property="assetView" destination="sd1-EH-kE8" id="0W3-hH-yne"/>
                         <outlet property="copyButton" destination="XGT-S3-w6b" id="rCP-dZ-q8d"/>
+                        <outlet property="copyLabel" destination="t9L-ZG-A7F" id="yZ0-kR-bdQ"/>
                         <outlet property="feedbackView" destination="thx-iW-atD" id="Fmq-el-Pt5"/>
                         <outlet property="qrImageBackgroundView" destination="JzK-r0-UC5" id="mXB-VJ-w8L"/>
                         <outlet property="qrImageView" destination="Siu-kh-cw1" id="bNn-cB-H2U"/>
                         <outlet property="setAmountButton" destination="Ps6-Vd-dxK" id="qPS-dz-AQo"/>
+                        <outlet property="setAmountLabel" destination="8sn-R8-nH2" id="1r5-6t-zOc"/>
                         <outlet property="shareButton" destination="F6f-Zj-xIy" id="2yb-lm-uCe"/>
+                        <outlet property="shareLabel" destination="H69-3q-4ID" id="MCQ-Qa-Hqu"/>
                         <outlet property="specifyButton" destination="F6f-Zj-xIy" id="DuV-Lz-uYi"/>
                     </connections>
                 </viewController>
