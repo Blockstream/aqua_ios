@@ -197,7 +197,6 @@
                                     <color key="titleColor" name="paleLilac"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirmButtonTapped:" destination="tRb-tc-NGx" eventType="touchUpInside" id="Cm6-w3-QgH"/>
                                     <action selector="skip:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="bjS-LM-rAw"/>
                                 </connections>
                             </button>
