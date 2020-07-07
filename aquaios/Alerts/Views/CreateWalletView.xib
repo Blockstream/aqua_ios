@@ -17,11 +17,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="482" height="146"/>
+            <rect key="frame" x="0.0" y="0.0" width="487" height="175"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wq6-v0-p8B">
-                    <rect key="frame" x="24" y="30.5" width="434" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wq6-v0-p8B">
+                    <rect key="frame" x="24" y="30.5" width="439" height="48"/>
                     <color key="backgroundColor" name="teal"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="tDu-Nh-oqM"/>
@@ -31,14 +31,14 @@
                         <color key="titleColor" name="paleLilac"/>
                     </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have a wallet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKU-7K-sb9">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Already have a wallet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKU-7K-sb9">
                     <rect key="frame" x="24" y="102.5" width="165" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                     <color key="textColor" name="auroMetalSaurus"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-Fw-bzw">
-                    <rect key="frame" x="334" y="102.5" width="74" height="20"/>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-Fw-bzw">
+                    <rect key="frame" x="24" y="136" width="82" height="20"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                     <state key="normal" title="Restore  " image="chevron-right">
                         <color key="titleColor" name="topaz"/>
@@ -49,16 +49,14 @@
             <constraints>
                 <constraint firstItem="vKU-7K-sb9" firstAttribute="top" secondItem="wq6-v0-p8B" secondAttribute="bottom" constant="24" id="2Dg-ab-5FO"/>
                 <constraint firstItem="vKU-7K-sb9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="GnM-7r-xtt"/>
+                <constraint firstItem="4tX-Fw-bzw" firstAttribute="top" secondItem="vKU-7K-sb9" secondAttribute="bottom" constant="15" id="Nzm-HT-VKt"/>
                 <constraint firstAttribute="trailing" secondItem="wq6-v0-p8B" secondAttribute="trailing" constant="24" id="SHd-q7-cy8"/>
-                <constraint firstAttribute="bottom" secondItem="vKU-7K-sb9" secondAttribute="bottom" constant="24" id="U3I-Cn-5hM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4tX-Fw-bzw" secondAttribute="trailing" constant="74" id="ZRH-PR-IeL"/>
+                <constraint firstItem="4tX-Fw-bzw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="c08-hi-dPj"/>
                 <constraint firstItem="wq6-v0-p8B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="fEb-Xb-49L"/>
-                <constraint firstItem="4tX-Fw-bzw" firstAttribute="centerY" secondItem="vKU-7K-sb9" secondAttribute="centerY" id="kce-UR-em0"/>
-                <constraint firstItem="vKU-7K-sb9" firstAttribute="top" secondItem="wq6-v0-p8B" secondAttribute="bottom" constant="24" id="tQZ-JU-TRd"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="3" y="75"/>
+            <point key="canvasLocation" x="-2.1739130434782612" y="100.78125"/>
         </view>
     </objects>
     <resources>
