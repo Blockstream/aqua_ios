@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -182,8 +182,7 @@
                                     <color key="titleColor" name="paleLilac"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirmButtonTapped:" destination="tRb-tc-NGx" eventType="touchUpInside" id="3Ur-eC-Gmv"/>
-                                    <action selector="enable:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="pz2-xu-b6z"/>
+                                    <action selector="enable:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="zDR-d0-vTk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-Lm-BZb">
@@ -198,7 +197,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmButtonTapped:" destination="tRb-tc-NGx" eventType="touchUpInside" id="Cm6-w3-QgH"/>
-                                    <action selector="skip:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="Tgb-3C-0oG"/>
+                                    <action selector="skip:" destination="ZsU-xv-hTa" eventType="touchUpInside" id="bjS-LM-rAw"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="passcode" translatesAutoresizingMaskIntoConstraints="NO" id="jwa-tM-uyf">
@@ -246,7 +245,7 @@
                         <outlet property="authDescriptionLabel" destination="Yed-kl-PPH" id="J3u-h3-1pX"/>
                         <outlet property="authIcon" destination="jwa-tM-uyf" id="3eX-Wm-dqp"/>
                         <outlet property="authLabel" destination="qEb-fg-iY4" id="3dd-ZW-kuN"/>
-                        <outlet property="enableButton" destination="JVM-UV-bgc" id="Oxn-cB-gW2"/>
+                        <outlet property="enableButton" destination="JVM-UV-bgc" id="s1e-11-WFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zW-Yl-rdo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
