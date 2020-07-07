@@ -121,6 +121,7 @@
                     <connections>
                         <outlet property="actionButton" destination="r2b-7v-5QI" id="cOu-AZ-bn0"/>
                         <outlet property="actionButtonBackgroundView" destination="yeI-gM-b5u" id="cwW-KE-gMD"/>
+                        <outlet property="myQrLabel" destination="LUV-44-Yrc" id="Wnh-Np-4wz"/>
                         <outlet property="scanQrLabel" destination="p2P-nR-zj8" id="Szx-Qy-JHw"/>
                         <outlet property="scannerPreviewView" destination="VCu-vN-TOB" id="Ia9-AZ-B0A"/>
                         <segue destination="wOD-bu-DVp" kind="show" identifier="send_details" id="2NL-TK-O1P"/>
