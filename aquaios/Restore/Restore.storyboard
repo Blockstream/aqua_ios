@@ -484,6 +484,7 @@
                         <outlet property="authIcon" destination="HUJ-sc-T5q" id="Fai-YG-cIk"/>
                         <outlet property="authLabel" destination="1sV-84-DoN" id="pJa-qR-s96"/>
                         <outlet property="enableButton" destination="xo6-7Q-aNc" id="BXo-mQ-utH"/>
+                        <outlet property="skipButton" destination="I4a-TF-Ibv" id="Hma-Tf-Ygw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bs-Id-a6n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
