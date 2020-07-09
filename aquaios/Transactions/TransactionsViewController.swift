@@ -4,7 +4,10 @@ import PromiseKit
 class TransactionsViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var receiveView: UIView!
+    @IBOutlet weak var buyView: UIView!
+    @IBOutlet weak var receiveIconView: UIView!
+    @IBOutlet weak var buyIconView: UIView!
     private var transactions: [Transaction] = []
     private var transactionToken: NSObjectProtocol?
 
@@ -17,8 +20,13 @@ class TransactionsViewController: BaseViewController {
         super.viewWillAppear(animated)
         navigationItem.title = NSLocalizedString(NSLocalizedString("id_transactions", comment: ""), comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
+        configurePreLogin()
         if hasWallet {
+            self.tableView.isHidden = false
             reloadData()
+
+        } else {
+            self.tableView.isHidden = true
         }
 
         transactionToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "transaction"), object: nil, queue: .main, using: onNewTransaction)
@@ -45,6 +53,20 @@ class TransactionsViewController: BaseViewController {
         tableView.separatorColor = .aquaShadowBlue
         let nib = UINib(nibName: "TransactionCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TransactionCell")
+    }
+
+    func configurePreLogin() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createOrRestore))
+        receiveView.addGestureRecognizer(tapGestureRecognizer)
+        receiveView.isUserInteractionEnabled = true
+        receiveView.round(radius: 24)
+        buyView.round(radius: 24)
+        receiveIconView.round(radius: 35)
+        buyIconView.round(radius: 35)
+    }
+
+    @objc func createOrRestore(_ sender: Any?) {
+        showCreateAlert()
     }
 
     func txsPromise(_ sharedNetwork: NetworkSession) -> Promise<[Transaction]> {

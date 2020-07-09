@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2036733124B7776100A57897 /* CreateWalletAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036733024B7776100A57897 /* CreateWalletAlertController.swift */; };
 		20A6A94924ADE05D009E0210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A94B24ADE05D009E0210 /* Localizable.strings */; };
 		20A6A94E24ADE0CD009E0210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A95024ADE0CD009E0210 /* InfoPlist.strings */; };
 		20A6A96F24AE35DE009E0210 /* Restore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A96E24AE35DE009E0210 /* Restore.storyboard */; };
@@ -115,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2036733024B7776100A57897 /* CreateWalletAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletAlertController.swift; sourceTree = "<group>"; };
 		20A6A94A24ADE05D009E0210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20A6A94F24ADE0CD009E0210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20A6A95124ADE0E4009E0210 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 				812A122B2448A9A400129EDE /* BackupNagViewController.swift */,
 				812A122D2448A9A400129EDE /* BackupAlertViewController.swift */,
 				812A122C2448A9A400129EDE /* Alerts.storyboard */,
+				2036733024B7776100A57897 /* CreateWalletAlertController.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -850,6 +853,7 @@
 				6D482FCC246A08310054AC84 /* BackupIntroViewController.swift in Sources */,
 				6D724280240DE1BE00488E16 /* TransactionCell.swift in Sources */,
 				6D482FCE246A08490054AC84 /* MnemonicViewController.swift in Sources */,
+				2036733124B7776100A57897 /* CreateWalletAlertController.swift in Sources */,
 				6DD7274624044A3A005D982D /* UIColor.swift in Sources */,
 				81D9E4722405E71D005DD867 /* Liquid.swift in Sources */,
 				6D6FA7232476FDFC00BDF8C4 /* AssetTitleView.swift in Sources */,

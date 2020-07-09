@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +17,137 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="mCf-9r-TFY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-6m-zSh" userLabel="Background View">
+                                        <rect key="frame" x="20" y="328.5" width="374" height="200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V47-va-Xaz" userLabel="ReceiveView">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-CM-UkY" userLabel="ReceiveIconView">
+                                                        <rect key="frame" x="53.5" y="20" width="70" height="70"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="7mN-9p-poh">
+                                                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="BqG-0l-IuP"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="tIO-3U-tHN"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="lighterBlueGray"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="Cle-b7-ByR"/>
+                                                            <constraint firstItem="7mN-9p-poh" firstAttribute="centerX" secondItem="7XN-CM-UkY" secondAttribute="centerX" id="Jl6-LB-py4"/>
+                                                            <constraint firstItem="7mN-9p-poh" firstAttribute="centerY" secondItem="7XN-CM-UkY" secondAttribute="centerY" id="LvN-KY-gYy"/>
+                                                            <constraint firstAttribute="height" constant="70" id="NNX-sE-K41"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrL-uF-UDs">
+                                                        <rect key="frame" x="58.5" y="110" width="60" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="paleLilac"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From other wallets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-ha-SH6">
+                                                        <rect key="frame" x="29" y="140.5" width="119.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" name="auroMetalSaurus"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="aquaShadowBlue"/>
+                                                <constraints>
+                                                    <constraint firstItem="xaZ-ha-SH6" firstAttribute="centerX" secondItem="V47-va-Xaz" secondAttribute="centerX" id="Phh-KO-jlk"/>
+                                                    <constraint firstItem="xaZ-ha-SH6" firstAttribute="top" secondItem="WrL-uF-UDs" secondAttribute="bottom" constant="10" id="jyV-El-4dz"/>
+                                                    <constraint firstItem="7XN-CM-UkY" firstAttribute="centerX" secondItem="V47-va-Xaz" secondAttribute="centerX" id="rFz-R4-IHk"/>
+                                                    <constraint firstItem="7XN-CM-UkY" firstAttribute="top" secondItem="V47-va-Xaz" secondAttribute="top" constant="20" id="txu-zv-yy6"/>
+                                                    <constraint firstItem="WrL-uF-UDs" firstAttribute="centerX" secondItem="V47-va-Xaz" secondAttribute="centerX" id="xRY-W5-P01"/>
+                                                    <constraint firstItem="WrL-uF-UDs" firstAttribute="top" secondItem="7XN-CM-UkY" secondAttribute="bottom" constant="20" id="zkn-ha-hB1"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xs-iw-Ep0" userLabel="BuyView">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3n-j5-9YE" userLabel="BuyIconView">
+                                                        <rect key="frame" x="53.5" y="20" width="70" height="70"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_asset_selected" translatesAutoresizingMaskIntoConstraints="NO" id="0bL-uH-bCS">
+                                                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="19u-gD-xa2"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="Swa-YD-hD1"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="lighterBlueGray"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="3zW-dU-S0m"/>
+                                                            <constraint firstAttribute="height" constant="70" id="ItI-7D-5Tl"/>
+                                                            <constraint firstItem="0bL-uH-bCS" firstAttribute="centerY" secondItem="g3n-j5-9YE" secondAttribute="centerY" id="fy8-kk-FnT"/>
+                                                            <constraint firstItem="0bL-uH-bCS" firstAttribute="centerX" secondItem="g3n-j5-9YE" secondAttribute="centerX" id="yhH-he-euc"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmP-MZ-CrO">
+                                                        <rect key="frame" x="74" y="105" width="29.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="paleLilac"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debit or Apple pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-wv-9cV">
+                                                        <rect key="frame" x="28.5" y="135.5" width="120" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" name="auroMetalSaurus"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="aquaShadowBlue"/>
+                                                <constraints>
+                                                    <constraint firstItem="x8R-wv-9cV" firstAttribute="centerX" secondItem="1xs-iw-Ep0" secondAttribute="centerX" id="JZP-u4-RyR"/>
+                                                    <constraint firstItem="x8R-wv-9cV" firstAttribute="top" secondItem="FmP-MZ-CrO" secondAttribute="bottom" constant="10" id="UnX-Sz-KL3"/>
+                                                    <constraint firstItem="FmP-MZ-CrO" firstAttribute="centerX" secondItem="1xs-iw-Ep0" secondAttribute="centerX" id="WIR-qr-hA3"/>
+                                                    <constraint firstItem="g3n-j5-9YE" firstAttribute="centerX" secondItem="1xs-iw-Ep0" secondAttribute="centerX" id="s7N-tu-u9d"/>
+                                                    <constraint firstItem="g3n-j5-9YE" firstAttribute="top" secondItem="1xs-iw-Ep0" secondAttribute="top" constant="20" id="wHb-Ia-pjh"/>
+                                                    <constraint firstItem="FmP-MZ-CrO" firstAttribute="top" secondItem="g3n-j5-9YE" secondAttribute="bottom" constant="15" id="xHJ-eL-bO0"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1xs-iw-Ep0" firstAttribute="centerY" secondItem="Peh-6m-zSh" secondAttribute="centerY" id="NYI-IO-Cbs"/>
+                                            <constraint firstItem="1xs-iw-Ep0" firstAttribute="height" secondItem="V47-va-Xaz" secondAttribute="height" id="OpO-Da-V97"/>
+                                            <constraint firstItem="V47-va-Xaz" firstAttribute="height" secondItem="Peh-6m-zSh" secondAttribute="height" id="d8u-wg-Gto"/>
+                                            <constraint firstItem="V47-va-Xaz" firstAttribute="width" secondItem="1xs-iw-Ep0" secondAttribute="width" id="jeL-k3-gqh"/>
+                                            <constraint firstAttribute="height" constant="200" id="vIS-cF-rV1"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add assets to get started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hop-83-FIm">
+                                        <rect key="frame" x="110.5" y="273" width="193" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="auroMetalSaurus"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to Aqua?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTm-ic-lHJ">
+                                        <rect key="frame" x="154" y="237.5" width="106" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="auroMetalSaurus"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                                <constraints>
+                                    <constraint firstItem="Peh-6m-zSh" firstAttribute="top" secondItem="Hop-83-FIm" secondAttribute="bottom" constant="35" id="3xb-nJ-b91"/>
+                                    <constraint firstItem="25S-UB-fc8" firstAttribute="trailing" secondItem="Peh-6m-zSh" secondAttribute="trailing" constant="20" id="8Vd-h8-O4d"/>
+                                    <constraint firstItem="Hop-83-FIm" firstAttribute="centerX" secondItem="25S-UB-fc8" secondAttribute="centerX" id="Iwa-Vi-KVc"/>
+                                    <constraint firstItem="Peh-6m-zSh" firstAttribute="leading" secondItem="25S-UB-fc8" secondAttribute="leading" constant="20" id="Vyz-Gq-MaS"/>
+                                    <constraint firstItem="Peh-6m-zSh" firstAttribute="centerY" secondItem="25S-UB-fc8" secondAttribute="centerY" id="n08-h0-Hgh"/>
+                                    <constraint firstItem="MTm-ic-lHJ" firstAttribute="centerX" secondItem="25S-UB-fc8" secondAttribute="centerX" id="nCG-80-iEe"/>
+                                    <constraint firstItem="Hop-83-FIm" firstAttribute="top" secondItem="MTm-ic-lHJ" secondAttribute="bottom" constant="15" id="wZ7-YS-66u"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="25S-UB-fc8"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-FQ-Haf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
@@ -35,6 +166,10 @@
                     <tabBarItem key="tabBarItem" title="" image="tx_icon" id="obX-ab-dI3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buyIconView" destination="g3n-j5-9YE" id="gL8-fE-OHq"/>
+                        <outlet property="buyView" destination="1xs-iw-Ep0" id="aqU-wt-0ad"/>
+                        <outlet property="receiveIconView" destination="7XN-CM-UkY" id="Ao4-R5-L4P"/>
+                        <outlet property="receiveView" destination="V47-va-Xaz" id="9Jz-Lq-eci"/>
                         <outlet property="tableView" destination="xlV-FQ-Haf" id="YlA-aw-Ush"/>
                     </connections>
                 </viewController>
@@ -44,9 +179,23 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add_asset_selected" width="28" height="28"/>
+        <image name="qrcode_selected" width="24" height="24"/>
         <image name="tx_icon" width="28" height="25"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aquaShadowBlue">
+            <color red="0.074509803921568626" green="0.11372549019607843" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auroMetalSaurus">
+            <color red="0.41960784313725491" green="0.45098039215686275" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lighterBlueGray">
+            <color red="0.17254901960784313" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleLilac">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tiffanyBlue">
             <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

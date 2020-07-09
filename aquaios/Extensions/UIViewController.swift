@@ -78,6 +78,14 @@ extension UIViewController {
         present(backupAlert, animated: true, completion: nil)
     }
 
+    func showCreateAlert() {
+        let storyboard = UIStoryboard(name: "Alerts", bundle: .main)
+        let createAlert = storyboard.instantiateViewController(withIdentifier: "CreateWalletAlertController")
+        createAlert.modalPresentationStyle = .overFullScreen
+        createAlert.modalTransitionStyle = .crossDissolve
+        present(createAlert, animated: true, completion: nil)
+    }
+
     func showOnboarding(with presentationDelegate: UIAdaptivePresentationControllerDelegate) {
         let storyboard = UIStoryboard(name: "Onboarding", bundle: .main)
         let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnboardingNavigationController")
