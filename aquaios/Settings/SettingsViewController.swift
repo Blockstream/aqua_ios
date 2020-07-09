@@ -18,10 +18,27 @@ class SettingsViewController: BaseViewController {
         removeLabel.isUserInteractionEnabled = true
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configure()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = NSLocalizedString("id_settings", comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+
+    func configure() {
+        if hasWallet {
+            hideCreateWalletView()
+            self.tableView.isHidden = false
+            self.removeLabel.isHidden = false
+            navigationItem.title = NSLocalizedString("id_settings", comment: "")
+        } else {
+            self.tableView.isHidden = true
+            self.removeLabel.isHidden = true
+            showCreateWalletView(delegate: self)
+        }
     }
 
     func configureTableView() {
@@ -111,5 +128,27 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             return
         }
+    }
+}
+
+extension SettingsViewController: CreateWalletDelegate {
+    func didTapCreate() {
+        showOnboarding(with: self)
+    }
+
+    func didTapRestore() {
+        let storyboard = UIStoryboard(name: "Restore", bundle: .main)
+        let restoreVC = storyboard.instantiateViewController(withIdentifier: "RestoreNavigationController")
+        restoreVC.modalPresentationStyle = .fullScreen
+        restoreVC.presentationController?.delegate = self
+        present(restoreVC, animated: true, completion: nil)
+    }
+
+}
+
+extension SettingsViewController: UIAdaptivePresentationControllerDelegate {
+
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        configure()
     }
 }
