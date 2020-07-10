@@ -57,58 +57,60 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeI-gM-b5u">
-                                <rect key="frame" x="99" y="632" width="216" height="64"/>
+                                <rect key="frame" x="164" y="746" width="86" height="86"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" highlightedImage="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-xT-0Yn">
-                                        <rect key="frame" x="14" y="20" width="24" height="24"/>
+                                        <rect key="frame" x="31" y="26" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="gqc-Mq-nFK"/>
                                             <constraint firstAttribute="height" constant="24" id="iPf-Bu-9Ve"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Reveal my QR" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-44-Yrc">
-                                        <rect key="frame" x="46" y="17.5" width="156" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-7v-5QI">
+                                        <rect key="frame" x="0.0" y="40" width="86" height="46"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="6i5-e4-jOY" eventType="touchUpInside" id="iea-4z-dbh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="My QR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-44-Yrc">
+                                        <rect key="frame" x="-1" y="51" width="87" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="86" id="Zch-BU-4AN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="LUV-44-Yrc" firstAttribute="leading" secondItem="Rsn-xT-0Yn" secondAttribute="trailing" constant="8" id="FyB-yq-WtU"/>
-                                    <constraint firstAttribute="width" constant="216" id="GCG-8y-pfI"/>
-                                    <constraint firstItem="Rsn-xT-0Yn" firstAttribute="centerY" secondItem="yeI-gM-b5u" secondAttribute="centerY" id="GOM-EQ-rsY"/>
-                                    <constraint firstAttribute="height" constant="64" id="Q6t-xn-lFs"/>
-                                    <constraint firstItem="Rsn-xT-0Yn" firstAttribute="leading" secondItem="yeI-gM-b5u" secondAttribute="leading" constant="14" id="dsE-xE-rUl"/>
-                                    <constraint firstItem="LUV-44-Yrc" firstAttribute="centerY" secondItem="yeI-gM-b5u" secondAttribute="centerY" id="msK-k9-yHS"/>
-                                    <constraint firstAttribute="trailing" secondItem="LUV-44-Yrc" secondAttribute="trailing" constant="14" id="w1N-ra-ugN"/>
+                                    <constraint firstItem="Rsn-xT-0Yn" firstAttribute="centerX" secondItem="yeI-gM-b5u" secondAttribute="centerX" id="B56-g1-jAe"/>
+                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="leading" secondItem="yeI-gM-b5u" secondAttribute="leading" id="E0S-qo-gCD"/>
+                                    <constraint firstAttribute="width" constant="86" id="GCG-8y-pfI"/>
+                                    <constraint firstAttribute="bottom" secondItem="r2b-7v-5QI" secondAttribute="bottom" id="HXV-CR-e3X"/>
+                                    <constraint firstAttribute="height" constant="86" id="Q6t-xn-lFs"/>
+                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="top" secondItem="Rsn-xT-0Yn" secondAttribute="bottom" constant="-10" id="TI0-Np-ycw"/>
+                                    <constraint firstItem="LUV-44-Yrc" firstAttribute="centerX" secondItem="yeI-gM-b5u" secondAttribute="centerX" id="TWv-WE-6dG"/>
+                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="top" secondItem="Rsn-xT-0Yn" secondAttribute="bottom" constant="-10" id="WY1-yJ-g86"/>
+                                    <constraint firstAttribute="bottom" secondItem="LUV-44-Yrc" secondAttribute="bottom" constant="6" id="cIr-yg-znS"/>
+                                    <constraint firstItem="Rsn-xT-0Yn" firstAttribute="top" secondItem="yeI-gM-b5u" secondAttribute="top" constant="26" id="dD0-1B-AXr"/>
+                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="trailing" secondItem="yeI-gM-b5u" secondAttribute="trailing" id="iSA-Yy-MHE"/>
+                                    <constraint firstItem="LUV-44-Yrc" firstAttribute="top" secondItem="Rsn-xT-0Yn" secondAttribute="bottom" constant="7" id="tHv-pg-dnM"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-7v-5QI">
-                                <rect key="frame" x="99" y="632" width="216" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="actionButtonTapped:" destination="6i5-e4-jOY" eventType="touchUpInside" id="iea-4z-dbh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZCt-7b-si2" firstAttribute="centerX" secondItem="zgo-Ot-zAC" secondAttribute="centerX" id="3aK-vD-nLX"/>
                             <constraint firstItem="p2P-nR-zj8" firstAttribute="top" secondItem="ZCt-7b-si2" secondAttribute="bottom" constant="26" id="Aud-pg-fyn"/>
-                            <constraint firstItem="r2b-7v-5QI" firstAttribute="leading" secondItem="yeI-gM-b5u" secondAttribute="leading" id="D74-Jj-Gaf"/>
+                            <constraint firstItem="yeI-gM-b5u" firstAttribute="top" secondItem="VCu-vN-TOB" secondAttribute="bottom" constant="-150" id="D2d-UC-mMP"/>
                             <constraint firstItem="yeI-gM-b5u" firstAttribute="centerX" secondItem="zgo-Ot-zAC" secondAttribute="centerX" id="DR3-G1-rPf"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="trailing" secondItem="g6E-dG-7Mv" secondAttribute="trailing" id="IDD-3x-G65"/>
-                            <constraint firstItem="r2b-7v-5QI" firstAttribute="trailing" secondItem="yeI-gM-b5u" secondAttribute="trailing" id="K18-bP-a1z"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="top" secondItem="zgo-Ot-zAC" secondAttribute="top" id="Nn5-R1-jd6"/>
                             <constraint firstAttribute="bottom" secondItem="VCu-vN-TOB" secondAttribute="bottom" id="Ujl-Uh-PJe"/>
                             <constraint firstItem="ZCt-7b-si2" firstAttribute="centerY" secondItem="zgo-Ot-zAC" secondAttribute="centerY" id="ad2-ZH-hJV"/>
-                            <constraint firstItem="yeI-gM-b5u" firstAttribute="top" secondItem="p2P-nR-zj8" secondAttribute="bottom" constant="30" id="b7V-Yh-r5i"/>
-                            <constraint firstItem="r2b-7v-5QI" firstAttribute="bottom" secondItem="yeI-gM-b5u" secondAttribute="bottom" id="boK-15-2sX"/>
-                            <constraint firstItem="r2b-7v-5QI" firstAttribute="top" secondItem="yeI-gM-b5u" secondAttribute="top" id="e1h-3V-gcJ"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="leading" secondItem="g6E-dG-7Mv" secondAttribute="leading" id="gTL-4w-0nL"/>
                             <constraint firstItem="zCZ-xj-eIu" firstAttribute="leading" secondItem="g6E-dG-7Mv" secondAttribute="leading" constant="28" id="hnN-ca-edb"/>
-                            <constraint firstItem="r2b-7v-5QI" firstAttribute="top" secondItem="p2P-nR-zj8" secondAttribute="bottom" constant="30" id="kuM-N0-41M"/>
                             <constraint firstItem="g6E-dG-7Mv" firstAttribute="trailing" secondItem="pgD-Q2-VuL" secondAttribute="trailing" constant="28" id="moc-ab-fNC"/>
                             <constraint firstItem="p2P-nR-zj8" firstAttribute="leading" secondItem="ZCt-7b-si2" secondAttribute="leading" id="nu0-cS-gcI"/>
                             <constraint firstItem="pgD-Q2-VuL" firstAttribute="centerY" secondItem="zCZ-xj-eIu" secondAttribute="centerY" id="ogF-eG-FEN"/>
