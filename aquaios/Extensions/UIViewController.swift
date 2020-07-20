@@ -94,6 +94,14 @@ extension UIViewController {
         present(onboardingVC, animated: true, completion: nil)
     }
 
+    func showRestore(with presentationDelegate: UIAdaptivePresentationControllerDelegate) {
+        let storyboard = UIStoryboard(name: "Restore", bundle: .main)
+        let restoreVC = storyboard.instantiateViewController(withIdentifier: "RestoreNavigationController")
+        restoreVC.modalPresentationStyle = .fullScreen
+        restoreVC.presentationController?.delegate = presentationDelegate
+        present(restoreVC, animated: true, completion: nil)
+    }
+
     func showError(_ error: TransactionError) {
         let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: "", preferredStyle: .alert)
         switch error {

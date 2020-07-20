@@ -154,13 +154,8 @@ extension AssetListViewController: CreateWalletDelegate {
     }
 
     func didTapRestore() {
-        let storyboard = UIStoryboard(name: "Restore", bundle: .main)
-        let restoreVC = storyboard.instantiateViewController(withIdentifier: "RestoreNavigationController")
-        restoreVC.modalPresentationStyle = .fullScreen
-        restoreVC.presentationController?.delegate = self
-        present(restoreVC, animated: true, completion: nil)
+        showRestore(with: self)
     }
-
 }
 
 extension AssetListViewController: UIAdaptivePresentationControllerDelegate {
