@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2036733124B7776100A57897 /* CreateWalletAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036733024B7776100A57897 /* CreateWalletAlertController.swift */; };
+		2040D84424C5F8C2003DFA3C /* AssetInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040D84324C5F8C2003DFA3C /* AssetInfoCell.xib */; };
+		2040D84A24C5FF01003DFA3C /* AssetInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040D84924C5FF01003DFA3C /* AssetInfoCell.swift */; };
 		20A6A94924ADE05D009E0210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A94B24ADE05D009E0210 /* Localizable.strings */; };
 		20A6A94E24ADE0CD009E0210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A95024ADE0CD009E0210 /* InfoPlist.strings */; };
 		20A6A96F24AE35DE009E0210 /* Restore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A96E24AE35DE009E0210 /* Restore.storyboard */; };
@@ -117,6 +119,8 @@
 
 /* Begin PBXFileReference section */
 		2036733024B7776100A57897 /* CreateWalletAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletAlertController.swift; sourceTree = "<group>"; };
+		2040D84324C5F8C2003DFA3C /* AssetInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetInfoCell.xib; sourceTree = "<group>"; };
+		2040D84924C5FF01003DFA3C /* AssetInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetInfoCell.swift; sourceTree = "<group>"; };
 		20A6A94A24ADE05D009E0210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20A6A94F24ADE0CD009E0210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20A6A95124ADE0E4009E0210 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -326,12 +330,14 @@
 		6D407BFD2404A72200EE06EB /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				2040D84924C5FF01003DFA3C /* AssetInfoCell.swift */,
 				6D407BFE2404A75500EE06EB /* AssetCell.swift */,
 				6D407C002404A79800EE06EB /* AssetCell.xib */,
 				6DE35A4D24492AC700005783 /* AssetListCell.swift */,
 				6DE35A4E24492AC700005783 /* AssetListCell.xib */,
 				6D09E81E2406F9EF0052CD35 /* AddAssetCell.swift */,
 				6D09E81D2406F9EF0052CD35 /* AddAssetCell.xib */,
+				2040D84324C5F8C2003DFA3C /* AssetInfoCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -710,6 +716,7 @@
 				6D09E81F2406F9EF0052CD35 /* AddAssetCell.xib in Resources */,
 				6D4A4C3F240458160002BA93 /* Transactions.storyboard in Resources */,
 				6D0771F9242A828B009DEA9B /* TransactionsHeaderCell.xib in Resources */,
+				2040D84424C5F8C2003DFA3C /* AssetInfoCell.xib in Resources */,
 				6D407C012404A79800EE06EB /* AssetCell.xib in Resources */,
 				6D4A4C4D24045D7F0002BA93 /* Settings.storyboard in Resources */,
 				6DF148312462278B00F30DFB /* Onboarding.storyboard in Resources */,
@@ -819,6 +826,7 @@
 				6DA69A36240F3CB1000F626E /* QRScanner.swift in Sources */,
 				6DE3BC8D2433DA5A00E2B011 /* SendReviewViewController.swift in Sources */,
 				6D4A4C41240458480002BA93 /* TransactionsViewController.swift in Sources */,
+				2040D84A24C5FF01003DFA3C /* AssetInfoCell.swift in Sources */,
 				6D63E56424525384000B4BE6 /* SendSuccessViewController.swift in Sources */,
 				6DCF98E524774DF500737B42 /* Constants.swift in Sources */,
 				817F86C1243E7B4E000545C7 /* TransactionError.swift in Sources */,
