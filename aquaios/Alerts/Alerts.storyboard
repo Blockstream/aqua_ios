@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -195,33 +195,11 @@
                         <outlet property="messageLabel" destination="PqN-B7-e2Q" id="Idr-Fh-EJ1"/>
                         <outlet property="restoreButton" destination="Geq-mV-qaY" id="ncW-0y-mYw"/>
                         <outlet property="titleLabel" destination="Vw7-MK-93i" id="DbS-2N-Bva"/>
-                        <segue destination="7Ni-KR-wwq" kind="show" identifier="create_wallet" id="Q9z-ZV-1UG"/>
-                        <segue destination="Rbc-dd-AB0" kind="show" identifier="restore_wallet" id="6ZM-Kg-Yeo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdi-4k-Lvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="891.96428571428567"/>
-        </scene>
-        <!--OnboardingLandingViewController-->
-        <scene sceneID="0qr-as-j7d">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Onboarding" referencedIdentifier="OnboardingLandingViewController" id="7Ni-KR-wwq" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="tp4-bc-jga"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wsO-SS-n0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="963" y="789"/>
-        </scene>
-        <!--RestoreViewController-->
-        <scene sceneID="973-8C-38E">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Restore" referencedIdentifier="RestoreViewController" id="Rbc-dd-AB0" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="89x-VN-v0t"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MBz-hN-cQ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1008" y="892"/>
         </scene>
         <!--MnemonicNavigationController-->
         <scene sceneID="Bpm-XT-KKq">
@@ -370,6 +348,9 @@
             <point key="canvasLocation" x="551" y="171"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Ee-Bf-lyq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="close_white" width="14" height="14"/>
         <namedColor name="darkBlueGray">
@@ -388,7 +369,4 @@
             <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1Ee-Bf-lyq"/>
-    </inferredMetricsTieBreakers>
 </document>

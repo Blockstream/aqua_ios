@@ -66,7 +66,7 @@ class TransactionsViewController: BaseViewController {
     }
 
     @objc func createOrRestore(_ sender: Any?) {
-        showCreateAlert()
+        performSegue(withIdentifier: "create_wallet_alert", sender: nil)
     }
 
     func txsPromise(_ sharedNetwork: NetworkSession) -> Promise<[Transaction]> {
@@ -89,6 +89,12 @@ class TransactionsViewController: BaseViewController {
             self.showError("Failure on fetch balance")
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? CreateWalletAlertController {
+            dest.delegateVC = self
+        }
+    }
 }
 
 extension TransactionsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -104,5 +110,12 @@ extension TransactionsViewController: UITableViewDataSource, UITableViewDelegate
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension TransactionsViewController: UIAdaptivePresentationControllerDelegate {
+
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        configurePreLogin()
     }
 }

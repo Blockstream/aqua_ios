@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -171,11 +171,22 @@
                         <outlet property="receiveIconView" destination="7XN-CM-UkY" id="Ao4-R5-L4P"/>
                         <outlet property="receiveView" destination="V47-va-Xaz" id="9Jz-Lq-eci"/>
                         <outlet property="tableView" destination="xlV-FQ-Haf" id="YlA-aw-Ush"/>
+                        <segue destination="xSR-hv-Kxs" kind="showDetail" identifier="create_wallet_alert" id="xIB-wi-PiV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Pf-r4-itg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="177.45535714285714"/>
+        </scene>
+        <!--CreateWalletAlertController-->
+        <scene sceneID="J3q-6g-e1D">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alerts" referencedIdentifier="CreateWalletAlertController" id="xSR-hv-Kxs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xhd-AB-1Xn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1R-66-azZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="130"/>
         </scene>
     </scenes>
     <resources>
