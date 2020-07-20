@@ -11,7 +11,6 @@ class SettingsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.removeWallet))
         removeLabel.addGestureRecognizer(tapGestureRecognizer)
@@ -30,6 +29,7 @@ class SettingsViewController: BaseViewController {
 
     func configure() {
         if hasWallet {
+            configureTableView()
             hideCreateWalletView()
             self.tableView.isHidden = false
             self.removeLabel.isHidden = false
