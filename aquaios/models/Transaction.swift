@@ -27,6 +27,7 @@ struct Transaction: Codable {
         case memo
         case satoshi
         case type
+        case addressees
     }
 
     let hash: String
@@ -36,10 +37,11 @@ struct Transaction: Codable {
     let memo: String
     var satoshi: [String: UInt64]
     let type: String
+    let addressees: [String]
     var networkName: String = ""
 
     var defaultAsset: String {
-        return AquaService.sort(satoshi).filter { $0.key != "btc" }.first?.key ?? "btc"
+        return AquaService.sort(satoshi).filter { $0.value != 0 }.last!.key
     }
 
     var incoming: Bool {

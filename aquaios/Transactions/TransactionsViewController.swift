@@ -97,6 +97,9 @@ class TransactionsViewController: BaseViewController {
         if let dest = segue.destination as? CreateWalletAlertController {
             dest.delegateVC = self
         }
+        if let nav = segue.destination as? UINavigationController, let dest = nav.topViewController as? TransactionViewController {
+            dest.tx = sender as? Transaction
+        }
     }
 }
 
@@ -113,6 +116,11 @@ extension TransactionsViewController: UITableViewDataSource, UITableViewDelegate
             return cell
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tx = transactions[indexPath.row]
+        performSegue(withIdentifier: "transaction", sender: tx)
     }
 }
 

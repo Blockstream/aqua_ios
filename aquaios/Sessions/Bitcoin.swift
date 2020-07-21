@@ -16,9 +16,12 @@ class Bitcoin: NetworkSession {
     }
 
     override func getTransactions(first: UInt32 = 0) -> [Transaction] {
-        let list = super.getTransactions(first: first)
-        for var tx in list {
-            tx.networkName = Bitcoin.networkName
+        var list = super.getTransactions(first: first)
+        if list.isEmpty {
+            return list
+        }
+        for i in 0...list.count-1 {
+            list[i].networkName = Bitcoin.networkName
         }
         return list
     }

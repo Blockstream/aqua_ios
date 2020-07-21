@@ -136,6 +136,8 @@ class AssetDetailViewController: BaseViewController {
             dest.showCloseButton = true
         } else if let dest = nav.topViewController as? AssetInfoViewController {
             dest.asset = sender as? Asset
+        } else if let dest = nav.topViewController as? TransactionViewController {
+            dest.tx = sender as? Transaction
         }
     }
 
@@ -191,5 +193,10 @@ extension AssetDetailViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tx = transactions[indexPath.row]
+        performSegue(withIdentifier: "transaction", sender: tx)
     }
 }

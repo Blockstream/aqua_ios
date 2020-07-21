@@ -20,9 +20,12 @@ class Liquid: NetworkSession {
     }
 
     override func getTransactions(first: UInt32 = 0) -> [Transaction] {
-        let list = super.getTransactions(first: first)
-        for var tx in list {
-            tx.networkName = Liquid.networkName
+        var list = super.getTransactions(first: first)
+        if list.isEmpty {
+            return list
+        }
+        for i in 0...list.count-1 {
+            list[i].networkName = Liquid.networkName
         }
         return list
     }
