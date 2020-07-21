@@ -2,6 +2,7 @@ import Foundation
 
 class NetworkSession {
     var session: Session?
+    var blockHeight: Int = 0
 
     init() {
         let url = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(Bundle.main.bundleIdentifier!, isDirectory: true)
@@ -25,6 +26,9 @@ class NetworkSession {
         case "transaction":
             let data = notification?[event!] as? [String: Any]
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "transaction"), object: nil, userInfo: data)
+        case "block":
+            let data = notification?[event!] as? [String: Any]
+            blockHeight = data?["block_height"] as? Int ?? 0
         default: break
         }
     }
