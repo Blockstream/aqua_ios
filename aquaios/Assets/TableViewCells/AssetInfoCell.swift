@@ -1,12 +1,3 @@
-//
-//  AssetInfoCellController.swift
-//  aquaios
-//
-//  Created by Domenico Gabriele on 20/07/2020.
-//  Copyright © 2020 Blockstream. All rights reserved.
-//
-
-import Foundation
 import UIKit
 
 class AssetInfoCell: UITableViewCell {
