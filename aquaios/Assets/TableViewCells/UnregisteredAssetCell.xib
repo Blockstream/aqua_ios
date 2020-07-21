@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UnregisteredAssetCell" customModule="Aqua" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asset Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcB-6j-TTP">
+                    <rect key="frame" x="24" y="14" width="52" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="Hnd-Ou-gyu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="auroMetalSaurus"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-ro-Ev6">
+                    <rect key="frame" x="374" y="46" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="EY4-1V-gNP"/>
+                        <constraint firstAttribute="width" constant="16" id="Wl3-I3-dP3"/>
+                    </constraints>
+                    <state key="normal" image="copy"/>
+                    <connections>
+                        <action selector="copyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="HQY-Qm-sSC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1a57c66ec5e922285d8d261bafe6f8eee7ec37a60c80a7eca9ae85c7a62f01ca" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV9-Do-HNa">
+                    <rect key="frame" x="24" y="34" width="334" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" name="paleLilac"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="aquaBackgroundBlue"/>
+            <constraints>
+                <constraint firstItem="yV9-Do-HNa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="0FX-nX-dBt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jnp-ro-Ev6" secondAttribute="trailing" constant="24" id="1A9-Yy-ZZe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jnp-ro-Ev6" secondAttribute="bottom" constant="8" id="4EO-tl-HaR"/>
+                <constraint firstItem="yV9-Do-HNa" firstAttribute="top" secondItem="WcB-6j-TTP" secondAttribute="bottom" constant="6" id="CDP-I7-3fg"/>
+                <constraint firstItem="jnp-ro-Ev6" firstAttribute="leading" secondItem="yV9-Do-HNa" secondAttribute="trailing" constant="16" id="KFw-Wu-06I"/>
+                <constraint firstItem="WcB-6j-TTP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="R7M-f4-Nkx"/>
+                <constraint firstItem="WcB-6j-TTP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="eFw-CD-9jo"/>
+                <constraint firstItem="jnp-ro-Ev6" firstAttribute="centerY" secondItem="yV9-Do-HNa" secondAttribute="centerY" id="hli-DZ-DWo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="infoText" destination="yV9-Do-HNa" id="7fE-Sv-m69"/>
+                <outlet property="infoTitle" destination="WcB-6j-TTP" id="zeL-G3-9pe"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="copy" width="22" height="22"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auroMetalSaurus">
+            <color red="0.41960784313725491" green="0.45098039215686275" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleLilac">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
