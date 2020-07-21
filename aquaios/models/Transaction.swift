@@ -36,9 +36,22 @@ struct Transaction: Codable {
     let memo: String
     var satoshi: [String: UInt64]
     let type: String
+    var networkName: String = ""
 
     var defaultAsset: String {
         return AquaService.sort(satoshi).filter { $0.key != "btc" }.first?.key ?? "btc"
+    }
+
+    var incoming: Bool {
+        return type == "incoming"
+    }
+
+    var outgoing: Bool {
+        return type == "outgoing"
+    }
+
+    var redeposit: Bool {
+        return type == "redeposit"
     }
 }
 

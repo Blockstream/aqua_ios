@@ -18,4 +18,12 @@ class Liquid: NetworkSession {
     var policyAsset: String {
         return network.policyAsset!
     }
+
+    override func getTransactions(first: UInt32 = 0) -> [Transaction] {
+        let list = super.getTransactions(first: first)
+        for var tx in list {
+            tx.networkName = Liquid.networkName
+        }
+        return list
+    }
 }

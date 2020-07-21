@@ -14,4 +14,12 @@ class Bitcoin: NetworkSession {
     func connect() throws {
         try session?.connect(netParams: ["name": Bitcoin.networkName, "use_tor": false, "log_level": "debug"])
     }
+
+    override func getTransactions(first: UInt32 = 0) -> [Transaction] {
+        let list = super.getTransactions(first: first)
+        for var tx in list {
+            tx.networkName = Bitcoin.networkName
+        }
+        return list
+    }
 }
