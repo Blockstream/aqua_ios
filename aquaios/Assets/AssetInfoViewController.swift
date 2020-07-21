@@ -3,8 +3,7 @@ import UIKit
 enum AssetInfoCellType {
     case ticker
     case unregistered
-    case issuanceDate
-    case community
+    case issuer
     case intro
 }
 
@@ -14,23 +13,25 @@ class AssetInfoViewController: BaseViewController {
 
     var asset: Asset?
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
     private var assetInfoCellTypes = AssetInfoCellType.allCases
-    private var isLiquid: Bool {
+    private var isBTC: Bool {
         get {
-            return !(asset?.isBTC ?? false)
+            return asset?.isBTC ?? false
         }
     }
     private var hasAssetInfo: Bool {
         get {
-            return asset?.info == nil
+            return asset?.info?.name != nil
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCellTypes()
+        configureTitle()
         configureTableView()
     }
 
@@ -48,27 +49,40 @@ class AssetInfoViewController: BaseViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    func configureTitle() {
+        if isBTC {
+            titleLabel.text = "Bitcoin"
+        } else {
+            titleLabel.text = asset?.info?.name ?? "Unregistered Asset"
+        }
+    }
+
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension // do I need this?
-        tableView.estimatedRowHeight = 75 // do I need this?
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 75
         tableView.tableFooterView = UIView()
         tableView.separatorColor = .aquaBackgroundBlue
         tableView.backgroundColor = .aquaBackgroundBlue
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
-        let cellNib = UINib(nibName: "AssetInfoCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "AssetInfoCell")
+        let infoCellNib = UINib(nibName: "AssetInfoCell", bundle: nil)
+        let unregisteredCellNib = UINib(nibName: "UnregisteredAssetCell", bundle: nil)
+        tableView.register(infoCellNib, forCellReuseIdentifier: "AssetInfoCell")
+        tableView.register(unregisteredCellNib, forCellReuseIdentifier: "UnregisteredAssetCell")
     }
 
     func setupCellTypes() {
-        if !isLiquid {
+        if isBTC {
             // Keep only ticker and intro for BTC
-            assetInfoCellTypes.removeSubrange(1...3)
+            assetInfoCellTypes = [AssetInfoCellType.ticker, AssetInfoCellType.intro]
         } else {
-            if !hasAssetInfo {
+            if asset!.isLBTC {
+                assetInfoCellTypes = [AssetInfoCellType.ticker, AssetInfoCellType.issuer, AssetInfoCellType.intro]
+            }
+            if !hasAssetInfo && !asset!.isLBTC {
                 // Keep only unregistered
-                assetInfoCellTypes.removeAll(where: { $0 != AssetInfoCellType.unregistered })
+                assetInfoCellTypes = [AssetInfoCellType.unregistered]
             }
         }
     }
@@ -76,6 +90,10 @@ class AssetInfoViewController: BaseViewController {
 
 extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 
@@ -95,27 +113,23 @@ extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
         switch assetInfoCellTypes[indexPath.row] {
         case .ticker:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                cell.setup(title: "L-BTC")
+                cell.setup(title: asset?.info?.ticker ?? (asset?.isBTC ?? false ? "BTC" : ""))
                 return cell
             }
         case .unregistered:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                    cell.setup(title: "Issuer", text: "1:1 Peg with Bitcoin")
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "UnregisteredAssetCell") as? UnregisteredAssetCell {
+                cell.setup(title: "Asset Id", text: asset?.info?.assetId ?? "n.a.")
                 return cell
             }
-        case .issuanceDate:
+        case .issuer:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                cell.setup(title: "L-BTC")
-                return cell
-            }
-        case .community:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                cell.setup(title: "L-BTC")
+                cell.setup(title: "Issuer", text: asset?.info?.entity?.domain ?? "")
                 return cell
             }
         case .intro:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                cell.setup(title: "L-BTC")
+                let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper libero et nulla porta suscipit. Nullam at risus arcu. Sed tincidunt lacus sed elementum suscipit. Vivamus justo est, faucibus tempor nisi quis, malesuada sodales lacus."
+                cell.setup(title: "Intro", text: text)
                 return cell
             }
         }
