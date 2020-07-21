@@ -311,7 +311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liquid Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qO-19-wY6">
-                                <rect key="frame" x="24" y="159" width="171" height="34"/>
+                                <rect key="frame" x="24" y="80" width="171" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="YiU-mN-3VR"/>
                                     <constraint firstAttribute="width" constant="171" id="tzT-hV-MTv"/>
@@ -320,40 +320,18 @@
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6479ac8306e4a5086decf573df70e3d24cf6ec81ed8ee39bd1f3f1199413adc5" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="f5C-yd-LeW">
-                                <rect key="frame" x="24" y="203" width="250" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="4Vh-C0-Yd8"/>
-                                    <constraint firstAttribute="width" constant="250" id="p6a-ac-pAO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" name="paleLilac"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4t-nR-TwE">
-                                <rect key="frame" x="289" y="203" width="16" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="Pt4-7m-I2g"/>
-                                    <constraint firstAttribute="width" constant="16" id="rzD-1J-MRN"/>
-                                </constraints>
-                                <state key="normal" image="copy"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SoJ-Td-5jV">
-                                <rect key="frame" x="0.0" y="267" width="414" height="541"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
-                            <constraint firstItem="y4t-nR-TwE" firstAttribute="leading" secondItem="f5C-yd-LeW" secondAttribute="trailing" constant="15" id="0sc-Mk-hHu"/>
-                            <constraint firstItem="9qO-19-wY6" firstAttribute="top" secondItem="kha-W0-Xe1" secondAttribute="top" constant="103" id="2Kj-0k-5DR"/>
+                            <constraint firstItem="9qO-19-wY6" firstAttribute="top" secondItem="kha-W0-Xe1" secondAttribute="top" constant="24" id="2Kj-0k-5DR"/>
                             <constraint firstItem="SoJ-Td-5jV" firstAttribute="centerX" secondItem="kha-W0-Xe1" secondAttribute="centerX" id="8ND-9K-Ffo"/>
-                            <constraint firstItem="SoJ-Td-5jV" firstAttribute="top" secondItem="f5C-yd-LeW" secondAttribute="bottom" constant="48" id="9vp-9K-htd"/>
                             <constraint firstItem="kha-W0-Xe1" firstAttribute="bottom" secondItem="SoJ-Td-5jV" secondAttribute="bottom" id="MBa-xN-7vd"/>
                             <constraint firstItem="SoJ-Td-5jV" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" id="Qn2-2Z-aTA"/>
-                            <constraint firstItem="f5C-yd-LeW" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" constant="24" id="e03-TR-UpS"/>
-                            <constraint firstItem="f5C-yd-LeW" firstAttribute="top" secondItem="9qO-19-wY6" secondAttribute="bottom" constant="10" id="pMu-dD-QMd"/>
-                            <constraint firstItem="y4t-nR-TwE" firstAttribute="top" secondItem="9qO-19-wY6" secondAttribute="bottom" constant="10" id="r4w-xV-sHm"/>
+                            <constraint firstItem="SoJ-Td-5jV" firstAttribute="top" secondItem="9qO-19-wY6" secondAttribute="bottom" constant="6" id="QyN-7d-Rjp"/>
                             <constraint firstItem="9qO-19-wY6" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" constant="24" id="vXm-7P-Caa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kha-W0-Xe1"/>
@@ -361,6 +339,7 @@
                     <navigationItem key="navigationItem" id="6ws-ny-lU9"/>
                     <connections>
                         <outlet property="tableView" destination="SoJ-Td-5jV" id="h5z-49-Ir9"/>
+                        <outlet property="titleLabel" destination="9qO-19-wY6" id="B9D-Yt-0Nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="939-5D-l7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,7 +466,6 @@
         <image name="add_asset" width="22" height="22"/>
         <image name="add_asset_selected" width="28" height="28"/>
         <image name="close" width="14" height="14"/>
-        <image name="copy" width="22" height="22"/>
         <image name="curlyarrow" width="23" height="43"/>
         <image name="homeqr" width="30" height="29"/>
         <image name="logo" width="117" height="30"/>
