@@ -30,9 +30,9 @@ class AssetInfoViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCellTypes()
         configureTitle()
         configureTableView()
+        setupCellTypes()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -60,12 +60,11 @@ class AssetInfoViewController: BaseViewController {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 75
         tableView.tableFooterView = UIView()
         tableView.separatorColor = .aquaBackgroundBlue
         tableView.backgroundColor = .aquaBackgroundBlue
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
+        tableView.allowsSelection = false
         let infoCellNib = UINib(nibName: "AssetInfoCell", bundle: nil)
         let unregisteredCellNib = UINib(nibName: "UnregisteredAssetCell", bundle: nil)
         tableView.register(infoCellNib, forCellReuseIdentifier: "AssetInfoCell")
@@ -94,7 +93,14 @@ extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        switch indexPath.row {
+        case assetInfoCellTypes.firstIndex(of: .ticker):
+            return 50
+        case assetInfoCellTypes.firstIndex(of: .intro):
+            return 150
+        default:
+            return 80
+        }
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -123,7 +129,7 @@ extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .issuer:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                cell.setup(title: "Issuer", text: asset?.info?.entity?.domain ?? "")
+                cell.setup(title: "Issuer", text: asset?.info?.entity?.domain ?? (asset?.isLBTC ?? false ? "L-BTC has no issuer and is instead created on the network via a peg-in." : ""))
                 return cell
             }
         case .intro:
