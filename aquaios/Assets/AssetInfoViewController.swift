@@ -124,7 +124,7 @@ extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .unregistered:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "UnregisteredAssetCell") as? UnregisteredAssetCell {
-                cell.setup(title: "Asset Id", text: asset?.info?.assetId ?? "n.a.")
+                cell.setup(title: "Asset Id", text: asset?.tag ?? "n.a.")
                 return cell
             }
         case .issuer:
