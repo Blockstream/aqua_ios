@@ -311,10 +311,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liquid Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qO-19-wY6">
-                                <rect key="frame" x="24" y="80" width="171" height="34"/>
+                                <rect key="frame" x="24" y="80" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="YiU-mN-3VR"/>
-                                    <constraint firstAttribute="width" constant="171" id="tzT-hV-MTv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="textColor" name="paleLilac"/>
@@ -332,6 +331,7 @@
                             <constraint firstItem="kha-W0-Xe1" firstAttribute="bottom" secondItem="SoJ-Td-5jV" secondAttribute="bottom" id="MBa-xN-7vd"/>
                             <constraint firstItem="SoJ-Td-5jV" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" id="Qn2-2Z-aTA"/>
                             <constraint firstItem="SoJ-Td-5jV" firstAttribute="top" secondItem="9qO-19-wY6" secondAttribute="bottom" constant="6" id="QyN-7d-Rjp"/>
+                            <constraint firstItem="kha-W0-Xe1" firstAttribute="trailing" secondItem="9qO-19-wY6" secondAttribute="trailing" constant="16" id="llf-Ri-hbz"/>
                             <constraint firstItem="9qO-19-wY6" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" constant="24" id="vXm-7P-Caa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kha-W0-Xe1"/>
