@@ -34,7 +34,7 @@
                                     <action selector="dismissButtonTapped:" destination="6i5-e4-jOY" eventType="touchUpInside" id="qbD-nW-1Vw"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrboundary" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-7b-si2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-7b-si2">
                                 <rect key="frame" x="108" y="349" width="198" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZCt-7b-si2" secondAttribute="height" multiplier="1:1" id="n1f-O3-yK3"/>
@@ -59,7 +59,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeI-gM-b5u">
                                 <rect key="frame" x="164" y="746" width="86" height="86"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" highlightedImage="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-xT-0Yn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrwhite" highlightedImage="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-xT-0Yn">
                                         <rect key="frame" x="31" y="26" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="gqc-Mq-nFK"/>
@@ -79,7 +79,7 @@
                                             <constraint firstAttribute="width" constant="86" id="Zch-BU-4AN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="paleLilac"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -219,11 +219,14 @@
     </scenes>
     <resources>
         <image name="close" width="14" height="14"/>
-        <image name="qrboundary" width="198" height="198"/>
-        <image name="qrcode" width="24" height="24"/>
+        <image name="qrbound" width="198" height="198"/>
         <image name="qrcode_selected" width="24" height="24"/>
+        <image name="qrwhite" width="24" height="23"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleLilac">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
