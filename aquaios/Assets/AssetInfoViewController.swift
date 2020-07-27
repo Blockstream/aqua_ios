@@ -22,6 +22,16 @@ class AssetInfoViewController: BaseViewController {
             return asset?.isBTC ?? false
         }
     }
+    private var isLBTC: Bool {
+        get {
+            return asset?.isLBTC ?? false
+        }
+    }
+    private var isUSDt: Bool {
+        get {
+            return asset?.tag == "ce091c998b83c78bb71a632313ba3760f1763d9cfcffae02258ffa9865a37bd2"
+        }
+    }
     private var hasAssetInfo: Bool {
         get {
             return asset?.info?.name != nil
@@ -75,16 +85,29 @@ class AssetInfoViewController: BaseViewController {
         if isBTC {
             // Keep only ticker and intro for BTC
             assetInfoCellTypes = [AssetInfoCellType.ticker, AssetInfoCellType.intro]
-        } else {
-            if asset!.isLBTC {
-                assetInfoCellTypes = [AssetInfoCellType.ticker, AssetInfoCellType.issuer, AssetInfoCellType.intro]
-            }
-            if !hasAssetInfo && !asset!.isLBTC {
-                // Keep only unregistered
-                assetInfoCellTypes = [AssetInfoCellType.unregistered]
-            }
+            return
+        } else if !hasAssetInfo && !isLBTC {
+            // Keep only unregistered
+            assetInfoCellTypes = [AssetInfoCellType.unregistered]
+        } else if !(isLBTC || isUSDt) {
+            // Only BTC, LBTC, USDt have intros
+            assetInfoCellTypes.remove(at: assetInfoCellTypes.firstIndex(of: AssetInfoCellType.intro)!)
+        } else if isLBTC {
+            assetInfoCellTypes.remove(at: assetInfoCellTypes.firstIndex(of: AssetInfoCellType.unregistered)!)
         }
     }
+
+    func getIntroId() -> String {
+        if isBTC {
+            return "id_bitcoin_is_a_decentralized"
+        } else if isLBTC {
+            return "id_liquid_bitcoin_lbtc_represents"
+        } else if isUSDt {
+            return "id_tether_is_a_blockchainenabled"
+        }
+        return ""
+    }
+
 }
 
 extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
@@ -124,18 +147,18 @@ extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case .unregistered:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "UnregisteredAssetCell") as? UnregisteredAssetCell {
-                cell.setup(title: "Asset Id", text: asset?.tag ?? "n.a.")
+                cell.setup(title: NSLocalizedString("id_asset_id", comment: ""), text: asset?.tag ?? "n.a.")
                 return cell
             }
         case .issuer:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                cell.setup(title: "Issuer", text: asset?.info?.entity?.domain ?? (asset?.isLBTC ?? false ? "L-BTC has no issuer and is instead created on the network via a peg-in." : ""))
+                cell.setup(title: NSLocalizedString("id_issuer", comment: ""), text: asset?.info?.entity?.domain ?? (asset?.isLBTC ?? false ? NSLocalizedString("id_lbtc_has_no_issuer_and_is", comment: "") : ""))
                 return cell
             }
         case .intro:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AssetInfoCell") as? AssetInfoCell {
-                let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper libero et nulla porta suscipit. Nullam at risus arcu. Sed tincidunt lacus sed elementum suscipit. Vivamus justo est, faucibus tempor nisi quis, malesuada sodales lacus."
-                cell.setup(title: "Intro", text: text)
+                let text = NSLocalizedString(getIntroId(), comment: "")
+                cell.setup(title: NSLocalizedString("id_intro", comment: ""), text: text)
                 return cell
             }
         }
