@@ -56,9 +56,12 @@ class TransactionsViewController: BaseViewController {
     }
 
     func configurePreLogin() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createOrRestore))
-        receiveView.addGestureRecognizer(tapGestureRecognizer)
+        let receiveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createOrRestore))
+        let buyGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createOrRestore))
+        receiveView.addGestureRecognizer(receiveGestureRecognizer)
         receiveView.isUserInteractionEnabled = true
+        buyView.addGestureRecognizer(buyGestureRecognizer)
+        buyView.isUserInteractionEnabled = true
         receiveView.round(radius: 24)
         buyView.round(radius: 24)
         receiveIconView.round(radius: 35)
