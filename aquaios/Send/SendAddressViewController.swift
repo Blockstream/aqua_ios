@@ -30,6 +30,9 @@ class SendAddressViewController: BaseViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        addressTextField.text = NSLocalizedString("id_input_address_or_scan_qr_code", comment: "")
+        addressTextField.textColor = .teal
+        addressTextField.clearsOnBeginEditing = true
         if let address = UIPasteboard.general.string {
             addressLabel.text = address
             pasteFromClipboardView.isHidden = true
