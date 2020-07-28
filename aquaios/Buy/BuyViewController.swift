@@ -43,6 +43,9 @@ class BuyViewController: BaseViewController {
         if let dest = segue.destination as? WyreWidgetViewController {
             dest.buyBtc = sender as? Bool
         }
+        if let dest = segue.destination as? CreateWalletAlertController {
+            dest.delegateVC = self
+        }
     }
 
     func configurePreLogin() {
