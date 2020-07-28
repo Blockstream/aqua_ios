@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-CM-UkY" userLabel="ReceiveIconView">
                                                         <rect key="frame" x="53.5" y="20" width="70" height="70"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="7mN-9p-poh">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receive-prelogin" translatesAutoresizingMaskIntoConstraints="NO" id="7mN-9p-poh">
                                                                 <rect key="frame" x="20" y="20" width="30" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="BqG-0l-IuP"/>
@@ -75,7 +75,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3n-j5-9YE" userLabel="BuyIconView">
                                                         <rect key="frame" x="53.5" y="20" width="70" height="70"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_asset_selected" translatesAutoresizingMaskIntoConstraints="NO" id="0bL-uH-bCS">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buy_prelogin" translatesAutoresizingMaskIntoConstraints="NO" id="0bL-uH-bCS">
                                                                 <rect key="frame" x="20" y="20" width="30" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="19u-gD-xa2"/>
@@ -148,8 +148,8 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="25S-UB-fc8"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-FQ-Haf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-FQ-Haf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="106"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <color key="tintColor" name="tiffanyBlue"/>
                             </tableView>
@@ -190,8 +190,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_asset_selected" width="28" height="28"/>
-        <image name="qrcode_selected" width="24" height="24"/>
+        <image name="buy_prelogin" width="15" height="15"/>
+        <image name="receive-prelogin" width="16" height="16"/>
         <image name="tx_icon" width="28" height="25"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

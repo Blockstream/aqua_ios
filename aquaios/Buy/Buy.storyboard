@@ -87,7 +87,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m78-IZ-MwF" userLabel="BuyIconView">
                                         <rect key="frame" x="56" y="43.5" width="48" height="48"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_asset_selected" translatesAutoresizingMaskIntoConstraints="NO" id="WlM-Sv-YBc">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buy_prelogin" translatesAutoresizingMaskIntoConstraints="NO" id="WlM-Sv-YBc">
                                                 <rect key="frame" x="9" y="9" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="k4N-hX-m29"/>
@@ -218,8 +218,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_asset_selected" width="28" height="28"/>
         <image name="buy_icon" width="24" height="28"/>
+        <image name="buy_prelogin" width="15" height="15"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
