@@ -40,10 +40,7 @@ class QRCodeViewController: BaseViewController {
         actionButton.isHidden = hideActionButton
         actionButtonBackgroundView.isHidden = hideActionButton
         actionButtonBackgroundView.round(radius: 12)
-        actionButtonBackgroundView.shadow(radius: 3.0,
-                                          color: .black,
-                                          offset: CGSize(width: 0.0, height: 1.0),
-                                          opacity: 0.5)
+
         let receiveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.receiveAsset(_:)))
         actionButtonBackgroundView.addGestureRecognizer(receiveGestureRecognizer)
     }
