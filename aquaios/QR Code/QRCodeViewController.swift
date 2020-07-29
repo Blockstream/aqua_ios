@@ -44,6 +44,8 @@ class QRCodeViewController: BaseViewController {
                                           color: .black,
                                           offset: CGSize(width: 0.0, height: 1.0),
                                           opacity: 0.5)
+        let receiveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.receiveAsset(_:)))
+        actionButtonBackgroundView.addGestureRecognizer(receiveGestureRecognizer)
     }
 
     func setupBlurEffect() {
@@ -90,7 +92,7 @@ class QRCodeViewController: BaseViewController {
         }
     }
 
-    @IBAction func actionButtonTapped(_ sender: UIButton) {
+    @objc func receiveAsset(_ sender: Any?) {
         performSegue(withIdentifier: "select_asset_receive", sender: nil)
     }
 
