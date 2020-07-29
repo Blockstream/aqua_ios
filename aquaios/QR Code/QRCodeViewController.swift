@@ -22,11 +22,13 @@ class QRCodeViewController: BaseViewController {
     private var qrScreenshotReader: QRCodeScreenshotReader?
     private let picker = UIImagePickerController()
     private var network = Bitcoin.networkName
+    private var blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         qrScanner = QRScanner(with: scannerPreviewView, delegate: self)
         qrScreenshotReader = QRCodeScreenshotReader(delegate: self)
+        setupBlurEffect()
         startScanner()
     }
 
@@ -42,6 +44,18 @@ class QRCodeViewController: BaseViewController {
                                           color: .black,
                                           offset: CGSize(width: 0.0, height: 1.0),
                                           opacity: 0.5)
+    }
+
+    func setupBlurEffect() {
+        actionButtonBackgroundView.backgroundColor = .clear
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.round(radius: 16)
+        actionButtonBackgroundView.insertSubview(blurView, at: 0)
+
+        NSLayoutConstraint.activate([
+        blurView.heightAnchor.constraint(equalTo: actionButtonBackgroundView.heightAnchor),
+        blurView.widthAnchor.constraint(equalTo: actionButtonBackgroundView.widthAnchor)
+        ])
     }
 
     func startScanner() {
