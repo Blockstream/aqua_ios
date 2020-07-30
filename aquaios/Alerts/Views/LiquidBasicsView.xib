@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Liquid Basics View" customClass="LiquidBasicsView" customModule="Aqua" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="135"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infomercial_background" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-2O-HM8">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="135"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="135" id="GUv-79-wsM"/>
+                        <constraint firstAttribute="width" constant="340" id="JBs-7a-XgS"/>
+                    </constraints>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liquid 101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-3c-dJL">
+                    <rect key="frame" x="26" y="25" width="97.5" height="25.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                    <color key="textColor" name="paleLilac"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Liquid and how does it work?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpG-A8-ZVT">
+                    <rect key="frame" x="26" y="59.5" width="244" height="50.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="244" id="GOF-po-xQL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" name="paleLilac"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="aquaBackgroundBlue"/>
+            <constraints>
+                <constraint firstItem="AQL-2O-HM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1k5-5h-1p0"/>
+                <constraint firstItem="GpG-A8-ZVT" firstAttribute="top" secondItem="jWP-3c-dJL" secondAttribute="bottom" constant="9" id="HZg-Jd-jfv"/>
+                <constraint firstItem="RZk-n5-X6B" firstAttribute="bottom" secondItem="GpG-A8-ZVT" secondAttribute="bottom" constant="25" id="K8a-2n-1cR"/>
+                <constraint firstItem="GpG-A8-ZVT" firstAttribute="leading" secondItem="RZk-n5-X6B" secondAttribute="leading" constant="26" id="RYY-jV-hlx"/>
+                <constraint firstItem="AQL-2O-HM8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YpU-Vp-ns3"/>
+                <constraint firstItem="jWP-3c-dJL" firstAttribute="leading" secondItem="RZk-n5-X6B" secondAttribute="leading" constant="26" id="nUW-5k-N7C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="RZk-n5-X6B"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.88839285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="infomercial_background" width="375" height="812"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleLilac">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
