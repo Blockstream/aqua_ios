@@ -17,11 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NH1-oY-uCX">
-                                <rect key="frame" x="20" y="593" width="374" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8P-FF-bLf" userLabel="BuyBtcView">
                                 <rect key="frame" x="37" y="204" width="340" height="160"/>
                                 <subviews>
@@ -189,12 +184,20 @@
                                     <constraint firstItem="meS-GA-OS8" firstAttribute="top" secondItem="Z5V-NZ-Huq" secondAttribute="top" constant="35" id="xb7-Mb-OiY"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More options coming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QB-dm-Ffp">
+                                <rect key="frame" x="105" y="569" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="lightestBlueGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="Z5V-NZ-Huq" firstAttribute="centerY" secondItem="Boq-V6-JWe" secondAttribute="centerY" id="192-Iz-sWu"/>
                             <constraint firstItem="Z5V-NZ-Huq" firstAttribute="leading" secondItem="Boq-V6-JWe" secondAttribute="leading" constant="18" id="61E-It-8x7"/>
+                            <constraint firstItem="0QB-dm-Ffp" firstAttribute="top" secondItem="ohL-22-ehY" secondAttribute="bottom" constant="25" id="9h9-su-QB8"/>
                             <constraint firstItem="F8P-FF-bLf" firstAttribute="top" secondItem="Boq-V6-JWe" secondAttribute="top" constant="160" id="KQF-ai-TBh"/>
+                            <constraint firstItem="0QB-dm-Ffp" firstAttribute="centerX" secondItem="Boq-V6-JWe" secondAttribute="centerX" id="ST5-7M-xwV"/>
                             <constraint firstItem="F8P-FF-bLf" firstAttribute="centerX" secondItem="Boq-V6-JWe" secondAttribute="centerX" id="XTg-PI-Lst"/>
                             <constraint firstItem="ohL-22-ehY" firstAttribute="top" secondItem="F8P-FF-bLf" secondAttribute="bottom" constant="20" id="asm-SL-HFA"/>
                             <constraint firstItem="ohL-22-ehY" firstAttribute="leading" secondItem="F8P-FF-bLf" secondAttribute="leading" id="ly9-Rv-W50"/>
@@ -211,6 +214,7 @@
                         <outlet property="buyLbtcButton" destination="tIL-kx-jtR" id="1Ky-oS-mwX"/>
                         <outlet property="buyLbtcView" destination="ohL-22-ehY" id="RgG-4Q-gq0"/>
                         <outlet property="buyView" destination="Z5V-NZ-Huq" id="4dh-Ge-LAX"/>
+                        <outlet property="comingSoonLabel" destination="0QB-dm-Ffp" id="kTn-3g-RbH"/>
                         <segue destination="0D1-ki-87B" kind="presentation" identifier="buy_wyre" id="BVG-l9-8p7"/>
                         <segue destination="WPx-gU-XLV" kind="showDetail" identifier="create_wallet_alert" id="nza-KW-AFv"/>
                     </connections>
@@ -278,6 +282,9 @@
         </namedColor>
         <namedColor name="lighterBlueGray">
             <color red="0.17254901960784313" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightestBlueGray">
+            <color red="0.55686274509803924" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="paleLilac">
             <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

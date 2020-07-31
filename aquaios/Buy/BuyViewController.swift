@@ -9,6 +9,7 @@ class BuyViewController: BaseViewController {
     @IBOutlet weak var buyLbtcView: UIView! //
     @IBOutlet weak var buyBtcButton: UIButton!
     @IBOutlet weak var buyLbtcButton: UIButton!
+    @IBOutlet weak var comingSoonLabel: UILabel!
     private var wyreService: WyreService!
     private var wyreAllowed: Bool = false
 
@@ -26,10 +27,12 @@ class BuyViewController: BaseViewController {
             buyView.isHidden = true
             buyBtcView.isHidden = false
             buyLbtcView.isHidden = false
+            comingSoonLabel.isHidden = false
             wyreService.getWidget()
         } else {
             buyBtcView.isHidden = true
             buyLbtcView.isHidden = true
+            comingSoonLabel.isHidden = true
         }
     }
 
