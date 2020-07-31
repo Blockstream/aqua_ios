@@ -17,70 +17,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH1-oY-uCX">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NH1-oY-uCX">
                                 <rect key="frame" x="20" y="593" width="374" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vw4-Io-CWj">
-                                <rect key="frame" x="20" y="593" width="374" height="140"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8P-FF-bLf" userLabel="BuyBtcView">
+                                <rect key="frame" x="37" y="204" width="340" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-tU-7hF">
-                                        <rect key="frame" x="115" y="0.0" width="144" height="53"/>
-                                        <color key="backgroundColor" name="aquaShadowBlue"/>
-                                        <state key="normal" title="Buy bitcoin">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buybtc" translatesAutoresizingMaskIntoConstraints="NO" id="fdr-gb-Kqv" userLabel="buybtcimage">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="160"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Bitcoin with card or Apple Pay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE7-mY-NJv">
+                                        <rect key="frame" x="18" y="25" width="187" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="187" id="7q1-Lx-y56"/>
+                                            <constraint firstAttribute="height" constant="60" id="PsY-bg-3mk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" name="paleLilac"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wyrelogowhite" translatesAutoresizingMaskIntoConstraints="NO" id="Mjf-54-xWi">
+                                        <rect key="frame" x="262" y="25" width="60" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Brm-OE-bXE"/>
+                                            <constraint firstAttribute="height" constant="20" id="Zjj-Ws-6r3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB2-va-2uW">
+                                        <rect key="frame" x="18" y="107" width="100" height="35"/>
+                                        <color key="backgroundColor" name="topaz"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="32T-kB-4BR"/>
+                                            <constraint firstAttribute="width" constant="100" id="fA5-hz-rC9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Buy">
                                             <color key="titleColor" name="paleLilac"/>
                                         </state>
-                                        <state key="selected">
-                                            <color key="titleColor" name="tiffanyBlue"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" name="tiffanyBlue"/>
-                                        </state>
                                         <connections>
-                                            <action selector="actionButtonTapped:" destination="nuA-Tx-K8e" eventType="touchUpInside" id="gn6-Vr-o3v"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sij-wX-AEw">
-                                        <rect key="frame" x="186.5" y="53" width="1" height="34"/>
-                                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="hyh-Zq-Nmt"/>
-                                            <constraint firstAttribute="height" constant="34" id="jtd-px-bQz"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-Fx-4cd">
-                                        <rect key="frame" x="115" y="87" width="144" height="53"/>
-                                        <color key="backgroundColor" name="aquaShadowBlue"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="53" id="fQn-Lp-iPm"/>
-                                        </constraints>
-                                        <state key="normal" title="Buy Liquid bitcoin">
-                                            <color key="titleColor" name="paleLilac"/>
-                                        </state>
-                                        <state key="selected">
-                                            <color key="titleColor" name="tiffanyBlue"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" name="tiffanyBlue"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="actionButtonTapped:" destination="nuA-Tx-K8e" eventType="touchUpInside" id="Fhf-1b-vB0"/>
+                                            <action selector="buyBtcTapped:" destination="nuA-Tx-K8e" eventType="touchUpInside" id="sZV-Vu-YPg"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <constraints>
-                                    <constraint firstItem="sij-wX-AEw" firstAttribute="centerY" secondItem="vw4-Io-CWj" secondAttribute="centerY" id="4Kp-qG-4zG"/>
-                                    <constraint firstItem="9Dh-Fx-4cd" firstAttribute="width" secondItem="rtM-tU-7hF" secondAttribute="width" id="CII-Zk-xIB"/>
-                                    <constraint firstItem="9Dh-Fx-4cd" firstAttribute="height" secondItem="rtM-tU-7hF" secondAttribute="height" id="u28-eZ-ZOf"/>
+                                    <constraint firstItem="fdr-gb-Kqv" firstAttribute="centerY" secondItem="F8P-FF-bLf" secondAttribute="centerY" id="21j-Dj-f1T"/>
+                                    <constraint firstItem="AE7-mY-NJv" firstAttribute="top" secondItem="F8P-FF-bLf" secondAttribute="top" constant="25" id="CEi-Au-D9t"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mjf-54-xWi" secondAttribute="trailing" constant="18" id="GW1-0V-ava"/>
+                                    <constraint firstAttribute="bottom" secondItem="XB2-va-2uW" secondAttribute="bottom" constant="18" id="Jfi-uk-3JC"/>
+                                    <constraint firstItem="fdr-gb-Kqv" firstAttribute="width" secondItem="F8P-FF-bLf" secondAttribute="width" id="N4k-o3-Rh6"/>
+                                    <constraint firstAttribute="height" constant="160" id="Pzo-AN-6v3"/>
+                                    <constraint firstItem="XB2-va-2uW" firstAttribute="leading" secondItem="F8P-FF-bLf" secondAttribute="leading" constant="18" id="dEa-yd-sqU"/>
+                                    <constraint firstItem="fdr-gb-Kqv" firstAttribute="height" secondItem="F8P-FF-bLf" secondAttribute="height" id="dzy-eX-shb"/>
+                                    <constraint firstItem="fdr-gb-Kqv" firstAttribute="centerX" secondItem="F8P-FF-bLf" secondAttribute="centerX" id="lY7-m6-GeI"/>
+                                    <constraint firstAttribute="width" constant="340" id="lzp-1b-Mnm"/>
+                                    <constraint firstItem="AE7-mY-NJv" firstAttribute="leading" secondItem="F8P-FF-bLf" secondAttribute="leading" constant="18" id="oIW-6C-Ed6"/>
+                                    <constraint firstItem="Mjf-54-xWi" firstAttribute="top" secondItem="F8P-FF-bLf" secondAttribute="top" constant="25" id="z6O-Ao-X5C"/>
                                 </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy with Debit Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgR-az-qh1">
-                                <rect key="frame" x="131" y="552.5" width="152.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="paleLilac"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohL-22-ehY" userLabel="BuyLbtcView">
+                                <rect key="frame" x="37" y="384" width="340" height="160"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buybtc" translatesAutoresizingMaskIntoConstraints="NO" id="XDS-bW-k2D" userLabel="buylbtcimage">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="160"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Liquid Bitcoin with card or Apple Pay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-nY-cOt">
+                                        <rect key="frame" x="18" y="25" width="187" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="187" id="4fp-RE-73W"/>
+                                            <constraint firstAttribute="height" constant="60" id="R9p-Ye-qig"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" name="paleLilac"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wyrelogowhite" translatesAutoresizingMaskIntoConstraints="NO" id="hpm-Dv-v3E">
+                                        <rect key="frame" x="262" y="25" width="60" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="PFF-XF-yxu"/>
+                                            <constraint firstAttribute="height" constant="20" id="mX7-Wy-Cqy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIL-kx-jtR" userLabel="Buy Lbtc Button">
+                                        <rect key="frame" x="18" y="107" width="100" height="35"/>
+                                        <color key="backgroundColor" name="topaz"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="e3G-6j-FPq"/>
+                                            <constraint firstAttribute="width" constant="100" id="h7W-6z-rRO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Buy">
+                                            <color key="titleColor" name="paleLilac"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyLbtcTapped:" destination="nuA-Tx-K8e" eventType="touchUpInside" id="TWL-i6-b8U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                                <constraints>
+                                    <constraint firstItem="XDS-bW-k2D" firstAttribute="height" secondItem="ohL-22-ehY" secondAttribute="height" id="1l8-b2-d3e"/>
+                                    <constraint firstItem="hpm-Dv-v3E" firstAttribute="top" secondItem="ohL-22-ehY" secondAttribute="top" constant="25" id="2bR-Xd-kVC"/>
+                                    <constraint firstItem="XDS-bW-k2D" firstAttribute="width" secondItem="ohL-22-ehY" secondAttribute="width" id="E2i-DU-qLw"/>
+                                    <constraint firstItem="tIL-kx-jtR" firstAttribute="leading" secondItem="ohL-22-ehY" secondAttribute="leading" constant="18" id="Fhx-Zh-mfm"/>
+                                    <constraint firstItem="KdT-nY-cOt" firstAttribute="leading" secondItem="ohL-22-ehY" secondAttribute="leading" constant="18" id="Hsl-IO-wQL"/>
+                                    <constraint firstItem="XDS-bW-k2D" firstAttribute="centerX" secondItem="ohL-22-ehY" secondAttribute="centerX" id="JqU-TA-xUo"/>
+                                    <constraint firstAttribute="bottom" secondItem="tIL-kx-jtR" secondAttribute="bottom" constant="18" id="WP6-B2-Wvt"/>
+                                    <constraint firstItem="XDS-bW-k2D" firstAttribute="centerY" secondItem="ohL-22-ehY" secondAttribute="centerY" id="aep-DC-r1g"/>
+                                    <constraint firstAttribute="height" constant="160" id="dXK-Vf-FJm"/>
+                                    <constraint firstAttribute="trailing" secondItem="hpm-Dv-v3E" secondAttribute="trailing" constant="18" id="e9Q-AA-R5h"/>
+                                    <constraint firstItem="KdT-nY-cOt" firstAttribute="top" secondItem="ohL-22-ehY" secondAttribute="top" constant="25" id="iOc-pi-23M"/>
+                                    <constraint firstAttribute="width" constant="340" id="r6x-n8-IWV"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5V-NZ-Huq" userLabel="BuyView">
                                 <rect key="frame" x="18" y="361" width="378" height="135"/>
                                 <subviews>
@@ -143,36 +194,30 @@
                         <constraints>
                             <constraint firstItem="Z5V-NZ-Huq" firstAttribute="centerY" secondItem="Boq-V6-JWe" secondAttribute="centerY" id="192-Iz-sWu"/>
                             <constraint firstItem="Z5V-NZ-Huq" firstAttribute="leading" secondItem="Boq-V6-JWe" secondAttribute="leading" constant="18" id="61E-It-8x7"/>
-                            <constraint firstItem="vw4-Io-CWj" firstAttribute="leading" secondItem="7rF-EA-n6L" secondAttribute="leading" constant="20" id="8ZQ-FZ-BPn"/>
-                            <constraint firstItem="NH1-oY-uCX" firstAttribute="trailing" secondItem="vw4-Io-CWj" secondAttribute="trailing" id="CeI-1T-kqj"/>
-                            <constraint firstItem="Boq-V6-JWe" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" constant="80" id="Cmy-x5-xjX"/>
-                            <constraint firstItem="GgR-az-qh1" firstAttribute="centerX" secondItem="7rF-EA-n6L" secondAttribute="centerX" id="LJQ-2Y-Cre"/>
-                            <constraint firstItem="NH1-oY-uCX" firstAttribute="bottom" secondItem="vw4-Io-CWj" secondAttribute="bottom" id="Lop-bk-ifO"/>
-                            <constraint firstItem="Boq-V6-JWe" firstAttribute="trailing" secondItem="vw4-Io-CWj" secondAttribute="trailing" constant="20" id="Wp6-wf-Lk9"/>
-                            <constraint firstItem="NH1-oY-uCX" firstAttribute="leading" secondItem="vw4-Io-CWj" secondAttribute="leading" id="h1H-DD-bTo"/>
-                            <constraint firstItem="NH1-oY-uCX" firstAttribute="top" secondItem="vw4-Io-CWj" secondAttribute="top" id="n11-jK-ATK"/>
+                            <constraint firstItem="F8P-FF-bLf" firstAttribute="top" secondItem="Boq-V6-JWe" secondAttribute="top" constant="160" id="KQF-ai-TBh"/>
+                            <constraint firstItem="F8P-FF-bLf" firstAttribute="centerX" secondItem="Boq-V6-JWe" secondAttribute="centerX" id="XTg-PI-Lst"/>
+                            <constraint firstItem="ohL-22-ehY" firstAttribute="top" secondItem="F8P-FF-bLf" secondAttribute="bottom" constant="20" id="asm-SL-HFA"/>
+                            <constraint firstItem="ohL-22-ehY" firstAttribute="leading" secondItem="F8P-FF-bLf" secondAttribute="leading" id="ly9-Rv-W50"/>
                             <constraint firstItem="Boq-V6-JWe" firstAttribute="trailing" secondItem="Z5V-NZ-Huq" secondAttribute="trailing" constant="18" id="v66-K4-LHL"/>
-                            <constraint firstItem="rtM-tU-7hF" firstAttribute="top" secondItem="GgR-az-qh1" secondAttribute="bottom" constant="20" id="zKi-aL-QeV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Boq-V6-JWe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="buy_icon" id="KmE-Hf-bcT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="actionStackBackgroundView" destination="sij-wX-AEw" id="15K-fg-PlZ"/>
-                        <outlet property="actionStackView" destination="vw4-Io-CWj" id="cO4-jZ-VwL"/>
-                        <outlet property="btcButton" destination="rtM-tU-7hF" id="1Ma-zf-SRJ"/>
+                        <outlet property="buyBtcButton" destination="XB2-va-2uW" id="iTb-we-clZ"/>
+                        <outlet property="buyBtcView" destination="F8P-FF-bLf" id="qPQ-En-QXK"/>
                         <outlet property="buyIconView" destination="m78-IZ-MwF" id="qYq-jx-gmX"/>
+                        <outlet property="buyLbtcButton" destination="tIL-kx-jtR" id="1Ky-oS-mwX"/>
+                        <outlet property="buyLbtcView" destination="ohL-22-ehY" id="RgG-4Q-gq0"/>
                         <outlet property="buyView" destination="Z5V-NZ-Huq" id="4dh-Ge-LAX"/>
-                        <outlet property="infoLabel" destination="GgR-az-qh1" id="H7s-ad-7dR"/>
-                        <outlet property="lbtcButton" destination="9Dh-Fx-4cd" id="wMj-KP-2J4"/>
                         <segue destination="0D1-ki-87B" kind="presentation" identifier="buy_wyre" id="BVG-l9-8p7"/>
                         <segue destination="WPx-gU-XLV" kind="showDetail" identifier="create_wallet_alert" id="nza-KW-AFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEN-Mf-PyX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="132"/>
+            <point key="canvasLocation" x="163.768115942029" y="131.91964285714286"/>
         </scene>
         <!--Wyre Widget View Controller-->
         <scene sceneID="0AF-qf-Br4">
@@ -220,6 +265,8 @@
     <resources>
         <image name="buy_icon" width="24" height="28"/>
         <image name="buy_prelogin" width="15" height="15"/>
+        <image name="buybtc" width="340" height="160"/>
+        <image name="wyrelogowhite" width="60" height="20"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -235,8 +282,8 @@
         <namedColor name="paleLilac">
             <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="tiffanyBlue">
-            <color red="0.094117647058823528" green="0.78431372549019607" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="topaz">
+            <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -1,15 +1,16 @@
 import UIKit
+import PromiseKit
 
 class BuyViewController: BaseViewController {
 
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var actionStackView: UIStackView!
-    @IBOutlet weak var actionStackBackgroundView: UIView!
-    @IBOutlet weak var btcButton: UIButton!
-    @IBOutlet weak var lbtcButton: UIButton!
     @IBOutlet weak var buyView: UIView!
     @IBOutlet weak var buyIconView: UIView!
+    @IBOutlet weak var buyBtcView: UIView! // !!!
+    @IBOutlet weak var buyLbtcView: UIView! //
+    @IBOutlet weak var buyBtcButton: UIButton!
+    @IBOutlet weak var buyLbtcButton: UIButton!
     private var wyreService: WyreService!
+    private var wyreAllowed: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,25 +19,43 @@ class BuyViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        actionStackBackgroundView.round(radius: 21, borderWidth: 2, borderColor: .tiffanyBlue)
+        buyBtcButton.round(radius: 16)
+        buyLbtcButton.round(radius: 16)
         configurePreLogin()
         if hasWallet {
             buyView.isHidden = true
-            btcButton.isHidden = false
-            lbtcButton.isHidden = false
-            infoLabel.isHidden = false
-            infoLabel.text = "Checking availability..."
+            buyBtcView.isHidden = false
+            buyLbtcView.isHidden = false
             wyreService.getWidget()
         } else {
-            btcButton.isHidden = true
-            lbtcButton.isHidden = true
-            infoLabel.isHidden = true
+            buyBtcView.isHidden = true
+            buyLbtcView.isHidden = true
         }
     }
 
-    @IBAction func actionButtonTapped(_ sender: UIButton) {
-        let buyBtc = sender.titleLabel?.text == "Buy bitcoin"
-        performSegue(withIdentifier: "buy_wyre", sender: buyBtc)
+    func prepareBuy(isBtc: Bool) {
+        let bgq = DispatchQueue.global(qos: .background)
+        firstly {
+            self.startAnimating()
+            return Guarantee()
+        }.compactMap(on: bgq) {
+            self.wyreService.getWidget()
+        }.ensure {
+            self.stopAnimating()
+        }.done {  _ in
+            if self.wyreAllowed {
+                self.performSegue(withIdentifier: "buy_wyre", sender: isBtc)
+            } else {
+                self.showAlert(title: "Error", message: "Service not available in your country")
+            }
+        }
+    }
+
+    @IBAction func buyBtcTapped(_ sender: Any) {
+        prepareBuy(isBtc: true)
+    }
+    @IBAction func buyLbtcTapped(_ sender: Any) {
+        prepareBuy(isBtc: false)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -63,13 +82,7 @@ class BuyViewController: BaseViewController {
 
 extension BuyViewController: WyreServiceDelegate {
     func widgetRetrieved(with widget: WyreWidget) {
-        if !(widget.hasRestrictions ?? true) {
-            DispatchQueue.main.async {
-                self.infoLabel.text = "Buy with Debit Card"
-                self.actionStackView.isHidden = false
-                self.actionStackBackgroundView.isHidden = false
-            }
-        }
+        self.wyreAllowed = !(widget.hasRestrictions ?? true)
     }
 
     func requestFailed(with error: Error) {
