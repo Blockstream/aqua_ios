@@ -8,6 +8,9 @@ class TransactionsViewController: BaseViewController {
     @IBOutlet weak var buyView: UIView!
     @IBOutlet weak var receiveIconView: UIView!
     @IBOutlet weak var buyIconView: UIView!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+
     private var transactions: [Transaction] = []
     private var transactionToken: NSObjectProtocol?
 
@@ -23,6 +26,10 @@ class TransactionsViewController: BaseViewController {
         configurePreLogin()
         if hasWallet {
             self.tableView.isHidden = false
+            self.buyView.isHidden = true
+            self.receiveView.isHidden = true
+            self.firstLabel.isHidden = true
+            self.secondLabel.isHidden = true
             reloadData()
 
         } else {
