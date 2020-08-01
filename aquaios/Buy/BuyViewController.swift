@@ -10,13 +10,7 @@ class BuyViewController: BaseViewController {
     @IBOutlet weak var buyBtcButton: UIButton!
     @IBOutlet weak var buyLbtcButton: UIButton!
     @IBOutlet weak var comingSoonLabel: UILabel!
-    private var wyreService: WyreService!
     private var wyreAllowed: Bool = false
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        wyreService = WyreService(delegate: self)
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,7 +22,6 @@ class BuyViewController: BaseViewController {
             buyBtcView.isHidden = false
             buyLbtcView.isHidden = false
             comingSoonLabel.isHidden = false
-            wyreService.getWidget()
         } else {
             buyBtcView.isHidden = true
             buyLbtcView.isHidden = true
@@ -41,15 +34,20 @@ class BuyViewController: BaseViewController {
         firstly {
             self.startAnimating()
             return Guarantee()
-        }.compactMap(on: bgq) {
-            self.wyreService.getWidget()
+        }.then(on: bgq) {
+            self.reserve()
         }.ensure {
             self.stopAnimating()
-        }.done {  _ in
-            if self.wyreAllowed {
-                self.performSegue(withIdentifier: "buy_wyre", sender: isBtc)
+        }.done {  res in
+            if let path = res["url"] {
+                let address = isBtc ? Bitcoin.shared.address : Liquid.shared.address
+                let destCurrency = isBtc ? "BTC" : "LBTC"
+                let url = URL(string: "\(path)&destCurrency=\(destCurrency)&dest=\(address!)")
+                UIApplication.shared.open(url!, options: [:])
+                return
             } else {
-                self.showAlert(title: "Error", message: "Service not available in your country")
+                // TODO: GET /location/widget not available in v3
+                self.showAlert(title: "Error", message: "Missing url")
             }
         }
     }
@@ -62,9 +60,6 @@ class BuyViewController: BaseViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? WyreWidgetViewController {
-            dest.buyBtc = sender as? Bool
-        }
         if let dest = segue.destination as? CreateWalletAlertController {
             dest.delegateVC = self
         }
@@ -81,13 +76,29 @@ class BuyViewController: BaseViewController {
     @objc func createOrRestore(_ sender: Any?) {
         performSegue(withIdentifier: "create_wallet_alert", sender: nil)
     }
-}
 
-extension BuyViewController: WyreServiceDelegate {
-    func widgetRetrieved(with widget: WyreWidget) {
-        self.wyreAllowed = !(widget.hasRestrictions ?? true)
-    }
-
-    func requestFailed(with error: Error) {
+    func reserve() -> Promise<[String: String]> {
+        let url = URL(string: "https://api.testwyre.com/v3/orders/reserve")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = [ "Content-Type": "application/json",
+                                        "Accept": "application/json",
+                                        "Authorization": "Bearer SK-X4F6UAXL-LNCFNU63-2TC4NGRG-T3EPCUZD" ]
+        let params = ["referrerAccountId": "AC_82VYBNNYG32"]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        return Promise { seal in
+            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+                if let error = error {
+                    print(error)
+                    return seal.reject(GaError.GenericError)
+                }
+                if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: String] {
+                    print(json)
+                    return seal.fulfill(json)
+                }
+                return seal.reject(GaError.GenericError)
+            })
+            task.resume()
+        }
     }
 }

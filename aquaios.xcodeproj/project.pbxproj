@@ -10,6 +10,7 @@
 		2036733124B7776100A57897 /* CreateWalletAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036733024B7776100A57897 /* CreateWalletAlertController.swift */; };
 		2040D84424C5F8C2003DFA3C /* AssetInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2040D84324C5F8C2003DFA3C /* AssetInfoCell.xib */; };
 		2040D84A24C5FF01003DFA3C /* AssetInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040D84924C5FF01003DFA3C /* AssetInfoCell.swift */; };
+		207846A224D5B5EC005C3268 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0B6755243FDA7800776289 /* WebKit.framework */; };
 		2085919624C6EC2100912ED0 /* UnregisteredAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2085919524C6EC2100912ED0 /* UnregisteredAssetCell.xib */; };
 		2085919A24C6F84900912ED0 /* UnregisteredAssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2085919924C6F84800912ED0 /* UnregisteredAssetCell.swift */; };
 		20A6A94924ADE05D009E0210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A94B24ADE05D009E0210 /* Localizable.strings */; };
@@ -24,10 +25,6 @@
 		6D077207242C2E6E009DEA9B /* SendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D077206242C2E6E009DEA9B /* SendDetailsViewController.swift */; };
 		6D09E81F2406F9EF0052CD35 /* AddAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E81D2406F9EF0052CD35 /* AddAssetCell.xib */; };
 		6D09E8202406F9EF0052CD35 /* AddAssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D09E81E2406F9EF0052CD35 /* AddAssetCell.swift */; };
-		6D0B6751243FD24900776289 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B674F243FD24900776289 /* APIClient.swift */; };
-		6D0B6752243FD24900776289 /* WyreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B6750243FD24900776289 /* WyreService.swift */; };
-		6D0B6754243FD2AC00776289 /* WyreWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B6753243FD2AC00776289 /* WyreWidgetViewController.swift */; };
-		6D0B6756243FDA7800776289 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0B6755243FDA7800776289 /* WebKit.framework */; };
 		6D1592C82405D0DE00F15BCD /* AddAssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1592C72405D0DE00F15BCD /* AddAssetsViewController.swift */; };
 		6D1592CE2405E7F800F15BCD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1592CD2405E7F800F15BCD /* UIViewController.swift */; };
 		6D2513E1246CAE0E005D4EDC /* AssetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2513E0246CAE0E005D4EDC /* AssetInfoViewController.swift */; };
@@ -171,9 +168,6 @@
 		6D077206242C2E6E009DEA9B /* SendDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDetailsViewController.swift; sourceTree = "<group>"; };
 		6D09E81D2406F9EF0052CD35 /* AddAssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAssetCell.xib; sourceTree = "<group>"; };
 		6D09E81E2406F9EF0052CD35 /* AddAssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAssetCell.swift; sourceTree = "<group>"; };
-		6D0B674F243FD24900776289 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		6D0B6750243FD24900776289 /* WyreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WyreService.swift; sourceTree = "<group>"; };
-		6D0B6753243FD2AC00776289 /* WyreWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WyreWidgetViewController.swift; sourceTree = "<group>"; };
 		6D0B6755243FDA7800776289 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6D1592C72405D0DE00F15BCD /* AddAssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetsViewController.swift; sourceTree = "<group>"; };
 		6D1592CD2405E7F800F15BCD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -270,7 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0B6756243FDA7800776289 /* WebKit.framework in Frameworks */,
+				207846A224D5B5EC005C3268 /* WebKit.framework in Frameworks */,
 				DC02C5F53739EDFBFBA12642 /* Pods_aquaios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,19 +304,9 @@
 		6D0B674D243FD22100776289 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6D0B674E243FD24900776289 /* API Service */,
 				6DD8D980243D3B1300A6F560 /* AquaService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		6D0B674E243FD24900776289 /* API Service */ = {
-			isa = PBXGroup;
-			children = (
-				6D0B674F243FD24900776289 /* APIClient.swift */,
-				6D0B6750243FD24900776289 /* WyreService.swift */,
-			);
-			path = "API Service";
 			sourceTree = "<group>";
 		};
 		6D30692223E38DEA008F3EAD /* Models */ = {
@@ -394,7 +378,6 @@
 			isa = PBXGroup;
 			children = (
 				6D4A4C4824045CBE0002BA93 /* BuyViewController.swift */,
-				6D0B6753243FD2AC00776289 /* WyreWidgetViewController.swift */,
 				6D4A4C4624045CB20002BA93 /* Buy.storyboard */,
 			);
 			path = Buy;
@@ -833,7 +816,6 @@
 				6D482FD0246A085D0054AC84 /* ConfirmMnemonicViewController.swift in Sources */,
 				81D9E47624068D15005DD867 /* Wallet.swift in Sources */,
 				6D077207242C2E6E009DEA9B /* SendDetailsViewController.swift in Sources */,
-				6D0B6751243FD24900776289 /* APIClient.swift in Sources */,
 				81D9E4882406BA9F005DD867 /* Registry.swift in Sources */,
 				818439F6246ACC03006BF3BF /* NetworkSession.swift in Sources */,
 				6DA69A2F240F2BB3000F626E /* QRCodeViewController.swift in Sources */,
@@ -843,7 +825,6 @@
 				8192528C2428DD6900203C44 /* Transaction.swift in Sources */,
 				6DC69E7E23E12F0600DCD7CB /* GreenAddress.swift in Sources */,
 				8174BBB824928B5F00929D4E /* AuthenticationViewController.swift in Sources */,
-				6D0B6754243FD2AC00776289 /* WyreWidgetViewController.swift in Sources */,
 				6DB9FCE924186B0500E266DB /* BaseViewController.swift in Sources */,
 				6D407BFC2404A56800EE06EB /* Asset.swift in Sources */,
 				6DC69E6B23DB446600DCD7CB /* AssetListViewController.swift in Sources */,
@@ -871,7 +852,6 @@
 				6D482FD2246A08EB0054AC84 /* BackupCompleteViewController.swift in Sources */,
 				6DA69A32240F30BA000F626E /* QRScreenshotReader.swift in Sources */,
 				812A122E2448A9A400129EDE /* BackupNagViewController.swift in Sources */,
-				6D0B6752243FD24900776289 /* WyreService.swift in Sources */,
 				6D3103E92425819800CA17CF /* AssetDetailViewController.swift in Sources */,
 				81A6ABD424741BC200599556 /* Fiat.swift in Sources */,
 				6DD8D97A243BF4C100A6F560 /* UIImage.swift in Sources */,
