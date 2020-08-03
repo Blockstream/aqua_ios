@@ -97,13 +97,6 @@ class QRCodeViewController: BaseViewController {
         dismissModal(animated: true)
     }
 
-    @IBAction func albumButtonTapped(_ sender: UIButton) {
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(picker, animated: true, completion: nil)
-    }
-
     func createTransactionPromise(_ networkSession: NetworkSession, address: String) -> Promise<RawTransaction> {
         return Promise<RawTransaction> { seal in
             let tx = try networkSession.createTransaction(address)

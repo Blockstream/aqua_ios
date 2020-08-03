@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,27 +35,17 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-7b-si2">
-                                <rect key="frame" x="9" y="250" width="396" height="396"/>
+                                <rect key="frame" x="108" y="349" width="198" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZCt-7b-si2" secondAttribute="height" multiplier="1:1" id="n1f-O3-yK3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2P-nR-zj8">
-                                <rect key="frame" x="9" y="672" width="396" height="29"/>
+                                <rect key="frame" x="108" y="573" width="198" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgD-Q2-VuL">
-                                <rect key="frame" x="332" y="113" width="54" height="34"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="Album">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="albumButtonTapped:" destination="6i5-e4-jOY" eventType="touchUpInside" id="z5u-ya-7IV"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeI-gM-b5u">
                                 <rect key="frame" x="164" y="746" width="86" height="86"/>
                                 <subviews>
@@ -70,8 +60,8 @@
                                         <rect key="frame" x="0.0" y="40" width="86" height="46"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="My QR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-44-Yrc">
-                                        <rect key="frame" x="-1" y="51" width="87" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="My QR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-44-Yrc">
+                                        <rect key="frame" x="0.0" y="57" width="86" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="86" id="Zch-BU-4AN"/>
                                         </constraints>
@@ -108,9 +98,7 @@
                             <constraint firstItem="ZCt-7b-si2" firstAttribute="centerY" secondItem="zgo-Ot-zAC" secondAttribute="centerY" id="ad2-ZH-hJV"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="leading" secondItem="g6E-dG-7Mv" secondAttribute="leading" id="gTL-4w-0nL"/>
                             <constraint firstItem="zCZ-xj-eIu" firstAttribute="leading" secondItem="g6E-dG-7Mv" secondAttribute="leading" constant="28" id="hnN-ca-edb"/>
-                            <constraint firstItem="g6E-dG-7Mv" firstAttribute="trailing" secondItem="pgD-Q2-VuL" secondAttribute="trailing" constant="28" id="moc-ab-fNC"/>
                             <constraint firstItem="p2P-nR-zj8" firstAttribute="leading" secondItem="ZCt-7b-si2" secondAttribute="leading" id="nu0-cS-gcI"/>
-                            <constraint firstItem="pgD-Q2-VuL" firstAttribute="centerY" secondItem="zCZ-xj-eIu" secondAttribute="centerY" id="ogF-eG-FEN"/>
                             <constraint firstItem="zCZ-xj-eIu" firstAttribute="top" secondItem="g6E-dG-7Mv" secondAttribute="top" constant="28" id="sEj-JH-Myz"/>
                             <constraint firstItem="p2P-nR-zj8" firstAttribute="trailing" secondItem="ZCt-7b-si2" secondAttribute="trailing" id="uPj-xg-Gyw"/>
                         </constraints>
@@ -214,6 +202,9 @@
             <point key="canvasLocation" x="3537" y="4"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nl2-qr-1Rt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="close" width="14" height="14"/>
         <image name="qrbound" width="198" height="198"/>
@@ -226,7 +217,4 @@
             <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nl2-qr-1Rt"/>
-    </inferredMetricsTieBreakers>
 </document>
