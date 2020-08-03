@@ -46,7 +46,7 @@ class BuyViewController: BaseViewController {
                 UIApplication.shared.open(url!, options: [:])
                 return
             } else {
-                // TODO: GET /location/widget not available in v3
+                // GET /location/widget not available in v3
                 self.showAlert(title: "Error", message: "Missing url")
             }
         }
@@ -87,7 +87,7 @@ class BuyViewController: BaseViewController {
         let params = ["referrerAccountId": "AC_82VYBNNYG32"]
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
         return Promise { seal in
-            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, _, error in
                 if let error = error {
                     print(error)
                     return seal.reject(GaError.GenericError)
