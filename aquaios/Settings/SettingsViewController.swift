@@ -1,4 +1,5 @@
 import UIKit
+import LocalAuthentication
 
 class SettingsViewController: BaseViewController {
 
@@ -6,8 +7,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var removeLabel: UILabel!
 
     var labels = [NSLocalizedString("id_support", comment: ""),
-                  NSLocalizedString("id_view_my_recovery_phrase", comment: ""),
-                  NSLocalizedString("id_device_authorization", comment: "")]
+                  NSLocalizedString("id_view_my_recovery_phrase", comment: "")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,12 @@ class SettingsViewController: BaseViewController {
 
     func configure() {
         if hasWallet {
+            labels.append(authLabel())
             configureTableView()
             hideCreateWalletView()
             self.tableView.isHidden = false
             self.removeLabel.isHidden = false
-            navigationItem.title = NSLocalizedString("id_settings", comment: "")
+            navigationItem.title = NSLocalizedString("id_profile", comment: "")
         } else {
             self.tableView.isHidden = true
             self.removeLabel.isHidden = true
@@ -48,10 +49,31 @@ class SettingsViewController: BaseViewController {
         tableView.tableFooterView = UIView()
     }
 
+    func authType() -> LABiometryType {
+        let context = LAContext()
+
+        var error: NSError?
+        guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+            return LABiometryType.none
+        }
+        return context.biometryType
+    }
+
+    func authLabel() -> String {
+        switch authType() {
+        case .faceID:
+            return NSLocalizedString("id_face_id", comment: "")
+        case .touchID:
+            return NSLocalizedString("id_touch_id", comment: "")
+        default:
+            return NSLocalizedString("id_passcode", comment: "")
+        }
+    }
+
     @objc func removeWallet(_ sender: Any?) {
         let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_doublecheck_that_you_have_a", comment: ""), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
-        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .destructive) { _ in
             try? Mnemonic.delete()
             exit(0)
         })
@@ -59,22 +81,20 @@ class SettingsViewController: BaseViewController {
     }
 
     func enableSafeMnemonic() {
-        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_do_you_want_to_enable_s", comment: ""), preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
-        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
-            guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-                return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
-            }
-            try? Mnemonic.delete()
-            try? Mnemonic.write(mnemonic, safe: true)
-        })
+        guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
+            return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
+        }
+        try? Mnemonic.delete()
+        try? Mnemonic.write(mnemonic, safe: true)
+        let alert = UIAlertController(title: NSLocalizedString("id_success", comment: ""), message: String(format: NSLocalizedString("id_login_with__enabled", comment: ""), authLabel()), preferredStyle: .actionSheet) // TODO: update string
+        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in })
         self.present(alert, animated: true, completion: nil)
     }
 
     func disableSafeMnemonic() {
-        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_do_you_want_to_disable_s", comment: ""), preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: String(format: NSLocalizedString("id_do_you_want_to_disable_", comment: ""), authLabel()), preferredStyle: .actionSheet) // TODO: update string
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
-        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in
+        alert.addAction(UIAlertAction(title: String(format: NSLocalizedString("id_disable_", comment: ""), authLabel()), style: .destructive) { _ in
             guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
                 return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
             }
@@ -114,9 +134,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            // open email to support
-            let email = "support@greenaddress.it"
-            if let url = URL(string: "mailto:\(email)") {
+            if let url = URL(string: "https://blockstream.zendesk.com/hc/en-us") {
               UIApplication.shared.open(url)
             }
         case 1:
