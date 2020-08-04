@@ -1,7 +1,8 @@
+import Foundation
 import UIKit
 
 @IBDesignable
-class LiquidBasicsView: UIView {
+class CreateNewWalletView: UIView {
     var contentView:UIView?
 
     override func awakeFromNib() {
@@ -20,7 +21,7 @@ class LiquidBasicsView: UIView {
 
     func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "LiquidBasicsView", bundle: bundle)
+        let nib = UINib(nibName: "CreateNewWalletView", bundle: bundle)
         return nib.instantiate( withOwner: self, options: nil).first as? UIView
     }
 

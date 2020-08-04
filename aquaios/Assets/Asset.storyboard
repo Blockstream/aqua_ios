@@ -94,17 +94,37 @@
                                     <action selector="qrCodeTapped:" destination="4Oy-Ab-8Uq" eventType="touchUpInside" id="wiU-AV-JEK"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jC-Xc-MXi" customClass="CreateNewWalletView" customModule="Aqua" customModuleProvider="target">
+                                <rect key="frame" x="18" y="132" width="378" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="UXC-ws-2gq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir3-Qt-MJ8" customClass="LiquidBasicsView" customModule="Aqua" customModuleProvider="target">
+                                <rect key="frame" x="18" y="422" width="378" height="135"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="FOL-gy-2bh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="zxS-51-fpL" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="135" id="6Gu-hQ-QZO"/>
+                            <constraint firstItem="ir3-Qt-MJ8" firstAttribute="top" secondItem="2jC-Xc-MXi" secondAttribute="bottom" constant="50" id="9L9-He-gZV"/>
+                            <constraint firstItem="ir3-Qt-MJ8" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" constant="18" id="H2x-3G-fRN"/>
+                            <constraint firstItem="2jC-Xc-MXi" firstAttribute="leading" secondItem="yv6-ya-X0D" secondAttribute="leading" constant="18" id="H9X-Yg-vOq"/>
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="trailing" secondItem="xfc-v9-VBA" secondAttribute="trailing" id="IOU-5B-ggd"/>
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" id="Mix-Qt-Ujl"/>
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="bottom" secondItem="xfc-v9-VBA" secondAttribute="bottom" id="NAt-DY-1jt"/>
+                            <constraint firstItem="2jC-Xc-MXi" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="132" id="Oyf-Rh-ve9"/>
                             <constraint firstItem="oC3-wa-Ruu" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="67" id="RHc-EM-HZD"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" id="WYK-nX-iEP"/>
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="top" secondItem="2Nu-0D-IsG" secondAttribute="bottom" constant="-20" id="aQK-Y8-NQP"/>
+                            <constraint firstItem="xfc-v9-VBA" firstAttribute="trailing" secondItem="ir3-Qt-MJ8" secondAttribute="trailing" constant="18" id="ami-rD-RtB"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="trailing" secondItem="xfc-v9-VBA" secondAttribute="trailing" id="cwX-k4-fOe"/>
+                            <constraint firstItem="xfc-v9-VBA" firstAttribute="trailing" secondItem="2jC-Xc-MXi" secondAttribute="trailing" constant="18" id="gWD-MD-CPG"/>
                             <constraint firstItem="zxS-51-fpL" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" constant="24" id="uJr-22-iwl"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" id="w9A-YJ-bq3"/>
                             <constraint firstItem="oC3-wa-Ruu" firstAttribute="centerX" secondItem="2Nu-0D-IsG" secondAttribute="centerX" id="y8F-pZ-GLQ"/>

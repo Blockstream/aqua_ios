@@ -109,6 +109,8 @@
 		81D9E4802406A3E1005DD867 /* AquaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E47F2406A3E1005DD867 /* AquaTests.swift */; };
 		81D9E4882406BA9F005DD867 /* Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E4872406BA9F005DD867 /* Registry.swift */; };
 		81D9E48A2406BAEF005DD867 /* AssetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E4892406BAEF005DD867 /* AssetInfo.swift */; };
+		81E9E24A24D957C90069747F /* CreateNewWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E9E24924D957C90069747F /* CreateNewWalletView.xib */; };
+		81E9E24C24D957DB0069747F /* CreateNewWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E9E24B24D957DA0069747F /* CreateNewWalletView.swift */; };
 		81FDC6EE249E151500E7F6F8 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FDC6ED249E151500E7F6F8 /* UISearchBar.swift */; };
 		DC02C5F53739EDFBFBA12642 /* Pods_aquaios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B8F4D9A4188E7C86615620 /* Pods_aquaios.framework */; };
 /* End PBXBuildFile section */
@@ -259,6 +261,8 @@
 		81D9E4812406A3E1005DD867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D9E4872406BA9F005DD867 /* Registry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registry.swift; sourceTree = "<group>"; };
 		81D9E4892406BAEF005DD867 /* AssetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetInfo.swift; sourceTree = "<group>"; };
+		81E9E24924D957C90069747F /* CreateNewWalletView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewWalletView.xib; sourceTree = "<group>"; };
+		81E9E24B24D957DA0069747F /* CreateNewWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletView.swift; sourceTree = "<group>"; };
 		81FDC6ED249E151500E7F6F8 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		A7B8F4D9A4188E7C86615620 /* Pods_aquaios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aquaios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -543,8 +547,10 @@
 			children = (
 				6D2551842465E7A1000D4782 /* CreateWalletView.swift */,
 				6D2551862465E7AF000D4782 /* CreateWalletView.xib */,
-				2026744B24D2FC0C0093A17A /* LiquidBasicsView.xib */,
 				2026744D24D302A40093A17A /* LiquidBasicsView.swift */,
+				2026744B24D2FC0C0093A17A /* LiquidBasicsView.xib */,
+				81E9E24B24D957DA0069747F /* CreateNewWalletView.swift */,
+				81E9E24924D957C90069747F /* CreateNewWalletView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -714,6 +720,7 @@
 				6DA69A28240F29D8000F626E /* Receive.storyboard in Resources */,
 				20A6A94924ADE05D009E0210 /* Localizable.strings in Resources */,
 				6D6FA7222476FDFC00BDF8C4 /* AssetTitleView.xib in Resources */,
+				81E9E24A24D957C90069747F /* CreateNewWalletView.xib in Resources */,
 				6DC69E7323DB446700DCD7CB /* LaunchScreen.storyboard in Resources */,
 				812A122F2448A9A400129EDE /* Alerts.storyboard in Resources */,
 				6D4A4C4724045CB20002BA93 /* Buy.storyboard in Resources */,
@@ -868,6 +875,7 @@
 				6DA69A2A240F29FE000F626E /* ReceiveViewController.swift in Sources */,
 				818439F9246ACCDC006BF3BF /* Bitcoin.swift in Sources */,
 				6D4A4C4B24045CCF0002BA93 /* SettingsViewController.swift in Sources */,
+				81E9E24C24D957DB0069747F /* CreateNewWalletView.swift in Sources */,
 				6D4C9A302433DE22003EF3DE /* SlidingButton.swift in Sources */,
 				812A12322448AA7100129EDE /* DropAlert.swift in Sources */,
 				6DF148372462280000F30DFB /* TermsOfServiceViewController.swift in Sources */,

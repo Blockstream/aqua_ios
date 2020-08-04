@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNewWalletView" customModule="Aqua" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYQ-yK-PcA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_asset_selected" translatesAutoresizingMaskIntoConstraints="NO" id="joQ-wR-NZF">
+                            <rect key="frame" x="25" y="32" width="72" height="72"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="72" id="ZbT-G3-1zR"/>
+                                <constraint firstAttribute="width" constant="72" id="qGL-ZL-4ch"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-6k-YzO">
+                            <rect key="frame" x="119" y="27" width="265" height="25.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your wallet will support Bitcoin, Liquid Bitcoin, and other Liquid assets." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-O5-AUF">
+                            <rect key="frame" x="119" y="60.5" width="263" height="33.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" name="lightestBlueGray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="aquaShadowBlue"/>
+                    <constraints>
+                        <constraint firstItem="8yi-6k-YzO" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" constant="22" id="2Ru-zX-PrO"/>
+                        <constraint firstItem="joQ-wR-NZF" firstAttribute="leading" secondItem="RYQ-yK-PcA" secondAttribute="leading" constant="25" id="Hwn-sl-0oH"/>
+                        <constraint firstAttribute="trailing" secondItem="hJk-O5-AUF" secondAttribute="trailing" constant="32" id="JGG-Sc-Wy2"/>
+                        <constraint firstItem="hJk-O5-AUF" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" constant="22" id="SqO-b2-KOM"/>
+                        <constraint firstAttribute="bottom" secondItem="joQ-wR-NZF" secondAttribute="bottom" constant="32" id="VAs-jQ-HzS"/>
+                        <constraint firstAttribute="trailing" secondItem="8yi-6k-YzO" secondAttribute="trailing" constant="30" id="m1B-DH-ikl"/>
+                        <constraint firstItem="8yi-6k-YzO" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" constant="27" id="oLY-Er-aRe"/>
+                        <constraint firstItem="joQ-wR-NZF" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" constant="32" id="raL-UT-AN9"/>
+                        <constraint firstAttribute="bottom" secondItem="hJk-O5-AUF" secondAttribute="bottom" priority="100" constant="16" id="tSg-mC-c1w"/>
+                        <constraint firstItem="hJk-O5-AUF" firstAttribute="top" secondItem="8yi-6k-YzO" secondAttribute="bottom" priority="998" constant="8" id="tTZ-UY-VUr"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have a wallet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acH-wh-FUC">
+                    <rect key="frame" x="7" y="162" width="400" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <color key="textColor" name="auroMetalSaurus"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-ae-vmF">
+                    <rect key="frame" x="7" y="196.5" width="400" height="27.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <state key="normal" title="Restore  " image="chevron-right">
+                        <color key="titleColor" name="topaz"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="aquaBackgroundBlue"/>
+            <constraints>
+                <constraint firstItem="X7O-ae-vmF" firstAttribute="top" secondItem="acH-wh-FUC" secondAttribute="bottom" constant="15" id="0b1-8v-6Vz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="X7O-ae-vmF" secondAttribute="bottom" constant="16" id="7c1-LW-GPV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RYQ-yK-PcA" secondAttribute="trailing" id="HDG-xE-uEG"/>
+                <constraint firstItem="acH-wh-FUC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="HdT-tW-2lp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X7O-ae-vmF" secondAttribute="trailing" constant="7" id="R1j-Pa-fNv"/>
+                <constraint firstItem="X7O-ae-vmF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="RNF-hq-gtx"/>
+                <constraint firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" id="Sqt-1D-I3W"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="acH-wh-FUC" secondAttribute="trailing" constant="7" id="XXm-G4-oVY"/>
+                <constraint firstItem="acH-wh-FUC" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="bottom" constant="26" id="ldO-a6-Oey"/>
+                <constraint firstItem="RYQ-yK-PcA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oKV-GU-PqJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="189.85507246376812" y="19.419642857142858"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add_asset_selected" width="28" height="28"/>
+        <image name="chevron-right" width="8" height="13"/>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aquaShadowBlue">
+            <color red="0.074509803921568626" green="0.11372549019607843" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auroMetalSaurus">
+            <color red="0.41960784313725491" green="0.45098039215686275" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightestBlueGray">
+            <color red="0.55686274509803924" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="topaz">
+            <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -7,6 +7,7 @@ class AssetListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var assetsTitleLabel: UILabel!
     @IBOutlet weak var qrButton: UIButton!
+    @IBOutlet weak var liquidBasicsView: LiquidBasicsView!
 
     private var assets: [Asset] = []
     private var transactionToken: NSObjectProtocol?
