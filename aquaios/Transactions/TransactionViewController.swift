@@ -71,6 +71,11 @@ class TransactionViewController: BaseViewController {
         fields += (tx.outgoing ? [TxField.sentFrom] : [])
         fields += [TxField.id, TxField.finalSeparator]
     }
+
+    @objc func copyId() {
+        UIPasteboard.general.string = self.tx.hash
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    }
 }
 
 extension TransactionViewController: UITableViewDataSource, UITableViewDelegate {
@@ -122,6 +127,8 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
             imageView.backgroundColor = UIColor.darkBlueGray
             imageView.image = UIImage(named: "copy")
+            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(copyId))
+            cell?.detailTextLabel?.addGestureRecognizer(tap)
             cell?.accessoryView = imageView
             cell?.accessoryView?.backgroundColor = UIColor.darkBlueGray
             return cell ?? UITableViewCell()
