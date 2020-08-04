@@ -21,8 +21,8 @@ class CreateWalletAlertController: UIViewController {
         backgroundView.round(radius: 18)
         createButton.setTitle(NSLocalizedString("id_create", comment: ""), for: .normal)
         restoreButton.setTitle(NSLocalizedString("id_restore", comment: ""), for: .normal)
-        titleLabel.text = NSLocalizedString("id_please_create_wallet", comment: "")
-        messageLabel.text = NSLocalizedString("id_you_will_need_to_setup", comment: "")
+        titleLabel.text = NSLocalizedString("id_please_create_a_wallet_first", comment: "")
+        messageLabel.text = NSLocalizedString("id_youll_need_to_set_up_a_wallet", comment: "")
         if hasWallet {
             dismissModal(animated: true)
             delegateVC?.viewWillAppear(true)

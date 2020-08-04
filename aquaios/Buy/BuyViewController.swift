@@ -49,7 +49,7 @@ class BuyViewController: BaseViewController {
                 return
             } else {
                 // GET /location/widget not available in v3
-                self.showAlert(title: "Error", message: "Missing url")
+                self.showAlert(title: "Error", message: "Error opening Wyre widget") // improve error
             }
         }
     }

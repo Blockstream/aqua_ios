@@ -86,13 +86,13 @@ class SettingsViewController: BaseViewController {
         }
         try? Mnemonic.delete()
         try? Mnemonic.write(mnemonic, safe: true)
-        let alert = UIAlertController(title: NSLocalizedString("id_success", comment: ""), message: String(format: NSLocalizedString("id_login_with__enabled", comment: ""), authLabel()), preferredStyle: .actionSheet) // TODO: update string
+        let alert = UIAlertController(title: NSLocalizedString("id_success", comment: ""), message: String(format: NSLocalizedString("id_login_with__enabled", comment: ""), authLabel()), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default) { _ in })
         self.present(alert, animated: true, completion: nil)
     }
 
     func disableSafeMnemonic() {
-        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: String(format: NSLocalizedString("id_do_you_want_to_disable_", comment: ""), authLabel()), preferredStyle: .actionSheet) // TODO: update string
+        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: String(format: NSLocalizedString("id_do_you_want_to_disable_", comment: ""), authLabel()), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: String(format: NSLocalizedString("id_disable_", comment: ""), authLabel()), style: .destructive) { _ in
             guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
