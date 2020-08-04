@@ -74,8 +74,8 @@
                     <connections>
                         <segue destination="lbK-LE-9MI" kind="relationship" relationship="viewControllers" id="yNP-rK-3HB"/>
                         <segue destination="kyV-MZ-qwl" kind="relationship" relationship="viewControllers" id="Y0q-xV-Jrs"/>
-                        <segue destination="C61-tY-cDh" kind="relationship" relationship="viewControllers" id="u98-MD-NT1"/>
-                        <segue destination="CNZ-UW-7fX" kind="relationship" relationship="viewControllers" id="Vjy-WS-8FC"/>
+                        <segue destination="ezp-0w-yqF" kind="relationship" relationship="viewControllers" id="zj1-R6-18E"/>
+                        <segue destination="CNZ-UW-7fX" kind="relationship" relationship="viewControllers" id="M20-Vo-Ilt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRs-Jf-CW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,6 +205,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRr-Rs-4q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1164" y="1254"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="eH9-nK-DSg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ezp-0w-yqF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6vE-Jy-JmJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7RD-BV-Hsr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2hD-VV-7Ir" kind="relationship" relationship="rootViewController" id="JJC-57-Kj6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvE-PK-1Wm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="-943"/>
+        </scene>
+        <!--BuyViewController-->
+        <scene sceneID="rjN-WE-3Ps">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Buy" referencedIdentifier="BuyViewController" id="2hD-VV-7Ir" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1LE-RU-92W"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQO-rn-Mfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2104" y="-944"/>
         </scene>
     </scenes>
     <resources>

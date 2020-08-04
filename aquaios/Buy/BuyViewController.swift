@@ -14,6 +14,8 @@ class BuyViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.title = NSLocalizedString("id_exchange", comment: "")
+        navigationController?.setNavigationBarHidden(false, animated: false)
         buyBtcButton.round(radius: 16)
         buyLbtcButton.round(radius: 16)
         configurePreLogin()
