@@ -219,7 +219,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="darkBlueGray"/>
+                        <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="ZEf-7e-6bC" firstAttribute="trailing" secondItem="Yed-kl-PPH" secondAttribute="trailing" constant="50" id="737-nz-MaQ"/>
                             <constraint firstItem="qEb-fg-iY4" firstAttribute="leading" secondItem="ZEf-7e-6bC" secondAttribute="leading" constant="50" id="A83-M7-geD"/>
