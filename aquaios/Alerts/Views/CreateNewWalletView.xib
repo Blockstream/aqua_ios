@@ -9,10 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNewWalletView" customModule="Aqua" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNewWalletView" customModule="Aqua" customModuleProvider="target">
+            <connections>
+                <outlet property="alreadyHaveAWalletLabel" destination="acH-wh-FUC" id="tcw-Lm-uxw"/>
+                <outlet property="backgroundView" destination="RYQ-yK-PcA" id="nZA-An-v7A"/>
+                <outlet property="createNewWalletLabel" destination="8yi-6k-YzO" id="clT-Lm-35x"/>
+                <outlet property="descriptionLabel" destination="hJk-O5-AUF" id="4JK-WV-nPb"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYQ-yK-PcA">
@@ -59,16 +66,18 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-ae-vmF">
-                    <rect key="frame" x="7" y="196.5" width="400" height="27.5"/>
+                    <rect key="frame" x="7" y="188.5" width="400" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                     <state key="normal" title="Restore  " image="chevron-right">
                         <color key="titleColor" name="topaz"/>
                     </state>
+                    <connections>
+                        <action selector="restoreButtonTapped:" destination="-1" eventType="touchUpInside" id="EiD-88-jHI"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" name="aquaBackgroundBlue"/>
             <constraints>
-                <constraint firstItem="X7O-ae-vmF" firstAttribute="top" secondItem="acH-wh-FUC" secondAttribute="bottom" constant="15" id="0b1-8v-6Vz"/>
+                <constraint firstItem="X7O-ae-vmF" firstAttribute="top" secondItem="acH-wh-FUC" secondAttribute="bottom" constant="7" id="0b1-8v-6Vz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="X7O-ae-vmF" secondAttribute="bottom" constant="16" id="7c1-LW-GPV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RYQ-yK-PcA" secondAttribute="trailing" id="HDG-xE-uEG"/>
                 <constraint firstItem="acH-wh-FUC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="HdT-tW-2lp"/>
@@ -81,15 +90,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="189.85507246376812" y="19.419642857142858"/>
+            <point key="canvasLocation" x="189.85507246376812" y="16.40625"/>
         </view>
     </objects>
     <resources>
         <image name="add_asset_selected" width="28" height="28"/>
         <image name="chevron-right" width="8" height="13"/>
-        <namedColor name="aquaBackgroundBlue">
-            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="aquaShadowBlue">
             <color red="0.074509803921568626" green="0.11372549019607843" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -17,10 +17,6 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infomercial_background" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-2O-HM8">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="135"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="135" id="GUv-79-wsM"/>
-                        <constraint firstAttribute="width" constant="340" id="JBs-7a-XgS"/>
-                    </constraints>
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liquid 101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-3c-dJL">
@@ -41,12 +37,14 @@
             </subviews>
             <color key="backgroundColor" name="aquaBackgroundBlue"/>
             <constraints>
-                <constraint firstItem="AQL-2O-HM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1k5-5h-1p0"/>
+                <constraint firstItem="AQL-2O-HM8" firstAttribute="leading" secondItem="RZk-n5-X6B" secondAttribute="leading" id="Gv2-rZ-OVN"/>
                 <constraint firstItem="GpG-A8-ZVT" firstAttribute="top" secondItem="jWP-3c-dJL" secondAttribute="bottom" constant="9" id="HZg-Jd-jfv"/>
                 <constraint firstItem="RZk-n5-X6B" firstAttribute="bottom" secondItem="GpG-A8-ZVT" secondAttribute="bottom" constant="25" id="K8a-2n-1cR"/>
                 <constraint firstItem="GpG-A8-ZVT" firstAttribute="leading" secondItem="RZk-n5-X6B" secondAttribute="leading" constant="26" id="RYY-jV-hlx"/>
-                <constraint firstItem="AQL-2O-HM8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YpU-Vp-ns3"/>
+                <constraint firstItem="AQL-2O-HM8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YNg-Iw-9iD"/>
+                <constraint firstItem="AQL-2O-HM8" firstAttribute="bottom" secondItem="RZk-n5-X6B" secondAttribute="bottom" id="ZNE-cd-GeS"/>
                 <constraint firstItem="jWP-3c-dJL" firstAttribute="leading" secondItem="RZk-n5-X6B" secondAttribute="leading" constant="26" id="nUW-5k-N7C"/>
+                <constraint firstItem="AQL-2O-HM8" firstAttribute="trailing" secondItem="RZk-n5-X6B" secondAttribute="trailing" id="nWc-H5-1nk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="RZk-n5-X6B"/>

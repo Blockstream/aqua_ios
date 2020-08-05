@@ -7,6 +7,7 @@ class AssetListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var assetsTitleLabel: UILabel!
     @IBOutlet weak var qrButton: UIButton!
+    @IBOutlet weak var createNewWalletView: CreateNewWalletView!
     @IBOutlet weak var liquidBasicsView: LiquidBasicsView!
 
     private var assets: [Asset] = []
@@ -42,7 +43,6 @@ class AssetListViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        qrButton.round(radius: 0.5 * qrButton.bounds.width)
 
         transactionToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "transaction"), object: nil, queue: .main, using: onNewTransaction)
     }
@@ -65,14 +65,14 @@ class AssetListViewController: BaseViewController {
     }
 
     func configure() {
+        liquidBasicsView.round(radius: 24)
+        qrButton.round(radius: 0.5 * qrButton.bounds.width)
+        createNewWalletView.delegate = self
         if hasWallet {
-            hideCreateWalletView()
             self.qrButton.isHidden = false
             self.tableView.isHidden = false
             reloadData()
             showBackupIfNeeded()
-        } else {
-            showCreateWalletView(delegate: self)
         }
     }
 
