@@ -8,11 +8,9 @@ class ReceiveViewController: BaseViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var specifyButton: UIButton!
     @IBOutlet weak var copyButton: UIButton!
-    @IBOutlet weak var setAmountButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var copyLabel: UILabel!
     @IBOutlet weak var shareLabel: UILabel!
-    @IBOutlet weak var setAmountLabel: UILabel!
 
     @IBOutlet weak var addressBackgroundView: UIView!
     @IBOutlet weak var qrImageBackgroundView: UIView!
@@ -42,13 +40,12 @@ class ReceiveViewController: BaseViewController {
         feedbackView.alpha = 0.0
         feedbackView.round(radius: 17.5)
         qrImageBackgroundView.round(radius: 20)
-        for button in [copyButton, setAmountButton, shareButton] {
+        for button in [copyButton, shareButton] {
             button?.round(radius: 0.5 * (button?.bounds.width)!)
             button?.setBackgroundColor(color: .teal, for: .highlighted)
         }
         addressBackgroundView.round(radius: 6)
         copyLabel.text = NSLocalizedString("id_copy", comment: "")
-        setAmountLabel.text = NSLocalizedString("id_set_amount", comment: "")
         shareLabel.text = NSLocalizedString("id_share", comment: "")
     }
 
@@ -75,19 +72,9 @@ class ReceiveViewController: BaseViewController {
         present(avc, animated: true, completion: nil)
     }
 
-    @IBAction func specifyButtonTapped(_ sender: Any) {
-    }
-
     @IBAction func copyButtonTapped(_ sender: Any) {
         feedbackView.fadeInOut()
         UIPasteboard.general.string = addressLabel.text
         UINotificationFeedbackGenerator().notificationOccurred(.success)
-    }
-
-    @IBAction func noteButtonTapped(_ sender: Any) {
-    }
-
-    @IBAction func doneButtonTapped(_ sender: Any) {
-        presentingViewController?.dismissModal(animated: true)
     }
 }
