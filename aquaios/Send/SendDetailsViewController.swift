@@ -11,6 +11,7 @@ class SendDetailsViewController: BaseViewController {
     @IBOutlet weak var amountTitleLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
+    @IBOutlet weak var tickerLabel: UILabel!
     @IBOutlet weak var sendAllButton: UIButton!
 
     var addressee: Addressee?
@@ -62,6 +63,7 @@ class SendDetailsViewController: BaseViewController {
         amountLabel.isHidden = amount.count == 0
         continueButton.round(radius: 26.5)
         amountTitleLabel.text = NSLocalizedString("id_amount", comment: "")
+        tickerLabel.text = asset?.info?.ticker ?? ""
         sendAllButton.setTitle(NSLocalizedString("id_max", comment: ""), for: .normal)
         continueButton.setTitle(NSLocalizedString("id_continue", comment: ""), for: .normal)
     }
