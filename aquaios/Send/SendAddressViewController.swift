@@ -41,7 +41,7 @@ class SendAddressViewController: BaseViewController {
             let sharedNetwork = asset?.isBTC ?? false ? Bitcoin.shared : Liquid.shared
             Guarantee().compactMap(on: bgq) {_ -> RawTransaction in
                 let tx = try sharedNetwork.createTransaction(address)
-                if let error = tx.error, !error.isEmpty && error != NSLocalizedString("id_invalid_amount", comment: "") {
+                if let error = tx.error, !error.isEmpty && error != "id_invalid_amount" {
                     throw TransactionError.generic(error)
                 }
                 return tx
@@ -83,7 +83,7 @@ class SendAddressViewController: BaseViewController {
     func createTransactionPromise(_ networkSession: NetworkSession, address: String) -> Promise<RawTransaction> {
         return Promise<RawTransaction> { seal in
             let tx = try networkSession.createTransaction(address)
-            if let error = tx.error, error == NSLocalizedString("id_invalid_address", comment: "") {
+            if let error = tx.error, error == "id_invalid_address" {
                 seal.reject(TransactionError.generic(error))
             }
             seal.fulfill(tx)
@@ -103,7 +103,7 @@ class SendAddressViewController: BaseViewController {
                 return self.createTransactionPromise(Liquid.shared, address: address)
             }
         }.done { tx in
-            if let error = tx.error, !error.isEmpty && error != NSLocalizedString("id_invalid_amount", comment: "") {
+            if let error = tx.error, !error.isEmpty && error != "id_invalid_amount" {
                 throw TransactionError.generic(error)
             }
             var addressee = tx.addressees.first

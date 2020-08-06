@@ -101,7 +101,7 @@ class QRCodeViewController: BaseViewController {
         return Promise<RawTransaction> { seal in
             let tx = try networkSession.createTransaction(address)
             if let error = tx.error, !error.isEmpty {
-                if error == NSLocalizedString("id_invalid_address", comment: "") {
+                if error == "id_invalid_address" {
                     seal.reject(TransactionError.invalidAddress(error))
                 }
             }
@@ -122,7 +122,7 @@ class QRCodeViewController: BaseViewController {
                 return self.createTransactionPromise(Liquid.shared, address: address)
             }
         }.done { tx in
-            if let error = tx.error, !error.isEmpty && error != NSLocalizedString("id_invalid_amount", comment: "") {
+            if let error = tx.error, !error.isEmpty && error != "id_invalid_amount" {
                 throw TransactionError.generic(error)
             }
             var addressee = tx.addressees.first
