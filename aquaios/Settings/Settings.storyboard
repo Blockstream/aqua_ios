@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,7 +70,7 @@
                     <connections>
                         <outlet property="removeLabel" destination="Xub-be-fmy" id="i7A-Cy-Tmp"/>
                         <outlet property="tableView" destination="3k1-ln-tCa" id="s7X-sa-Td5"/>
-                        <segue destination="M0n-he-lrZ" kind="presentation" identifier="mnemonic" id="IgX-TB-YC1"/>
+                        <segue destination="uxZ-8Y-cHP" kind="presentation" identifier="mnemonic" id="IgX-TB-YC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HK-gp-K0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,11 +86,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6k-so-5UX">
-                                <rect key="frame" x="18" y="211" width="378" height="192"/>
+                                <rect key="frame" x="18" y="267" width="378" height="192"/>
                                 <color key="backgroundColor" name="lighterBlueGray"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZmC-n6-Wwe">
-                                <rect key="frame" x="18" y="211" width="378" height="192"/>
+                                <rect key="frame" x="18" y="267" width="378" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-Z8-Chq">
                                         <rect key="frame" x="16" y="0.0" width="346" height="48"/>
@@ -317,13 +317,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your recovery phrase" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTR-OG-k4a">
-                                <rect key="frame" x="24" y="30" width="280" height="33.5"/>
+                                <rect key="frame" x="24" y="86" width="280" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzm-em-Akw">
-                                <rect key="frame" x="24" y="93.5" width="366" height="57.5"/>
+                                <rect key="frame" x="24" y="149.5" width="366" height="57.5"/>
                                 <string key="text">Back up these 12 words using physical copy such as pen and paper. Digital copies, such as screenshot or email, are easy to get hacked.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="paleLilac"/>
@@ -373,7 +373,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yb-hU-zEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="-58"/>
+            <point key="canvasLocation" x="2171.0144927536235" y="-58.258928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="942-28-H0n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uxZ-8Y-cHP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TE3-NO-GMD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M0n-he-lrZ" kind="relationship" relationship="rootViewController" id="mrV-7G-Sol"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awr-td-Wsi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="-58.258928571428569"/>
         </scene>
     </scenes>
     <resources>

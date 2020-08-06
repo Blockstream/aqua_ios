@@ -15,6 +15,7 @@ class MnemonicViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        showCloseButton(on: .left)
         mnemonicBackgroundView.round(radius: 18)
         confirmButton.round(radius: 24)
         titleLabel.text = NSLocalizedString("id_write_down_your_recovery_phrase", comment: "")
