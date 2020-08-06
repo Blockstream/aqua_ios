@@ -199,8 +199,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-4F-sqZ">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-4F-sqZ">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" name="darkBlueGray"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCell" textLabel="xy7-a9-i6U" detailTextLabel="jXB-po-zhj" style="IBUITableViewCellStyleSubtitle" id="XHC-Z1-tFr">
@@ -295,7 +295,7 @@
                         <constraints>
                             <constraint firstItem="HJu-T2-n6p" firstAttribute="trailing" secondItem="CHA-4F-sqZ" secondAttribute="trailing" id="PRR-Qm-CM6"/>
                             <constraint firstItem="CHA-4F-sqZ" firstAttribute="top" secondItem="HJu-T2-n6p" secondAttribute="top" id="fvj-vC-jub"/>
-                            <constraint firstItem="HJu-T2-n6p" firstAttribute="bottom" secondItem="CHA-4F-sqZ" secondAttribute="bottom" id="kWn-VH-HOW"/>
+                            <constraint firstAttribute="bottom" secondItem="CHA-4F-sqZ" secondAttribute="bottom" id="kWn-VH-HOW"/>
                             <constraint firstItem="CHA-4F-sqZ" firstAttribute="leading" secondItem="HJu-T2-n6p" secondAttribute="leading" id="yaP-tP-dXu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HJu-T2-n6p"/>
