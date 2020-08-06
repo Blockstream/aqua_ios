@@ -21,7 +21,7 @@ class TransactionCell: UITableViewCell {
         let tag = tx.defaultAsset
         let amount = tx.satoshi[tag]
         let asset = Asset(info: Registry.shared.info(for: tag), tag: tag)
-        let prefix = tx.type == "outgoing" ? "-" : "+"
+        let prefix = tx.type == "incoming" ? "+" : "-"
         amountLabel.text = "\(prefix)\(asset.string(amount ?? 0) ?? "")"
         denominationLabel.text = asset.ticker
         dateLabel.text = AquaService.date(from: tx.createdAt)
