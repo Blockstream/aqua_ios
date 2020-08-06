@@ -10,6 +10,7 @@ class AssetDetailViewController: BaseViewController {
     @IBOutlet weak var receiveButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var curlyArrow: UIImageView!
+    @IBOutlet weak var nocoinersBackground: UIImageView!
     @IBOutlet weak var exchangePromptLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
 
@@ -19,7 +20,6 @@ class AssetDetailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -120,9 +120,9 @@ class AssetDetailViewController: BaseViewController {
                 // hide generic assets txs on lbtc page
                 self.transactions = self.transactions.filter { $0.satoshi.count == 1 && $0.satoshi.first?.key == Liquid.shared.policyAsset }
             }
-
             self.transactions.sort(by: { $0.createdAt > $1.createdAt })
-            self.tableView.isHidden = self.transactions.count == 0
+            self.nocoinersBackground.isHidden = !self.transactions.isEmpty
+            self.tableView.isHidden = self.transactions.isEmpty
             self.tableView.reloadData()
         }.catch { _ in
             let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: "No Transactions Found", preferredStyle: .alert)

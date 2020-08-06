@@ -219,7 +219,7 @@
                                     <constraint firstItem="RwN-g1-A06" firstAttribute="height" secondItem="vgY-aK-t4b" secondAttribute="height" id="zL8-Dr-VlK"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nocoiners" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-Gk-7Z6">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nocoiners" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-Gk-7Z6">
                                 <rect key="frame" x="0.0" y="125" width="414" height="395"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EL4-Gk-7Z6" secondAttribute="height" multiplier="414:395" id="geX-pH-H8u"/>
@@ -310,6 +310,7 @@
                         <outlet property="curlyArrow" destination="hy4-4q-MGy" id="PKO-WT-hhT"/>
                         <outlet property="exchangePromptLabel" destination="x1u-N6-Jcl" id="UVl-it-weA"/>
                         <outlet property="fiatLabel" destination="K9s-j1-fab" id="aiN-qQ-WG7"/>
+                        <outlet property="nocoinersBackground" destination="EL4-Gk-7Z6" id="dgA-UK-4um"/>
                         <outlet property="receiveButton" destination="RwN-g1-A06" id="c5C-n0-NdF"/>
                         <outlet property="sendButton" destination="vgY-aK-t4b" id="0hl-pA-5ez"/>
                         <outlet property="tableView" destination="ISu-MX-RfK" id="8hV-Mn-uOq"/>
