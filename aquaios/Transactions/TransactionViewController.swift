@@ -15,6 +15,7 @@ enum TxField {
 class TransactionViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var copiedButton: UIButton!
 
     var tx: Transaction!
     private var fields = [TxField]()
@@ -44,6 +45,8 @@ class TransactionViewController: BaseViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.layoutIfNeeded()
         showCloseButton(on: .left)
+        copiedButton.alpha = 0.0
+        copiedButton.round(radius: 17.5)
         configureTableView()
         reload()
     }
@@ -73,6 +76,7 @@ class TransactionViewController: BaseViewController {
     }
 
     @objc func copyId() {
+        copiedButton.fadeInOut()
         UIPasteboard.general.string = self.tx.hash
         UINotificationFeedbackGenerator().notificationOccurred(.success)
     }
