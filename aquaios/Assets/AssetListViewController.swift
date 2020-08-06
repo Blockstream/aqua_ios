@@ -37,13 +37,12 @@ class AssetListViewController: BaseViewController {
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
         let nib = UINib(nibName: "AssetListCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "AssetListCell")
-        tableView.isHidden = true
-        qrButton.isHidden = true
+        liquidBasicsView.round(radius: 24)
+        qrButton.round(radius: 0.5 * qrButton.bounds.width)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         transactionToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "transaction"), object: nil, queue: .main, using: onNewTransaction)
     }
 
@@ -65,14 +64,17 @@ class AssetListViewController: BaseViewController {
     }
 
     func configure() {
-        liquidBasicsView.round(radius: 24)
-        qrButton.round(radius: 0.5 * qrButton.bounds.width)
         createNewWalletView.delegate = self
         if hasWallet {
-            self.qrButton.isHidden = false
-            self.tableView.isHidden = false
+            qrButton.isHidden = false
+            tableView.isHidden = false
+            createNewWalletView.isHidden = true
+            liquidBasicsView.isHidden = true
             reloadData()
             showBackupIfNeeded()
+        } else {
+            createNewWalletView.isHidden = false
+            liquidBasicsView.isHidden = false
         }
     }
 
