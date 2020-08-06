@@ -101,7 +101,7 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
             let asset = Asset(info: Registry.shared.info(for: tag), tag: tag)
             let cell = tableView.dequeueReusableCell(withIdentifier: "rightCell")
             cell?.textLabel?.text = NSLocalizedString("id_asset", comment: "")
-            cell?.detailTextLabel?.text = asset.name
+            cell?.detailTextLabel?.text = asset.name ?? tag
             return cell ?? UITableViewCell()
         case .fee:
             let cell = tableView.dequeueReusableCell(withIdentifier: "rightCell")
