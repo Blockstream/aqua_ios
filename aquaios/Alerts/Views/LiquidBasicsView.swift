@@ -2,7 +2,8 @@ import UIKit
 
 @IBDesignable
 class LiquidBasicsView: UIView {
-    var contentView:UIView?
+
+    var contentView: UIView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
