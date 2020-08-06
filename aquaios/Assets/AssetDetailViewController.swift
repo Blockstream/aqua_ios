@@ -93,7 +93,7 @@ class AssetDetailViewController: BaseViewController {
         }.compactMap(on: bgq) {
             return self.asset?.isBTC ?? false ? Bitcoin.shared.balance : Liquid.shared.balance
         }.done { balance in
-            self.asset = AquaService.assets(for: balance.filter({ $0.key == self.asset?.info?.assetId })).first
+            self.asset?.sats = balance.filter { $0.key == self.asset?.info?.assetId }.first?.value ?? 0
             self.balanceLabel.text = "\(self.asset?.string() ?? "")"
             let fiat = Fiat.from(self.asset?.sats ?? 0)
             self.fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
