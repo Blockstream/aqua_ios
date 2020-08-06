@@ -25,21 +25,21 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYQ-yK-PcA">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_asset_selected" translatesAutoresizingMaskIntoConstraints="NO" id="joQ-wR-NZF">
-                            <rect key="frame" x="25" y="32" width="72" height="72"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="joQ-wR-NZF">
+                            <rect key="frame" x="0.0" y="0.0" width="136" height="136"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="72" id="ZbT-G3-1zR"/>
-                                <constraint firstAttribute="width" constant="72" id="qGL-ZL-4ch"/>
+                                <constraint firstAttribute="height" constant="136" id="ZbT-G3-1zR"/>
+                                <constraint firstAttribute="width" constant="136" id="qGL-ZL-4ch"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-6k-YzO">
-                            <rect key="frame" x="119" y="27" width="265" height="25.5"/>
+                            <rect key="frame" x="136" y="27" width="248" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your wallet will support Bitcoin, Liquid Bitcoin, and other Liquid assets." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-O5-AUF">
-                            <rect key="frame" x="119" y="60.5" width="263" height="33.5"/>
+                            <rect key="frame" x="136" y="60.5" width="246" height="33.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" name="lightestBlueGray"/>
                             <nil key="highlightedColor"/>
@@ -47,14 +47,14 @@
                     </subviews>
                     <color key="backgroundColor" name="aquaShadowBlue"/>
                     <constraints>
-                        <constraint firstItem="8yi-6k-YzO" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" constant="22" id="2Ru-zX-PrO"/>
-                        <constraint firstItem="joQ-wR-NZF" firstAttribute="leading" secondItem="RYQ-yK-PcA" secondAttribute="leading" constant="25" id="Hwn-sl-0oH"/>
+                        <constraint firstItem="8yi-6k-YzO" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" id="2Ru-zX-PrO"/>
+                        <constraint firstItem="joQ-wR-NZF" firstAttribute="leading" secondItem="RYQ-yK-PcA" secondAttribute="leading" id="Hwn-sl-0oH"/>
                         <constraint firstAttribute="trailing" secondItem="hJk-O5-AUF" secondAttribute="trailing" constant="32" id="JGG-Sc-Wy2"/>
-                        <constraint firstItem="hJk-O5-AUF" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" constant="22" id="SqO-b2-KOM"/>
-                        <constraint firstAttribute="bottom" secondItem="joQ-wR-NZF" secondAttribute="bottom" constant="32" id="VAs-jQ-HzS"/>
+                        <constraint firstItem="hJk-O5-AUF" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" id="SqO-b2-KOM"/>
+                        <constraint firstAttribute="bottom" secondItem="joQ-wR-NZF" secondAttribute="bottom" id="VAs-jQ-HzS"/>
                         <constraint firstAttribute="trailing" secondItem="8yi-6k-YzO" secondAttribute="trailing" constant="30" id="m1B-DH-ikl"/>
                         <constraint firstItem="8yi-6k-YzO" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" constant="27" id="oLY-Er-aRe"/>
-                        <constraint firstItem="joQ-wR-NZF" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" constant="32" id="raL-UT-AN9"/>
+                        <constraint firstItem="joQ-wR-NZF" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" id="raL-UT-AN9"/>
                         <constraint firstAttribute="bottom" secondItem="hJk-O5-AUF" secondAttribute="bottom" priority="100" constant="16" id="tSg-mC-c1w"/>
                         <constraint firstItem="hJk-O5-AUF" firstAttribute="top" secondItem="8yi-6k-YzO" secondAttribute="bottom" priority="998" constant="8" id="tTZ-UY-VUr"/>
                     </constraints>
@@ -94,8 +94,8 @@
         </view>
     </objects>
     <resources>
-        <image name="add_asset_selected" width="28" height="28"/>
         <image name="chevron-right" width="8" height="13"/>
+        <image name="plus" width="186" height="186"/>
         <namedColor name="aquaShadowBlue">
             <color red="0.074509803921568626" green="0.11372549019607843" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
