@@ -29,21 +29,7 @@ class TransactionViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-        if #available(iOS 13.0, *) {
-            let barAppearance = UINavigationBarAppearance()
-            barAppearance.backgroundColor = .darkBlueGray
-            barAppearance.largeTitleTextAttributes = [
-                .foregroundColor: UIColor.white
-            ]
-            barAppearance.shadowColor = .clear
-            barAppearance.shadowImage = UIImage()
-            navigationController?.navigationBar.standardAppearance = barAppearance
-            navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
-        }
-        navigationController?.navigationBar.backgroundColor = .darkBlueGray
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.layoutIfNeeded()
+        setNavigationBarBackgroundColor(.darkBlueGray)
         showCloseButton(on: .left)
         copiedButton.alpha = 0.0
         copiedButton.round(radius: 17.5)

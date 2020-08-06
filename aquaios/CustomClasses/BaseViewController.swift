@@ -10,26 +10,29 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setNavigationBarBackgroundColor(.aquaBackgroundBlue)
+    }
+
+    func setNavigationBarBackgroundColor(_ color: UIColor) {
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
             .font: UIFont.systemFont(ofSize: 18, weight: .medium)
         ]
         if #available(iOS 13.0, *) {
             let barAppearance = UINavigationBarAppearance()
-            barAppearance.backgroundColor = .aquaBackgroundBlue
+            barAppearance.backgroundColor = color
             barAppearance.largeTitleTextAttributes = [
                 .foregroundColor: UIColor.white
             ]
-            barAppearance.titleTextAttributes = titleAttributes
             barAppearance.shadowColor = .clear
             barAppearance.shadowImage = UIImage()
+            barAppearance.titleTextAttributes = titleAttributes
             navigationController?.navigationBar.standardAppearance = barAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
-        } else {
-            navigationController?.navigationBar.backgroundColor = .aquaBackgroundBlue
-            navigationController?.navigationBar.titleTextAttributes = titleAttributes
         }
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+        navigationController?.navigationBar.backgroundColor = color
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
