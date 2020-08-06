@@ -20,7 +20,7 @@ class MnemonicViewController: BaseViewController {
         titleLabel.text = NSLocalizedString("id_write_down_your_recovery_phrase", comment: "")
         messageLabel.text = NSLocalizedString("id_the_12word_recovery_phrase_is", comment: "")
         populateLabels()
-        confirmButton.setTitle("id_confirm_backup", for: .normal)
+        confirmButton.setTitle(NSLocalizedString("id_confirm_backup", comment: ""), for: .normal)
     }
 
     func populateLabels() {

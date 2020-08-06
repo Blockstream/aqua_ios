@@ -22,6 +22,7 @@ class TermsOfServiceViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         acceptTermsLabel.text = NSLocalizedString("id_i_have_read_and_agree_to_the", comment: "")
         confirmButton.setTitle(NSLocalizedString("id_confirm", comment: ""), for: .normal)
+        confirmButton.round(radius: 24)
     }
 
     @IBAction func confirmButtonTapped(_ sender: Any) {
