@@ -336,15 +336,15 @@
 		6D407BFD2404A72200EE06EB /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				2085919924C6F84800912ED0 /* UnregisteredAssetCell.swift */,
-				2040D84924C5FF01003DFA3C /* AssetInfoCell.swift */,
 				6D407BFE2404A75500EE06EB /* AssetCell.swift */,
 				6D407C002404A79800EE06EB /* AssetCell.xib */,
 				6DE35A4D24492AC700005783 /* AssetListCell.swift */,
 				6DE35A4E24492AC700005783 /* AssetListCell.xib */,
 				6D09E81E2406F9EF0052CD35 /* AddAssetCell.swift */,
 				6D09E81D2406F9EF0052CD35 /* AddAssetCell.xib */,
+				2040D84924C5FF01003DFA3C /* AssetInfoCell.swift */,
 				2040D84324C5F8C2003DFA3C /* AssetInfoCell.xib */,
+				2085919924C6F84800912ED0 /* UnregisteredAssetCell.swift */,
 				2085919524C6EC2100912ED0 /* UnregisteredAssetCell.xib */,
 			);
 			path = TableViewCells;

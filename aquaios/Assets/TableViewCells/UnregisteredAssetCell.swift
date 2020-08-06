@@ -10,10 +10,6 @@ class UnregisteredAssetCell: UITableViewCell {
         backgroundColor = .aquaBackgroundBlue
         infoTitle.text = title
         infoText.text = text
-    }
-
-    @IBAction func copyTapped(_ sender: Any) {
-        UIPasteboard.general.string = infoText.text
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        selectionStyle = .none
     }
 }

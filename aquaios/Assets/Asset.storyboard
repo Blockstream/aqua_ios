@@ -346,6 +346,14 @@
                                 <rect key="frame" x="0.0" y="120" width="414" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frW-la-rcv">
+                                <rect key="frame" x="63" y="756" width="288" height="32"/>
+                                <color key="backgroundColor" name="teal"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Copied to clipboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
@@ -354,13 +362,17 @@
                             <constraint firstItem="kha-W0-Xe1" firstAttribute="bottom" secondItem="SoJ-Td-5jV" secondAttribute="bottom" id="MBa-xN-7vd"/>
                             <constraint firstItem="SoJ-Td-5jV" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" id="Qn2-2Z-aTA"/>
                             <constraint firstItem="SoJ-Td-5jV" firstAttribute="top" secondItem="9qO-19-wY6" secondAttribute="bottom" constant="6" id="QyN-7d-Rjp"/>
+                            <constraint firstItem="frW-la-rcv" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" constant="63" id="gkZ-fo-vbs"/>
                             <constraint firstItem="kha-W0-Xe1" firstAttribute="trailing" secondItem="9qO-19-wY6" secondAttribute="trailing" constant="16" id="llf-Ri-hbz"/>
+                            <constraint firstItem="kha-W0-Xe1" firstAttribute="trailing" secondItem="frW-la-rcv" secondAttribute="trailing" constant="63" id="tex-qV-MYy"/>
                             <constraint firstItem="9qO-19-wY6" firstAttribute="leading" secondItem="kha-W0-Xe1" secondAttribute="leading" constant="24" id="vXm-7P-Caa"/>
+                            <constraint firstItem="kha-W0-Xe1" firstAttribute="bottom" secondItem="frW-la-rcv" secondAttribute="bottom" constant="20" id="wUj-W5-sHf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kha-W0-Xe1"/>
                     </view>
                     <navigationItem key="navigationItem" id="6ws-ny-lU9"/>
                     <connections>
+                        <outlet property="copiedButton" destination="frW-la-rcv" id="jaK-KZ-zUq"/>
                         <outlet property="tableView" destination="SoJ-Td-5jV" id="h5z-49-Ir9"/>
                         <outlet property="titleLabel" destination="9qO-19-wY6" id="B9D-Yt-0Nm"/>
                     </connections>

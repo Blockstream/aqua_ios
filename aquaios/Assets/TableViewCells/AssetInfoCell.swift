@@ -16,5 +16,6 @@ class AssetInfoCell: UITableViewCell {
         infoTitle.text = title
         infoText.text = ""
         infoTitle.textColor = .paleLilac
+        selectionStyle = .none
     }
 }

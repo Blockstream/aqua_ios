@@ -15,6 +15,7 @@ class AssetInfoViewController: BaseViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var copiedButton: UIButton!
 
     private var assetInfoCellTypes = AssetInfoCellType.allCases
     private var isBTC: Bool {
@@ -49,6 +50,8 @@ class AssetInfoViewController: BaseViewController {
         super.viewWillAppear(animated)
         showCloseButton(on: .left)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        copiedButton.alpha = 0.0
+        copiedButton.round(radius: 17.5)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -74,7 +77,6 @@ class AssetInfoViewController: BaseViewController {
         tableView.separatorColor = .aquaBackgroundBlue
         tableView.backgroundColor = .aquaBackgroundBlue
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
-        tableView.allowsSelection = false
         let infoCellNib = UINib(nibName: "AssetInfoCell", bundle: nil)
         let unregisteredCellNib = UINib(nibName: "UnregisteredAssetCell", bundle: nil)
         tableView.register(infoCellNib, forCellReuseIdentifier: "AssetInfoCell")
@@ -163,5 +165,13 @@ extension AssetInfoViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if assetInfoCellTypes[indexPath.row] == .unregistered {
+            copiedButton.fadeInOut()
+            UIPasteboard.general.string = asset?.tag ?? ""
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        }
     }
 }
