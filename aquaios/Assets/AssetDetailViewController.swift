@@ -114,7 +114,13 @@ class AssetDetailViewController: BaseViewController {
         }.ensure {
             self.stopAnimating()
         }.done { transactions in
-            self.transactions = transactions.filter { $0.satoshi.contains { $0.key == self.asset!.tag } }
+            self.transactions = transactions
+                .filter { $0.satoshi.contains { $0.key == self.asset!.tag } }
+            if let asset = self.asset, asset.isLBTC {
+                // hide generic assets txs on lbtc page
+                self.transactions = self.transactions.filter { $0.satoshi.count == 1 && $0.satoshi.first?.key == Liquid.shared.policyAsset }
+            }
+
             self.transactions.sort(by: { $0.createdAt > $1.createdAt })
             self.tableView.isHidden = self.transactions.count == 0
             self.tableView.reloadData()
