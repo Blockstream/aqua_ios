@@ -95,6 +95,7 @@
 "id_quit" = "Quit";
 "id_receive" = "Receive";
 "id_received" = "Received";
+"id_redeposit" = "Redeposit";
 "id_remember_keep_your_recovery" = "Remember, keep your recovery phrase somewhere very safe and never show it to anyone else!";
 "id_remove_wallet" = "Remove Wallet";
 "id_restore" = "Restore";
