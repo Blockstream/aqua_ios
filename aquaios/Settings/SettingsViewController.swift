@@ -12,7 +12,7 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.removeWallet))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.removeWalletAlert))
         removeLabel.addGestureRecognizer(tapGestureRecognizer)
         removeLabel.isUserInteractionEnabled = true
     }
@@ -70,14 +70,21 @@ class SettingsViewController: BaseViewController {
         }
     }
 
-    @objc func removeWallet(_ sender: Any?) {
+    @objc func removeWalletAlert(_ sender: Any?) {
         let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_doublecheck_that_you_have_a", comment: ""), preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .destructive) { _ in
-            try? Mnemonic.delete()
-            exit(0)
+            self.removeWallet()
         })
         self.present(alert, animated: true, completion: nil)
+    }
+
+    func removeWallet() {
+        UserDefaults.standard.set(false, forKey: Constants.Keys.hasBackedUp)
+        UserDefaults.standard.set(false, forKey: Constants.Keys.hasShownBackup)
+        UserDefaults.standard.set([String](), forKey: Constants.Keys.pinnedAssets)
+        try? Mnemonic.delete()
+        exit(0)
     }
 
     func enableSafeMnemonic() {
