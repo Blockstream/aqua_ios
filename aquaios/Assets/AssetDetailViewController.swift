@@ -54,11 +54,9 @@ class AssetDetailViewController: BaseViewController {
             buyButton.isHidden = !(asset.isBTC || asset.isLBTC)
             balanceLabel.text = "\(asset.string() ?? "")"
             tickerLabel.text = asset.ticker ?? ""
-            fiatLabel.text = ""
-            if !asset.selectable {
-                let fiat = Fiat.from(asset.sats ?? 0)
-                fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
-            }
+            fiatLabel.isHidden = asset.selectable
+            let fiat = Fiat.from(asset.sats ?? 0)
+            self.fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
             let infoButton = UIBarButtonItem(image: UIImage(named: "info"),
                                              style: .plain,
                                              target: self,
@@ -93,9 +91,9 @@ class AssetDetailViewController: BaseViewController {
         }.compactMap(on: bgq) {
             return self.asset?.isBTC ?? false ? Bitcoin.shared.balance : Liquid.shared.balance
         }.done { balance in
-            self.asset?.sats = balance.filter { $0.key == self.asset?.info?.assetId }.first?.value ?? 0
-            self.balanceLabel.text = "\(self.asset?.string() ?? "")"
-            let fiat = Fiat.from(self.asset?.sats ?? 0)
+            let sats = balance.filter { $0.key == self.asset?.info?.assetId }.first?.value
+            let fiat = Fiat.from(sats ?? 0)
+            self.balanceLabel.text = "\(self.asset?.string(sats ?? 0) ?? "")"
             self.fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }.catch { _ in
             let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: "No balance found", preferredStyle: .alert)
