@@ -5,7 +5,7 @@ class NetworkSession {
     var blockHeight: Int = 0
 
     init() {
-        let url = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(Bundle.main.bundleIdentifier!, isDirectory: true)
+        let url = try! FileManager.default.url(for: .applicationDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(Bundle.main.bundleIdentifier!, isDirectory: true)
         try? FileManager.default.createDirectory(atPath: url.path, withIntermediateDirectories: true, attributes: nil)
         try? gdkInit(config: ["datadir": url.path])
         session = try! Session(notificationCompletionHandler: newNotification)
