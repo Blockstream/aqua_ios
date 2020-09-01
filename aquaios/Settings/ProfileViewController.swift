@@ -18,20 +18,20 @@ class ProfileViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = 54
+        tableView.contentInset = UIEdgeInsets(top: 0, left: +6, bottom: 0, right: 0)
 
         let headerView = Bundle.main.loadNibNamed("ProfileHeaderCell", owner: self, options: nil)![0] as? ProfileHeaderCell
         headerView?.configure()
         tableView.tableHeaderView = headerView
 
-        let cellNib = UINib(nibName: "SettingCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "SettingCell")
+        let cellNib = UINib(nibName: "ProfileCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "ProfileCell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationItem.title = "              " + NSLocalizedString("id_profile", comment: "")
+        navigationItem.title = NSLocalizedString("id_profile", comment: "")
     }
 
 }
@@ -43,7 +43,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell") as? SettingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as? ProfileCell
         cell?.accessoryType = .disclosureIndicator
         cell?.selectionStyle = .none
         switch Voices.allCases[indexPath.row] {

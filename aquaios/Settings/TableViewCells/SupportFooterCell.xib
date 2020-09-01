@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aff-a9-I5v">
-                        <rect key="frame" x="24" y="24" width="272" height="17"/>
+                        <rect key="frame" x="20" y="24" width="280" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" name="lightestBlueGray"/>
                         <nil key="highlightedColor"/>
                         <size key="shadowOffset" width="0.0" height="-2"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blU-eb-Ms6">
-                        <rect key="frame" x="24" y="49" width="272" height="17"/>
+                        <rect key="frame" x="20" y="49" width="280" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" name="lightestBlueGray"/>
                         <nil key="highlightedColor"/>
@@ -36,11 +36,11 @@
                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                 <constraints>
                     <constraint firstItem="blU-eb-Ms6" firstAttribute="top" secondItem="aff-a9-I5v" secondAttribute="bottom" constant="8" id="3O1-I2-MaZ"/>
-                    <constraint firstItem="aff-a9-I5v" firstAttribute="leading" secondItem="R53-WR-ydi" secondAttribute="leading" constant="24" id="6zf-B5-YUa"/>
-                    <constraint firstItem="blU-eb-Ms6" firstAttribute="leading" secondItem="R53-WR-ydi" secondAttribute="leading" constant="24" id="CXj-II-ALs"/>
-                    <constraint firstAttribute="trailing" secondItem="blU-eb-Ms6" secondAttribute="trailing" constant="24" id="QfZ-pY-KU4"/>
+                    <constraint firstItem="aff-a9-I5v" firstAttribute="leading" secondItem="R53-WR-ydi" secondAttribute="leading" constant="20" id="6zf-B5-YUa"/>
+                    <constraint firstItem="blU-eb-Ms6" firstAttribute="leading" secondItem="R53-WR-ydi" secondAttribute="leading" constant="20" id="CXj-II-ALs"/>
+                    <constraint firstAttribute="trailing" secondItem="blU-eb-Ms6" secondAttribute="trailing" constant="20" id="QfZ-pY-KU4"/>
                     <constraint firstItem="aff-a9-I5v" firstAttribute="top" secondItem="R53-WR-ydi" secondAttribute="top" constant="24" id="Vi8-7D-jVE"/>
-                    <constraint firstAttribute="trailing" secondItem="aff-a9-I5v" secondAttribute="trailing" constant="24" id="so5-dG-g1f"/>
+                    <constraint firstAttribute="trailing" secondItem="aff-a9-I5v" secondAttribute="trailing" constant="20" id="so5-dG-g1f"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" name="aquaBackgroundBlue"/>

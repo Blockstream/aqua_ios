@@ -24,7 +24,6 @@ class AboutUsViewController: BaseViewController {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
     }
 }

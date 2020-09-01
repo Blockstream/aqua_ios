@@ -25,7 +25,6 @@ class SettingsViewController: BaseViewController {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
 
         let footerView = Bundle.main.loadNibNamed("SettingsFooterCell", owner: self, options: nil)![0] as? SettingsFooterCell
@@ -103,7 +102,12 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             cell?.accessoryView = switcher
             cell?.textLabel?.text = authLabel()
         case .currency:
-            break
+            cell?.textLabel?.text = NSLocalizedString("id_reference_exchange_rate", comment: "")
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 45, height: 20))
+            label.textColor = .gray
+            label.text = "USD"
+            label.textAlignment = .right
+            cell?.accessoryView = label
         }
         return cell ?? UITableViewCell()
     }

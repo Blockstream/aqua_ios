@@ -19,13 +19,12 @@ class SupportViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationItem.title = "       " + NSLocalizedString("id_support_and_feedback", comment: "")
+        navigationItem.title = NSLocalizedString("id_support_and_feedback", comment: "")
     }
 
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
 
         let footerView = Bundle.main.loadNibNamed("SupportFooterCell", owner: self, options: nil)![0] as? SupportFooterCell
         footerView?.configure()

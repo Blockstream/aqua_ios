@@ -91,8 +91,8 @@
 		812A12302448A9A400129EDE /* BackupAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A122D2448A9A400129EDE /* BackupAlertViewController.swift */; };
 		812A12322448AA7100129EDE /* DropAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A12312448AA7100129EDE /* DropAlert.swift */; };
 		8152BC8024F3BD3900CD3B66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC7F24F3BD3900CD3B66 /* ProfileViewController.swift */; };
-		8152BC8324F3C53800CD3B66 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC8224F3C53800CD3B66 /* SettingCell.swift */; };
-		8152BC8524F3C54700CD3B66 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8152BC8424F3C54700CD3B66 /* SettingCell.xib */; };
+		8152BC8324F3C53800CD3B66 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC8224F3C53800CD3B66 /* ProfileCell.swift */; };
+		8152BC8524F3C54700CD3B66 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8152BC8424F3C54700CD3B66 /* ProfileCell.xib */; };
 		8152BC8724F3F54800CD3B66 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8152BC8624F3F54800CD3B66 /* ProfileHeaderCell.xib */; };
 		8152BC8924F3F83900CD3B66 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC8824F3F83900CD3B66 /* ProfileHeaderCell.swift */; };
 		8174BBB4249285D600929D4E /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174BBB3249285D600929D4E /* Mnemonic.swift */; };
@@ -252,8 +252,8 @@
 		812A122D2448A9A400129EDE /* BackupAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupAlertViewController.swift; sourceTree = "<group>"; };
 		812A12312448AA7100129EDE /* DropAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAlert.swift; sourceTree = "<group>"; };
 		8152BC7F24F3BD3900CD3B66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8152BC8224F3C53800CD3B66 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
-		8152BC8424F3C54700CD3B66 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		8152BC8224F3C53800CD3B66 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		8152BC8424F3C54700CD3B66 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		8152BC8624F3F54800CD3B66 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
 		8152BC8824F3F83900CD3B66 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
 		8174BBB3249285D600929D4E /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mnemonic.swift; path = aquaios/models/Mnemonic.swift; sourceTree = SOURCE_ROOT; };
@@ -618,8 +618,8 @@
 		8152BC8124F3C50F00CD3B66 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				8152BC8224F3C53800CD3B66 /* SettingCell.swift */,
-				8152BC8424F3C54700CD3B66 /* SettingCell.xib */,
+				8152BC8224F3C53800CD3B66 /* ProfileCell.swift */,
+				8152BC8424F3C54700CD3B66 /* ProfileCell.xib */,
 				8152BC8824F3F83900CD3B66 /* ProfileHeaderCell.swift */,
 				8152BC8624F3F54800CD3B66 /* ProfileHeaderCell.xib */,
 				81DF87F324F5097A00286F0D /* SupportFooterCell.swift */,
@@ -788,7 +788,7 @@
 				6D72427E240DE18D00488E16 /* TransactionCell.xib in Resources */,
 				8152BC8724F3F54800CD3B66 /* ProfileHeaderCell.xib in Resources */,
 				6D6FA7252476FDFC00BDF8C4 /* AssetView.xib in Resources */,
-				8152BC8524F3C54700CD3B66 /* SettingCell.xib in Resources */,
+				8152BC8524F3C54700CD3B66 /* ProfileCell.xib in Resources */,
 				6D2551872465E7AF000D4782 /* CreateWalletView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -875,7 +875,7 @@
 				6D482FD0246A085D0054AC84 /* ConfirmMnemonicViewController.swift in Sources */,
 				2026744E24D302A40093A17A /* LiquidBasicsView.swift in Sources */,
 				81DF87F824F512C700286F0D /* SettingsFooterCell.swift in Sources */,
-				8152BC8324F3C53800CD3B66 /* SettingCell.swift in Sources */,
+				8152BC8324F3C53800CD3B66 /* ProfileCell.swift in Sources */,
 				81D9E47624068D15005DD867 /* Wallet.swift in Sources */,
 				6D077207242C2E6E009DEA9B /* SendDetailsViewController.swift in Sources */,
 				81D9E4882406BA9F005DD867 /* Registry.swift in Sources */,

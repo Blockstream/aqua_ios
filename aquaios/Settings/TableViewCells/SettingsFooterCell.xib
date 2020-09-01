@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-d6-KkK">
-                        <rect key="frame" x="24" y="24" width="107" height="32"/>
+                        <rect key="frame" x="20" y="24" width="107" height="32"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <state key="normal" title="Remove Wallet">
                             <color key="titleColor" name="reddishPink"/>
@@ -31,7 +31,7 @@
                 </subviews>
                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                 <constraints>
-                    <constraint firstItem="Iud-d6-KkK" firstAttribute="leading" secondItem="LXd-0u-IGM" secondAttribute="leading" constant="24" id="099-gN-EiD"/>
+                    <constraint firstItem="Iud-d6-KkK" firstAttribute="leading" secondItem="LXd-0u-IGM" secondAttribute="leading" constant="20" id="099-gN-EiD"/>
                     <constraint firstItem="Iud-d6-KkK" firstAttribute="top" secondItem="LXd-0u-IGM" secondAttribute="top" constant="24" id="2Fr-Yn-ArA"/>
                 </constraints>
             </tableViewCellContentView>
