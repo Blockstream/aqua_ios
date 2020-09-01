@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="GSn-64-mlh" customClass="SettingsFooterCell" customModule="Aqua" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSn-64-mlh" id="LXd-0u-IGM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-d6-KkK">
+                        <rect key="frame" x="24" y="24" width="107" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="Remove Wallet">
+                            <color key="titleColor" name="reddishPink"/>
+                        </state>
+                        <connections>
+                            <action selector="removeClick:" destination="GSn-64-mlh" eventType="touchUpInside" id="5oh-Gr-bak"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                <constraints>
+                    <constraint firstItem="Iud-d6-KkK" firstAttribute="leading" secondItem="LXd-0u-IGM" secondAttribute="leading" constant="24" id="099-gN-EiD"/>
+                    <constraint firstItem="Iud-d6-KkK" firstAttribute="top" secondItem="LXd-0u-IGM" secondAttribute="top" constant="24" id="2Fr-Yn-ArA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="aquaBackgroundBlue"/>
+            <viewLayoutGuide key="safeArea" id="aLF-rA-iY8"/>
+            <connections>
+                <outlet property="removeButton" destination="Iud-d6-KkK" id="BlA-kU-ngE"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="165.06696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="reddishPink">
+            <color red="1" green="0.13333333333333333" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

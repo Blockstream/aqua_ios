@@ -3,43 +3,23 @@ import LocalAuthentication
 
 class SettingsViewController: BaseViewController {
 
+    enum Voices: CaseIterable {
+        case auth
+        case currency
+    }
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var removeLabel: UILabel!
 
-    var labels = [NSLocalizedString("id_support", comment: ""),
-                  NSLocalizedString("id_view_my_recovery_phrase", comment: "")]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.removeWalletAlert))
-        removeLabel.addGestureRecognizer(tapGestureRecognizer)
-        removeLabel.isUserInteractionEnabled = true
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        configure()
+        configureTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-
-    func configure() {
-        if hasWallet {
-            labels.append(authLabel())
-            configureTableView()
-            hideCreateWalletView()
-            self.tableView.isHidden = false
-            self.removeLabel.isHidden = false
-            navigationItem.title = NSLocalizedString("id_profile", comment: "")
-        } else {
-            self.tableView.isHidden = true
-            self.removeLabel.isHidden = true
-            showCreateWalletView(delegate: self)
-        }
+        navigationItem.title = NSLocalizedString("id_settings", comment: "")
     }
 
     func configureTableView() {
@@ -47,6 +27,10 @@ class SettingsViewController: BaseViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
+
+        let footerView = Bundle.main.loadNibNamed("SettingsFooterCell", owner: self, options: nil)![0] as? SettingsFooterCell
+        footerView?.delegate = self
+        tableView.tableFooterView = footerView
     }
 
     func authType() -> LABiometryType {
@@ -68,23 +52,6 @@ class SettingsViewController: BaseViewController {
         default:
             return NSLocalizedString("id_passcode", comment: "")
         }
-    }
-
-    @objc func removeWalletAlert(_ sender: Any?) {
-        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_doublecheck_that_you_have_a", comment: ""), preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
-        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .destructive) { _ in
-            self.removeWallet()
-        })
-        self.present(alert, animated: true, completion: nil)
-    }
-
-    func removeWallet() {
-        UserDefaults.standard.set(false, forKey: Constants.Keys.hasBackedUp)
-        UserDefaults.standard.set(false, forKey: Constants.Keys.hasShownBackup)
-        UserDefaults.standard.set([String](), forKey: Constants.Keys.pinnedAssets)
-        try? Mnemonic.delete()
-        exit(0)
     }
 
     func enableSafeMnemonic() {
@@ -123,53 +90,50 @@ class SettingsViewController: BaseViewController {
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return labels.count
+        return Voices.allCases.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = labels[indexPath.row]
-        if indexPath.row == 2 {
+        switch Voices.allCases[indexPath.row] {
+        case .auth:
             let switcher = UISwitch()
             switcher.isOn = Mnemonic.protected()
             switcher.addTarget(self, action: #selector(switchStateDidChange(_:)), for: .valueChanged)
             cell?.accessoryView = switcher
+            cell?.textLabel?.text = authLabel()
+        case .currency:
+            break
         }
         return cell ?? UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            if let url = URL(string: "https://blockstream.zendesk.com/hc/en-us") {
-              UIApplication.shared.open(url)
-            }
-        case 1:
-            // view mnemonic
-            performSegue(withIdentifier: "mnemonic", sender: nil)
-        case 2:
-            // device authorization
+        switch Voices.allCases[indexPath.row] {
+        case .auth:
             break
-        default:
-            return
+        case .currency:
+            break
         }
     }
 }
 
-extension SettingsViewController: CreateWalletDelegate {
-    func didTapCreate() {
-        showOnboarding(with: self)
+extension SettingsViewController: SettingsFooterActions {
+
+    func remove() {
+        let alert = UIAlertController(title: NSLocalizedString("id_warning", comment: ""), message: NSLocalizedString("id_doublecheck_that_you_have_a", comment: ""), preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
+        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .destructive) { _ in
+            self.removeWallet()
+        })
+        self.present(alert, animated: true, completion: nil)
     }
 
-    func didTapRestore() {
-        showRestore(with: self)
-    }
-
-}
-
-extension SettingsViewController: UIAdaptivePresentationControllerDelegate {
-
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        configure()
+    func removeWallet() {
+        UserDefaults.standard.set(false, forKey: Constants.Keys.hasBackedUp)
+        UserDefaults.standard.set(false, forKey: Constants.Keys.hasShownBackup)
+        UserDefaults.standard.set([String](), forKey: Constants.Keys.pinnedAssets)
+        try? Mnemonic.delete()
+        exit(0)
     }
 }

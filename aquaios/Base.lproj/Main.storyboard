@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="1812" y="139"/>
         </scene>
-        <!--SettingsViewController-->
+        <!--ProfileViewController-->
         <scene sceneID="rzk-gw-i92">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="0zN-RN-UGq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="ProfileViewController" id="0zN-RN-UGq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cZh-cY-phE"/>
                     <navigationItem key="navigationItem" id="GdE-9X-XHj"/>
                 </viewControllerPlaceholder>

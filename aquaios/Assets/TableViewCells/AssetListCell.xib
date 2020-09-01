@@ -31,20 +31,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TICKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hz-hp-G1Q">
-                            <rect key="frame" x="72" y="46" width="49" height="17"/>
+                            <rect key="frame" x="67" y="46" width="49" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" name="lightestBlueGray"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asset_unknown" translatesAutoresizingMaskIntoConstraints="NO" id="aPM-xK-byV">
-                            <rect key="frame" x="20" y="23" width="36" height="36"/>
+                            <rect key="frame" x="16" y="23" width="36" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="MGe-Mu-qcD"/>
                                 <constraint firstAttribute="width" constant="36" id="R37-Jl-m0L"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Asset Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZU-or-ytd">
-                            <rect key="frame" x="72" y="23" width="90" height="20"/>
+                            <rect key="frame" x="67" y="23" width="90" height="20"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                             <color key="textColor" name="paleLilac"/>
                             <nil key="highlightedColor"/>
@@ -53,14 +53,14 @@
                     <color key="backgroundColor" name="aquaShadowBlue"/>
                     <constraints>
                         <constraint firstItem="frm-JW-5js" firstAttribute="top" secondItem="z27-nR-Iq8" secondAttribute="bottom" constant="3" id="8bi-Fn-yp3"/>
-                        <constraint firstItem="RZU-or-ytd" firstAttribute="leading" secondItem="aPM-xK-byV" secondAttribute="trailing" constant="16" id="FIY-bO-cZT"/>
+                        <constraint firstItem="RZU-or-ytd" firstAttribute="leading" secondItem="aPM-xK-byV" secondAttribute="trailing" constant="15" id="FIY-bO-cZT"/>
                         <constraint firstItem="z27-nR-Iq8" firstAttribute="top" secondItem="aPM-xK-byV" secondAttribute="top" id="HkX-BL-IX4"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="78" id="NtV-nH-aoP"/>
-                        <constraint firstItem="3hz-hp-G1Q" firstAttribute="leading" secondItem="aPM-xK-byV" secondAttribute="trailing" constant="16" id="ZBH-YF-D7U"/>
+                        <constraint firstItem="3hz-hp-G1Q" firstAttribute="leading" secondItem="aPM-xK-byV" secondAttribute="trailing" constant="15" id="ZBH-YF-D7U"/>
                         <constraint firstAttribute="trailing" secondItem="frm-JW-5js" secondAttribute="trailing" constant="16" id="fBF-IM-8Hg"/>
                         <constraint firstAttribute="trailing" secondItem="z27-nR-Iq8" secondAttribute="trailing" constant="16" id="h4Z-Oh-97g"/>
                         <constraint firstItem="RZU-or-ytd" firstAttribute="top" secondItem="aPM-xK-byV" secondAttribute="top" id="ock-MB-RrA"/>
-                        <constraint firstItem="aPM-xK-byV" firstAttribute="leading" secondItem="dhh-rD-ctz" secondAttribute="leading" constant="20" id="w2a-nU-Xfo"/>
+                        <constraint firstItem="aPM-xK-byV" firstAttribute="leading" secondItem="dhh-rD-ctz" secondAttribute="leading" constant="16" id="w2a-nU-Xfo"/>
                         <constraint firstItem="3hz-hp-G1Q" firstAttribute="top" secondItem="RZU-or-ytd" secondAttribute="bottom" constant="3" id="xu9-NZ-GLR"/>
                         <constraint firstItem="aPM-xK-byV" firstAttribute="centerY" secondItem="dhh-rD-ctz" secondAttribute="centerY" id="y4e-SX-5gH"/>
                     </constraints>

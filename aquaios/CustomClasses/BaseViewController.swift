@@ -19,11 +19,14 @@ class BaseViewController: UIViewController {
             .foregroundColor: UIColor.white,
             .font: UIFont.systemFont(ofSize: 18, weight: .medium)
         ]
+        let style = NSMutableParagraphStyle()
+        style.firstLineHeadIndent = 4
         if #available(iOS 13.0, *) {
             let barAppearance = UINavigationBarAppearance()
             barAppearance.backgroundColor = color
             barAppearance.largeTitleTextAttributes = [
-                .foregroundColor: UIColor.white
+                .foregroundColor: UIColor.white,
+                .paragraphStyle: style
             ]
             barAppearance.shadowColor = .clear
             barAppearance.shadowImage = UIImage()

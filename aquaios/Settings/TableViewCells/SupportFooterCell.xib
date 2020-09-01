@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="h6I-mY-qxO" customClass="SupportFooterCell" customModule="Aqua" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h6I-mY-qxO" id="R53-WR-ydi">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aff-a9-I5v">
+                        <rect key="frame" x="24" y="24" width="272" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="lightestBlueGray"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="-2"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blU-eb-Ms6">
+                        <rect key="frame" x="24" y="49" width="272" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="lightestBlueGray"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="-2"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                <constraints>
+                    <constraint firstItem="blU-eb-Ms6" firstAttribute="top" secondItem="aff-a9-I5v" secondAttribute="bottom" constant="8" id="3O1-I2-MaZ"/>
+                    <constraint firstItem="aff-a9-I5v" firstAttribute="leading" secondItem="R53-WR-ydi" secondAttribute="leading" constant="24" id="6zf-B5-YUa"/>
+                    <constraint firstItem="blU-eb-Ms6" firstAttribute="leading" secondItem="R53-WR-ydi" secondAttribute="leading" constant="24" id="CXj-II-ALs"/>
+                    <constraint firstAttribute="trailing" secondItem="blU-eb-Ms6" secondAttribute="trailing" constant="24" id="QfZ-pY-KU4"/>
+                    <constraint firstItem="aff-a9-I5v" firstAttribute="top" secondItem="R53-WR-ydi" secondAttribute="top" constant="24" id="Vi8-7D-jVE"/>
+                    <constraint firstAttribute="trailing" secondItem="aff-a9-I5v" secondAttribute="trailing" constant="24" id="so5-dG-g1f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="aquaBackgroundBlue"/>
+            <viewLayoutGuide key="safeArea" id="ZHq-tu-I51"/>
+            <connections>
+                <outlet property="appLabel" destination="blU-eb-Ms6" id="240-NB-mVa"/>
+                <outlet property="iosLabel" destination="aff-a9-I5v" id="cZo-jf-cfG"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="180.80357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="aquaBackgroundBlue">
+            <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightestBlueGray">
+            <color red="0.55686274509803924" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
