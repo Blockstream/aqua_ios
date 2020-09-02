@@ -67,6 +67,7 @@ class SendDetailsViewController: BaseViewController {
         tickerButton.setTitle(asset?.info?.ticker ?? "", for: .normal)
         sendAllButton.setTitle(NSLocalizedString("id_max", comment: ""), for: .normal)
         continueButton.setTitle(NSLocalizedString("id_continue", comment: ""), for: .normal)
+        tickerButton.isEnabled = asset?.isBTC ?? false || asset?.isLBTC ?? false
     }
 
     @IBAction func maxButtonTapped(_ sender: Any) {
@@ -83,7 +84,7 @@ class SendDetailsViewController: BaseViewController {
     }
 
     @IBAction func continueButtonTapped(_ sender: Any) {
-        addressee?.satoshi = asset?.satoshi(amount) ?? 0
+        addressee?.satoshi = showFiat ? Fiat.to(amount) : asset?.satoshi(amount) ?? 0
         guard let addressee = self.addressee, addressee.satoshi > 0 else {
             return
         }
