@@ -28,7 +28,7 @@ class TransactionCell: UITableViewCell {
         notesLabel.text = tx.memo
         let fiat = Fiat.from(amount ?? 0)
         fiatLabel.text = asset.isBTC || asset.isLBTC ? "\(prefix)\(Fiat.currency() ?? "") \(fiat ?? "")" : ""
-        iconImageView.image = UIImage(named: tx.type)
+        iconImageView.image = UIImage(named: tx.blockHeight == 0 ? "pending" : tx.type)
         selectionStyle = .none
     }
 }
