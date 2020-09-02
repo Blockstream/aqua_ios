@@ -34,7 +34,7 @@ struct Transaction: Codable {
     let blockHeight: UInt32
     let createdAt: String
     let fee: UInt64
-    let memo: String
+    var memo: String
     var satoshi: [String: UInt64]
     let type: String
     let addressees: [String]

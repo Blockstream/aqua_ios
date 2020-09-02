@@ -20,8 +20,6 @@
 		20A6A96F24AE35DE009E0210 /* Restore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A6A96E24AE35DE009E0210 /* Restore.storyboard */; };
 		20A6A97124AE3756009E0210 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6A97024AE3756009E0210 /* RestoreViewController.swift */; };
 		20A6A97324AE376D009E0210 /* RestoreWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6A97224AE376D009E0210 /* RestoreWordsViewController.swift */; };
-		6D0771F8242A828B009DEA9B /* TransactionsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0771F6242A828B009DEA9B /* TransactionsHeaderCell.swift */; };
-		6D0771F9242A828B009DEA9B /* TransactionsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0771F7242A828B009DEA9B /* TransactionsHeaderCell.xib */; };
 		6D077203242ACC0C009DEA9B /* Send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D077202242ACC0C009DEA9B /* Send.storyboard */; };
 		6D077205242ACC30009DEA9B /* SendAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D077204242ACC30009DEA9B /* SendAddressViewController.swift */; };
 		6D077207242C2E6E009DEA9B /* SendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D077206242C2E6E009DEA9B /* SendDetailsViewController.swift */; };
@@ -95,6 +93,9 @@
 		8152BC8524F3C54700CD3B66 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8152BC8424F3C54700CD3B66 /* ProfileCell.xib */; };
 		8152BC8724F3F54800CD3B66 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8152BC8624F3F54800CD3B66 /* ProfileHeaderCell.xib */; };
 		8152BC8924F3F83900CD3B66 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC8824F3F83900CD3B66 /* ProfileHeaderCell.swift */; };
+		816522D12500198C007AF2D3 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816522D02500198C007AF2D3 /* NoteViewController.swift */; };
+		816522D325004114007AF2D3 /* TransactionNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816522D225004114007AF2D3 /* TransactionNoteCell.xib */; };
+		816522D525004120007AF2D3 /* TransactionNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816522D425004120007AF2D3 /* TransactionNoteCell.swift */; };
 		8174BBB4249285D600929D4E /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174BBB3249285D600929D4E /* Mnemonic.swift */; };
 		8174BBB824928B5F00929D4E /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174BBB724928B5F00929D4E /* AuthenticationViewController.swift */; };
 		817F86C1243E7B4E000545C7 /* TransactionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F86C0243E7B4E000545C7 /* TransactionError.swift */; };
@@ -104,8 +105,6 @@
 		8192528C2428DD6900203C44 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192528B2428DD6900203C44 /* Transaction.swift */; };
 		81A6ABD424741BC200599556 /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6ABD324741BC200599556 /* Fiat.swift */; };
 		81C4ED0524C6A2E90005B320 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C4ED0424C6A2E90005B320 /* TransactionViewController.swift */; };
-		81C4ED0824C6A8360005B320 /* TransactionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C4ED0724C6A8360005B320 /* TransactionHeaderCell.xib */; };
-		81C4ED0A24C6A8450005B320 /* TransactionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C4ED0924C6A8450005B320 /* TransactionHeaderCell.swift */; };
 		81C4ED0C24C6B7C80005B320 /* TransactionFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C4ED0B24C6B7C80005B320 /* TransactionFooterCell.swift */; };
 		81C4ED0E24C6BBB10005B320 /* TransactionFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C4ED0D24C6BBB10005B320 /* TransactionFooterCell.xib */; };
 		81D9E4702405E6E0005DD867 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D9E46F2405E6E0005DD867 /* Network.swift */; };
@@ -178,8 +177,6 @@
 		266A114AFDB2B069F7CAE597 /* Pods-aquaios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aquaios.debug.xcconfig"; path = "Target Support Files/Pods-aquaios/Pods-aquaios.debug.xcconfig"; sourceTree = "<group>"; };
 		4D6BEF3CB30ADD6858F090D0 /* Pods-aquaios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aquaios.release.xcconfig"; path = "Target Support Files/Pods-aquaios/Pods-aquaios.release.xcconfig"; sourceTree = "<group>"; };
 		549AD5F60E0D9F05BF21B919 /* Pods_aquaios_AquaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aquaios_AquaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D0771F6242A828B009DEA9B /* TransactionsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeaderCell.swift; sourceTree = "<group>"; };
-		6D0771F7242A828B009DEA9B /* TransactionsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsHeaderCell.xib; sourceTree = "<group>"; };
 		6D077202242ACC0C009DEA9B /* Send.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Send.storyboard; sourceTree = "<group>"; };
 		6D077204242ACC30009DEA9B /* SendAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAddressViewController.swift; sourceTree = "<group>"; };
 		6D077206242C2E6E009DEA9B /* SendDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDetailsViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +253,9 @@
 		8152BC8424F3C54700CD3B66 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		8152BC8624F3F54800CD3B66 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
 		8152BC8824F3F83900CD3B66 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		816522D02500198C007AF2D3 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		816522D225004114007AF2D3 /* TransactionNoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionNoteCell.xib; sourceTree = "<group>"; };
+		816522D425004120007AF2D3 /* TransactionNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionNoteCell.swift; sourceTree = "<group>"; };
 		8174BBB3249285D600929D4E /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mnemonic.swift; path = aquaios/models/Mnemonic.swift; sourceTree = SOURCE_ROOT; };
 		8174BBB724928B5F00929D4E /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		817F86C0243E7B4E000545C7 /* TransactionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionError.swift; path = aquaios/models/TransactionError.swift; sourceTree = SOURCE_ROOT; };
@@ -265,8 +265,6 @@
 		8192528B2428DD6900203C44 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = aquaios/models/Transaction.swift; sourceTree = SOURCE_ROOT; };
 		81A6ABD324741BC200599556 /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fiat.swift; path = aquaios/models/Fiat.swift; sourceTree = SOURCE_ROOT; };
 		81C4ED0424C6A2E90005B320 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
-		81C4ED0724C6A8360005B320 /* TransactionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHeaderCell.xib; sourceTree = "<group>"; };
-		81C4ED0924C6A8450005B320 /* TransactionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHeaderCell.swift; sourceTree = "<group>"; };
 		81C4ED0B24C6B7C80005B320 /* TransactionFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFooterCell.swift; sourceTree = "<group>"; };
 		81C4ED0D24C6BBB10005B320 /* TransactionFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionFooterCell.xib; sourceTree = "<group>"; };
 		81D9E46F2405E6E0005DD867 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -390,6 +388,7 @@
 				6D72427C240DE17600488E16 /* TableViewCells */,
 				6D4A4C40240458480002BA93 /* TransactionsViewController.swift */,
 				81C4ED0424C6A2E90005B320 /* TransactionViewController.swift */,
+				816522D02500198C007AF2D3 /* NoteViewController.swift */,
 				6D4A4C3E240458160002BA93 /* Transactions.storyboard */,
 			);
 			path = Transactions;
@@ -431,12 +430,10 @@
 			children = (
 				6D72427D240DE18D00488E16 /* TransactionCell.xib */,
 				6D72427F240DE1BE00488E16 /* TransactionCell.swift */,
-				6D0771F6242A828B009DEA9B /* TransactionsHeaderCell.swift */,
-				6D0771F7242A828B009DEA9B /* TransactionsHeaderCell.xib */,
-				81C4ED0924C6A8450005B320 /* TransactionHeaderCell.swift */,
-				81C4ED0724C6A8360005B320 /* TransactionHeaderCell.xib */,
 				81C4ED0B24C6B7C80005B320 /* TransactionFooterCell.swift */,
 				81C4ED0D24C6BBB10005B320 /* TransactionFooterCell.xib */,
+				816522D225004114007AF2D3 /* TransactionNoteCell.xib */,
+				816522D425004120007AF2D3 /* TransactionNoteCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -775,13 +772,12 @@
 				6DE35A5024492AC700005783 /* AssetListCell.xib in Resources */,
 				6DC69E6E23DB446600DCD7CB /* Main.storyboard in Resources */,
 				6D09E81F2406F9EF0052CD35 /* AddAssetCell.xib in Resources */,
+				816522D325004114007AF2D3 /* TransactionNoteCell.xib in Resources */,
 				6D4A4C3F240458160002BA93 /* Transactions.storyboard in Resources */,
-				6D0771F9242A828B009DEA9B /* TransactionsHeaderCell.xib in Resources */,
 				2040D84424C5F8C2003DFA3C /* AssetInfoCell.xib in Resources */,
 				2085919624C6EC2100912ED0 /* UnregisteredAssetCell.xib in Resources */,
 				81C4ED0E24C6BBB10005B320 /* TransactionFooterCell.xib in Resources */,
 				6D407C012404A79800EE06EB /* AssetCell.xib in Resources */,
-				81C4ED0824C6A8360005B320 /* TransactionHeaderCell.xib in Resources */,
 				6D4A4C4D24045D7F0002BA93 /* Settings.storyboard in Resources */,
 				6DF148312462278B00F30DFB /* Onboarding.storyboard in Resources */,
 				6D482FCA246A07F70054AC84 /* Mnemonic.storyboard in Resources */,
@@ -900,6 +896,7 @@
 				6DCF98E524774DF500737B42 /* Constants.swift in Sources */,
 				817F86C1243E7B4E000545C7 /* TransactionError.swift in Sources */,
 				6D6FA7242476FDFC00BDF8C4 /* AssetView.swift in Sources */,
+				816522D525004120007AF2D3 /* TransactionNoteCell.swift in Sources */,
 				6DC69E6723DB446600DCD7CB /* AppDelegate.swift in Sources */,
 				81C4ED0524C6A2E90005B320 /* TransactionViewController.swift in Sources */,
 				6D1592CE2405E7F800F15BCD /* UIViewController.swift in Sources */,
@@ -907,15 +904,14 @@
 				6D4A4C4924045CBE0002BA93 /* BuyViewController.swift in Sources */,
 				81DF87F424F5097A00286F0D /* SupportFooterCell.swift in Sources */,
 				6D1592C82405D0DE00F15BCD /* AddAssetsViewController.swift in Sources */,
-				81C4ED0A24C6A8450005B320 /* TransactionHeaderCell.swift in Sources */,
 				81851993249C84EF002EDEB5 /* LoginViewController.swift in Sources */,
 				6DF148212460EEB400F30DFB /* RadialGradient.swift in Sources */,
 				8174BBB4249285D600929D4E /* Mnemonic.swift in Sources */,
-				6D0771F8242A828B009DEA9B /* TransactionsHeaderCell.swift in Sources */,
 				6D482FD2246A08EB0054AC84 /* BackupCompleteViewController.swift in Sources */,
 				6DA69A32240F30BA000F626E /* QRScreenshotReader.swift in Sources */,
 				812A122E2448A9A400129EDE /* BackupNagViewController.swift in Sources */,
 				6D3103E92425819800CA17CF /* AssetDetailViewController.swift in Sources */,
+				816522D12500198C007AF2D3 /* NoteViewController.swift in Sources */,
 				81A6ABD424741BC200599556 /* Fiat.swift in Sources */,
 				6DD8D97A243BF4C100A6F560 /* UIImage.swift in Sources */,
 				6D2513E1246CAE0E005D4EDC /* AssetInfoViewController.swift in Sources */,
