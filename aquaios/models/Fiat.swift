@@ -21,6 +21,13 @@ class Fiat {
         return formatter.string(from: decimal as NSDecimalNumber)
     }
 
+    static func to(_ amount: String) -> UInt64 {
+        var decimal = Decimal(string: amount)! * pow(10, 8) / Decimal(Fiat.rate()!)
+        var drounded: Decimal = Decimal()
+        NSDecimalRound(&drounded, &decimal, 0, .plain)
+        return NSDecimalNumber(decimal:  drounded).uint64Value
+    }
+
     static var formatter: NumberFormatter {
         let formatter: NumberFormatter = NumberFormatter()
         formatter.locale = Locale.current

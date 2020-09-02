@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -337,22 +337,23 @@
                                             <action selector="maxButtonTapped:" destination="ygw-8U-pDp" eventType="touchUpInside" id="tNn-Im-ETM"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TKR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoy-46-fKO">
-                                        <rect key="frame" x="233" y="13" width="31" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="KoJ-NU-5II"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-YH-TXc">
+                                        <rect key="frame" x="232" y="8.0000000000000284" width="31" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" name="topaz"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="TKR">
+                                            <color key="titleColor" name="topaz"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tickerClick:" destination="ygw-8U-pDp" eventType="touchUpInside" id="q0I-C9-aXN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="aquaShadowBlue"/>
                                 <constraints>
+                                    <constraint firstItem="mrE-YH-TXc" firstAttribute="centerY" secondItem="bky-1i-2cg" secondAttribute="centerY" id="9qD-Lp-SP6"/>
                                     <constraint firstItem="v6F-C0-fS2" firstAttribute="leading" secondItem="8UP-Ou-dHX" secondAttribute="leading" constant="20" id="Kcu-en-VDI"/>
                                     <constraint firstItem="v6F-C0-fS2" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="Kdh-Fh-hLH"/>
-                                    <constraint firstItem="Qoy-46-fKO" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="c0H-JG-kxu"/>
-                                    <constraint firstItem="bky-1i-2cg" firstAttribute="leading" secondItem="Qoy-46-fKO" secondAttribute="trailing" constant="19" id="cAD-06-8IY"/>
+                                    <constraint firstItem="bky-1i-2cg" firstAttribute="leading" secondItem="mrE-YH-TXc" secondAttribute="trailing" constant="20" id="f6W-Li-PIF"/>
                                     <constraint firstAttribute="height" constant="48" id="oCP-56-OeS"/>
                                     <constraint firstAttribute="trailing" secondItem="bky-1i-2cg" secondAttribute="trailing" constant="20" id="sSw-SS-hDd"/>
                                     <constraint firstItem="bky-1i-2cg" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="ysF-Cz-rFO"/>
@@ -405,7 +406,7 @@
                         <outlet property="deleteButton" destination="gsd-rv-tWb" id="N3C-j4-EVg"/>
                         <outlet property="fiatLabel" destination="GAy-0x-0lh" id="HQt-H4-k1h"/>
                         <outlet property="sendAllButton" destination="bky-1i-2cg" id="Ygb-X5-hum"/>
-                        <outlet property="tickerLabel" destination="Qoy-46-fKO" id="ucQ-rM-MFI"/>
+                        <outlet property="tickerButton" destination="mrE-YH-TXc" id="XFp-vS-Mqy"/>
                         <outletCollection property="padKeys" destination="4OE-aT-zRO" collectionClass="NSMutableArray" id="kl1-dS-VVA"/>
                         <outletCollection property="padKeys" destination="yPE-jh-Px7" collectionClass="NSMutableArray" id="tyb-zz-ySQ"/>
                         <outletCollection property="padKeys" destination="P3T-WK-pzr" collectionClass="NSMutableArray" id="qsa-uE-WHC"/>
@@ -826,6 +827,9 @@
             <point key="canvasLocation" x="2190" y="664"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1xh-fK-K8N"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow_down" width="9" height="5"/>
         <image name="arrow_right" width="20" height="16"/>
@@ -870,7 +874,4 @@
             <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1xh-fK-K8N"/>
-    </inferredMetricsTieBreakers>
 </document>

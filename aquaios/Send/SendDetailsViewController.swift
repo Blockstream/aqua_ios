@@ -11,13 +11,14 @@ class SendDetailsViewController: BaseViewController {
     @IBOutlet weak var amountTitleLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
-    @IBOutlet weak var tickerLabel: UILabel!
+    @IBOutlet weak var tickerButton: UIButton!
     @IBOutlet weak var sendAllButton: UIButton!
 
     var addressee: Addressee?
     private var amount: String = ""
     private var asset: Asset?
-    private var sendAll: Bool = false
+    private var sendAll = false
+    private var showFiat = false
 
     private var balance: UInt64 {
         if let tag = addressee?.assetTag, tag != "btc" {
@@ -63,7 +64,7 @@ class SendDetailsViewController: BaseViewController {
         amountLabel.isHidden = amount.count == 0
         continueButton.round(radius: 26.5)
         amountTitleLabel.text = NSLocalizedString("id_amount", comment: "")
-        tickerLabel.text = asset?.info?.ticker ?? ""
+        tickerButton.setTitle(asset?.info?.ticker ?? "", for: .normal)
         sendAllButton.setTitle(NSLocalizedString("id_max", comment: ""), for: .normal)
         continueButton.setTitle(NSLocalizedString("id_continue", comment: ""), for: .normal)
     }
@@ -71,7 +72,13 @@ class SendDetailsViewController: BaseViewController {
     @IBAction func maxButtonTapped(_ sender: Any) {
         self.sendAll = !self.sendAll
         sendAllButton.isSelected = self.sendAll
-        amount = self.sendAll ? asset?.string() ?? "" : ""
+        if !sendAll {
+            amount = ""
+        } else if !showFiat {
+            amount = self.sendAll ? asset?.string() ?? "" : ""
+        } else {
+            amount = Fiat.from(asset?.sats ?? 0) ?? ""
+        }
         reload()
     }
 
@@ -106,10 +113,20 @@ class SendDetailsViewController: BaseViewController {
         fiatLabel.isHidden = amount.isEmpty
         continueButton.isHidden = amount.isEmpty
         amountLabel.text = amount
-        if let asset = asset, asset.hasFiatRate {
+        guard let asset = asset, !asset.selectable || !asset.hasFiatRate else {
+            return
+        }
+        if amount.isEmpty {
+            return
+        }
+        if !showFiat {
             let satoshi = asset.satoshi(amount) ?? 0
             let fiat = Fiat.from(satoshi)
-            fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
+            fiatLabel.text = "\(Fiat.currency() ?? "") \( sendAll ? asset.string() ?? "" : fiat ?? "")"
+        } else {
+            let satoshi = Fiat.to(amount)
+            let value = asset.string(satoshi)
+            fiatLabel.text = "\(asset.info?.ticker ?? "") \( value ?? "")"
         }
     }
 
@@ -134,6 +151,18 @@ class SendDetailsViewController: BaseViewController {
         reload()
     }
 
+    @IBAction func tickerClick(_ sender: Any) {
+        showFiat = !showFiat
+        tickerButton.setTitle(showFiat ? Fiat.currency() : asset?.info?.ticker ?? "", for: .normal)
+        if sendAll {
+            if !showFiat {
+                amount = self.sendAll ? asset?.string() ?? "" : ""
+            } else {
+                amount = Fiat.from(asset?.sats ?? 0) ?? ""
+            }
+        }
+        reload()
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
