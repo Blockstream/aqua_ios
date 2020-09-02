@@ -12,6 +12,7 @@ class BaseViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         setNavigationBarBackgroundColor(.aquaBackgroundBlue)
+        self.view.backgroundColor = UIColor.aquaBackgroundBlue
     }
 
     func setNavigationBarBackgroundColor(_ color: UIColor) {

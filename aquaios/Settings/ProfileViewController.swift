@@ -18,7 +18,8 @@ class ProfileViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        tableView.contentInset = UIEdgeInsets(top: 0, left: +6, bottom: 0, right: 0)
+        tableView.backgroundColor = .aquaBackgroundBlue
+        tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
 
         let headerView = Bundle.main.loadNibNamed("ProfileHeaderCell", owner: self, options: nil)![0] as? ProfileHeaderCell
         headerView?.configure()
@@ -44,6 +45,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as? ProfileCell
+        cell?.backgroundColor = .aquaBackgroundBlue
         cell?.accessoryType = .disclosureIndicator
         cell?.selectionStyle = .none
         switch Voices.allCases[indexPath.row] {
