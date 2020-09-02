@@ -17,7 +17,7 @@ class AssetListCell: UITableViewCell {
         tickerLabel.text = asset.ticker ?? ""
         fiatValueLabel.text = ""
         assetIconImageView.image = asset.icon ?? UIImage(named: "asset_unknown")
-        if !asset.selectable {
+        if asset.hasFiatRate {
             let fiat = Fiat.from(asset.sats ?? 0)
             fiatValueLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }

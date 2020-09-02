@@ -54,7 +54,7 @@ class AssetDetailViewController: BaseViewController {
             buyButton.isHidden = !(asset.isBTC || asset.isLBTC)
             balanceLabel.text = "\(asset.string() ?? "")"
             tickerLabel.text = asset.ticker ?? ""
-            fiatLabel.isHidden = asset.selectable
+            fiatLabel.isHidden = !asset.hasFiatRate
             let fiat = Fiat.from(asset.sats ?? 0)
             self.fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
             let infoButton = UIBarButtonItem(image: UIImage(named: "info"),

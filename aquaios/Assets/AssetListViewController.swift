@@ -14,7 +14,8 @@ class AssetListViewController: BaseViewController {
     private var transactionToken: NSObjectProtocol?
     private var pinnedAssets: [String: UInt64] {
         get {
-            if let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] {
+            if var pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] {
+                pinned.insert(Liquid.shared.usdtId, at: 0)
                 return pinned.reduce([String: UInt64]()) { (dict, asset) -> [String: UInt64] in
                     var dict = dict
                     dict[asset] = 0

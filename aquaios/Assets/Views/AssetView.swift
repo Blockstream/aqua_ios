@@ -26,7 +26,7 @@ class AssetView: UIView {
         assetNameLabel.text = asset.name
         assetTickerLabel.text = asset.ticker
         balanceLabel.text = asset.string() ?? ""
-        if !asset.selectable {
+        if asset.hasFiatRate {
             let fiat = Fiat.from(asset.sats ?? 0)
             fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }

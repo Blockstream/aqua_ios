@@ -19,6 +19,10 @@ class Liquid: NetworkSession {
         return network.policyAsset!
     }
 
+    var usdtId: String {
+        return "ce091c998b83c78bb71a632313ba3760f1763d9cfcffae02258ffa9865a37bd2"
+    }
+
     override func getTransactions(first: UInt32 = 0) -> [Transaction] {
         var list = super.getTransactions(first: first)
         if list.isEmpty {

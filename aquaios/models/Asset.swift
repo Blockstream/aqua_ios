@@ -14,6 +14,10 @@ struct Asset {
         return tag == Liquid.shared.policyAsset
     }
 
+    var isUSDt: Bool {
+        return tag == Liquid.shared.usdtId
+    }
+
     var name: String? {
         return info?.name
     }
@@ -23,8 +27,12 @@ struct Asset {
     }
 
     var selectable: Bool {
-            return !isBTC && !isLBTC
+            return !isBTC && !isLBTC && !isUSDt
         }
+
+    var hasFiatRate: Bool {
+        return isBTC || isLBTC
+    }
 
     func string() -> String? {
         string(sats ?? 0)
@@ -77,9 +85,10 @@ extension Array where Element == Asset {
         var out = [Asset]()
         if let btc = first(where: { $0.isBTC }) { out.append(btc) }
         if let lbtc = first(where: { $0.isLBTC }) { out.append(lbtc) }
-        let withName = filter { !$0.isBTC && !$0.isLBTC && $0.name != nil }.sorted(by: {$0.name! < $1.name! })
+        if let usdt = first(where: { $0.isUSDt }) { out.append(usdt) }
+        let withName = filter { !$0.isBTC && !$0.isLBTC && !$0.isUSDt && $0.name != nil }.sorted(by: {$0.name! < $1.name! })
         out.append(contentsOf: withName)
-        let noNamed = filter { !$0.isBTC && !$0.isLBTC && $0.name == nil }
+        let noNamed = filter { !$0.isBTC && !$0.isLBTC && !$0.isUSDt && $0.name == nil }
         out.append(contentsOf: noNamed)
         return out
     }

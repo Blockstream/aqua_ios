@@ -106,7 +106,7 @@ class SendDetailsViewController: BaseViewController {
         fiatLabel.isHidden = amount.isEmpty
         continueButton.isHidden = amount.isEmpty
         amountLabel.text = amount
-        if let asset = asset, !asset.selectable {
+        if let asset = asset, asset.hasFiatRate {
             let satoshi = asset.satoshi(amount) ?? 0
             let fiat = Fiat.from(satoshi)
             fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"

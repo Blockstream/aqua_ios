@@ -18,7 +18,10 @@ struct AquaService {
     }
 
     static func sort<T>(_ dict: [String: T]) -> [(key: String, value: T)] {
-        var sorted = dict.filter {$0.key != "btc" && $0.key != Liquid.shared.policyAsset }.sorted(by: {$0.0 < $1.0 })
+        var sorted = dict.filter {$0.key != "btc" && $0.key != Liquid.shared.policyAsset && $0.key != Liquid.shared.usdtId }.sorted(by: {$0.0 < $1.0 })
+        if dict.contains(where: { $0.key == Liquid.shared.usdtId }) {
+            sorted.insert((key: Liquid.shared.usdtId, value: dict[Liquid.shared.usdtId]!), at: 0)
+        }
         if dict.contains(where: { $0.key == Liquid.shared.policyAsset }) {
             sorted.insert((key: Liquid.shared.policyAsset, value: dict[Liquid.shared.policyAsset]!), at: 0)
         }

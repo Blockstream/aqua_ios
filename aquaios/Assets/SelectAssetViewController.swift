@@ -64,7 +64,8 @@ class SelectAssetViewController: BaseViewController {
                 self.sendAssets = AquaService.assets(for: liquid).sort()
                 self.assets = self.sendAssets
             } else {
-                let pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
+                var pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
+                pinned.append(Liquid.shared.usdtId)
                 let pinnedAssets = pinned.map { ($0, UInt64(0)) }
                 var list = bitcoin.merging(liquid) { (_, new) in new }
                 list = list.merging(pinnedAssets) { (old, _) in old }

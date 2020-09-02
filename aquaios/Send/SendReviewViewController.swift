@@ -52,7 +52,7 @@ class SendReviewViewController: BaseViewController {
         amountLabel.text = "\(amount ?? "") \(asset.ticker ?? "")"
         toLabel.text = NSLocalizedString("id_to", comment: "")
         addressLabel.text = addressee.address
-        if !asset.selectable {
+        if asset.hasFiatRate {
             let fiat = Fiat.from(addressee.satoshi)
             fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }
