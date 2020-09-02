@@ -12,7 +12,6 @@ class QRCodeViewController: BaseViewController {
     @IBOutlet weak var scannerPreviewView: UIView!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var scanQrLabel: UILabel!
-    @IBOutlet weak var myQrLabel: UILabel!
     @IBOutlet weak var actionButtonBackgroundView: UIView!
 
     var asset: Asset?
@@ -36,13 +35,10 @@ class QRCodeViewController: BaseViewController {
         super.viewWillAppear(animated)
         startScanner()
         scanQrLabel.text = NSLocalizedString("id_scan_qr_code", comment: "")
-        myQrLabel.text = NSLocalizedString("id_my_qr", comment: "")
+        actionButton.titleLabel?.text = NSLocalizedString("id_my_qr", comment: "")
         actionButton.isHidden = hideActionButton
         actionButtonBackgroundView.isHidden = hideActionButton
         actionButtonBackgroundView.round(radius: 12)
-
-        let receiveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.receiveAsset(_:)))
-        actionButtonBackgroundView.addGestureRecognizer(receiveGestureRecognizer)
     }
 
     func setupBlurEffect() {
@@ -89,10 +85,9 @@ class QRCodeViewController: BaseViewController {
         }
     }
 
-    @objc func receiveAsset(_ sender: Any?) {
+    @IBAction func myQrButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "select_asset_receive", sender: nil)
     }
-
     @IBAction func dismissButtonTapped(_ sender: UIButton) {
         dismissModal(animated: true)
     }

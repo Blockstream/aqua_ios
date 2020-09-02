@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,13 +35,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-7b-si2">
-                                <rect key="frame" x="108" y="349" width="198" height="198"/>
+                                <rect key="frame" x="9" y="258" width="396" height="396"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZCt-7b-si2" secondAttribute="height" multiplier="1:1" id="n1f-O3-yK3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2P-nR-zj8">
-                                <rect key="frame" x="108" y="573" width="198" height="29"/>
+                                <rect key="frame" x="9" y="680" width="396" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -49,53 +49,44 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeI-gM-b5u">
                                 <rect key="frame" x="164" y="746" width="86" height="86"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrwhite" highlightedImage="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-xT-0Yn">
-                                        <rect key="frame" x="31" y="26" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="gqc-Mq-nFK"/>
-                                            <constraint firstAttribute="height" constant="24" id="iPf-Bu-9Ve"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-7v-5QI">
-                                        <rect key="frame" x="0.0" y="40" width="86" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="My QR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-44-Yrc">
-                                        <rect key="frame" x="0.0" y="57" width="86" height="23"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="86" id="Zch-BU-4AN"/>
+                                            <constraint firstAttribute="width" constant="86" id="NEd-Q3-6d2"/>
+                                            <constraint firstAttribute="height" constant="86" id="y8o-g4-1Ki"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <color key="textColor" name="paleLilac"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="-23" minY="46" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="32" minY="-17" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="My QR" image="qrwhite"/>
+                                        <connections>
+                                            <action selector="myQrButtonTapped:" destination="6i5-e4-jOY" eventType="touchUpInside" id="iHC-83-nWj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <constraints>
-                                    <constraint firstItem="Rsn-xT-0Yn" firstAttribute="centerX" secondItem="yeI-gM-b5u" secondAttribute="centerX" id="B56-g1-jAe"/>
+                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="centerX" secondItem="yeI-gM-b5u" secondAttribute="centerX" id="493-8z-jeA"/>
                                     <constraint firstItem="r2b-7v-5QI" firstAttribute="leading" secondItem="yeI-gM-b5u" secondAttribute="leading" id="E0S-qo-gCD"/>
                                     <constraint firstAttribute="width" constant="86" id="GCG-8y-pfI"/>
-                                    <constraint firstAttribute="bottom" secondItem="r2b-7v-5QI" secondAttribute="bottom" id="HXV-CR-e3X"/>
                                     <constraint firstAttribute="height" constant="86" id="Q6t-xn-lFs"/>
-                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="top" secondItem="Rsn-xT-0Yn" secondAttribute="bottom" constant="-10" id="TI0-Np-ycw"/>
-                                    <constraint firstItem="LUV-44-Yrc" firstAttribute="centerX" secondItem="yeI-gM-b5u" secondAttribute="centerX" id="TWv-WE-6dG"/>
-                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="top" secondItem="Rsn-xT-0Yn" secondAttribute="bottom" constant="-10" id="WY1-yJ-g86"/>
-                                    <constraint firstAttribute="bottom" secondItem="LUV-44-Yrc" secondAttribute="bottom" constant="6" id="cIr-yg-znS"/>
-                                    <constraint firstItem="Rsn-xT-0Yn" firstAttribute="top" secondItem="yeI-gM-b5u" secondAttribute="top" constant="26" id="dD0-1B-AXr"/>
+                                    <constraint firstAttribute="trailing" secondItem="r2b-7v-5QI" secondAttribute="trailing" id="WLZ-Gh-gis"/>
                                     <constraint firstItem="r2b-7v-5QI" firstAttribute="trailing" secondItem="yeI-gM-b5u" secondAttribute="trailing" id="iSA-Yy-MHE"/>
-                                    <constraint firstItem="LUV-44-Yrc" firstAttribute="top" secondItem="Rsn-xT-0Yn" secondAttribute="bottom" constant="7" id="tHv-pg-dnM"/>
+                                    <constraint firstItem="r2b-7v-5QI" firstAttribute="centerY" secondItem="yeI-gM-b5u" secondAttribute="centerY" id="vxr-eQ-HSe"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZCt-7b-si2" firstAttribute="centerX" secondItem="zgo-Ot-zAC" secondAttribute="centerX" id="3aK-vD-nLX"/>
+                            <constraint firstItem="yeI-gM-b5u" firstAttribute="top" secondItem="VCu-vN-TOB" secondAttribute="bottom" constant="-150" id="AHX-KH-PR0"/>
                             <constraint firstItem="p2P-nR-zj8" firstAttribute="top" secondItem="ZCt-7b-si2" secondAttribute="bottom" constant="26" id="Aud-pg-fyn"/>
-                            <constraint firstItem="yeI-gM-b5u" firstAttribute="top" secondItem="VCu-vN-TOB" secondAttribute="bottom" constant="-150" id="D2d-UC-mMP"/>
                             <constraint firstItem="yeI-gM-b5u" firstAttribute="centerX" secondItem="zgo-Ot-zAC" secondAttribute="centerX" id="DR3-G1-rPf"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="trailing" secondItem="g6E-dG-7Mv" secondAttribute="trailing" id="IDD-3x-G65"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="top" secondItem="zgo-Ot-zAC" secondAttribute="top" id="Nn5-R1-jd6"/>
                             <constraint firstAttribute="bottom" secondItem="VCu-vN-TOB" secondAttribute="bottom" id="Ujl-Uh-PJe"/>
-                            <constraint firstItem="ZCt-7b-si2" firstAttribute="centerY" secondItem="zgo-Ot-zAC" secondAttribute="centerY" id="ad2-ZH-hJV"/>
+                            <constraint firstItem="ZCt-7b-si2" firstAttribute="top" secondItem="g6E-dG-7Mv" secondAttribute="top" constant="170" id="WRF-Qb-jos"/>
                             <constraint firstItem="VCu-vN-TOB" firstAttribute="leading" secondItem="g6E-dG-7Mv" secondAttribute="leading" id="gTL-4w-0nL"/>
                             <constraint firstItem="zCZ-xj-eIu" firstAttribute="leading" secondItem="g6E-dG-7Mv" secondAttribute="leading" constant="28" id="hnN-ca-edb"/>
                             <constraint firstItem="p2P-nR-zj8" firstAttribute="leading" secondItem="ZCt-7b-si2" secondAttribute="leading" id="nu0-cS-gcI"/>
@@ -108,7 +99,6 @@
                     <connections>
                         <outlet property="actionButton" destination="r2b-7v-5QI" id="cOu-AZ-bn0"/>
                         <outlet property="actionButtonBackgroundView" destination="yeI-gM-b5u" id="cwW-KE-gMD"/>
-                        <outlet property="myQrLabel" destination="LUV-44-Yrc" id="Wnh-Np-4wz"/>
                         <outlet property="scanQrLabel" destination="p2P-nR-zj8" id="Szx-Qy-JHw"/>
                         <outlet property="scannerPreviewView" destination="VCu-vN-TOB" id="Ia9-AZ-B0A"/>
                         <segue destination="wOD-bu-DVp" kind="show" identifier="send_details" id="2NL-TK-O1P"/>
@@ -202,13 +192,9 @@
             <point key="canvasLocation" x="3537" y="4"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nl2-qr-1Rt"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="close" width="14" height="14"/>
         <image name="qrbound" width="198" height="198"/>
-        <image name="qrcode_selected" width="24" height="24"/>
         <image name="qrwhite" width="24" height="23"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,4 +203,7 @@
             <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nl2-qr-1Rt"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -546,7 +546,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-q2-rse">
-                                        <rect key="frame" x="20" y="214.33333333333331" width="111" height="20"/>
+                                        <rect key="frame" x="20" y="214.33333333333331" width="120" height="20"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <state key="normal" title="Network Fee  " image="arrow_down"/>
                                         <connections>
@@ -758,13 +758,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-bN-m5E">
-                                <rect key="frame" x="88.666666666666686" y="307" width="198" height="198"/>
+                                <rect key="frame" x="-10.666666666666657" y="258" width="396.33333333333326" height="396"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m7b-bN-m5E" secondAttribute="height" multiplier="1:1" id="62f-nE-bDo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIA-IP-CJl">
-                                <rect key="frame" x="88.666666666666686" y="531" width="198" height="28.666666666666629"/>
+                                <rect key="frame" x="-10.666666666666657" y="680" width="396.33333333333326" height="28.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -772,40 +772,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igi-to-R8i">
                                 <rect key="frame" x="144.66666666666666" y="662" width="86" height="86"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrwhite" highlightedImage="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-2y-TP5">
-                                        <rect key="frame" x="31" y="26" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="Oc5-UO-0cN"/>
-                                            <constraint firstAttribute="width" constant="24" id="omx-cx-nb2"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-32-PPw">
-                                        <rect key="frame" x="0.0" y="40" width="86" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="My QR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rO-YM-gOv">
-                                        <rect key="frame" x="0.0" y="57" width="86" height="23"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="86" id="q4h-zQ-nvg"/>
+                                            <constraint firstAttribute="width" constant="86" id="1Dy-GD-QbN"/>
+                                            <constraint firstAttribute="height" constant="86" id="QhO-5c-dGJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <color key="textColor" name="paleLilac"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="My QR" image="qrwhite"/>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Ktn-32-PPw" secondAttribute="bottom" id="BiV-S2-EFG"/>
+                                    <constraint firstItem="Ktn-32-PPw" firstAttribute="centerY" secondItem="Igi-to-R8i" secondAttribute="centerY" id="2YK-rv-b0W"/>
                                     <constraint firstItem="Ktn-32-PPw" firstAttribute="trailing" secondItem="Igi-to-R8i" secondAttribute="trailing" id="IOQ-i3-l7F"/>
-                                    <constraint firstItem="5ef-2y-TP5" firstAttribute="top" secondItem="Igi-to-R8i" secondAttribute="top" constant="26" id="JOt-kD-Vzu"/>
-                                    <constraint firstItem="Ktn-32-PPw" firstAttribute="top" secondItem="5ef-2y-TP5" secondAttribute="bottom" constant="-10" id="KWP-pS-3Pm"/>
                                     <constraint firstAttribute="width" constant="86" id="Kpq-fN-ZHe"/>
                                     <constraint firstItem="Ktn-32-PPw" firstAttribute="leading" secondItem="Igi-to-R8i" secondAttribute="leading" id="O9l-BL-rc3"/>
-                                    <constraint firstItem="5ef-2y-TP5" firstAttribute="centerX" secondItem="Igi-to-R8i" secondAttribute="centerX" id="SON-zY-xte"/>
-                                    <constraint firstItem="Ktn-32-PPw" firstAttribute="top" secondItem="5ef-2y-TP5" secondAttribute="bottom" constant="-10" id="Zxv-go-BMq"/>
+                                    <constraint firstItem="Ktn-32-PPw" firstAttribute="centerX" secondItem="Igi-to-R8i" secondAttribute="centerX" id="fTE-OF-wM6"/>
                                     <constraint firstAttribute="height" constant="86" id="gae-MK-ypQ"/>
-                                    <constraint firstItem="0rO-YM-gOv" firstAttribute="top" secondItem="5ef-2y-TP5" secondAttribute="bottom" constant="7" id="pel-ge-vXj"/>
-                                    <constraint firstItem="0rO-YM-gOv" firstAttribute="centerX" secondItem="Igi-to-R8i" secondAttribute="centerX" id="t2V-bd-0Od"/>
-                                    <constraint firstAttribute="bottom" secondItem="0rO-YM-gOv" secondAttribute="bottom" constant="6" id="uEP-dH-KCN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -815,6 +800,7 @@
                             <constraint firstItem="ETo-50-ShY" firstAttribute="top" secondItem="70A-fj-69t" secondAttribute="top" constant="28" id="3WR-lU-rGu"/>
                             <constraint firstItem="DIA-IP-CJl" firstAttribute="top" secondItem="m7b-bN-m5E" secondAttribute="bottom" constant="26" id="GOe-lP-NKH"/>
                             <constraint firstItem="xsr-yr-lpe" firstAttribute="top" secondItem="wJm-wu-Ila" secondAttribute="top" id="Huw-R6-m3h"/>
+                            <constraint firstItem="m7b-bN-m5E" firstAttribute="top" secondItem="70A-fj-69t" secondAttribute="top" constant="170" id="O1x-MW-tzL"/>
                             <constraint firstItem="ETo-50-ShY" firstAttribute="leading" secondItem="70A-fj-69t" secondAttribute="leading" constant="28" id="QhP-ID-efn"/>
                             <constraint firstItem="xsr-yr-lpe" firstAttribute="trailing" secondItem="70A-fj-69t" secondAttribute="trailing" id="RI1-7s-6eU"/>
                             <constraint firstItem="DIA-IP-CJl" firstAttribute="leading" secondItem="m7b-bN-m5E" secondAttribute="leading" id="X4i-yK-FIq"/>
@@ -822,7 +808,6 @@
                             <constraint firstItem="xsr-yr-lpe" firstAttribute="leading" secondItem="70A-fj-69t" secondAttribute="leading" id="hIU-Zv-FE7"/>
                             <constraint firstItem="Igi-to-R8i" firstAttribute="top" secondItem="xsr-yr-lpe" secondAttribute="bottom" constant="-150" id="hXo-kL-39Z"/>
                             <constraint firstItem="Igi-to-R8i" firstAttribute="centerX" secondItem="wJm-wu-Ila" secondAttribute="centerX" id="xYq-t2-NFT"/>
-                            <constraint firstItem="m7b-bN-m5E" firstAttribute="centerY" secondItem="wJm-wu-Ila" secondAttribute="centerY" id="yP3-KE-XEg"/>
                             <constraint firstAttribute="bottom" secondItem="xsr-yr-lpe" secondAttribute="bottom" id="ya5-2G-U1x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="70A-fj-69t"/>
@@ -831,7 +816,6 @@
                     <connections>
                         <outlet property="actionButton" destination="Ktn-32-PPw" id="Ivf-BH-aVS"/>
                         <outlet property="actionButtonBackgroundView" destination="Igi-to-R8i" id="fpF-Pk-KDO"/>
-                        <outlet property="myQrLabel" destination="0rO-YM-gOv" id="CsY-NX-DyJ"/>
                         <outlet property="scanQrLabel" destination="DIA-IP-CJl" id="Kw8-pe-mtX"/>
                         <outlet property="scannerPreviewView" destination="xsr-yr-lpe" id="BIM-aI-FQl"/>
                         <segue destination="ygw-8U-pDp" kind="show" identifier="send_details" id="1xh-fK-K8N"/>
@@ -849,7 +833,6 @@
         <image name="close" width="14" height="14"/>
         <image name="erase" width="20" height="15"/>
         <image name="qrbound" width="198" height="198"/>
-        <image name="qrcode_selected" width="24" height="24"/>
         <image name="qrscanner" width="20" height="18"/>
         <image name="qrwhite" width="24" height="23"/>
         <image name="rocketship" width="200" height="162"/>
