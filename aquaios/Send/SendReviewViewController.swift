@@ -121,6 +121,14 @@ class SendReviewViewController: BaseViewController {
         newTx!.feeRate = sharedNetwork.getFastFees()
         updateTransaction(tx: newTx!)
     }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? SendSuccessViewController {
+            dest.tx = sender as? Transaction
+        }
+    }
 }
 
 extension SendReviewViewController: SlidingButtonDelegate {
@@ -143,8 +151,9 @@ extension SendReviewViewController: SlidingButtonDelegate {
             return try self.sharedNetwork.sendTransaction(self.tx)
         }.ensure {
             self.stopAnimating()
-        }.done { _ in
-            self.performSegue(withIdentifier: "success", sender: nil)
+        }.done { id in
+            let sentTx = Transaction(hash: id, height: 0, rawTx: self.tx)
+            self.performSegue(withIdentifier: "success", sender: sentTx)
         }.catch { err in
             if let error = err as? TransactionError {
                 self.showError(error)

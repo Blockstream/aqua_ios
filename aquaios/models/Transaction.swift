@@ -55,6 +55,18 @@ struct Transaction: Codable {
     var redeposit: Bool {
         return type == "redeposit"
     }
+
+    init(hash: String, height: UInt32, rawTx: RawTransaction) {
+        self.hash = hash
+        self.blockHeight = height
+        self.createdAt = ""
+        self.fee = rawTx.fee ?? 0
+        self.memo = ""
+        self.satoshi = [rawTx.addressees[0].assetTag ?? "": rawTx.addressees[0].satoshi]
+        self.type = "outgoing"
+        self.addressees = [rawTx.addressees[0].address]
+        self.networkName = ""
+    }
 }
 
 struct RawTransaction: Codable {
