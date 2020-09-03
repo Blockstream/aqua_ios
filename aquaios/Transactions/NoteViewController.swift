@@ -5,6 +5,7 @@ class NoteViewController: BaseViewController {
 
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var memoTextView: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
 
     var transaction: Transaction!
     var updateTransaction: (_ transaction: Transaction) -> Void = { _ in }
@@ -23,6 +24,8 @@ class NoteViewController: BaseViewController {
             memoTextView.text = transaction.memo
         }
         memoTextView.delegate = self
+        saveButton.setTitle(NSLocalizedString("id_save", comment: ""), for: .normal)
+        titleLabel.text = NSLocalizedString("id_add_a_note_to_yourself", comment: "")
     }
 
     override func viewDidAppear(_ animated: Bool) {
