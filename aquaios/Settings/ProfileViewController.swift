@@ -13,20 +13,9 @@ class ProfileViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
-        tableView.backgroundColor = .aquaBackgroundBlue
-        tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
-
-        let headerView = Bundle.main.loadNibNamed("ProfileHeaderCell", owner: self, options: nil)![0] as? ProfileHeaderCell
-        headerView?.configure()
-        tableView.tableHeaderView = headerView
-
-        let cellNib = UINib(nibName: "ProfileCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "ProfileCell")
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configure()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +24,29 @@ class ProfileViewController: BaseViewController {
         navigationItem.title = NSLocalizedString("id_profile", comment: "")
     }
 
+    func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = .aquaBackgroundBlue
+        tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
+        let headerView = Bundle.main.loadNibNamed("ProfileHeaderCell", owner: self, options: nil)![0] as? ProfileHeaderCell
+        headerView?.configure()
+        tableView.tableHeaderView = headerView
+        let cellNib = UINib(nibName: "ProfileCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "ProfileCell")
+    }
+
+    func configure() {
+        if hasWallet {
+            configureTableView()
+            hideCreateWalletView()
+            tableView.isHidden = false
+        } else {
+            tableView.isHidden = true
+            showCreateWalletView(delegate: self)
+        }
+    }
 }
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
