@@ -123,10 +123,10 @@ class SendDetailsViewController: BaseViewController {
         if !showFiat {
             let satoshi = asset.satoshi(amount) ?? 0
             let fiat = Fiat.from(satoshi)
-            fiatLabel.text = "\(Fiat.currency() ?? "") \( sendAll ? asset.string() ?? "" : fiat ?? "")"
+            fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         } else {
             let satoshi = Fiat.to(amount)
-            let value = asset.string(satoshi)
+            let value = sendAll ? asset.string() : asset.string(satoshi)
             fiatLabel.text = "\(asset.info?.ticker ?? "") \( value ?? "")"
         }
     }
