@@ -547,7 +547,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-q2-rse">
-                                        <rect key="frame" x="20" y="214.33333333333331" width="120" height="20"/>
+                                        <rect key="frame" x="20" y="214.33333333333331" width="111" height="20"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <state key="normal" title="Network Fee  " image="arrow_down"/>
                                         <connections>
@@ -633,7 +633,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocketship" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-Kt-vnK">
                                 <rect key="frame" x="100" y="117.99999999999999" width="175" height="136.66666666666663"/>
-                                <color key="backgroundColor" name="lighterBlueGray"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ifo-Kt-vnK" secondAttribute="height" multiplier="41:32" id="Q4h-YK-nAW"/>
                                 </constraints>
@@ -659,15 +658,15 @@
                                     <action selector="doneButtonTapped:" destination="yJX-dI-zrf" eventType="touchUpInside" id="ePV-l2-t6s"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gkb-bJ-bCd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gkb-bJ-bCd">
                                 <rect key="frame" x="0.0" y="328.66666666666674" width="375" height="366.33333333333326"/>
-                                <color key="backgroundColor" name="lighterBlueGray"/>
+                                <color key="backgroundColor" name="darkBlueGray"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCell" textLabel="OKh-7v-XCy" detailTextLabel="Ka0-dG-g3n" style="IBUITableViewCellStyleSubtitle" id="oAp-pG-jsI">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="53.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAp-pG-jsI" id="tWv-e2-iQN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OKh-7v-XCy">
@@ -689,13 +688,13 @@
                                             </subviews>
                                             <color key="backgroundColor" name="darkBlueGray"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="lighterBlueGray"/>
+                                        <color key="backgroundColor" name="darkBlueGray"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rightCell" textLabel="Kxr-0b-qDa" detailTextLabel="M5T-yh-N0h" style="IBUITableViewCellStyleValue1" id="lnh-cO-lvU">
-                                        <rect key="frame" x="0.0" y="81.666667938232422" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="82" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnh-cO-lvU" id="xIk-tX-wbN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kxr-0b-qDa">
@@ -717,13 +716,13 @@
                                             </subviews>
                                             <color key="backgroundColor" name="darkBlueGray"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="lighterBlueGray"/>
+                                        <color key="backgroundColor" name="darkBlueGray"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="middleSeparator" id="nB7-mu-Abx">
-                                        <rect key="frame" x="0.0" y="125.33333587646484" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="126" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nB7-mu-Abx" id="YFV-K7-N5y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator1" id="8c3-IA-5Kt">
@@ -733,14 +732,23 @@
                                             </subviews>
                                             <color key="backgroundColor" name="darkBlueGray"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="lighterBlueGray"/>
+                                        <color key="backgroundColor" name="darkBlueGray"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ4-5l-doh">
+                                <rect key="frame" x="63" y="663" width="249" height="32"/>
+                                <color key="backgroundColor" name="teal"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Copied to clipboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" name="lighterBlueGray"/>
+                        <color key="backgroundColor" name="darkBlueGray"/>
                         <constraints>
                             <constraint firstItem="Gkb-bJ-bCd" firstAttribute="centerX" secondItem="FmK-25-FKU" secondAttribute="centerX" id="6sM-Tz-rI0"/>
+                            <constraint firstItem="ZZ4-5l-doh" firstAttribute="leading" secondItem="FmK-25-FKU" secondAttribute="leading" constant="63" id="BVC-RD-q4U"/>
                             <constraint firstItem="FmK-25-FKU" firstAttribute="trailing" secondItem="W1t-Lr-hXX" secondAttribute="trailing" constant="20" id="CDy-qn-fGx"/>
                             <constraint firstItem="Ifo-Kt-vnK" firstAttribute="top" secondItem="FmK-25-FKU" secondAttribute="top" constant="30" id="JfW-Sz-Q8A"/>
                             <constraint firstItem="RAx-GZ-1NP" firstAttribute="top" secondItem="Gkb-bJ-bCd" secondAttribute="bottom" constant="10" id="Mqt-nO-zwz"/>
@@ -750,14 +758,17 @@
                             <constraint firstItem="RAx-GZ-1NP" firstAttribute="leading" secondItem="FmK-25-FKU" secondAttribute="leading" constant="20" id="Yl8-m1-K7e"/>
                             <constraint firstItem="Gkb-bJ-bCd" firstAttribute="width" secondItem="FmK-25-FKU" secondAttribute="width" id="ZJt-by-S9x"/>
                             <constraint firstItem="W1t-Lr-hXX" firstAttribute="leading" secondItem="FmK-25-FKU" secondAttribute="leading" constant="20" id="hnh-bx-GRp"/>
+                            <constraint firstItem="RAx-GZ-1NP" firstAttribute="top" secondItem="ZZ4-5l-doh" secondAttribute="bottom" constant="10" id="pgQ-Cn-AHj"/>
                             <constraint firstItem="Gkb-bJ-bCd" firstAttribute="top" secondItem="W1t-Lr-hXX" secondAttribute="bottom" constant="20" id="vqj-Np-6Ae"/>
                             <constraint firstItem="FmK-25-FKU" firstAttribute="trailing" secondItem="Ifo-Kt-vnK" secondAttribute="trailing" constant="100" id="wAg-VB-64s"/>
                             <constraint firstItem="FmK-25-FKU" firstAttribute="trailing" secondItem="RAx-GZ-1NP" secondAttribute="trailing" constant="20" id="xqV-Qw-CfP"/>
+                            <constraint firstItem="FmK-25-FKU" firstAttribute="trailing" secondItem="ZZ4-5l-doh" secondAttribute="trailing" constant="63" id="yiq-be-ugc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FmK-25-FKU"/>
                     </view>
                     <navigationItem key="navigationItem" id="WnF-Ta-rO8"/>
                     <connections>
+                        <outlet property="copiedButton" destination="ZZ4-5l-doh" id="geR-Ch-MQf"/>
                         <outlet property="doneButton" destination="RAx-GZ-1NP" id="TgB-RE-D5x"/>
                         <outlet property="successLabel" destination="W1t-Lr-hXX" id="VTQ-dU-Eax"/>
                         <outlet property="tableView" destination="Gkb-bJ-bCd" id="ABT-3C-H3v"/>
@@ -843,13 +854,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-bN-m5E">
-                                <rect key="frame" x="-10.666666666666657" y="258" width="396.33333333333326" height="396"/>
+                                <rect key="frame" x="88.666666666666686" y="258" width="198" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m7b-bN-m5E" secondAttribute="height" multiplier="1:1" id="62f-nE-bDo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIA-IP-CJl">
-                                <rect key="frame" x="-10.666666666666657" y="680" width="396.33333333333326" height="28.666666666666629"/>
+                                <rect key="frame" x="88.666666666666686" y="482" width="198" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -913,6 +924,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1xh-fK-K8N"/>
+        <segue reference="Llh-hN-Z5g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow_down" width="9" height="5"/>
