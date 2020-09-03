@@ -49,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤓 It’s time to back up your wallet." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO9-lQ-svO">
-                                        <rect key="frame" x="35" y="20" width="268" height="50.5"/>
+                                        <rect key="frame" x="35" y="20" width="283" height="50.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                                 <color key="backgroundColor" name="darkBlueGray"/>
                                 <constraints>
-                                    <constraint firstItem="sZU-8V-q28" firstAttribute="leading" secondItem="NO9-lQ-svO" secondAttribute="trailing" constant="35" id="75i-ds-m1R"/>
+                                    <constraint firstItem="sZU-8V-q28" firstAttribute="leading" secondItem="NO9-lQ-svO" secondAttribute="trailing" constant="20" id="75i-ds-m1R"/>
                                     <constraint firstItem="HCz-ZA-eEn" firstAttribute="leading" secondItem="8n8-mR-W1f" secondAttribute="leading" constant="35" id="89T-9m-aZW"/>
                                     <constraint firstAttribute="trailing" secondItem="Ntj-dN-B40" secondAttribute="trailing" constant="20" id="8la-cA-GTA"/>
                                     <constraint firstItem="HCz-ZA-eEn" firstAttribute="top" secondItem="NO9-lQ-svO" secondAttribute="bottom" constant="8" id="BHX-zf-nnl"/>
@@ -114,8 +114,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcO-q6-Yo0" userLabel="CreateWalletAlertView">
                                 <rect key="frame" x="62.5" y="328" width="289.5" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please create a wallet first" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-MK-93i">
-                                        <rect key="frame" x="20" y="20" width="249.5" height="25.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please create a wallet first" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-MK-93i">
+                                        <rect key="frame" x="20" y="20" width="213.5" height="50.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -158,7 +158,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will need to setup an Aqua wallet before you can get Bitcoin and Liquid Assets." lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqN-B7-e2Q">
-                                        <rect key="frame" x="20" y="70.5" width="250" height="54"/>
+                                        <rect key="frame" x="20" y="90.5" width="250" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="SuY-GJ-R1Z"/>
                                         </constraints>
@@ -166,19 +166,32 @@
                                         <color key="textColor" name="paleLilac"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUi-uB-gSE">
+                                        <rect key="frame" x="253.5" y="20" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="AVB-MR-tZW"/>
+                                            <constraint firstAttribute="width" constant="16" id="xLP-Un-lBK"/>
+                                        </constraints>
+                                        <state key="normal" image="close_white"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="IAr-gY-PNW" eventType="touchUpInside" id="1wC-k6-c7c"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="darkBlueGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="2r4-Bf-vJp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vw7-MK-93i" secondAttribute="trailing" constant="20" id="9nC-70-fsI"/>
                                     <constraint firstAttribute="trailing" secondItem="qQ5-R1-oBa" secondAttribute="trailing" constant="20" id="B7E-QU-m1E"/>
                                     <constraint firstAttribute="bottom" secondItem="qQ5-R1-oBa" secondAttribute="bottom" constant="20" id="DPF-Bf-IBv"/>
+                                    <constraint firstAttribute="trailing" secondItem="bUi-uB-gSE" secondAttribute="trailing" constant="20" id="F9R-2E-Se0"/>
                                     <constraint firstItem="Vw7-MK-93i" firstAttribute="top" secondItem="vcO-q6-Yo0" secondAttribute="top" constant="20" id="Ii0-Oy-r4n"/>
                                     <constraint firstItem="qQ5-R1-oBa" firstAttribute="leading" secondItem="vcO-q6-Yo0" secondAttribute="leading" constant="20" id="LMi-by-Pad"/>
+                                    <constraint firstItem="bUi-uB-gSE" firstAttribute="top" secondItem="vcO-q6-Yo0" secondAttribute="top" constant="20" id="Tis-vF-xQT"/>
                                     <constraint firstItem="Vw7-MK-93i" firstAttribute="leading" secondItem="vcO-q6-Yo0" secondAttribute="leading" constant="20" id="XD9-ez-3QS"/>
                                     <constraint firstItem="PqN-B7-e2Q" firstAttribute="leading" secondItem="vcO-q6-Yo0" secondAttribute="leading" constant="20" id="lUw-nE-pjN"/>
                                     <constraint firstAttribute="trailing" secondItem="PqN-B7-e2Q" secondAttribute="trailing" constant="19.5" id="o1o-Fa-m5k"/>
-                                    <constraint firstItem="PqN-B7-e2Q" firstAttribute="top" secondItem="Vw7-MK-93i" secondAttribute="bottom" constant="25" id="qhK-e4-O3t"/>
+                                    <constraint firstItem="PqN-B7-e2Q" firstAttribute="top" secondItem="Vw7-MK-93i" secondAttribute="bottom" constant="20" id="qhK-e4-O3t"/>
+                                    <constraint firstItem="bUi-uB-gSE" firstAttribute="leading" secondItem="Vw7-MK-93i" secondAttribute="trailing" constant="20" id="t6r-Uc-vEA"/>
                                 </constraints>
                             </view>
                         </subviews>

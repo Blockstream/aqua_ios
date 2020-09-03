@@ -36,6 +36,10 @@ class CreateWalletAlertController: UIViewController {
     @IBAction func createButtonTapped(_ sender: Any) {
         showOnboarding(with: self)
     }
+
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        dismissModal(animated: true)
+    }
 }
 
 extension CreateWalletAlertController: UIAdaptivePresentationControllerDelegate {
