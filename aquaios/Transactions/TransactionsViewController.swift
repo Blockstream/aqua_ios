@@ -71,8 +71,6 @@ class TransactionsViewController: BaseViewController {
         buyView.isUserInteractionEnabled = true
         receiveView.round(radius: 24)
         buyView.round(radius: 24)
-        receiveIconView.round(radius: 35)
-        buyIconView.round(radius: 35)
     }
 
     @objc func createOrRestore(_ sender: Any?) {
