@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import PromiseKit
 
-class RestoreWordsViewController: BaseViewController {
+class RestoreWordsViewController: BaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var firstMessageLabel: UILabel!
@@ -27,12 +27,7 @@ class RestoreWordsViewController: BaseViewController {
     }
 
     @IBAction func continueTapped(_ sender: Any) {
-        var mnemonic = String()
-        for word in mnemonicTextFields {
-            mnemonic.append(word.text ?? "")
-            if mnemonicTextFields.firstIndex(of: word)! < 11 { mnemonic.append(" ") }
-        }
-        self.register(mnemonic: mnemonic)
+        self.restoreWallet()
     }
 
     func register(mnemonic: String) {
@@ -66,11 +61,28 @@ class RestoreWordsViewController: BaseViewController {
         }
     }
 
+    func restoreWallet() {
+        var mnemonic = String()
+        for word in mnemonicTextFields {
+            mnemonic.append(word.text ?? "")
+            if mnemonicTextFields.firstIndex(of: word)! < 11 { mnemonic.append(" ") }
+        }
+        self.register(mnemonic: mnemonic)
+    }
+
     func setupTextFields() {
         for word in mnemonicTextFields {
+            word.delegate = self
             word.autocapitalizationType = .none
             word.autocorrectionType = .no
+            word.returnKeyType = .done
         }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.restoreWallet()
+        return true
     }
 
     @objc func dismissKeyboard() {
