@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,13 +35,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-7b-si2">
-                                <rect key="frame" x="9" y="258" width="396" height="396"/>
+                                <rect key="frame" x="108" y="258" width="198" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZCt-7b-si2" secondAttribute="height" multiplier="1:1" id="n1f-O3-yK3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2P-nR-zj8">
-                                <rect key="frame" x="9" y="680" width="396" height="29"/>
+                                <rect key="frame" x="108" y="482" width="198" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -150,10 +150,63 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-vg-shO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOa-5Z-mDT">
+                                        <rect key="frame" x="20" y="60" width="374" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="auroMetalSaurus"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TT-Ah-rQQ">
+                                        <rect key="frame" x="20" y="89.5" width="374" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive any Liquid Assets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-Ep-UsL">
+                                                <rect key="frame" x="20" y="2.5" width="171.5" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="Dwr-Ym-cX3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="lightPeriwinkle"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_selected" translatesAutoresizingMaskIntoConstraints="NO" id="L8F-iW-AUy">
+                                                <rect key="frame" x="336" y="15" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="epH-KV-N8W"/>
+                                                    <constraint firstAttribute="width" constant="18" id="wnm-F4-Q6q"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="aquaShadowBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="L8F-iW-AUy" secondAttribute="trailing" constant="20" id="5Jl-lu-rQX"/>
+                                            <constraint firstItem="dXW-Ep-UsL" firstAttribute="centerY" secondItem="8TT-Ah-rQQ" secondAttribute="centerY" id="Azc-cE-Zyb"/>
+                                            <constraint firstAttribute="height" constant="48" id="XYl-ER-KBl"/>
+                                            <constraint firstItem="dXW-Ep-UsL" firstAttribute="leading" secondItem="8TT-Ah-rQQ" secondAttribute="leading" constant="20" id="t9u-Kz-VYl"/>
+                                            <constraint firstItem="L8F-iW-AUy" firstAttribute="centerY" secondItem="8TT-Ah-rQQ" secondAttribute="centerY" id="uWq-c2-7Bi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="aquaBackgroundBlue"/>
+                                <constraints>
+                                    <constraint firstItem="rOa-5Z-mDT" firstAttribute="leading" secondItem="DgH-vg-shO" secondAttribute="leading" constant="20" id="5CO-wa-TXU"/>
+                                    <constraint firstAttribute="trailing" secondItem="rOa-5Z-mDT" secondAttribute="trailing" constant="20" id="DfC-pM-8c5"/>
+                                    <constraint firstItem="8TT-Ah-rQQ" firstAttribute="top" secondItem="rOa-5Z-mDT" secondAttribute="bottom" constant="10" id="IET-be-Jsq"/>
+                                    <constraint firstItem="8TT-Ah-rQQ" firstAttribute="leading" secondItem="DgH-vg-shO" secondAttribute="leading" constant="20" id="ZOQ-Qw-W9y"/>
+                                    <constraint firstItem="rOa-5Z-mDT" firstAttribute="top" secondItem="DgH-vg-shO" secondAttribute="top" constant="60" id="b3G-3R-ZbA"/>
+                                    <constraint firstAttribute="trailing" secondItem="8TT-Ah-rQQ" secondAttribute="trailing" constant="20" id="oMf-ml-ELa"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="GxV-vd-THl" firstAttribute="leading" secondItem="TZf-7N-sWV" secondAttribute="leading" id="Uye-we-fBH"/>
+                            <constraint firstItem="DgH-vg-shO" firstAttribute="leading" secondItem="TZf-7N-sWV" secondAttribute="leading" id="ZG1-fh-Ika"/>
+                            <constraint firstItem="TZf-7N-sWV" firstAttribute="trailing" secondItem="DgH-vg-shO" secondAttribute="trailing" id="fCq-Z0-zRI"/>
+                            <constraint firstItem="TZf-7N-sWV" firstAttribute="bottom" secondItem="DgH-vg-shO" secondAttribute="bottom" id="jwF-AO-IIf"/>
+                            <constraint firstItem="DgH-vg-shO" firstAttribute="top" secondItem="TZf-7N-sWV" secondAttribute="top" id="mDf-1X-mJZ"/>
                             <constraint firstItem="GxV-vd-THl" firstAttribute="bottom" secondItem="TZf-7N-sWV" secondAttribute="bottom" id="sNM-sx-KUc"/>
                             <constraint firstItem="GxV-vd-THl" firstAttribute="trailing" secondItem="TZf-7N-sWV" secondAttribute="trailing" id="srl-hx-FdI"/>
                             <constraint firstItem="GxV-vd-THl" firstAttribute="top" secondItem="TZf-7N-sWV" secondAttribute="top" id="xJd-eM-ced"/>
@@ -162,6 +215,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="v6s-x8-Fxf"/>
                     <connections>
+                        <outlet property="genericAssetView" destination="8TT-Ah-rQQ" id="2mj-Iu-E2q"/>
+                        <outlet property="noAssetsView" destination="DgH-vg-shO" id="TjC-Sa-m5w"/>
                         <outlet property="tableView" destination="GxV-vd-THl" id="84i-vE-Fox"/>
                         <segue destination="NbN-05-Mpt" kind="show" identifier="select_receive" id="8Xl-ur-hTY"/>
                         <segue destination="W1t-lD-1tZ" kind="show" identifier="select_send" id="a3a-LR-7mm"/>
@@ -169,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKm-vv-tmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="115"/>
+            <point key="canvasLocation" x="2598.5507246376815" y="114.50892857142857"/>
         </scene>
         <!--ReceiveViewController-->
         <scene sceneID="ltu-Fb-cCr">
@@ -192,18 +247,28 @@
             <point key="canvasLocation" x="3537" y="4"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nl2-qr-1Rt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="close" width="14" height="14"/>
         <image name="qrbound" width="198" height="198"/>
+        <image name="qrcode_selected" width="24" height="24"/>
         <image name="qrwhite" width="24" height="23"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aquaShadowBlue">
+            <color red="0.074509803921568626" green="0.11372549019607843" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auroMetalSaurus">
+            <color red="0.41960784313725491" green="0.45098039215686275" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightPeriwinkle">
+            <color red="0.84705882352941175" green="0.86274509803921573" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="paleLilac">
             <color red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nl2-qr-1Rt"/>
-    </inferredMetricsTieBreakers>
 </document>

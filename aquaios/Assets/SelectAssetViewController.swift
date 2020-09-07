@@ -3,6 +3,8 @@ import PromiseKit
 
 class SelectAssetViewController: BaseViewController {
 
+    @IBOutlet weak var noAssetsView: UIView!
+    @IBOutlet weak var genericAssetView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
     var flow: TxFlow!
@@ -22,7 +24,8 @@ class SelectAssetViewController: BaseViewController {
         }
         configureTableView()
         configureSearch()
-        reloadData()
+        configureNoAssetView()
+        loadData()
     }
 
     func configureTableView() {
@@ -44,6 +47,17 @@ class SelectAssetViewController: BaseViewController {
         tableView.tableHeaderView = searchController.searchBar
     }
 
+    func configureNoAssetView() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(genericAssetClick))
+        genericAssetView.addGestureRecognizer(tap)
+        genericAssetView.round(radius: 18)
+    }
+
+    @objc func genericAssetClick() {
+        searchController.isActive = false
+        performSegue(withIdentifier: "select_receive", sender: nil)
+    }
+
     func balancePromise(_ sharedNetwork: NetworkSession) -> Promise<[String: UInt64]> {
         return Promise<[String: UInt64]> { seal in
             seal.fulfill(sharedNetwork.balance ?? [:])
@@ -51,6 +65,14 @@ class SelectAssetViewController: BaseViewController {
     }
 
     func reloadData() {
+        if flow! == .receive {
+            noAssetsView.isHidden = !assets.isEmpty
+            tableView.isHidden = assets.isEmpty
+        }
+        tableView.reloadData()
+    }
+
+    func loadData() {
         let bgq = DispatchQueue.global(qos: .background)
         firstly {
             self.startAnimating()
@@ -72,10 +94,10 @@ class SelectAssetViewController: BaseViewController {
                 self.receivedAssets = AquaService.assets(for: list).sort()
                 self.assets = self.receivedAssets
             }
-            self.tableView.reloadData()
+            self.reloadData()
         }.catch { _ in
             let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: "Failure on fetch balance", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.reloadData() }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.loadData() }))
             self.present(alert, animated: true)
         }
     }
@@ -148,6 +170,6 @@ extension SelectAssetViewController: UISearchResultsUpdating {
         } else {
             assets = self.receivedAssets
         }
-        tableView.reloadData()
+        reloadData()
     }
 }

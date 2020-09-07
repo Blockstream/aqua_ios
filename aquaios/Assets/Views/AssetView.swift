@@ -19,9 +19,17 @@ class AssetView: UIView {
         setup()
     }
 
-    func configure(with asset: Asset, bgColor: UIColor, radius: CGFloat, hiddenBalance: Bool = false) {
+    func configure(with asset: Asset?, bgColor: UIColor, radius: CGFloat, hiddenBalance: Bool = false) {
         round(radius: radius)
         backgroundColor = bgColor
+        balanceLabel.isHidden = hiddenBalance
+        fiatLabel.isHidden = hiddenBalance
+        guard let asset = asset else {
+            iconImageView.image = UIImage(named: "diamond")
+            assetNameLabel.text = NSLocalizedString("id_liquid_asset", comment: "")
+            assetTickerLabel.isHidden = true
+            return
+        }
         iconImageView.image = asset.icon ?? UIImage(named: "asset_unknown")
         assetNameLabel.text = asset.name
         assetTickerLabel.text = asset.ticker
@@ -30,7 +38,5 @@ class AssetView: UIView {
             let fiat = Fiat.from(asset.sats ?? 0)
             fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         }
-        balanceLabel.isHidden = hiddenBalance
-        fiatLabel.isHidden = hiddenBalance
     }
 }
