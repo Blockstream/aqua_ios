@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -310,15 +310,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UP-Ou-dHX">
                                 <rect key="frame" x="20" y="252.66666666666663" width="335" height="48"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v6F-C0-fS2">
-                                        <rect key="frame" x="20.000000000000007" y="2.3333333333333428" width="96.666666666666686" height="43"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="43" id="P0m-8a-2zZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <color key="textColor" name="lightPeriwinkle"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bky-1i-2cg">
                                         <rect key="frame" x="283" y="5.0000000000000284" width="32" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,16 +338,26 @@
                                             <action selector="tickerClick:" destination="ygw-8U-pDp" eventType="touchUpInside" id="q0I-C9-aXN"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00000000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-od-aBc" userLabel="Amount Text Field">
+                                        <rect key="frame" x="20" y="14.666666666666659" width="150" height="18.666666666666671"/>
+                                        <color key="backgroundColor" name="aquaShadowBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="c8n-qp-UeT"/>
+                                        </constraints>
+                                        <color key="textColor" name="paleLilac"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="aquaShadowBlue"/>
                                 <constraints>
                                     <constraint firstItem="mrE-YH-TXc" firstAttribute="centerY" secondItem="bky-1i-2cg" secondAttribute="centerY" id="9qD-Lp-SP6"/>
-                                    <constraint firstItem="v6F-C0-fS2" firstAttribute="leading" secondItem="8UP-Ou-dHX" secondAttribute="leading" constant="20" id="Kcu-en-VDI"/>
-                                    <constraint firstItem="v6F-C0-fS2" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="Kdh-Fh-hLH"/>
+                                    <constraint firstItem="8bs-od-aBc" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="KMl-rr-Kx3"/>
                                     <constraint firstItem="bky-1i-2cg" firstAttribute="leading" secondItem="mrE-YH-TXc" secondAttribute="trailing" constant="20" id="f6W-Li-PIF"/>
                                     <constraint firstAttribute="height" constant="48" id="oCP-56-OeS"/>
                                     <constraint firstAttribute="trailing" secondItem="bky-1i-2cg" secondAttribute="trailing" constant="20" id="sSw-SS-hDd"/>
                                     <constraint firstItem="bky-1i-2cg" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="ysF-Cz-rFO"/>
+                                    <constraint firstItem="8bs-od-aBc" firstAttribute="leading" secondItem="8UP-Ou-dHX" secondAttribute="leading" constant="20" id="zsy-eW-j77"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAy-0x-0lh">
@@ -398,8 +399,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ze2-wW-JY1"/>
                     <connections>
+                        <outlet property="amounTextField" destination="8bs-od-aBc" id="v76-62-7Mk"/>
                         <outlet property="amountBackgroundView" destination="8UP-Ou-dHX" id="Ufr-c8-KMn"/>
-                        <outlet property="amountLabel" destination="v6F-C0-fS2" id="4SI-x8-JSP"/>
                         <outlet property="amountTitleLabel" destination="wBy-eL-cIb" id="XPp-iC-BJF"/>
                         <outlet property="assetView" destination="eX1-a9-jd9" id="ZqN-mx-nvN"/>
                         <outlet property="continueButton" destination="jdQ-L4-hH7" id="8pR-zT-29j"/>
@@ -547,7 +548,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-q2-rse">
-                                        <rect key="frame" x="20" y="214.33333333333331" width="111" height="20"/>
+                                        <rect key="frame" x="20" y="214.33333333333331" width="120" height="20"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <state key="normal" title="Network Fee  " image="arrow_down"/>
                                         <connections>
@@ -854,13 +855,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrbound" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-bN-m5E">
-                                <rect key="frame" x="88.666666666666686" y="258" width="198" height="198"/>
+                                <rect key="frame" x="-10.666666666666657" y="258" width="396.33333333333326" height="396"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m7b-bN-m5E" secondAttribute="height" multiplier="1:1" id="62f-nE-bDo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIA-IP-CJl">
-                                <rect key="frame" x="88.666666666666686" y="482" width="198" height="28.666666666666686"/>
+                                <rect key="frame" x="-10.666666666666657" y="680" width="396.33333333333326" height="28.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -948,9 +949,6 @@
         <namedColor name="darkBlueGray">
             <color red="0.10588235294117647" green="0.14509803921568629" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lightPeriwinkle">
-            <color red="0.84705882352941175" green="0.86274509803921573" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="lighterBlueGray">
             <color red="0.17254901960784313" green="0.23529411764705882" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -970,4 +968,7 @@
             <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Llh-hN-Z5g"/>
+    </inferredMetricsTieBreakers>
 </document>

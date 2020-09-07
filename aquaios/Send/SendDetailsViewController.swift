@@ -9,7 +9,7 @@ class SendDetailsViewController: BaseViewController {
     @IBOutlet weak var assetView: AssetView!
     @IBOutlet weak var amountBackgroundView: UIView!
     @IBOutlet weak var amountTitleLabel: UILabel!
-    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var amounTextField: UITextField!
     @IBOutlet weak var fiatLabel: UILabel!
     @IBOutlet weak var tickerButton: UIButton!
     @IBOutlet weak var sendAllButton: UIButton!
@@ -61,7 +61,12 @@ class SendDetailsViewController: BaseViewController {
         }
         assetView.configure(with: asset!, bgColor: .aquaShadowBlue, radius: 18)
         amountBackgroundView.round(radius: 18)
-        amountLabel.isHidden = amount.count == 0
+        // setup amount textfield
+        amounTextField.inputView = UIView()
+        amounTextField.inputAccessoryView = UIView()
+        amounTextField.tintColor = .topaz
+        amounTextField.becomeFirstResponder()
+        // setup buttons and labels
         continueButton.round(radius: 26.5)
         amountTitleLabel.text = NSLocalizedString("id_amount", comment: "")
         tickerButton.setTitle(asset?.info?.ticker ?? "", for: .normal)
@@ -72,6 +77,8 @@ class SendDetailsViewController: BaseViewController {
 
     @IBAction func maxButtonTapped(_ sender: Any) {
         self.sendAll = !self.sendAll
+        self.amounTextField.isEnabled = !self.amounTextField.isEnabled
+        if !self.sendAll { self.amounTextField.becomeFirstResponder() }
         sendAllButton.isSelected = self.sendAll
         if !sendAll {
             amount = ""
@@ -110,10 +117,9 @@ class SendDetailsViewController: BaseViewController {
     }
 
     func reload() {
-        amountLabel.isHidden = amount.isEmpty
         fiatLabel.isHidden = amount.isEmpty
         continueButton.isHidden = amount.isEmpty
-        amountLabel.text = amount
+        amounTextField.text = amount
         guard let asset = asset, !asset.selectable || !asset.hasFiatRate else {
             return
         }
