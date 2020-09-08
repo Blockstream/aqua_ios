@@ -72,7 +72,6 @@ class BuyViewController: BaseViewController {
         buyView.addGestureRecognizer(tapGestureRecognizer)
         buyView.isUserInteractionEnabled = true
         buyView.round(radius: 24)
-        buyIconView.round(radius: 24)
     }
 
     @objc func createOrRestore(_ sender: Any?) {
