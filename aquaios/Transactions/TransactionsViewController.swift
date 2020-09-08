@@ -13,6 +13,7 @@ class TransactionsViewController: BaseViewController {
 
     private var transactions: [Transaction] = []
     private var transactionToken: NSObjectProtocol?
+    private var blockToken: NSObjectProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,23 @@ class TransactionsViewController: BaseViewController {
         }
 
         transactionToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "transaction"), object: nil, queue: .main, using: onNewTransaction)
+        blockToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "block"), object: nil, queue: .main, using: onNewBlock)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let token = transactionToken {
             NotificationCenter.default.removeObserver(token)
+        }
+        if let token = blockToken {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+
+    func onNewBlock(_ notification: Notification) {
+        let pendingTxs = transactions.filter { $0.blockHeight == 0 }
+        if !pendingTxs.isEmpty {
+            reloadData()
         }
     }
 

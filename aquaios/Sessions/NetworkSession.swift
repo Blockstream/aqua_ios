@@ -29,6 +29,7 @@ class NetworkSession {
         case "block":
             let data = notification?[event!] as? [String: Any]
             blockHeight = data?["block_height"] as? Int ?? 0
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "block"), object: nil, userInfo: data)
         default: break
         }
     }
