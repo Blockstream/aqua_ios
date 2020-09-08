@@ -52,4 +52,8 @@ extension UIColor {
     open class var aquaShadowBlue: UIColor {
         return UIColor(named: "aquaShadowBlue")!
     }
+
+    open class var reddishPink: UIColor {
+        return UIColor(named: "reddishPink")!
+    }
 }

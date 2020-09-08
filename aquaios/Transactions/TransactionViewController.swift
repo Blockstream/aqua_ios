@@ -37,6 +37,9 @@ class TransactionViewController: BaseViewController {
         showCloseButton(on: .left)
         copiedButton.alpha = 0.0
         copiedButton.round(radius: 17.5)
+        pendingLabel.layer.borderWidth = 1.0
+        pendingLabel.layer.cornerRadius = 12
+        pendingLabel.layer.borderColor = UIColor.reddishPink.cgColor
         reload()
     }
 
