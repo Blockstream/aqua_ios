@@ -550,6 +550,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-q2-rse">
                                         <rect key="frame" x="20" y="214.33333333333331" width="120" height="20"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Network Fee  " image="arrow_down"/>
                                         <connections>
                                             <action selector="networkFeeButtonTapped:" destination="BLP-ef-qhX" eventType="touchUpInside" id="eS8-nE-VFL"/>
