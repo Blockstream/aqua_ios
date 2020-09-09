@@ -24,6 +24,10 @@ class SendReviewViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        slidingButton.delegate = self
+        slidingButton.buttonText = NSLocalizedString("id_slide_to_send", comment: "")
+        slidingButton.buttonFont = UIFont.systemFont(ofSize: 16, weight: .medium)
+        slidingButton.round(radius: 26.5)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +37,6 @@ class SendReviewViewController: BaseViewController {
     }
 
     func configureView() {
-        slidingButton.delegate = self
         reviewBackgroundView.round(radius: 18)
         feeUpdateView.round(radius: 18)
         defaultFeeButton.round(radius: 24)
@@ -66,12 +69,6 @@ class SendReviewViewController: BaseViewController {
         networkFeeButton.setTitle(NSLocalizedString("id_network_fee", comment: ""), for: .normal)
         // Disable fee buttons for liquid
         networkFeeButton.isEnabled = asset.isBTC
-        slidingButton.buttonText = NSLocalizedString("id_slide_to_send", comment: "")
-    }
-
-    override func viewDidLayoutSubviews() {
-        slidingButton.round(radius: 26.5)
-        slidingButton.buttonFont = UIFont.systemFont(ofSize: 16, weight: .medium)
     }
 
     @IBAction func networkFeeButtonTapped(_ sender: Any) {
