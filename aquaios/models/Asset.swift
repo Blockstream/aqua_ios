@@ -18,6 +18,10 @@ struct Asset {
         return tag == Liquid.shared.usdtId
     }
 
+    var isHighlighted: Bool {
+        return Liquid.shared.highlightedAssets.contains(tag)
+    }
+
     var name: String? {
         return info?.name
     }

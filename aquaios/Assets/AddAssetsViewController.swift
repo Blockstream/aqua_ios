@@ -56,7 +56,7 @@ class AddAssetsViewController: BaseViewController {
     }
 
     func reloadData() {
-        self.assets = allAssets.filter({ $0.icon != nil })
+        self.assets = allAssets.filter({ $0.isHighlighted || $0.isBTC || $0.isLBTC || $0.isUSDt })
         self.pinnedAssets = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
         self.tableView.reloadData()
     }
@@ -135,7 +135,7 @@ extension AddAssetsViewController: UISearchResultsUpdating {
                 ($0.name?.contains(searchText) ?? false) ||
                 ($0.ticker?.contains(searchText) ?? false) }
         } else {
-            assets = allAssets.filter({ $0.icon != nil })
+            assets = allAssets.filter({ $0.isHighlighted || $0.isBTC || $0.isLBTC || $0.isUSDt })
         }
         tableView.reloadData()
     }
