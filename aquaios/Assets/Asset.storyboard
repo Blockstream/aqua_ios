@@ -71,12 +71,12 @@
                                     <constraint firstAttribute="height" constant="192" id="XTw-by-HRe"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oC3-wa-Ruu">
-                                <rect key="frame" x="154.66666666666666" y="67" width="104.99999999999997" height="33"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oC3-wa-Ruu">
+                                <rect key="frame" x="-343" y="60" width="1100" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="kpA-kd-Hja"/>
-                                    <constraint firstAttribute="width" constant="105" id="kvn-Zt-ESh"/>
+                                    <constraint firstAttribute="height" constant="38" id="DHK-47-x06"/>
                                 </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxS-51-fpL">
                                 <rect key="frame" x="24" y="135" width="72" height="72"/>
@@ -118,7 +118,7 @@
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" id="Mix-Qt-Ujl"/>
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="bottom" secondItem="xfc-v9-VBA" secondAttribute="bottom" id="NAt-DY-1jt"/>
                             <constraint firstItem="2jC-Xc-MXi" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="132" id="Oyf-Rh-ve9"/>
-                            <constraint firstItem="oC3-wa-Ruu" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="67" id="RHc-EM-HZD"/>
+                            <constraint firstItem="oC3-wa-Ruu" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="60" id="RHc-EM-HZD"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" id="WYK-nX-iEP"/>
                             <constraint firstItem="5dz-kb-6zd" firstAttribute="top" secondItem="2Nu-0D-IsG" secondAttribute="bottom" constant="-20" id="aQK-Y8-NQP"/>
                             <constraint firstItem="xfc-v9-VBA" firstAttribute="trailing" secondItem="ir3-Qt-MJ8" secondAttribute="trailing" constant="18" id="ami-rD-RtB"/>
@@ -526,7 +526,7 @@
         <image name="close" width="14" height="14"/>
         <image name="curlyarrow" width="23" height="43"/>
         <image name="homeqr" width="30" height="29"/>
-        <image name="logo" width="117" height="30"/>
+        <image name="logo" width="1100" height="306"/>
         <image name="nocoiners" width="375" height="362"/>
         <image name="qrcode_selected" width="24" height="24"/>
         <image name="wallet_icon" width="28" height="24"/>
