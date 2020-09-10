@@ -120,7 +120,7 @@ class SendDetailsViewController: BaseViewController {
         fiatLabel.isHidden = amount.isEmpty
         continueButton.isHidden = amount.isEmpty
         amounTextField.text = amount
-        guard let asset = asset, !asset.selectable || !asset.hasFiatRate else {
+        guard let asset = asset, asset.hasFiatRate else {
             return
         }
         if amount.isEmpty {
