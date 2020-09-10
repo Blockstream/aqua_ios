@@ -44,6 +44,8 @@ class AddAssetsViewController: BaseViewController {
         tableView.backgroundView?.backgroundColor = .aquaBackgroundBlue
         let nib = UINib(nibName: "AddAssetCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "AddAssetCell")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     func configureSearch() {
@@ -81,6 +83,13 @@ class AddAssetsViewController: BaseViewController {
         } else {
             pinnedAssets.removeAll(where: { $0 == tappedAsset.tag })
         }
+        // dismiss search keyboard
+        searchController.searchBar.endEditing(true)
+    }
+
+    @objc func dismissKeyboard() {
+        searchController.isActive = false
+        searchController.searchBar.endEditing(true)
     }
 }
 
