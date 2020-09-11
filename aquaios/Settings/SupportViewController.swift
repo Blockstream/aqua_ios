@@ -56,11 +56,15 @@ extension SupportViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Voices.allCases[indexPath.row] {
         case .support:
-            break
+            if let url = URL(string: "https://help.blockstream.com/hc/en-us/categories/900000187546") {
+              UIApplication.shared.open(url)
+            }
         case .rate:
             break
         case .updates:
-            break
+            if let url = URL(string: "https://apps.apple.com/us/app/id1500791973") {
+              UIApplication.shared.open(url)
+            }
         }
     }
 }
