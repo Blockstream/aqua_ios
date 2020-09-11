@@ -129,7 +129,7 @@ class QRCodeViewController: BaseViewController {
                     addressee?.assetTag = inputTag ?? "btc"
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
-                    self.showError(NSLocalizedString("id_liquid_addresses_are_invalid", comment: ""))
+                    self.showError(NSLocalizedString("id_bitcoin_addresses_are_invalid", comment: ""))
                 }
             } else if network == Liquid.networkName {
                 if (inputTag != nil && inputTag != "btc") &&
@@ -147,7 +147,7 @@ class QRCodeViewController: BaseViewController {
                 } else if txTag == nil && inputTag == nil {
                     self.performSegue(withIdentifier: "select_asset_send", sender: addressee)
                 } else {
-                    self.showError(NSLocalizedString("id_bitcoin_addresses_are_invalid", comment: ""))
+                    self.showError(NSLocalizedString("id_liquid_addresses_are_invalid", comment: ""))
                 }
             }
         }.catch { err in
