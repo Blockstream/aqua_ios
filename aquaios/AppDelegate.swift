@@ -9,4 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set(false, forKey: Constants.Keys.hasShownBackup)
         return true
     }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        try? Bitcoin.shared.disconnect()
+        try? Liquid.shared.disconnect()
+    }
 }
