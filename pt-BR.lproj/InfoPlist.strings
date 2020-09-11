@@ -1,2 +1,2 @@
-NSFaceIDUsageDescription = "Aqua uses biometric authentication to allow easy access to the wallet";
-NSCameraUsageDescription = "We use the camera to scan QR codes";
+NSFaceIDUsageDescription = "A Aqua usa autenticação biométrica para um acesso mais fácil";
+NSCameraUsageDescription = "Usamos a câmera para ler códigos QR";
