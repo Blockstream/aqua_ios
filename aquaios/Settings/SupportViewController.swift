@@ -5,7 +5,6 @@ class SupportViewController: BaseViewController {
 
     enum Voices: CaseIterable {
         case support
-        case rate
         case updates
     }
 
@@ -44,8 +43,6 @@ extension SupportViewController: UITableViewDataSource, UITableViewDelegate {
         switch Voices.allCases[indexPath.row] {
         case .support:
             cell?.textLabel?.text = NSLocalizedString("id_support_and_faqs", comment: "")
-        case .rate:
-            cell?.textLabel?.text = NSLocalizedString("id_rate_the_app", comment: "")
         case .updates:
             cell?.textLabel?.text = NSLocalizedString("id_check_updates", comment: "")
             cell?.accessoryView = UIImageView.init(image: UIImage(named: "external_link"))
@@ -59,8 +56,6 @@ extension SupportViewController: UITableViewDataSource, UITableViewDelegate {
             if let url = URL(string: "https://help.blockstream.com/hc/en-us/categories/900000187546") {
               UIApplication.shared.open(url)
             }
-        case .rate:
-            break
         case .updates:
             if let url = URL(string: "https://apps.apple.com/us/app/id1500791973") {
               UIApplication.shared.open(url)
