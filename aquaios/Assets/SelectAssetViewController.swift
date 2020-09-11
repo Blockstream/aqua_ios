@@ -78,20 +78,22 @@ class SelectAssetViewController: BaseViewController {
             self.startAnimating()
             return Guarantee()
         }.then(on: bgq) {
-            when(fulfilled: self.balancePromise(Bitcoin.shared), self.balancePromise(Liquid.shared))
+            self.balancePromise(Liquid.shared)
         }.ensure {
             self.stopAnimating()
-        }.done { bitcoin, liquid in
+        }.done { liquid in
             if self.flow! == .send {
                 self.sendAssets = AquaService.assets(for: liquid).sort()
                 self.assets = self.sendAssets
             } else {
-                var pinned = UserDefaults.standard.object(forKey: Constants.Keys.pinnedAssets) as? [String] ?? []
-                pinned.append(Liquid.shared.usdtId)
-                let pinnedAssets = pinned.map { ($0, UInt64(0)) }
-                var list = bitcoin.merging(liquid) { (_, new) in new }
-                list = list.merging(pinnedAssets) { (old, _) in old }
-                self.receivedAssets = AquaService.assets(for: list).sort()
+                // Show highlighted assets
+                var highlighted = ["btc", Liquid.shared.policyAsset, Liquid.shared.usdtId]
+                highlighted.append(contentsOf: Liquid.shared.highlightedAssets)
+                var highlightedAssets = [String: UInt64]()
+                for asset in highlighted {
+                    highlightedAssets[asset] = 0
+                }
+                self.receivedAssets = AquaService.assets(for: highlightedAssets).sort()
                 self.assets = self.receivedAssets
             }
             self.reloadData()
