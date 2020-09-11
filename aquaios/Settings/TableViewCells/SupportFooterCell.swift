@@ -9,7 +9,7 @@ class SupportFooterCell: UITableViewCell {
     func configure() {
         let systemVersion = UIDevice.current.systemVersion
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        iosLabel.text = String(format: NSLocalizedString("id_ios_version_%@", comment: ""), systemVersion)
-        appLabel.text = String(format: NSLocalizedString("id_app_version_%@", comment: ""), appVersion!)
+        iosLabel.text = String(format: NSLocalizedString("id_ios_version", comment: "")) + " " + systemVersion
+        appLabel.text = String(format: NSLocalizedString("id_app_version", comment: "")) + " " + appVersion!
     }
 }

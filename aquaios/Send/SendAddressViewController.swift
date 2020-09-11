@@ -20,7 +20,7 @@ class SendAddressViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = NSLocalizedString("id_send_to", comment: "")
+        navigationItem.title = NSLocalizedString("id_send", comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.largeTitleDisplayMode = .never
         configureView()
