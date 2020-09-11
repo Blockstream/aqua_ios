@@ -25,8 +25,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket Purchasing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHm-Nc-rQx">
-                    <rect key="frame" x="62" y="42" width="115.5" height="28"/>
+                    <rect key="frame" x="62" y="42" width="150" height="28"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Etq-Nm-Qa0"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="FTQ-ww-HTO"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
