@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         firstly {
             return Guarantee()
         }.map(on: bgq) {
-            sleep(2)
+            sleep(1)
         }.done { _ in
             self.performSegue(withIdentifier: "next", sender: nil)
         }
