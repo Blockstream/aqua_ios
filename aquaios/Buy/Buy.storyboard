@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8P-FF-bLf" userLabel="BuyBtcView">
                                 <rect key="frame" x="37" y="60" width="340" height="160"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buybtc" translatesAutoresizingMaskIntoConstraints="NO" id="fdr-gb-Kqv" userLabel="buybtcimage">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btcBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fdr-gb-Kqv" userLabel="buybtcimage">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="160"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Bitcoin with card or Apple Pay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE7-mY-NJv">
@@ -41,7 +41,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB2-va-2uW">
-                                        <rect key="frame" x="18" y="107" width="100" height="35"/>
+                                        <rect key="frame" x="18" y="100" width="100" height="35"/>
                                         <color key="backgroundColor" name="topaz"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="32T-kB-4BR"/>
@@ -59,9 +59,9 @@
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <constraints>
                                     <constraint firstItem="fdr-gb-Kqv" firstAttribute="centerY" secondItem="F8P-FF-bLf" secondAttribute="centerY" id="21j-Dj-f1T"/>
+                                    <constraint firstItem="XB2-va-2uW" firstAttribute="top" secondItem="AE7-mY-NJv" secondAttribute="bottom" constant="15" id="6r4-ya-itp"/>
                                     <constraint firstItem="AE7-mY-NJv" firstAttribute="top" secondItem="F8P-FF-bLf" secondAttribute="top" constant="25" id="CEi-Au-D9t"/>
                                     <constraint firstAttribute="trailing" secondItem="Mjf-54-xWi" secondAttribute="trailing" constant="18" id="GW1-0V-ava"/>
-                                    <constraint firstAttribute="bottom" secondItem="XB2-va-2uW" secondAttribute="bottom" constant="18" id="Jfi-uk-3JC"/>
                                     <constraint firstItem="fdr-gb-Kqv" firstAttribute="width" secondItem="F8P-FF-bLf" secondAttribute="width" id="N4k-o3-Rh6"/>
                                     <constraint firstAttribute="height" constant="160" id="Pzo-AN-6v3"/>
                                     <constraint firstItem="XB2-va-2uW" firstAttribute="leading" secondItem="F8P-FF-bLf" secondAttribute="leading" constant="18" id="dEa-yd-sqU"/>
@@ -75,7 +75,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohL-22-ehY" userLabel="BuyLbtcView">
                                 <rect key="frame" x="37" y="240" width="340" height="160"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buybtc" translatesAutoresizingMaskIntoConstraints="NO" id="XDS-bW-k2D" userLabel="buylbtcimage">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lbtcBackground" translatesAutoresizingMaskIntoConstraints="NO" id="XDS-bW-k2D" userLabel="buylbtcimage">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="160"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Liquid Bitcoin with card or Apple Pay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-nY-cOt">
@@ -96,7 +96,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIL-kx-jtR" userLabel="Buy Lbtc Button">
-                                        <rect key="frame" x="18" y="107" width="100" height="35"/>
+                                        <rect key="frame" x="18" y="100" width="100" height="35"/>
                                         <color key="backgroundColor" name="topaz"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="e3G-6j-FPq"/>
@@ -116,10 +116,10 @@
                                     <constraint firstItem="XDS-bW-k2D" firstAttribute="height" secondItem="ohL-22-ehY" secondAttribute="height" id="1l8-b2-d3e"/>
                                     <constraint firstItem="hpm-Dv-v3E" firstAttribute="top" secondItem="ohL-22-ehY" secondAttribute="top" constant="25" id="2bR-Xd-kVC"/>
                                     <constraint firstItem="XDS-bW-k2D" firstAttribute="width" secondItem="ohL-22-ehY" secondAttribute="width" id="E2i-DU-qLw"/>
+                                    <constraint firstItem="tIL-kx-jtR" firstAttribute="top" secondItem="KdT-nY-cOt" secondAttribute="bottom" constant="15" id="EtH-3u-fDx"/>
                                     <constraint firstItem="tIL-kx-jtR" firstAttribute="leading" secondItem="ohL-22-ehY" secondAttribute="leading" constant="18" id="Fhx-Zh-mfm"/>
                                     <constraint firstItem="KdT-nY-cOt" firstAttribute="leading" secondItem="ohL-22-ehY" secondAttribute="leading" constant="18" id="Hsl-IO-wQL"/>
                                     <constraint firstItem="XDS-bW-k2D" firstAttribute="centerX" secondItem="ohL-22-ehY" secondAttribute="centerX" id="JqU-TA-xUo"/>
-                                    <constraint firstAttribute="bottom" secondItem="tIL-kx-jtR" secondAttribute="bottom" constant="18" id="WP6-B2-Wvt"/>
                                     <constraint firstItem="XDS-bW-k2D" firstAttribute="centerY" secondItem="ohL-22-ehY" secondAttribute="centerY" id="aep-DC-r1g"/>
                                     <constraint firstAttribute="height" constant="160" id="dXK-Vf-FJm"/>
                                     <constraint firstAttribute="trailing" secondItem="hpm-Dv-v3E" secondAttribute="trailing" constant="18" id="e9Q-AA-R5h"/>
@@ -134,7 +134,7 @@
                                         <rect key="frame" x="56" y="43.5" width="48" height="48"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buy_nowallet" translatesAutoresizingMaskIntoConstraints="NO" id="WlM-Sv-YBc">
-                                                <rect key="frame" x="-24" y="-24" width="96" height="96"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="aquaShadowBlue"/>
@@ -263,9 +263,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btcBackground" width="340" height="140"/>
         <image name="buy_icon" width="24" height="28"/>
         <image name="buy_nowallet" width="48" height="48"/>
-        <image name="buybtc" width="340" height="160"/>
+        <image name="lbtcBackground" width="340" height="140"/>
         <image name="wyrelogowhite" width="60" height="20"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
