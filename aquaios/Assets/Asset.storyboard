@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -225,6 +225,16 @@
                                     <constraint firstAttribute="width" secondItem="EL4-Gk-7Z6" secondAttribute="height" multiplier="414:395" id="geX-pH-H8u"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your bitcoin transactions will show up here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-hm-4vi" userLabel="Transactions Label">
+                                <rect key="frame" x="117.66666666666669" y="369" width="179" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="iy0-Dv-Mlv"/>
+                                    <constraint firstAttribute="height" constant="70" id="qkO-ED-PVv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="lightestBlueGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ISu-MX-RfK">
                                 <rect key="frame" x="0.0" y="125" width="414" height="594"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
@@ -298,7 +308,9 @@
                             <constraint firstItem="ISu-MX-RfK" firstAttribute="trailing" secondItem="jQz-YO-yHc" secondAttribute="trailing" id="rzg-Jk-F2g"/>
                             <constraint firstItem="EL4-Gk-7Z6" firstAttribute="leading" secondItem="jQz-YO-yHc" secondAttribute="leading" id="svQ-WH-xMj"/>
                             <constraint firstItem="jQz-YO-yHc" firstAttribute="trailing" secondItem="K9s-j1-fab" secondAttribute="trailing" constant="24" id="uA0-sw-kfA"/>
+                            <constraint firstItem="ubc-hm-4vi" firstAttribute="centerX" secondItem="jQz-YO-yHc" secondAttribute="centerX" id="uYC-Rl-1iy"/>
                             <constraint firstItem="ccj-1A-fhd" firstAttribute="top" secondItem="jQz-YO-yHc" secondAttribute="top" constant="30" id="vRW-ac-cYS"/>
+                            <constraint firstItem="ubc-hm-4vi" firstAttribute="centerY" secondItem="jQz-YO-yHc" secondAttribute="centerY" id="vee-JI-XJW"/>
                             <constraint firstItem="x1u-N6-Jcl" firstAttribute="trailing" secondItem="vgY-aK-t4b" secondAttribute="centerX" constant="-48" id="vl1-jp-SdQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jQz-YO-yHc"/>
@@ -315,6 +327,7 @@
                         <outlet property="sendButton" destination="vgY-aK-t4b" id="0hl-pA-5ez"/>
                         <outlet property="tableView" destination="ISu-MX-RfK" id="8hV-Mn-uOq"/>
                         <outlet property="tickerLabel" destination="1CF-09-oyl" id="pb0-wa-Y3e"/>
+                        <outlet property="yourTxLabel" destination="ubc-hm-4vi" id="G76-UT-ex8"/>
                         <segue destination="8vT-qr-PG8" kind="presentation" identifier="detail_receive" id="cN0-FK-sQ5"/>
                         <segue destination="aj3-U0-v5a" kind="presentation" identifier="detail_send" id="NJe-UD-ZGI"/>
                         <segue destination="wv9-O7-tJc" kind="show" identifier="asset_info" id="IdL-aJ-zD4"/>

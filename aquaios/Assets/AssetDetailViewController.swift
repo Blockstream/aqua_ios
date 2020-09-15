@@ -13,6 +13,7 @@ class AssetDetailViewController: BaseViewController {
     @IBOutlet weak var nocoinersBackground: UIImageView!
     @IBOutlet weak var exchangePromptLabel: UILabel!
     @IBOutlet weak var fiatLabel: UILabel!
+    @IBOutlet weak var yourTxLabel: UILabel!
 
     var asset: Asset?
     private var transactions: [Transaction] = []
@@ -81,8 +82,9 @@ class AssetDetailViewController: BaseViewController {
         receiveButton.round(radius: 24)
         sendButton.setTitle(NSLocalizedString("id_send", comment: ""), for: .normal)
         receiveButton.setTitle(NSLocalizedString("id_receive", comment: ""), for: .normal)
+        yourTxLabel.text = String(format: "Your %@ transactions will show up here", asset?.info?.ticker ?? NSLocalizedString("id_unregistered_asset", comment: ""))
 
-        // Hidden for beta one
+        // Hidden
         for view in [exchangePromptLabel, curlyArrow, buyButton] {
             view?.isHidden = true
         }
@@ -131,7 +133,8 @@ class AssetDetailViewController: BaseViewController {
                 self.transactions = self.transactions.filter { $0.satoshi.count == 1 && $0.satoshi.first?.key == Liquid.shared.policyAsset }
             }
             self.transactions.sort(by: { $0.createdAt > $1.createdAt })
-            self.nocoinersBackground.isHidden = !self.transactions.isEmpty
+            self.nocoinersBackground.isHidden = !self.transactions.isEmpty || !(self.asset?.isBTC ?? false)
+            self.yourTxLabel.isHidden = !self.transactions.isEmpty || (self.asset?.isBTC ?? false)
             self.tableView.isHidden = self.transactions.isEmpty
             self.tableView.reloadData()
         }.catch { _ in
