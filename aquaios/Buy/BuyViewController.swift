@@ -37,14 +37,12 @@ class BuyViewController: BaseViewController {
             self.startAnimating()
             return Guarantee()
         }.then(on: bgq) {
-            self.reserve()
+            self.reserve(isBtc: isBtc)
         }.ensure {
             self.stopAnimating()
         }.done {  res in
             if let path = res["url"] {
-                let address = isBtc ? Bitcoin.shared.address : Liquid.shared.address
-                let destCurrency = isBtc ? "BTC" : "LBTC"
-                let url = URL(string: "\(path)&destCurrency=\(destCurrency)&dest=\(address!)")
+                let url = URL(string: path)
                 UIApplication.shared.open(url!, options: [:])
                 return
             } else {
@@ -78,14 +76,16 @@ class BuyViewController: BaseViewController {
         performSegue(withIdentifier: "create_wallet_alert", sender: nil)
     }
 
-    func reserve() -> Promise<[String: String]> {
+    func reserve(isBtc: Bool) -> Promise<[String: String]> {
         let url = URL(string: "https://api.testwyre.com/v3/orders/reserve")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = [ "Content-Type": "application/json",
                                         "Accept": "application/json",
                                         "Authorization": "Bearer SK-X4F6UAXL-LNCFNU63-2TC4NGRG-T3EPCUZD" ]
-        let params = ["referrerAccountId": "AC_82VYBNNYG32"]
+        let address = isBtc ? Bitcoin.shared.address : Liquid.shared.address
+        let destCurrency = isBtc ? "BTC" : "LBTC"
+        let params = ["referrerAccountId": "AC_82VYBNNYG32", "paymentMethod": "apple-pay", "destCurrency": destCurrency, "dest": address]
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
         return Promise { seal in
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, _, error in
