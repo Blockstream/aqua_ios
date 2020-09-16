@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,20 +46,21 @@
                                     <segue destination="a2s-4V-JHY" kind="show" id="OYq-P1-daL"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-Bf-39K">
-                                <rect key="frame" x="40" y="118" width="334" height="275"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recovery_phrase" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-Bf-39K">
+                                <rect key="frame" x="89.5" y="118" width="235" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Hfc-Bf-39K" secondAttribute="height" multiplier="334:275" id="aVg-pV-ToT"/>
+                                    <constraint firstAttribute="height" constant="240" id="Pcj-WL-WMS"/>
+                                    <constraint firstAttribute="width" constant="235" id="Qyn-Bc-JRc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back up your wallet" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1N-D0-qxb">
-                                <rect key="frame" x="24" y="423" width="366" height="33.5"/>
+                                <rect key="frame" x="24" y="388" width="366" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVd-oW-OvK">
-                                <rect key="frame" x="24" y="486.5" width="366" height="76.5"/>
+                                <rect key="frame" x="24" y="451.5" width="366" height="76.5"/>
                                 <string key="text">With great power comes great responsibility. If you lose or break your device, only if you have backup recovery phrase can you restore access to your assets.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="paleLilac"/>
@@ -69,13 +70,12 @@
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="AVd-oW-OvK" firstAttribute="top" secondItem="T1N-D0-qxb" secondAttribute="bottom" constant="30" id="2By-Zi-Jou"/>
-                            <constraint firstItem="Hfc-Bf-39K" firstAttribute="leading" secondItem="qeP-PQ-5ZU" secondAttribute="leading" constant="40" id="2sG-gE-Dbh"/>
                             <constraint firstItem="qeP-PQ-5ZU" firstAttribute="trailing" secondItem="aep-KZ-a8O" secondAttribute="trailing" constant="24" id="E0Q-sT-OkR"/>
                             <constraint firstItem="aep-KZ-a8O" firstAttribute="leading" secondItem="qeP-PQ-5ZU" secondAttribute="leading" constant="24" id="E9C-kI-DE8"/>
                             <constraint firstItem="qeP-PQ-5ZU" firstAttribute="trailing" secondItem="AVd-oW-OvK" secondAttribute="trailing" constant="24" id="HDi-Ba-aGQ"/>
                             <constraint firstItem="qeP-PQ-5ZU" firstAttribute="trailing" secondItem="T1N-D0-qxb" secondAttribute="trailing" constant="24" id="P3N-3i-j6x"/>
+                            <constraint firstItem="Hfc-Bf-39K" firstAttribute="centerX" secondItem="qeP-PQ-5ZU" secondAttribute="centerX" id="aPg-O8-hNr"/>
                             <constraint firstItem="Hfc-Bf-39K" firstAttribute="top" secondItem="qeP-PQ-5ZU" secondAttribute="top" constant="30" id="nLV-XK-j4d"/>
-                            <constraint firstItem="qeP-PQ-5ZU" firstAttribute="trailing" secondItem="Hfc-Bf-39K" secondAttribute="trailing" constant="40" id="rpV-Zx-OEj"/>
                             <constraint firstItem="T1N-D0-qxb" firstAttribute="top" secondItem="Hfc-Bf-39K" secondAttribute="bottom" constant="30" id="sYp-Lw-ZsB"/>
                             <constraint firstItem="T1N-D0-qxb" firstAttribute="leading" secondItem="qeP-PQ-5ZU" secondAttribute="leading" constant="24" id="xdo-Gw-BKY"/>
                             <constraint firstItem="qeP-PQ-5ZU" firstAttribute="bottom" secondItem="aep-KZ-a8O" secondAttribute="bottom" constant="24" id="xi1-CF-OJv"/>
@@ -451,19 +451,19 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passcode" translatesAutoresizingMaskIntoConstraints="NO" id="HUJ-sc-T5q">
-                                <rect key="frame" x="167" y="268" width="80" height="81"/>
+                                <rect key="frame" x="167" y="268" width="80" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="QeB-eD-fFh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Touch ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sV-84-DoN">
-                                <rect key="frame" x="50" y="369" width="314" height="26.5"/>
+                                <rect key="frame" x="50" y="450" width="314" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secure your AQUA wallet with a simple thumb press" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iG-PR-JIC">
-                                <rect key="frame" x="50" y="415.5" width="314" height="33.5"/>
+                                <rect key="frame" x="50" y="496.5" width="314" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -506,7 +506,7 @@
     </scenes>
     <resources>
         <image name="passcode" width="70" height="81"/>
-        <image name="placeholder" width="272" height="275"/>
+        <image name="recovery_phrase" width="236" height="240"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -30,26 +30,27 @@
                                     <action selector="startButtonTapped:" destination="Fq4-QS-L87" eventType="touchUpInside" id="aSr-gN-hFd"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="IOV-kt-Adn">
-                                <rect key="frame" x="40" y="118" width="334" height="275"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backup" translatesAutoresizingMaskIntoConstraints="NO" id="IOV-kt-Adn">
+                                <rect key="frame" x="107" y="118" width="200" height="233"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="IOV-kt-Adn" secondAttribute="height" multiplier="334:275" id="lNc-vX-qeJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="QRX-nX-8YR"/>
+                                    <constraint firstAttribute="height" constant="233" id="Tpm-Fa-qQw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back up your wallet" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-dl-oSe">
-                                <rect key="frame" x="24" y="413" width="366" height="33.666666666666686"/>
+                                <rect key="frame" x="24" y="371" width="366" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With AQUA, you are your own bank. No one else other than you has access to your private key, not even us." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvH-K2-sfw">
-                                <rect key="frame" x="24" y="476.66666666666669" width="366" height="57.333333333333314"/>
+                                <rect key="frame" x="24" y="434.66666666666669" width="366" height="57.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMd-br-Uxa">
-                                <rect key="frame" x="24" y="564" width="366" height="76.666666666666629"/>
+                                <rect key="frame" x="24" y="522" width="366" height="76.666666666666629"/>
                                 <string key="text">With great power comes great responsibility. If you lose or break your device, only if you have backup recovery phrase can you restore access to your assets.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="paleLilac"/>
@@ -59,7 +60,6 @@
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="IOV-kt-Adn" firstAttribute="top" secondItem="Bzo-05-Jfc" secondAttribute="top" constant="30" id="0S7-LT-jRy"/>
-                            <constraint firstItem="Bzo-05-Jfc" firstAttribute="trailing" secondItem="IOV-kt-Adn" secondAttribute="trailing" constant="40" id="4bs-Qd-Y7B"/>
                             <constraint firstItem="Bzo-05-Jfc" firstAttribute="trailing" secondItem="geC-4g-fhs" secondAttribute="trailing" constant="24" id="6fg-eS-pIH"/>
                             <constraint firstItem="WYY-dl-oSe" firstAttribute="top" secondItem="IOV-kt-Adn" secondAttribute="bottom" constant="20" id="9kx-fA-qB6"/>
                             <constraint firstItem="geC-4g-fhs" firstAttribute="leading" secondItem="Bzo-05-Jfc" secondAttribute="leading" constant="24" id="AQX-Zf-8ve"/>
@@ -68,8 +68,8 @@
                             <constraint firstItem="Bzo-05-Jfc" firstAttribute="bottom" secondItem="geC-4g-fhs" secondAttribute="bottom" constant="24" id="EYt-RT-nQR"/>
                             <constraint firstItem="GMd-br-Uxa" firstAttribute="leading" secondItem="Bzo-05-Jfc" secondAttribute="leading" constant="24" id="Nwd-GJ-mFn"/>
                             <constraint firstItem="GMd-br-Uxa" firstAttribute="top" secondItem="jvH-K2-sfw" secondAttribute="bottom" constant="30" id="YbH-RQ-td1"/>
+                            <constraint firstItem="IOV-kt-Adn" firstAttribute="centerX" secondItem="Bzo-05-Jfc" secondAttribute="centerX" id="bDI-B4-xSU"/>
                             <constraint firstItem="WYY-dl-oSe" firstAttribute="leading" secondItem="Bzo-05-Jfc" secondAttribute="leading" constant="24" id="e6c-H1-223"/>
-                            <constraint firstItem="IOV-kt-Adn" firstAttribute="leading" secondItem="Bzo-05-Jfc" secondAttribute="leading" constant="40" id="jIQ-sG-jWR"/>
                             <constraint firstItem="geC-4g-fhs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GMd-br-Uxa" secondAttribute="bottom" constant="8" id="jZM-z0-4y9"/>
                             <constraint firstItem="Bzo-05-Jfc" firstAttribute="trailing" secondItem="GMd-br-Uxa" secondAttribute="trailing" constant="24" id="k5i-ym-3HR"/>
                             <constraint firstItem="Bzo-05-Jfc" firstAttribute="trailing" secondItem="WYY-dl-oSe" secondAttribute="trailing" constant="24" id="pSN-KP-hpU"/>
@@ -734,7 +734,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EjM-Iv-WHl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backup_success" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EjM-Iv-WHl">
                                 <rect key="frame" x="40" y="118" width="334" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EjM-Iv-WHl" secondAttribute="height" multiplier="334:275" id="kZG-LJ-EK4"/>
@@ -868,8 +868,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backup" width="200" height="233"/>
         <image name="backup_failed" width="240" height="158"/>
-        <image name="placeholder" width="272" height="275"/>
+        <image name="backup_success" width="234" height="185"/>
         <image name="smileyface" width="24" height="24"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
