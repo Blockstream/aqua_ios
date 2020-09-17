@@ -30,9 +30,13 @@ class SendAddressViewController: BaseViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        addressTextField.text = NSLocalizedString("id_input_address_or_scan_qr_code", comment: "")
         addressTextField.textColor = .teal
         addressTextField.clearsOnBeginEditing = true
+        addressTextField.attributedPlaceholder =
+            NSAttributedString(string: NSLocalizedString("id_input_address_or_scan_qr_code", comment: ""),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.auroMetalSaurus])
+        addressTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: addressTextField.frame.height))
+        addressTextField.leftViewMode = .always
         if let address = UIPasteboard.general.string {
             addressLabel.text = address
             pasteFromClipboardView.isHidden = true
