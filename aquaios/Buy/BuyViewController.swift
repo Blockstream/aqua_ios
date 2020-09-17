@@ -11,6 +11,11 @@ class BuyViewController: BaseViewController {
     @IBOutlet weak var buyLbtcButton: UIButton!
     @IBOutlet weak var comingSoonLabel: UILabel!
     private var wyreAllowed: Bool = false
+    #if DEBUG
+    private let baseUrl = "https://staging-wyre.blockstream.com"
+    #else
+    private let baseUrl = "https://wyre.blockstream.com"
+    #endif
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,12 +82,10 @@ class BuyViewController: BaseViewController {
     }
 
     func reserve(isBtc: Bool) -> Promise<[String: String]> {
-        let url = URL(string: "https://api.testwyre.com/v3/orders/reserve")!
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: URL(string: baseUrl + "/order-reservation")!)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = [ "Content-Type": "application/json",
-                                        "Accept": "application/json",
-                                        "Authorization": "Bearer SK-X4F6UAXL-LNCFNU63-2TC4NGRG-T3EPCUZD" ]
+                                        "Accept": "application/json" ]
         let address = isBtc ? Bitcoin.shared.address : Liquid.shared.address
         let destCurrency = isBtc ? "BTC" : "LBTC"
         var bodyComponents = URLComponents()
