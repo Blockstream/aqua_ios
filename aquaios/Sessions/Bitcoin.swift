@@ -12,7 +12,7 @@ class Bitcoin: NetworkSession {
     }
 
     func connect() throws {
-        try session?.connect(netParams: ["name": Bitcoin.networkName, "use_tor": false, "log_level": "debug"])
+        try session?.connect(netParams: ["name": Bitcoin.networkName, "use_tor": false])
     }
 
     override func getTransactions(first: UInt32 = 0) -> [Transaction] {

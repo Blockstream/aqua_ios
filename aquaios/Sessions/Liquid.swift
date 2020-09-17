@@ -12,7 +12,7 @@ class Liquid: NetworkSession {
     }
 
     func connect() throws {
-        try session?.connect(netParams: ["name": Liquid.networkName, "use_tor": false, "log_level": "debug"])
+        try session?.connect(netParams: ["name": Liquid.networkName, "use_tor": false])
     }
 
     var policyAsset: String {
