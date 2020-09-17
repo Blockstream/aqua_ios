@@ -85,8 +85,11 @@ class BuyViewController: BaseViewController {
                                         "Authorization": "Bearer SK-X4F6UAXL-LNCFNU63-2TC4NGRG-T3EPCUZD" ]
         let address = isBtc ? Bitcoin.shared.address : Liquid.shared.address
         let destCurrency = isBtc ? "BTC" : "LBTC"
-        let params = ["referrerAccountId": "AC_82VYBNNYG32", "paymentMethod": "apple-pay", "destCurrency": destCurrency, "dest": address]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        var bodyComponents = URLComponents()
+        bodyComponents.queryItems = [URLQueryItem(name: "paymentMethod", value: "apple-pay"),
+                                     URLQueryItem(name: "destCurrency", value: destCurrency),
+                                     URLQueryItem(name: "dest", value: address)]
+        request.httpBody = bodyComponents.query?.data(using: .utf8)
         return Promise { seal in
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, _, error in
                 if let error = error {
