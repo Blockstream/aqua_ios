@@ -2,7 +2,11 @@ import Foundation
 
 class Bitcoin: NetworkSession {
     static let shared = Bitcoin()
+    #if DEBUG
     static let networkName = "electrum-testnet"
+    #else
+    static let networkName = "electrum-mainnet"
+    #endif
 
     var network: Network {
         let networks = try! getNetworks()
