@@ -15,7 +15,7 @@ class TermsOfServiceViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let tosURL = URL(string: "https://blockstream.com/green/terms/") {
+        if let tosURL = URL(string: "https://blockstream.com/aqua/terms/") {
             let request = URLRequest(url: tosURL)
             tosWebView.load(request)
         }
