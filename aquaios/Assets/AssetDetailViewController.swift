@@ -82,7 +82,7 @@ class AssetDetailViewController: BaseViewController {
         receiveButton.round(radius: 24)
         sendButton.setTitle(NSLocalizedString("id_send", comment: ""), for: .normal)
         receiveButton.setTitle(NSLocalizedString("id_receive", comment: ""), for: .normal)
-        yourTxLabel.text = String(format: "Your %@ transactions will show up here", asset?.info?.ticker ?? NSLocalizedString("id_unregistered_asset", comment: ""))
+        yourTxLabel.text = String(format: NSLocalizedString("id_your__transactions_will_show_up", comment: ""), asset?.info?.ticker ?? NSLocalizedString("id_unregistered_asset", comment: ""))
 
         // Hidden
         for view in [exchangePromptLabel, curlyArrow, buyButton] {

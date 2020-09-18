@@ -1,11 +1,11 @@
 "id_20_countries_supported" = "支持超过20个国家";
-"id_80_of_users_back_up_their" = "80%的用户会在第一次使用时备份他们的钱包！";
 "id_a_quick_and_easy_way_to_secure" = "一个快速且便捷的保护您的AQUA钱包的方法。";
 "id_about_us" = "关于我们";
-"id_add_a_note_to_yourself" = "Add a note to yourself";
+"id_add_a_note_to_yourself" = "给自己添加笔记";
 "id_add_assets_to_get_started" = "添加资产以开始";
 "id_add_to_wallet" = "添加到钱包";
 "id_address_generation_failed" = "地址生成失败";
+"id_all" = "All";
 "id_already_have_an_aqua_wallet" = "已经有AQUA钱包？";
 "id_amount" = "金额";
 "id_app_version" = "APP版本：";
@@ -26,6 +26,7 @@
 "id_buy_liquid_bitcoin_with_card_or" = "使用银行卡或Apple Pay购买L-BTC";
 "id_cancel" = "取消";
 "id_check_updates" = "检查更新";
+"id_choose_asset" = "Choose Asset";
 "id_clipboard_content_is_not_a" = "剪贴板的内容不是一个有效地址\n";
 "id_complete" = "已完成";
 "id_confirm" = "确认";
@@ -51,6 +52,10 @@
 "id_enable_passcode_in_ios_settings" = "在IOS系统设置中启用密码以继续。";
 "id_enable_touch_id" = "启用指纹";
 "id_enter_recovery_phrase" = "输入找回口令";
+"id_error" = "Error";
+"id_error_creating_wallet" = "Error creating wallet";
+"id_error_logging_in" = "Error logging in";
+"id_error_opening_wyre_widget" = "Error opening Wyre widget";
 "id_error_restoring_your_wallet" = "恢复钱包时出现错误";
 "id_exchange" = "交易";
 "id_face_id" = "面部识别";
@@ -68,7 +73,7 @@
 "id_intro" = "简介";
 "id_invalid_address" = "无效地址";
 "id_invalid_amount" = "无效金额";
-"id_invalid_mnemonic" = "无效助记词";
+"id_invalid_recovery_phrase" = "Invalid recovery phrase";
 "id_ios_version" = "IOS版本：";
 "id_issuer" = "发行方";
 "id_its_important_to_back_up_your" = "将助记词写下作为备份很重要";
@@ -78,15 +83,19 @@
 "id_liquid_101__what_is_liquid_and" = "液态网络101-什么是液态网络以及它的工作原理";
 "id_liquid_101_what_is_liquid_and" = "液态网络101，什么是液态网络以及它的工作原理？";
 "id_liquid_addresses_are_invalid" = "液态网络地址不能用于比特币网络";
-"id_liquid_asset" = "Liquid Asset";
+"id_liquid_asset" = "液态网络资产";
 "id_liquid_bitcoin_lbtc_represents" = "L-BTC代表着通过锁入和解出转移到液态网络上的比特币。每一枚L-BTC的背后都有等量的可验证的由液态联盟负责其安全的比特币做支持。";
 "id_login_with__enabled" = "启用通过%@登录";
 "id_manage_your_bitcoin_and_liquid" = "通过由Blockstream开发的AQUA钱包管理您的比特币和液态网络资产。";
 "id_max" = "最大金额";
 "id_maybe_later" = "稍后提醒";
 "id_more_options_coming_soon" = "更多选项即将到来";
+"id_most_users_back_up_their_wallet" = "80%的用户会在第一次使用时备份他们的钱包！";
 "id_my_notes" = "我的备忘";
 "id_my_qr" = "我的二维码";
+"id_network_error" = "Network error";
+"id_network_error_creating_wallet" = "Network error creating wallet";
+"id_network_error_restoring_wallet" = "Network error restoring wallet";
 "id_network_fee" = "手续费";
 "id_new_to_aqua" = "第一次使用AQUA？";
 "id_not_a_valid_address_to_send" = "不能往无效地址发送该资产";
@@ -94,6 +103,7 @@
 "id_only_visible_to_you" = "仅对自己可见";
 "id_oops_make_sure_you_have_written" = "请确保选择的单词是正确的。";
 "id_oops_you_dont_have_enough_lbtc" = "您没有足够的L-BTC来支付手续费。";
+"id_operation_failure" = "Operation Failure";
 "id_passcode" = "系统密码";
 "id_paste_from_clipboard" = "从剪贴板粘贴";
 "id_payment_sent" = "已发送转账！";
@@ -102,7 +112,7 @@
 "id_quit" = "退出";
 "id_rate_the_app" = "App评分";
 "id_receive" = "收款";
-"id_receive_any_liquid_asset" = "Receive any Liquid Asset";
+"id_receive_any_liquid_asset" = "接收任意液态网络资产";
 "id_received" = "收款完成";
 "id_redeposit" = "重新存入";
 "id_reference_exchange_rate" = "货币单位";
@@ -117,6 +127,7 @@
 "id_scan_qr_code" = "扫描二维码";
 "id_search_assets" = "搜索资产";
 "id_secure_your_aqua_wallet_with_a" = "用指纹识别保护AQUA钱包。";
+"id_select_asset" = "Select Asset";
 "id_select_word_d" = "选择单词%d";
 "id_send" = "发送";
 "id_sent" = "已发送";
@@ -135,6 +146,7 @@
 "id_tether_is_a_blockchainenabled" = "Tether是一个致力于将法币数字化的基于区块链的平台。并且试图用更现代化的方式解决传统金融基础设施的问题。";
 "id_the_12word_recovery_phrase_is" = "这12个助记词是您的钱包的备份。请用纸笔记下并保存在安全的地方。不要留下电子存档，否则有被黑客入侵的风险。";
 "id_the_fastest_way_to_secure_your" = "最快的保证AQUA安全性的方法。";
+"id_the_service_is_not_available_in" = "The service is not available in your country";
 "id_to" = "收款地址";
 "id_touch_id" = "指纹识别";
 "id_transaction_id" = "交易ID";
@@ -154,5 +166,6 @@
 "id_you_can_restore_your_wallet" = "您可以用备份钱包时写下的12个单词的助记词恢复钱包。只支持由AQUA生成的助记词。";
 "id_youll_need_to_set_up_a_wallet" = "请在购买比特币和液态网络资产之前先设置一个AQUA钱包";
 "id_youll_need_to_set_up_an_aqua" = "请在能够接收或购买比特币之前先设置一个AQUA钱包。";
+"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
 "id_your_recovery_phrase_is_secret" = "助记词是个人隐私，请授权查看并将其备份。";
 "id_your_wallet_will_support" = "您的钱包将支持比特币，L-BTC和其它液态网络资产。";

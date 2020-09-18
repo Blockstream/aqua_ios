@@ -42,7 +42,7 @@ class AuthenticationViewController: BaseViewController {
             return
         }
         guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-            return showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
+            return showError(NSLocalizedString("id_invalid_recovery_phrase", comment: ""))
         }
         do {
             try Mnemonic.write(mnemonic, safe: safe)

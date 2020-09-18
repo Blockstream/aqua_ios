@@ -1,11 +1,11 @@
 "id_20_countries_supported" = "Más de 20 países soportados.";
-"id_80_of_users_back_up_their" = "¡El 80% de los usuarios crean una copia de seguridad de su cartera la primera vez que la usan!";
 "id_a_quick_and_easy_way_to_secure" = "Una forma fácil y rápida de asegurar tu cartera AQUA.";
 "id_about_us" = "Acerca de";
-"id_add_a_note_to_yourself" = "Add a note to yourself";
+"id_add_a_note_to_yourself" = "Agregate una nota";
 "id_add_assets_to_get_started" = "Añade activos para empezar.";
 "id_add_to_wallet" = "Añadir a la cartera";
 "id_address_generation_failed" = "La creación de la dirección falló";
+"id_all" = "All";
 "id_already_have_an_aqua_wallet" = "¿Ya tienes una cartera AQUA?";
 "id_amount" = "Cantidad";
 "id_app_version" = "Versión de la app:";
@@ -26,6 +26,7 @@
 "id_buy_liquid_bitcoin_with_card_or" = "Comprar Liquid Bitcoin con tarjeta o Apple Pay";
 "id_cancel" = "Cancelar";
 "id_check_updates" = "Buscar actualizaciones";
+"id_choose_asset" = "Choose Asset";
 "id_clipboard_content_is_not_a" = "El contenido del portapapeles no es una dirección válida\n";
 "id_complete" = "Completado";
 "id_confirm" = "Confirmar";
@@ -51,6 +52,10 @@
 "id_enable_passcode_in_ios_settings" = "Activar Código PIN en los ajustes de iOS para continuar.";
 "id_enable_touch_id" = "Activar Touch ID";
 "id_enter_recovery_phrase" = "Introduce tu frase de recuperación";
+"id_error" = "Error";
+"id_error_creating_wallet" = "Error creating wallet";
+"id_error_logging_in" = "Error logging in";
+"id_error_opening_wyre_widget" = "Error opening Wyre widget";
 "id_error_restoring_your_wallet" = "Error al restaurar tu cartera";
 "id_exchange" = "Exchange";
 "id_face_id" = "Face ID";
@@ -68,7 +73,7 @@
 "id_intro" = "Introducción";
 "id_invalid_address" = "Dirección inválida";
 "id_invalid_amount" = "Cantidad inválida";
-"id_invalid_mnemonic" = "Mnemónico inválido";
+"id_invalid_recovery_phrase" = "Invalid recovery phrase";
 "id_ios_version" = "Versión de iOS:";
 "id_issuer" = "Emisor";
 "id_its_important_to_back_up_your" = "Es importante hacer una copia de seguridad de tu cartera escribiendo en papel tu frase de recuperación.";
@@ -78,15 +83,19 @@
 "id_liquid_101__what_is_liquid_and" = "Liquid 101 - ¿Qué es Liquid y cómo funciona?";
 "id_liquid_101_what_is_liquid_and" = "Liquid 101, ¿qué es Liquid y cómo funciona?";
 "id_liquid_addresses_are_invalid" = "Las direcciones Liquid no son válidas para transacciones Bitcoin";
-"id_liquid_asset" = "Liquid Asset";
+"id_liquid_asset" = "Activos de Liquid";
 "id_liquid_bitcoin_lbtc_represents" = "Liquid Bitcoin (L-BTC) representa bitcoin (BTC) que ha sido transferido a la Red Liquid a través de un doble-anclaje (two-way peg). Cada L-BTC es está respaldado de forma verificable por una cantidad igual de BTC asegurados por la Federación Liquid.";
 "id_login_with__enabled" = "Inicia sesión con  %@ activo";
 "id_manage_your_bitcoin_and_liquid" = "Administra tus Bitcoin y activos de Liquid con la cartera AQUA, de la mano del equipo de Blockstream.";
 "id_max" = "Máximo";
 "id_maybe_later" = "Tal vez luego";
 "id_more_options_coming_soon" = "Pronto más opciones";
+"id_most_users_back_up_their_wallet" = "¡La mayoría de los usuarios hacen una copia de seguridad de su cartera al primer uso!";
 "id_my_notes" = "Mis Notas";
 "id_my_qr" = "Mi código QR";
+"id_network_error" = "Network error";
+"id_network_error_creating_wallet" = "Network error creating wallet";
+"id_network_error_restoring_wallet" = "Network error restoring wallet";
 "id_network_fee" = "Comisión de la Red";
 "id_new_to_aqua" = "¿Eres nuevo en AQUA?";
 "id_not_a_valid_address_to_send" = "No es una dirección válida para enviar este activo";
@@ -94,6 +103,7 @@
 "id_only_visible_to_you" = "Solo visible para ti";
 "id_oops_make_sure_you_have_written" = "¡Ups! Asegúrate de que has escrito correctamente las palabras.";
 "id_oops_you_dont_have_enough_lbtc" = "¡Ups! No tienes suficientes L-BTC para pagar la comisión de la transacción.";
+"id_operation_failure" = "Operation Failure";
 "id_passcode" = "Código PIN";
 "id_paste_from_clipboard" = "Pegar desde el portapapeles";
 "id_payment_sent" = "¡Pago Enviado!";
@@ -102,7 +112,7 @@
 "id_quit" = "Cerrar";
 "id_rate_the_app" = "Valora la App";
 "id_receive" = "Recibir";
-"id_receive_any_liquid_asset" = "Receive any Liquid Asset";
+"id_receive_any_liquid_asset" = "Reciba cualquier activo de Liquid";
 "id_received" = "Recibido";
 "id_redeposit" = "Volver a depositar";
 "id_reference_exchange_rate" = "Tasa de Cambio de Referencia";
@@ -117,6 +127,7 @@
 "id_scan_qr_code" = "Escanear código QR";
 "id_search_assets" = "Buscar activos";
 "id_secure_your_aqua_wallet_with_a" = "Asegura tu cartera de AQUA con solo presionar el pulgar.";
+"id_select_asset" = "Select Asset";
 "id_select_word_d" = "Selecciona la palabra #%d";
 "id_send" = "Enviar";
 "id_sent" = "Enviado";
@@ -135,6 +146,7 @@
 "id_tether_is_a_blockchainenabled" = "Tether es una plataforma blockchain diseñada para facilitar el uso de monedas fiat de forma digital. Tether es un disruptor del sistema financiero convencional a través de una forma más moderna del dinero. ";
 "id_the_12word_recovery_phrase_is" = "La frase de recuperación de 12 palabras es la copia de seguridad de tu cartera. Escríbela usando papel y lápiz y guárdala en un lugar seguro. No hagas copias digitales como capturas de pantalla, éstas son más fáciles de ser hackeadas.";
 "id_the_fastest_way_to_secure_your" = "La forma más rápida de asegurar tu cartera AQUA.";
+"id_the_service_is_not_available_in" = "The service is not available in your country";
 "id_to" = "A";
 "id_touch_id" = "Touch ID";
 "id_transaction_id" = "ID de transacción";
@@ -154,5 +166,6 @@
 "id_you_can_restore_your_wallet" = "Puedes restaurar tu cartera usando la frase de recuperación de 12 palabras que escribiste durante el proceso de creación de la cartera. Sólo están soportadas frases de recuperación creadas en AQUA.";
 "id_youll_need_to_set_up_a_wallet" = "Necesitas crear una cartera de AQUA antes de poder comprar Bitcoin y activos de Liquid.";
 "id_youll_need_to_set_up_an_aqua" = "Necesitas crear una cartera de AQUA antes de poder recibir o comprar Bitcoin.";
+"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
 "id_your_recovery_phrase_is_secret" = "Tu frase recuperación es secreta, autentícate para verla y crear una copia de seguridad.";
 "id_your_wallet_will_support" = "Tu cartera soportará Bitcoin, Liquid Bitcoin, y otros activos de Liquid.";

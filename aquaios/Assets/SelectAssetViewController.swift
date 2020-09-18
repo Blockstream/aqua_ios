@@ -17,7 +17,7 @@ class SelectAssetViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = flow == .send ?  "Choose Asset" : "Select Asset"
+        navigationItem.title = flow == .send ?  "id_choose_asset" : "id_select_asset"
         navigationController?.setNavigationBarHidden(false, animated: false)
         if flow == .receive {
             showCloseButton(on: .left)

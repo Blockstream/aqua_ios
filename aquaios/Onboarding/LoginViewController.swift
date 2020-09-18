@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
         }.done { _ in
             self.performSegue(withIdentifier: "next", sender: nil)
         }.catch { _ in
-            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString("id_login_failed", comment: ""), preferredStyle: .alert)
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString("id_error_logging_in", comment: ""), preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("id_retry", comment: ""), style: .default, handler: { _ in self.login(mnemonic) }))
             self.present(alert, animated: true)
         }

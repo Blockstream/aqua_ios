@@ -1,11 +1,11 @@
 "id_20_countries_supported" = "20カ国以上に対応。";
-"id_80_of_users_back_up_their" = "80%のユーザーが初回起動時にウォレットをバックアップしています！";
 "id_a_quick_and_easy_way_to_secure" = "AQUAウォレットを手軽に保護する方法です。";
 "id_about_us" = "Blockstreamについて";
-"id_add_a_note_to_yourself" = "Add a note to yourself";
+"id_add_a_note_to_yourself" = "自分用にメモを残す";
 "id_add_assets_to_get_started" = "まずはアセットを追加しましょう。";
 "id_add_to_wallet" = "ウォレットに追加";
 "id_address_generation_failed" = "アドレスの生成に失敗しました";
+"id_all" = "All";
 "id_already_have_an_aqua_wallet" = "既にAQUAウォレットをお持ちですか？";
 "id_amount" = "数量";
 "id_app_version" = "アプリのバージョン：";
@@ -26,6 +26,7 @@
 "id_buy_liquid_bitcoin_with_card_or" = "カードまたはApple PayでLiquid Bitcoinを購入する";
 "id_cancel" = "取り消し";
 "id_check_updates" = "アプリの更新を確認する";
+"id_choose_asset" = "Choose Asset";
 "id_clipboard_content_is_not_a" = "クリップボードの中身は有効なアドレスではありません\n";
 "id_complete" = "完了する";
 "id_confirm" = "同意する";
@@ -51,6 +52,10 @@
 "id_enable_passcode_in_ios_settings" = "続行するにはiOSの設定でパスコード認証を有効化してください。";
 "id_enable_touch_id" = "Touch IDを有効化";
 "id_enter_recovery_phrase" = "リカバリーフレーズを入力してください";
+"id_error" = "Error";
+"id_error_creating_wallet" = "Error creating wallet";
+"id_error_logging_in" = "Error logging in";
+"id_error_opening_wyre_widget" = "Error opening Wyre widget";
 "id_error_restoring_your_wallet" = "ウォレットの復元に失敗しました";
 "id_exchange" = "購入する";
 "id_face_id" = "Face ID";
@@ -68,7 +73,7 @@
 "id_intro" = "紹介文";
 "id_invalid_address" = "不正なアドレス";
 "id_invalid_amount" = "不正な数量";
-"id_invalid_mnemonic" = "不正なニーモニック";
+"id_invalid_recovery_phrase" = "Invalid recovery phrase";
 "id_ios_version" = "iOSバージョン：";
 "id_issuer" = "発行元";
 "id_its_important_to_back_up_your" = "リカバリーフレーズを書き留めることでウォレットをバックアップすることは重要です。";
@@ -78,15 +83,19 @@
 "id_liquid_101__what_is_liquid_and" = "Liquid入門 ー Liquidとは？その仕組みは？";
 "id_liquid_101_what_is_liquid_and" = "Liquid入門、Liquidとその仕組み";
 "id_liquid_addresses_are_invalid" = "Liquidアドレスにビットコインを送ることはできません";
-"id_liquid_asset" = "Liquid Asset";
+"id_liquid_asset" = "Liquidアセット";
 "id_liquid_bitcoin_lbtc_represents" = "Liquid Bitcoin (L-BTC)とは、two-wayペグを通してLiquidネットワークに移されたビットコイン(BTC)を表すものです。L-BTCはすべて検証可能な形でLiquidフェデレーションが管理する同量のBTCに裏付けられています。";
 "id_login_with__enabled" = "%@を有効にしてログインする";
 "id_manage_your_bitcoin_and_liquid" = "Blockstreamのチームが開発するAQUAウォレットでビットコインとLiquidアセットを管理しましょう。";
 "id_max" = "Max";
 "id_maybe_later" = "あとでする";
 "id_more_options_coming_soon" = "支払手段は今後追加予定";
+"id_most_users_back_up_their_wallet" = "大半のユーザーは初回起動時にウォレットをバックアップしています！";
 "id_my_notes" = "メモ";
 "id_my_qr" = "My QR";
+"id_network_error" = "Network error";
+"id_network_error_creating_wallet" = "Network error creating wallet";
+"id_network_error_restoring_wallet" = "Network error restoring wallet";
 "id_network_fee" = "ネットワーク手数料";
 "id_new_to_aqua" = "AQUAは初めてですか？";
 "id_not_a_valid_address_to_send" = "このアセットを送信するには不適切なアドレスです";
@@ -94,6 +103,7 @@
 "id_only_visible_to_you" = "メモの内容はあなたしか見れません";
 "id_oops_make_sure_you_have_written" = "エラー。単語を正しく書き留めたか、再度ご確認ください。";
 "id_oops_you_dont_have_enough_lbtc" = "エラー。L-BTCの残高不足で送金手数料が払えません。";
+"id_operation_failure" = "Operation Failure";
 "id_passcode" = "パスコード";
 "id_paste_from_clipboard" = "クリップボードからペーストする";
 "id_payment_sent" = "支払い成功！";
@@ -102,7 +112,7 @@
 "id_quit" = "閉じる";
 "id_rate_the_app" = "アプリを評価する";
 "id_receive" = "受け取る";
-"id_receive_any_liquid_asset" = "Receive any Liquid Asset";
+"id_receive_any_liquid_asset" = "Liquidアセットを受け取る";
 "id_received" = "受け取り済み";
 "id_redeposit" = "受け取りなおす";
 "id_reference_exchange_rate" = "参照レートの通貨";
@@ -117,6 +127,7 @@
 "id_scan_qr_code" = "QRコードをスキャンする";
 "id_search_assets" = "アセットを検索する";
 "id_secure_your_aqua_wallet_with_a" = "親指のひと押しでAQUAを保護します。";
+"id_select_asset" = "Select Asset";
 "id_select_word_d" = "%d番目の単語を選んでください";
 "id_send" = "送る";
 "id_sent" = "送信済み";
@@ -135,6 +146,7 @@
 "id_tether_is_a_blockchainenabled" = "テザーは法定通貨のデジタルな利用を可能にするブロックチェーン上のプラットフォームです。現代にマッチしたお金へのアプローチを通してテザーは従来の金融システムに変化をもたらします。";
 "id_the_12word_recovery_phrase_is" = "この12単語のリカバリーフレーズがあなたのウォレットのバックアップです。ペンを使って紙に書きとめ、どこか安全な場所に保管してください。スクリーンショットなどデジタルな形で保管するのは流出の危険性がより大きいので避けてください。";
 "id_the_fastest_way_to_secure_your" = "AQUAウォレットを最速で保護する方法です。";
+"id_the_service_is_not_available_in" = "The service is not available in your country";
 "id_to" = "宛先";
 "id_touch_id" = "Touch ID";
 "id_transaction_id" = "トランザクションID";
@@ -154,5 +166,6 @@
 "id_you_can_restore_your_wallet" = "バックアップの際に書きとめた12単語のリカバリーフレーズを利用してウォレットを復元することができます。AQUAウォレットで生成されたリカバリーフレーズにのみ対応しています。";
 "id_youll_need_to_set_up_a_wallet" = "ビットコインやLiquidアセットを購入する前にAQUAウォレットを作成する必要があります";
 "id_youll_need_to_set_up_an_aqua" = "ビットコインを受け取ったり購入するにはAQUAウォレットを作成する必要があります。";
+"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
 "id_your_recovery_phrase_is_secret" = "リカバリーフレーズは機密情報です。バックアップのために確認する場合は、認証が必要です。";
 "id_your_wallet_will_support" = "ビットコイン、Liquid Bitcoin、その他のLiquidアセットに対応したウォレットを作成します。";

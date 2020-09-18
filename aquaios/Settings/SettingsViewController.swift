@@ -55,7 +55,7 @@ class SettingsViewController: BaseViewController {
 
     func enableSafeMnemonic() {
         guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-            return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
+            return self.showError(NSLocalizedString("id_invalid_recovery_phrase", comment: ""))
         }
         try? Mnemonic.delete()
         try? Mnemonic.write(mnemonic, safe: true)
@@ -69,7 +69,7 @@ class SettingsViewController: BaseViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
         alert.addAction(UIAlertAction(title: String(format: NSLocalizedString("id_disable_", comment: ""), authLabel()), style: .destructive) { _ in
             guard let mnemonic = try? Bitcoin.shared.session?.getMnemonicPassphrase(password: "") else {
-                return self.showError(NSLocalizedString("id_invalid_mnemonic", comment: ""))
+                return self.showError(NSLocalizedString("id_invalid_recovery_phrase", comment: ""))
             }
             try? Mnemonic.delete()
             try? Mnemonic.write(mnemonic, safe: false)

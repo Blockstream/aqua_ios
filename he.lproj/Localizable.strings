@@ -1,11 +1,11 @@
 "id_20_countries_supported" = "20+ countries supported.";
-"id_80_of_users_back_up_their" = "80% of users back up their wallet on first-time use!";
 "id_a_quick_and_easy_way_to_secure" = "A quick and easy way to secure your AQUA wallet.";
 "id_about_us" = "About Us";
 "id_add_a_note_to_yourself" = "Add a note to yourself";
 "id_add_assets_to_get_started" = "Add assets to get started.";
 "id_add_to_wallet" = "Add to wallet";
 "id_address_generation_failed" = "Address generation failed";
+"id_all" = "All";
 "id_already_have_an_aqua_wallet" = "Already have an AQUA wallet?";
 "id_amount" = "Amount";
 "id_app_version" = "App Version:";
@@ -26,6 +26,7 @@
 "id_buy_liquid_bitcoin_with_card_or" = "Buy Liquid Bitcoin with card or Apple Pay";
 "id_cancel" = "Cancel";
 "id_check_updates" = "Check Updates";
+"id_choose_asset" = "Choose Asset";
 "id_clipboard_content_is_not_a" = "Clipboard content is not a valid address\n";
 "id_complete" = "Complete";
 "id_confirm" = "Confirm";
@@ -51,6 +52,10 @@
 "id_enable_passcode_in_ios_settings" = "Enable Passcode in iOS settings to continue.";
 "id_enable_touch_id" = "Enable Touch ID";
 "id_enter_recovery_phrase" = "Enter recovery phrase";
+"id_error" = "Error";
+"id_error_creating_wallet" = "Error creating wallet";
+"id_error_logging_in" = "Error logging in";
+"id_error_opening_wyre_widget" = "Error opening Wyre widget";
 "id_error_restoring_your_wallet" = "Error restoring your wallet";
 "id_exchange" = "Exchange";
 "id_face_id" = "Face ID";
@@ -68,7 +73,7 @@
 "id_intro" = "Intro";
 "id_invalid_address" = "Invalid address";
 "id_invalid_amount" = "Invalid amount";
-"id_invalid_mnemonic" = "Invalid mnemonic";
+"id_invalid_recovery_phrase" = "Invalid recovery phrase";
 "id_ios_version" = "iOS Version:";
 "id_issuer" = "Issuer";
 "id_its_important_to_back_up_your" = "It’s important to back up your wallet by writing down your recovery phrase.";
@@ -85,8 +90,12 @@
 "id_max" = "Max";
 "id_maybe_later" = "Maybe Later";
 "id_more_options_coming_soon" = "More options coming soon";
+"id_most_users_back_up_their_wallet" = "Most users back up their wallet on first-time use!";
 "id_my_notes" = "My Notes";
 "id_my_qr" = "My QR";
+"id_network_error" = "Network error";
+"id_network_error_creating_wallet" = "Network error creating wallet";
+"id_network_error_restoring_wallet" = "Network error restoring wallet";
 "id_network_fee" = "Network Fee";
 "id_new_to_aqua" = "New to AQUA?";
 "id_not_a_valid_address_to_send" = "Not a valid address to send this asset";
@@ -94,6 +103,7 @@
 "id_only_visible_to_you" = "Only visible to you";
 "id_oops_make_sure_you_have_written" = "Oops. Make sure you have written down the words correctly.";
 "id_oops_you_dont_have_enough_lbtc" = "Oops! You don’t have enough L-BTC to cover the transaction fee.";
+"id_operation_failure" = "Operation Failure";
 "id_passcode" = "Passcode";
 "id_paste_from_clipboard" = "Paste from clipboard";
 "id_payment_sent" = "Payment Sent!";
@@ -117,6 +127,7 @@
 "id_scan_qr_code" = "Scan QR Code";
 "id_search_assets" = "Search assets";
 "id_secure_your_aqua_wallet_with_a" = "Secure your AQUA wallet with a simple thumb press.";
+"id_select_asset" = "Select Asset";
 "id_select_word_d" = "Select word #%d";
 "id_send" = "Send";
 "id_sent" = "Sent";
@@ -135,6 +146,7 @@
 "id_tether_is_a_blockchainenabled" = "Tether is a blockchain-enabled platform designed to facilitate the use of fiat currencies in a digital manner. Tether works to disrupt the conventional financial system via a more modern approach to money.";
 "id_the_12word_recovery_phrase_is" = "The 12-word recovery phrase is your wallet's backup. Write it down using a pen and paper and store it somewhere safe. Do not make a digital copy such as a screenshot—these can be more easily hacked.";
 "id_the_fastest_way_to_secure_your" = "The fastest way to secure your AQUA wallet.";
+"id_the_service_is_not_available_in" = "The service is not available in your country";
 "id_to" = "To";
 "id_touch_id" = "Touch ID";
 "id_transaction_id" = "Transaction ID";
@@ -154,5 +166,6 @@
 "id_you_can_restore_your_wallet" = "You can restore your wallet using the 12-word recovery phrase you wrote down during the wallet backup process. Only recovery phrases generated in AQUA are supported.";
 "id_youll_need_to_set_up_a_wallet" = "You'll need to set up a wallet in AQUA before you can buy Bitcoin and Liquid assets";
 "id_youll_need_to_set_up_an_aqua" = "You'll need to set up an AQUA wallet before being able to receive or buy bitcoin.";
+"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
 "id_your_recovery_phrase_is_secret" = "Your recovery phrase is secret, authenticate to see it and back it up.";
 "id_your_wallet_will_support" = "Your wallet will support Bitcoin, Liquid Bitcoin, and other Liquid assets.";

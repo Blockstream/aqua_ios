@@ -1,11 +1,11 @@
 "id_20_countries_supported" = "20여 개국 지원";
-"id_80_of_users_back_up_their" = "사용자의 80%가 최초 사용 시 월렛을 백업합니다!";
 "id_a_quick_and_easy_way_to_secure" = "AQUA 월렛을 안전하게 지키는 빠르고 쉬운 방법.";
 "id_about_us" = "회사 소개";
-"id_add_a_note_to_yourself" = "Add a note to yourself";
+"id_add_a_note_to_yourself" = "나에게 메모 추가";
 "id_add_assets_to_get_started" = "시작 전 월렛 충전하기";
 "id_add_to_wallet" = "월렛에 충전";
 "id_address_generation_failed" = "주소 생성 실패";
+"id_all" = "All";
 "id_already_have_an_aqua_wallet" = "이미 AQUA 월렛을 가지고 계신가요?";
 "id_amount" = "금액";
 "id_app_version" = "앱 버전 :";
@@ -26,6 +26,7 @@
 "id_buy_liquid_bitcoin_with_card_or" = "신용카드 또는 Apple Pay로 Liquid 비트코인 매입하기";
 "id_cancel" = "취소";
 "id_check_updates" = "업데이트 확인하기";
+"id_choose_asset" = "Choose Asset";
 "id_clipboard_content_is_not_a" = "클립보드 콘텐츠가 유효한 주소가 아닙니다\n";
 "id_complete" = "완료";
 "id_confirm" = "확인";
@@ -51,6 +52,10 @@
 "id_enable_passcode_in_ios_settings" = "계속하려면 iOS 설정에서 패스코드를 활성화하세요.";
 "id_enable_touch_id" = "Touch ID 활성화";
 "id_enter_recovery_phrase" = "복구 문구 입력하기";
+"id_error" = "Error";
+"id_error_creating_wallet" = "Error creating wallet";
+"id_error_logging_in" = "Error logging in";
+"id_error_opening_wyre_widget" = "Error opening Wyre widget";
 "id_error_restoring_your_wallet" = "월렛 복구 중 오류 발생";
 "id_exchange" = "교환";
 "id_face_id" = "Face ID";
@@ -68,7 +73,7 @@
 "id_intro" = "소개";
 "id_invalid_address" = "주소가 유효하지 않습니다";
 "id_invalid_amount" = "금액이 유효하지 않습니다";
-"id_invalid_mnemonic" = "니모닉이 유효하지 않습니다";
+"id_invalid_recovery_phrase" = "Invalid recovery phrase";
 "id_ios_version" = "iOS 버전 :";
 "id_issuer" = "발행자";
 "id_its_important_to_back_up_your" = "복구 문구를 적어 월렛을 백업하는 것이 중요합니다.";
@@ -78,15 +83,19 @@
 "id_liquid_101__what_is_liquid_and" = "Liquid 입문 - Liquid는 무엇이고 어떻게 운영되나";
 "id_liquid_101_what_is_liquid_and" = "Liquid 입문, Liquid는 무엇이고 어떻게 운영되나요?";
 "id_liquid_addresses_are_invalid" = "Liquid 주소는 비트코인 거래에 유효하지 않습니다.";
-"id_liquid_asset" = "Liquid Asset";
+"id_liquid_asset" = "Liquid 자산";
 "id_liquid_bitcoin_lbtc_represents" = "Liquid 비트코인(L-BTC)은 양방향 페그를 통해 Liquid Network로 전송된 비트코인(BTC)을 나타냅니다. 각 L-BTC는 Liquid Federation에서 확보된 동일한 금액의 BTC로 검증 가능하게 지원됩니다.";
 "id_login_with__enabled" = "%@을 이용한 로그인 활성화";
 "id_manage_your_bitcoin_and_liquid" = "Blockstream 팀이 제공하는 AQUA 월렛으로 비트코인과 Liquid 자산을 관리하세요.";
 "id_max" = "최대";
 "id_maybe_later" = "다음에";
 "id_more_options_coming_soon" = "곧 더 많은 옵션이 추가됩니다";
+"id_most_users_back_up_their_wallet" = "사용자 대부분이 최초 사용 시 월렛을 백업합니다!";
 "id_my_notes" = "나의 노트";
 "id_my_qr" = "나의 QR";
+"id_network_error" = "Network error";
+"id_network_error_creating_wallet" = "Network error creating wallet";
+"id_network_error_restoring_wallet" = "Network error restoring wallet";
 "id_network_fee" = "네트워크 수수료";
 "id_new_to_aqua" = "AQUA를 처음 사용하시나요?";
 "id_not_a_valid_address_to_send" = "자산을 보낼 수 있는 유효한 주소가 아닙니다.";
@@ -94,6 +103,7 @@
 "id_only_visible_to_you" = "나에게만 표시됨";
 "id_oops_make_sure_you_have_written" = "이런, 단어를 올바르게 적었는지 확인해 주세요.";
 "id_oops_you_dont_have_enough_lbtc" = "이런! 거래 수수료를 지불할 수 있는 L-BTC가 충분하지 않습니다.";
+"id_operation_failure" = "Operation Failure";
 "id_passcode" = "패스코드";
 "id_paste_from_clipboard" = "클립보드에서 붙여 넣기";
 "id_payment_sent" = "송금 완료!";
@@ -102,7 +112,7 @@
 "id_quit" = "중지";
 "id_rate_the_app" = "앱 평가하기";
 "id_receive" = "수신";
-"id_receive_any_liquid_asset" = "Receive any Liquid Asset";
+"id_receive_any_liquid_asset" = "Liquid 자산 받기";
 "id_received" = "수신 완료";
 "id_redeposit" = "재충전";
 "id_reference_exchange_rate" = "기준 환율";
@@ -117,6 +127,7 @@
 "id_scan_qr_code" = "QR 코드 스캔";
 "id_search_assets" = "자산 검색";
 "id_secure_your_aqua_wallet_with_a" = "간단히 엄지로 눌러 AQUA 월렛을 보호하세요.";
+"id_select_asset" = "Select Asset";
 "id_select_word_d" = "단어 #%d 선택";
 "id_send" = "보내기";
 "id_sent" = "보내기 완료";
@@ -135,6 +146,7 @@
 "id_tether_is_a_blockchainenabled" = "Tether는 법정 화폐를 디지털 방식으로 수월하게 사용할 수 있도록 설계된 블록체인 기반의 플랫폼입니다. Tether는 보다 현대적인 화폐 접근 방식을 통해 기존의 금융 시스템을 혁파합니다.";
 "id_the_12word_recovery_phrase_is" = "12개 단어로 구성된 복구 문구는 월렛의 백업입니다. 복구 문구는 펜으로 종이에 적어두고 안전한 곳에 보관하세요. 화면 캡처 같은 디지털 사본은 만들지 마세요. 더 쉽게 해킹될 수 있습니다.";
 "id_the_fastest_way_to_secure_your" = "AQUA 월렛을 안전하게 지키는 가장 빠른 방법.";
+"id_the_service_is_not_available_in" = "The service is not available in your country";
 "id_to" = "수신인";
 "id_touch_id" = "Touch ID";
 "id_transaction_id" = "거래 ID";
@@ -154,5 +166,6 @@
 "id_you_can_restore_your_wallet" = "월렛 백업 과정에서 적어둔 12개 단어로 구성된 복구 문구를 사용하여 지갑을 복구할 수 있습니다. AQUA에서 생성된 복구 문구만 지원됩니다.";
 "id_youll_need_to_set_up_a_wallet" = "비트코인 및 Liquid 자산을 매입하기 전에 AQUA에서 월렛을 설정해야 합니다.";
 "id_youll_need_to_set_up_an_aqua" = "비트코인을 받거나 매입하려면 먼저 AQUA 월렛을 설정해야 합니다.";
+"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
 "id_your_recovery_phrase_is_secret" = "복구 문구는 비밀입니다. 복구 문구를 확인하고 백업하려면 인증하세요.";
 "id_your_wallet_will_support" = "월렛은 비트코인, Liquid Bitcoin, 기타 Liquid 자산을 지원합니다.";

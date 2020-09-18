@@ -53,9 +53,9 @@ class RestoreWordsViewController: BaseViewController, UITextFieldDelegate {
         }.catch { error in
             let message: String
             if let err = error as? GaError, err != GaError.GenericError {
-                message = NSLocalizedString("id_connection_failed", comment: "")
+                message = NSLocalizedString("id_network_error_restoring_wallet", comment: "")
             } else {
-                message = NSLocalizedString("id_login_failed", comment: "")
+                message = NSLocalizedString("id_error_restoring_your_wallet", comment: "")
             }
             self.showError(message)
         }

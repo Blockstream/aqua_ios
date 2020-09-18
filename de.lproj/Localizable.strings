@@ -1,11 +1,11 @@
 "id_20_countries_supported" = "Über 20 Länder werden unterstützt.";
-"id_80_of_users_back_up_their" = "80% der User führen das Backup ihrer Wallet bei der ersten Nutzung durch!";
 "id_a_quick_and_easy_way_to_secure" = "Eine schnelle und einfache Möglichkeit, deine AQUA-Wallet zu sichern.";
 "id_about_us" = "Über uns";
-"id_add_a_note_to_yourself" = "Add a note to yourself";
+"id_add_a_note_to_yourself" = "Eine Notiz für dich selbst hinzufügen";
 "id_add_assets_to_get_started" = "Füge Assets hinzu um zu loszulegen.";
 "id_add_to_wallet" = "Zu Wallet hinzufügen";
 "id_address_generation_failed" = "Adressgenerierung fehlgeschlagen";
+"id_all" = "All";
 "id_already_have_an_aqua_wallet" = "Hast du bereits eine AQUA-Wallet?";
 "id_amount" = "Betrag";
 "id_app_version" = "App-Version:";
@@ -26,6 +26,7 @@
 "id_buy_liquid_bitcoin_with_card_or" = "Liquid Bitcoin mit Karte oder Apple Pay kaufen";
 "id_cancel" = "Abbrechen";
 "id_check_updates" = "Updates prüfen";
+"id_choose_asset" = "Choose Asset";
 "id_clipboard_content_is_not_a" = "Der Inhalt der Zwischenablage ist keine gültige Adresse\n";
 "id_complete" = "Abgeschlossen";
 "id_confirm" = "Bestätigen";
@@ -51,6 +52,10 @@
 "id_enable_passcode_in_ios_settings" = "Aktiviere Passcodes in den iOS-Einstellungen, um fortzufahren.";
 "id_enable_touch_id" = "Touch ID aktivieren";
 "id_enter_recovery_phrase" = "Wiederherstellungsphrase eingeben";
+"id_error" = "Error";
+"id_error_creating_wallet" = "Error creating wallet";
+"id_error_logging_in" = "Error logging in";
+"id_error_opening_wyre_widget" = "Error opening Wyre widget";
 "id_error_restoring_your_wallet" = "Fehler bei der Wiederherstellung der Wallet";
 "id_exchange" = "Austausch";
 "id_face_id" = "Face ID";
@@ -68,7 +73,7 @@
 "id_intro" = "Einführung";
 "id_invalid_address" = "Ungültige Adresse";
 "id_invalid_amount" = "Ungültiger Betrag";
-"id_invalid_mnemonic" = "Ungültige Mnemonik";
+"id_invalid_recovery_phrase" = "Invalid recovery phrase";
 "id_ios_version" = "iOS Version:";
 "id_issuer" = "Herausgeber";
 "id_its_important_to_back_up_your" = "Es ist wichtig, die Wallet zu sichern, indem du deinen Wiederherstellungssatz aufschreibst.";
@@ -78,15 +83,19 @@
 "id_liquid_101__what_is_liquid_and" = "Liquid 101 - Was ist Liquid und wie funktioniert es?";
 "id_liquid_101_what_is_liquid_and" = "Liquid 101, was ist Liquid und wie funktioniert es?";
 "id_liquid_addresses_are_invalid" = "Liquid-Adressen sind für Bitcoin-Transaktionen ungültig";
-"id_liquid_asset" = "Liquid Asset";
+"id_liquid_asset" = "Liquid-Asset";
 "id_liquid_bitcoin_lbtc_represents" = "Liquid Bitcoin (L-BTC) repräsentiert Bitcoin (BTC), die über einen bidirektionalen Peg an das Liquid Network übertragen wurden. Jede L-BTC Einheit ist nachweislich durch einen gleichen Betrag an BTC gesichert, der von der Liquid Federation hinterlegt wurde.";
 "id_login_with__enabled" = "Einloggen mit %@-Aktivierung";
 "id_manage_your_bitcoin_and_liquid" = "Verwalte deine Bitcoin und Liquid Assets mit der AQUA-Wallet, die dir vom Blockstream-Team zur Verfügung gestellt wird.";
 "id_max" = "Max.";
 "id_maybe_later" = "Vielleicht später";
 "id_more_options_coming_soon" = "Weitere Optionen folgen schon bald";
+"id_most_users_back_up_their_wallet" = "Die meisten Nutzer sichern ihre Wallet beim ersten Gebrauch!";
 "id_my_notes" = "Meine Notizen";
 "id_my_qr" = "Mein QR-Code";
+"id_network_error" = "Network error";
+"id_network_error_creating_wallet" = "Network error creating wallet";
+"id_network_error_restoring_wallet" = "Network error restoring wallet";
 "id_network_fee" = "Netzwerk-Gebühr";
 "id_new_to_aqua" = "Neu bei AQUA?";
 "id_not_a_valid_address_to_send" = "Keine gültige Adresse zum Versenden dieses Assets";
@@ -94,6 +103,7 @@
 "id_only_visible_to_you" = "Nur für dich sichtbar";
 "id_oops_make_sure_you_have_written" = "Hoppla. Vergewissere dich, dass du die Wörter richtig aufgeschrieben hast.";
 "id_oops_you_dont_have_enough_lbtc" = "Hoppla! Du hast nicht genug L-BTC, um die Transaktionsgebühr zu decken.";
+"id_operation_failure" = "Operation Failure";
 "id_passcode" = "Passcode";
 "id_paste_from_clipboard" = "Aus Zwischenablage einfügen";
 "id_payment_sent" = "Zahlung gesendet!";
@@ -102,7 +112,7 @@
 "id_quit" = "Beenden";
 "id_rate_the_app" = "Bewerte die App";
 "id_receive" = "Empfangen";
-"id_receive_any_liquid_asset" = "Receive any Liquid Asset";
+"id_receive_any_liquid_asset" = "Beliebige Liquid-Assets empfangen";
 "id_received" = "Erhalten";
 "id_redeposit" = "Erneut einzahlen";
 "id_reference_exchange_rate" = "Referenz-Wechselkurs";
@@ -117,6 +127,7 @@
 "id_scan_qr_code" = "QR-Code scannen";
 "id_search_assets" = "Assets durchsuchen";
 "id_secure_your_aqua_wallet_with_a" = "Sichere deine AQUA-Wallet mit einem einfachen Fingerdruck.";
+"id_select_asset" = "Select Asset";
 "id_select_word_d" = "Wähle Wort #%d";
 "id_send" = "Senden";
 "id_sent" = "Gesendet";
@@ -135,6 +146,7 @@
 "id_tether_is_a_blockchainenabled" = "Tether ist eine Blockchain-fähige Plattform, die die Verwendung von Fiat-Währungen auf digitale Weise erleichtern soll. Tether arbeitet daran, das konventionelle Finanzsystem zu erschüttern, durch einen zeitgemäßeren Umgang mit Geld.";
 "id_the_12word_recovery_phrase_is" = "Der 12-Wörter-Wiederherstellungssatz ist die Sicherung deiner Wallet. Notiere ihn mit Stift und Papier und verwahre ihn an einem sicheren Ort. Erstelle keine digitale Kopie wie z.B. einen Screenshot - dieser lässt sich einfacher hacken.";
 "id_the_fastest_way_to_secure_your" = "Der schnellste Weg, deine AQUA-Wallet zu sichern.";
+"id_the_service_is_not_available_in" = "The service is not available in your country";
 "id_to" = "An";
 "id_touch_id" = "Touch ID";
 "id_transaction_id" = "Transaktions-ID";
@@ -154,5 +166,6 @@
 "id_you_can_restore_your_wallet" = "Du kannst deine Wallet mit dem 12-Wort-Wiederherstellungssatz wiederherstellen, den du während des Wallet-Backup-Prozesses aufgeschrieben hast. Es werden nur Wiederherstellungssätze unterstützt, die in AQUA generiert wurden.";
 "id_youll_need_to_set_up_a_wallet" = "Du musst eine Wallet in AQUA einrichten, bevor du Bitcoin und Liquid-Assets kaufen kannst";
 "id_youll_need_to_set_up_an_aqua" = "Du musst eine AQUA-Wallet einrichten, bevor du Bitcoin erhalten oder kaufen kannst.";
+"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
 "id_your_recovery_phrase_is_secret" = "Dein Wiederherstellungssatz ist geheim, authentifiziere dich, um ihn zu sehen und zu sichern.";
 "id_your_wallet_will_support" = "Deine Wallet unterstützt Bitcoin, Liquid Bitcoin und andere Liquid Assets.";

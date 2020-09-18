@@ -65,11 +65,11 @@ class BuyContainerViewController: UIViewController {
             if let error = err as? WyreError {
                 switch error {
                 case .offline:
-                    self.showError(NSLocalizedString("Offline", comment: ""))
+                    self.showError(NSLocalizedString("id_network_error", comment: ""))
                 case .unsupportedCountry:
-                    self.showError(NSLocalizedString("Unsupported country", comment: ""))
+                    self.showError(NSLocalizedString("id_the_service_is_not_available_in", comment: ""))
                 case .abort:
-                    self.showError(NSLocalizedString("Operation Failure", comment: ""))
+                    self.showError(NSLocalizedString("id_operation_failure", comment: ""))
                 }
             }
         }
