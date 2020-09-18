@@ -115,9 +115,8 @@ class BuyViewController: BaseViewController {
                 if error != nil {
                     return seal.reject(WyreError.offline)
                 }
-                if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [[String: String]] {
-                    print(json)
-                    let list = json.map { $0["code"] ?? "" }
+                if let list = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String] {
+                    print(list)
                     return seal.fulfill(list)
                 }
                 return seal.reject(WyreError.abort)
