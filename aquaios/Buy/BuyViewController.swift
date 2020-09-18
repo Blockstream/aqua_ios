@@ -13,9 +13,17 @@ class BuyViewController: BaseViewController {
     private var wyreAllowed: Bool = false
     #if DEBUG
     private let baseUrl = "https://staging-wyre.blockstream.com"
+    private let wyreUrl = "https://api.testwyre.com"
     #else
     private let baseUrl = "https://wyre.blockstream.com"
+    private let wyreUrl = "https://api.sendwyre.com"
     #endif
+
+    public enum WyreError: Error {
+        case offline
+        case unsupportedCountry
+        case abort
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,21 +46,39 @@ class BuyViewController: BaseViewController {
 
     func prepareBuy(isBtc: Bool) {
         let bgq = DispatchQueue.global(qos: .background)
+        let countryCode = (NSLocale.current as NSLocale).object(forKey: .countryCode) as? String
+
         firstly {
             self.startAnimating()
             return Guarantee()
         }.then(on: bgq) {
-            self.reserve(isBtc: isBtc)
+            self.supportedCountries()
+        }.map(on: bgq) { countries in
+            if !countries.contains(countryCode!) {
+                throw WyreError.unsupportedCountry
+            }
+        }.then(on: bgq) {
+            self.reserve(isBtc: true)
         }.ensure {
             self.stopAnimating()
-        }.done {  res in
+        }.done { res in
             if let path = res["url"] {
                 let url = URL(string: path)
                 UIApplication.shared.open(url!, options: [:])
                 return
             } else {
-                // GET /location/widget not available in v3
-                self.showAlert(title: "Error", message: "Error opening Wyre widget") // improve error
+                self.showError(NSLocalizedString("Error opening Wyre widget", comment: ""))
+            }
+        }.catch { err in
+            if let error = err as? WyreError {
+                switch error {
+                case .offline:
+                    self.showError(NSLocalizedString("Offline", comment: ""))
+                case .unsupportedCountry:
+                    self.showError(NSLocalizedString("Unsupported country", comment: ""))
+                case .abort:
+                    self.showError(NSLocalizedString("Operation Failure", comment: ""))
+                }
             }
         }
     }
@@ -81,6 +107,25 @@ class BuyViewController: BaseViewController {
         performSegue(withIdentifier: "create_wallet_alert", sender: nil)
     }
 
+    func supportedCountries() -> Promise<[String]> {
+        var request = URLRequest(url: URL(string: wyreUrl + "/v3/widget/supportedCountries")!)
+        request.allHTTPHeaderFields = [ "Content-Type": "application/json" ]
+        return Promise { seal in
+            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, _, error in
+                if error != nil {
+                    return seal.reject(WyreError.offline)
+                }
+                if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [[String: String]] {
+                    print(json)
+                    let list = json.map { $0["code"] ?? "" }
+                    return seal.fulfill(list)
+                }
+                return seal.reject(WyreError.abort)
+            })
+            task.resume()
+        }
+    }
+
     func reserve(isBtc: Bool) -> Promise<[String: String]> {
         var request = URLRequest(url: URL(string: baseUrl + "/order-reservation")!)
         request.httpMethod = "POST"
@@ -97,13 +142,13 @@ class BuyViewController: BaseViewController {
             let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, _, error in
                 if let error = error {
                     print(error)
-                    return seal.reject(GaError.GenericError)
+                    return seal.reject(WyreError.offline)
                 }
                 if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: String] {
                     print(json)
                     return seal.fulfill(json)
                 }
-                return seal.reject(GaError.GenericError)
+                return seal.reject(WyreError.abort)
             })
             task.resume()
         }
