@@ -58,7 +58,7 @@ class BuyViewController: BaseViewController {
                 throw WyreError.unsupportedCountry
             }
         }.then(on: bgq) {
-            self.reserve(isBtc: true)
+            self.reserve(isBtc: isBtc)
         }.ensure {
             self.stopAnimating()
         }.done { res in
