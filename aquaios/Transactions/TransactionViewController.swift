@@ -21,6 +21,8 @@ class TransactionViewController: BaseViewController {
     @IBOutlet weak var dateLabel: UILabel!
 
     var tx: Transaction!
+    var updateTransaction: (_ transaction: Transaction) -> Void = { _ in }
+
     private var fields = [TxField]()
     private var footerView: TransactionFooterCell?
 
@@ -82,6 +84,7 @@ class TransactionViewController: BaseViewController {
             dest.updateTransaction = { transaction in
                 self.tx = transaction
                 self.reload()
+                self.updateTransaction(transaction)
             }
         }
     }

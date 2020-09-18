@@ -157,6 +157,9 @@ class AssetDetailViewController: BaseViewController {
             dest.asset = sender as? Asset
         } else if let dest = nav.topViewController as? TransactionViewController {
             dest.tx = sender as? Transaction
+            dest.updateTransaction = { transaction in
+                self.reloadData()
+            }
         }
     }
 

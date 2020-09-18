@@ -116,6 +116,9 @@ class TransactionsViewController: BaseViewController {
         }
         if let nav = segue.destination as? UINavigationController, let dest = nav.topViewController as? TransactionViewController {
             dest.tx = sender as? Transaction
+            dest.updateTransaction = { transaction in
+                self.reloadData()
+            }
         }
     }
 }
