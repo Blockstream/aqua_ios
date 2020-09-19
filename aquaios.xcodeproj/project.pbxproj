@@ -88,6 +88,10 @@
 		812A122F2448A9A400129EDE /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A122C2448A9A400129EDE /* Alerts.storyboard */; };
 		812A12302448A9A400129EDE /* BackupAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A122D2448A9A400129EDE /* BackupAlertViewController.swift */; };
 		812A12322448AA7100129EDE /* DropAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A12312448AA7100129EDE /* DropAlert.swift */; };
+		814CB7CC25150D0100281798 /* BuyContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814CB7CB25150D0100281798 /* BuyContainerViewController.swift */; };
+		814CB7CE25150D1600281798 /* AvailableContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814CB7CD25150D1600281798 /* AvailableContainerViewController.swift */; };
+		814CB7D1251515A700281798 /* AvailableFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814CB7D0251515A700281798 /* AvailableFooterCell.xib */; };
+		814CB7D3251515B400281798 /* AvailableFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814CB7D2251515B400281798 /* AvailableFooterCell.swift */; };
 		8152BC8024F3BD3900CD3B66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC7F24F3BD3900CD3B66 /* ProfileViewController.swift */; };
 		8152BC8324F3C53800CD3B66 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152BC8224F3C53800CD3B66 /* ProfileCell.swift */; };
 		8152BC8524F3C54700CD3B66 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8152BC8424F3C54700CD3B66 /* ProfileCell.xib */; };
@@ -248,6 +252,10 @@
 		812A122C2448A9A400129EDE /* Alerts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
 		812A122D2448A9A400129EDE /* BackupAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupAlertViewController.swift; sourceTree = "<group>"; };
 		812A12312448AA7100129EDE /* DropAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAlert.swift; sourceTree = "<group>"; };
+		814CB7CB25150D0100281798 /* BuyContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyContainerViewController.swift; sourceTree = "<group>"; };
+		814CB7CD25150D1600281798 /* AvailableContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableContainerViewController.swift; sourceTree = "<group>"; };
+		814CB7D0251515A700281798 /* AvailableFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableFooterCell.xib; sourceTree = "<group>"; };
+		814CB7D2251515B400281798 /* AvailableFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableFooterCell.swift; sourceTree = "<group>"; };
 		8152BC7F24F3BD3900CD3B66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8152BC8224F3C53800CD3B66 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		8152BC8424F3C54700CD3B66 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
@@ -410,7 +418,10 @@
 		6D4A4C4524045C9F0002BA93 /* Buy */ = {
 			isa = PBXGroup;
 			children = (
+				814CB7CF2515158D00281798 /* Views */,
 				6D4A4C4824045CBE0002BA93 /* BuyViewController.swift */,
+				814CB7CB25150D0100281798 /* BuyContainerViewController.swift */,
+				814CB7CD25150D1600281798 /* AvailableContainerViewController.swift */,
 				6D4A4C4624045CB20002BA93 /* Buy.storyboard */,
 			);
 			path = Buy;
@@ -612,6 +623,15 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		814CB7CF2515158D00281798 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				814CB7D0251515A700281798 /* AvailableFooterCell.xib */,
+				814CB7D2251515B400281798 /* AvailableFooterCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8152BC8124F3C50F00CD3B66 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +774,7 @@
 			files = (
 				6DD8D977243BD34100A6F560 /* ProgressIndicator.xib in Resources */,
 				2026744C24D2FC0C0093A17A /* LiquidBasicsView.xib in Resources */,
+				814CB7D1251515A700281798 /* AvailableFooterCell.xib in Resources */,
 				81DF87F624F5098E00286F0D /* SupportFooterCell.xib in Resources */,
 				20A6A94E24ADE0CD009E0210 /* InfoPlist.strings in Resources */,
 				6DA69A28240F29D8000F626E /* Receive.storyboard in Resources */,
@@ -875,6 +896,7 @@
 				81D9E47624068D15005DD867 /* Wallet.swift in Sources */,
 				6D077207242C2E6E009DEA9B /* SendDetailsViewController.swift in Sources */,
 				81D9E4882406BA9F005DD867 /* Registry.swift in Sources */,
+				814CB7D3251515B400281798 /* AvailableFooterCell.swift in Sources */,
 				818439F6246ACC03006BF3BF /* NetworkSession.swift in Sources */,
 				6DA69A2F240F2BB3000F626E /* QRCodeViewController.swift in Sources */,
 				6D407BFF2404A75500EE06EB /* AssetCell.swift in Sources */,
@@ -890,6 +912,7 @@
 				20A6A97324AE376D009E0210 /* RestoreWordsViewController.swift in Sources */,
 				6DA69A36240F3CB1000F626E /* QRScanner.swift in Sources */,
 				6DE3BC8D2433DA5A00E2B011 /* SendReviewViewController.swift in Sources */,
+				814CB7CE25150D1600281798 /* AvailableContainerViewController.swift in Sources */,
 				6D4A4C41240458480002BA93 /* TransactionsViewController.swift in Sources */,
 				2040D84A24C5FF01003DFA3C /* AssetInfoCell.swift in Sources */,
 				6D63E56424525384000B4BE6 /* SendSuccessViewController.swift in Sources */,
@@ -936,6 +959,7 @@
 				6DD7274624044A3A005D982D /* UIColor.swift in Sources */,
 				81D9E4722405E71D005DD867 /* Liquid.swift in Sources */,
 				6D6FA7232476FDFC00BDF8C4 /* AssetTitleView.swift in Sources */,
+				814CB7CC25150D0100281798 /* BuyContainerViewController.swift in Sources */,
 				6DD8D981243D3B1300A6F560 /* AquaService.swift in Sources */,
 				6DB9FCEB2418716200E266DB /* QRImageGenerator.swift in Sources */,
 				81D9E48A2406BAEF005DD867 /* AssetInfo.swift in Sources */,

@@ -22,7 +22,7 @@ class TransactionsViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = NSLocalizedString(NSLocalizedString("id_transactions", comment: ""), comment: "")
+        navigationItem.title = NSLocalizedString("id_transactions", comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
         configurePreLogin()
         if hasWallet {
