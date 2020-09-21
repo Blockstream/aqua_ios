@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -164,6 +164,7 @@
                     <connections>
                         <outlet property="buyIconView" destination="g3n-j5-9YE" id="gL8-fE-OHq"/>
                         <outlet property="buyView" destination="1xs-iw-Ep0" id="aqU-wt-0ad"/>
+                        <outlet property="emptyView" destination="mCf-9r-TFY" id="R9n-HW-WT4"/>
                         <outlet property="firstLabel" destination="MTm-ic-lHJ" id="CgS-qj-Eec"/>
                         <outlet property="receiveIconView" destination="7XN-CM-UkY" id="Ao4-R5-L4P"/>
                         <outlet property="receiveView" destination="V47-va-Xaz" id="9Jz-Lq-eci"/>
@@ -171,11 +172,20 @@
                         <outlet property="tableView" destination="xlV-FQ-Haf" id="YlA-aw-Ush"/>
                         <segue destination="xSR-hv-Kxs" kind="showDetail" identifier="create_wallet_alert" id="xIB-wi-PiV"/>
                         <segue destination="T0h-O4-e1T" kind="presentation" identifier="transaction" id="l0l-af-zPV"/>
+                        <segue destination="FqJ-bR-8oU" kind="presentation" identifier="receive" id="EPu-V2-HfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Pf-r4-itg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="177.45535714285714"/>
+        </scene>
+        <!--ReceiveNavigationController-->
+        <scene sceneID="jwT-CD-DUa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receive" referencedIdentifier="ReceiveNavigationController" id="FqJ-bR-8oU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwk-aD-rRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688" y="57"/>
         </scene>
         <!--CreateWalletAlertController-->
         <scene sceneID="J3q-6g-e1D">

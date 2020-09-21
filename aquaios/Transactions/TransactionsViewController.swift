@@ -10,6 +10,7 @@ class TransactionsViewController: BaseViewController {
     @IBOutlet weak var buyIconView: UIView!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var emptyView: UIView!
 
     private var transactions: [Transaction] = []
     private var transactionToken: NSObjectProtocol?
@@ -25,16 +26,10 @@ class TransactionsViewController: BaseViewController {
         navigationItem.title = NSLocalizedString("id_transactions", comment: "")
         navigationController?.setNavigationBarHidden(false, animated: false)
         configurePreLogin()
+        self.tableView.isHidden = !hasWallet
+        self.emptyView.isHidden = hasWallet
         if hasWallet {
-            self.tableView.isHidden = false
-            self.buyView.isHidden = true
-            self.receiveView.isHidden = true
-            self.firstLabel.isHidden = true
-            self.secondLabel.isHidden = true
             reloadData()
-
-        } else {
-            self.tableView.isHidden = true
         }
 
         transactionToken = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "transaction"), object: nil, queue: .main, using: onNewTransaction)
@@ -75,8 +70,8 @@ class TransactionsViewController: BaseViewController {
     }
 
     func configurePreLogin() {
-        let receiveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createOrRestore))
-        let buyGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createOrRestore))
+        let receiveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createReceive))
+        let buyGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.createBuy))
         receiveView.addGestureRecognizer(receiveGestureRecognizer)
         receiveView.isUserInteractionEnabled = true
         buyView.addGestureRecognizer(buyGestureRecognizer)
@@ -85,8 +80,20 @@ class TransactionsViewController: BaseViewController {
         buyView.round(radius: 24)
     }
 
-    @objc func createOrRestore(_ sender: Any?) {
-        performSegue(withIdentifier: "create_wallet_alert", sender: nil)
+    @objc func createReceive(_ sender: Any?) {
+        if !hasWallet {
+            return performSegue(withIdentifier: "create_wallet_alert", sender: nil)
+        }
+        performSegue(withIdentifier: "receive", sender: nil)
+    }
+
+    @objc func createBuy(_ sender: Any?) {
+        if !hasWallet {
+            return performSegue(withIdentifier: "create_wallet_alert", sender: nil)
+        }
+        if let tabBarController = tabBarController {
+            tabBarController.selectedIndex = 2
+        }
     }
 
     func txsPromise(_ sharedNetwork: NetworkSession) -> Promise<[Transaction]> {
@@ -105,6 +112,8 @@ class TransactionsViewController: BaseViewController {
             self.transactions = bitcoin + liquid
             self.transactions.sort(by: { $0.createdAt > $1.createdAt })
             self.tableView.reloadData()
+            self.tableView.isHidden = self.transactions.isEmpty
+            self.emptyView.isHidden = !self.transactions.isEmpty
         }.catch { _ in
             self.showError("Failure on fetch balance")
         }
@@ -113,12 +122,16 @@ class TransactionsViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? CreateWalletAlertController {
             dest.delegateVC = self
+            return
         }
-        if let nav = segue.destination as? UINavigationController, let dest = nav.topViewController as? TransactionViewController {
+        let nav = segue.destination as? UINavigationController
+        if let dest = nav?.topViewController as? TransactionViewController {
             dest.tx = sender as? Transaction
             dest.updateTransaction = { transaction in
                 self.reloadData()
             }
+        } else if let dest = nav?.topViewController as? ReceiveViewController {
+            dest.asset = Registry.shared.asset(for: "btc")
         }
     }
 }
