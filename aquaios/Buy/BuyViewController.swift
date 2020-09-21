@@ -17,7 +17,6 @@ class BuyViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.paleLilac]
         UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
-        segmentedControl.round(radius: 24)
         configurePreLogin()
         noWalletView.isHidden = hasWallet
         walletView.isHidden = !hasWallet
