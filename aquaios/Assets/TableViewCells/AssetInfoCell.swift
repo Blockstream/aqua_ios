@@ -9,13 +9,11 @@ class AssetInfoCell: UITableViewCell {
         backgroundColor = .aquaBackgroundBlue
         infoTitle.text = title
         infoText.text = text
+        infoTitle.textColor = .paleLilac
+        selectionStyle = .none
     }
 
     func setup(title: String) {
-        backgroundColor = .aquaBackgroundBlue
-        infoTitle.text = title
-        infoText.text = ""
-        infoTitle.textColor = .paleLilac
-        selectionStyle = .none
+        setup(title: title, text: "")
     }
 }
