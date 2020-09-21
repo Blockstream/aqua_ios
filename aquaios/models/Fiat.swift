@@ -22,7 +22,8 @@ class Fiat {
     }
 
     static func to(_ amount: String) -> UInt64 {
-        var decimal = Decimal(string: amount)! * pow(10, 8) / Decimal(Fiat.rate()!)
+        let number = formatter.number(from: amount)?.decimalValue
+        var decimal = number! * pow(10, 8) / Decimal(Fiat.rate()!)
         var drounded: Decimal = Decimal()
         NSDecimalRound(&drounded, &decimal, 0, .plain)
         return NSDecimalNumber(decimal: drounded).uint64Value

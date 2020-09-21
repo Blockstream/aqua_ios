@@ -13,6 +13,7 @@ class SendDetailsViewController: BaseViewController {
     @IBOutlet weak var fiatLabel: UILabel!
     @IBOutlet weak var tickerButton: UIButton!
     @IBOutlet weak var sendAllButton: UIButton!
+    @IBOutlet weak var dotButton: UIButton!
 
     var addressee: Addressee?
     private var amount: String = ""
@@ -34,6 +35,10 @@ class SendDetailsViewController: BaseViewController {
         } else {
             return Bitcoin.shared
         }
+    }
+
+    private var decimal: String {
+        return NSLocale.current.decimalSeparator ?? "."
     }
 
     override func viewDidLoad() {
@@ -73,6 +78,7 @@ class SendDetailsViewController: BaseViewController {
         sendAllButton.setTitle(NSLocalizedString("id_max", comment: ""), for: .normal)
         continueButton.setTitle(NSLocalizedString("id_continue", comment: ""), for: .normal)
         tickerButton.isEnabled = asset?.isBTC ?? false || asset?.isLBTC ?? false
+        dotButton.setTitle(decimal, for: .normal)
     }
 
     @IBAction func maxButtonTapped(_ sender: Any) {
@@ -144,16 +150,21 @@ class SendDetailsViewController: BaseViewController {
             }
         } else {
             if let text = sender.titleLabel?.text {
-                if text.contains(".") {
-                    if amount.contains(".") {
-                        return
-                    }
-                    if amount.count == 0 {
-                        amount += "0"
-                    }
-                }
                 amount += text
             }
+        }
+        reload()
+    }
+
+    @IBAction func dotClick(_ sender: UIButton) {
+        if amount.contains(decimal) {
+            return
+        }
+        if amount.count == 0 {
+            amount += "0"
+        }
+        if let text = sender.titleLabel?.text {
+            amount += text
         }
         reload()
     }
