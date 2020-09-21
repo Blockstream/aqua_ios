@@ -131,9 +131,9 @@ extension AddAssetsViewController: UISearchResultsUpdating {
         if let searchText = searchController.searchBar.text,
                 !searchText.isEmpty {
             assets = allAssets.filter {
-                $0.tag.contains(searchText) ||
-                ($0.name?.contains(searchText) ?? false) ||
-                ($0.ticker?.contains(searchText) ?? false) }
+                $0.tag.range(of: searchText, options: .caseInsensitive) != nil ||
+                $0.name?.range(of: searchText, options: .caseInsensitive) != nil ||
+                $0.ticker?.range(of: searchText, options: .caseInsensitive) != nil }
         } else {
             assets = allAssets.filter({ $0.isHighlighted || $0.isBTC || $0.isLBTC || $0.isUSDt })
         }
