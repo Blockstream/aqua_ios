@@ -14,6 +14,7 @@
 "id_asset_id" = "アセットID";
 "id_assets_dont_match" = "アセットが一致しません";
 "id_authentication_failed" = "認証に失敗しました";
+"id_available_on" = "Available on";
 "id_back" = "戻る";
 "id_back_up_now" = "バックアップする";
 "id_back_up_your_wallet" = "ウォレットのバックアップ";
@@ -22,6 +23,7 @@
 "id_buy" = "購入する";
 "id_buy_bitcoin" = "ビットコインを購入する";
 "id_buy_bitcoin_with_card_or_apple" = "カードまたはApple Payでビットコインを購入する";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "L-BTCを購入する";
 "id_buy_liquid_bitcoin_with_card_or" = "カードまたはApple PayでLiquid Bitcoinを購入する";
 "id_cancel" = "取り消し";
@@ -159,6 +161,8 @@
 "id_warning" = "注意";
 "id_we_use_the_camera_to_scan_qr" = "QRコードをスキャンするためにカメラへのアクセスが必要です";
 "id_website" = "ウェブサイト";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "AQUAを使うとき、あなたは自分自身で資産を保管しています。他の誰にもあなたの資産に触れることはできません。開発した私達でさえもです。";
 "id_with_great_power_comes_great" = "大いなる力には大いなる責任が伴います。デバイスを紛失したり故障した場合に資産を復元できるように、ウォレットをバックアップする必要があります。";
 "id_without_your_recovery_phrase" = "リカバリーフレーズを保管していない場合、デバイスの紛失や故障に際してあなたの財産を取り戻す方法はありません。";

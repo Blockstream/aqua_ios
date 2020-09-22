@@ -14,6 +14,7 @@
 "id_asset_id" = "Asset ID";
 "id_assets_dont_match" = "Les assets ne sont pas identiques";
 "id_authentication_failed" = "L'authentification a échoué";
+"id_available_on" = "Available on";
 "id_back" = "Retour";
 "id_back_up_now" = "Faire un Back Up";
 "id_back_up_your_wallet" = "Faire un back up de votre wallet";
@@ -22,6 +23,7 @@
 "id_buy" = "Acheter";
 "id_buy_bitcoin" = "Acheter des bitcoins";
 "id_buy_bitcoin_with_card_or_apple" = "Acheter des Bitcoins par carte ou Apple Pay";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "Acheter des L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "Acheter des Liquid Bitcoins par carte ou Apple Pay";
 "id_cancel" = "Annuler";
@@ -159,6 +161,8 @@
 "id_warning" = "Attention";
 "id_we_use_the_camera_to_scan_qr" = "Nous utilisons l'appareil photo pour scanner les QR codes";
 "id_website" = "Site web";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "Avec AQUA, vous êtes votre propre banque. À part vous, personne n'a accès à vos assets. Pas même nous.";
 "id_with_great_power_comes_great" = "Un grand pouvoir implique de grandes responsabilités. Vous devez faire un backup de votre wallet pour être sûr de toujours pouvoir retrouver vos assets, même si vous perdez ou cassez votre appareil.";
 "id_without_your_recovery_phrase" = "Sans votre phrase de restauration, vous n'avez aucun moyen de récupérer vos assets si vous perdez ou abîmez votre appareil.";

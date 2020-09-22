@@ -14,6 +14,7 @@
 "id_asset_id" = "Asset ID";
 "id_assets_dont_match" = "Assets don't match";
 "id_authentication_failed" = "Authentication failed";
+"id_available_on" = "Available on";
 "id_back" = "Back";
 "id_back_up_now" = "Back Up Now";
 "id_back_up_your_wallet" = "Back up your wallet";
@@ -22,6 +23,7 @@
 "id_buy" = "Buy";
 "id_buy_bitcoin" = "Buy bitcoin";
 "id_buy_bitcoin_with_card_or_apple" = "Buy Bitcoin with card or Apple Pay";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "Buy L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "Buy Liquid Bitcoin with card or Apple Pay";
 "id_cancel" = "Cancel";
@@ -159,6 +161,8 @@
 "id_warning" = "Warning";
 "id_we_use_the_camera_to_scan_qr" = "We use the camera to scan QR codes";
 "id_website" = "Website";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "With AQUA, you are your own bank. No one else but you has access to your assets. Not even us.";
 "id_with_great_power_comes_great" = "With great power comes great responsibility. You'll need a backup of your wallet to ensure you can always your assets, even if you lose or break your device.";
 "id_without_your_recovery_phrase" = "Without your recovery phrase, there is no way to recover your assets if you lose or break your device.";

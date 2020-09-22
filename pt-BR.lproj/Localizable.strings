@@ -14,6 +14,7 @@
 "id_asset_id" = "ID do Ativo";
 "id_assets_dont_match" = "Ativos não batem";
 "id_authentication_failed" = "Falha na autenticação";
+"id_available_on" = "Available on";
 "id_back" = "Voltar";
 "id_back_up_now" = "Salvar o backup agora";
 "id_back_up_your_wallet" = "Fazer backup";
@@ -22,6 +23,7 @@
 "id_buy" = "Comprar";
 "id_buy_bitcoin" = "Comprar Bitcoin";
 "id_buy_bitcoin_with_card_or_apple" = "Comprar Bitcoin com cartão ou Apple Pay";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "Comprar L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "Comprar L-BTC com cartão ou Apple Pay";
 "id_cancel" = "Cancelar";
@@ -159,6 +161,8 @@
 "id_warning" = "Aviso";
 "id_we_use_the_camera_to_scan_qr" = "Usamos a câmera para ler códigos QR";
 "id_website" = "Website";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "Com a AQUA você é seu próprio banco. Ninguém além de você mesmo tem acesso aos seus ativos. Nem nós.";
 "id_with_great_power_comes_great" = "Com grandes poderes vêm grandes responsabilidades. Você precisará de um backup da sua carteira para garantir acesso aos seus ativos mesmo que quebre ou perca este aparelho.";
 "id_without_your_recovery_phrase" = "Sem sua frase de recuperação não há como recuperar o acesso caso você perca ou quebre este aparelho.";

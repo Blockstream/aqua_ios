@@ -14,6 +14,7 @@
 "id_asset_id" = "资产ID";
 "id_assets_dont_match" = "资产不匹配";
 "id_authentication_failed" = "授权失败";
+"id_available_on" = "Available on";
 "id_back" = "返回";
 "id_back_up_now" = "立即备份";
 "id_back_up_your_wallet" = "备份钱包";
@@ -22,6 +23,7 @@
 "id_buy" = "买入";
 "id_buy_bitcoin" = "买入比特币";
 "id_buy_bitcoin_with_card_or_apple" = "使用银行卡或Apple Pay购买比特币";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "买入L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "使用银行卡或Apple Pay购买L-BTC";
 "id_cancel" = "取消";
@@ -159,6 +161,8 @@
 "id_warning" = "警告";
 "id_we_use_the_camera_to_scan_qr" = "即将使用相机扫描二维码";
 "id_website" = "官网";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "通过使用AQUA，您就是自己的银行。没有任何第三方可以接触钱包内资产。即使是我们也不行。";
 "id_with_great_power_comes_great" = "您需要备份钱包以确保一直可以使用钱包内的资产，即使设备丢失或损毁。";
 "id_without_your_recovery_phrase" = "如果您的设备丢失或损毁，除了使用助记词，没有别的办法来恢复您的钱包。";

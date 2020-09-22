@@ -14,6 +14,7 @@
 "id_asset_id" = "자산 ID";
 "id_assets_dont_match" = "자산이 일치하지 않습니다.";
 "id_authentication_failed" = "인증 실패";
+"id_available_on" = "Available on";
 "id_back" = "뒤로";
 "id_back_up_now" = "지금 백업하기";
 "id_back_up_your_wallet" = "월렛 백업하기";
@@ -22,6 +23,7 @@
 "id_buy" = "매입하기";
 "id_buy_bitcoin" = "비트코인 매입하기";
 "id_buy_bitcoin_with_card_or_apple" = "신용카드 또는 Apple Pay로 비트코인 매입하기";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "L-BTC 매입하기";
 "id_buy_liquid_bitcoin_with_card_or" = "신용카드 또는 Apple Pay로 Liquid 비트코인 매입하기";
 "id_cancel" = "취소";
@@ -159,6 +161,8 @@
 "id_warning" = "경고";
 "id_we_use_the_camera_to_scan_qr" = "카메라를 사용하여 QR 코드를 스캔합니다.";
 "id_website" = "웹사이트";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "AQUA를 사용하면 여러분은 자신의 은행이 됩니다. AQUA도, 그 누구도 아닌 자기 자신만이 자산 액세스 권한을 갖습니다.";
 "id_with_great_power_comes_great" = "큰 힘에는 큰 책임이 따릅니다. 기기 분실 또는 파손 시에도 항상 자산을 안전하게 지킬 수있도록 월렛을 백업해야 합니다.";
 "id_without_your_recovery_phrase" = "복구 문구가 없으면 기기 분실 또는 파손 시 자산을 복구할 방법이 없습니다.";

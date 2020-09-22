@@ -14,6 +14,7 @@
 "id_asset_id" = "ID актива";
 "id_assets_dont_match" = "Активы не совпадают";
 "id_authentication_failed" = "Ошибка авторизации";
+"id_available_on" = "Available on";
 "id_back" = "Назад";
 "id_back_up_now" = "Произвести резервное копирование";
 "id_back_up_your_wallet" = "Создайте резервную копию вашего кошелька";
@@ -22,6 +23,7 @@
 "id_buy" = "Купить";
 "id_buy_bitcoin" = "Купить биткоины";
 "id_buy_bitcoin_with_card_or_apple" = "Купить биткоины с помощью карты или Apple Pay";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "Купить  L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "Купить Liquid-биткоины с помощью карты или Apple Pay";
 "id_cancel" = "Отменить";
@@ -159,6 +161,8 @@
 "id_warning" = "Предупреждение";
 "id_we_use_the_camera_to_scan_qr" = "Для сканирования QR-кода используется камера";
 "id_website" = "Веб-сайт";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "С AQUA вы - банк себе самим. Никто, кроме вас, не имеет доступа к вашим активам. Даже мы.";
 "id_with_great_power_comes_great" = "Чем больше сила, тем выше ответственность. Вам понадобится резервная копия вашего кошелька, чтобы вы всегда могли владеть своими активами, даже если ваше устройство будет потеряно или сломано.";
 "id_without_your_recovery_phrase" = "Без фразы восстановления невозможно восстановить ваши активы, если ваше устройство будет потеряно или сломано.";

@@ -14,6 +14,7 @@
 "id_asset_id" = "Asset ID";
 "id_assets_dont_match" = "Assets komen niet overeen";
 "id_authentication_failed" = "Authenticatie mislukt";
+"id_available_on" = "Available on";
 "id_back" = "Vorige";
 "id_back_up_now" = "Maak nu een back-up";
 "id_back_up_your_wallet" = "Maak een wallet back-up";
@@ -22,6 +23,7 @@
 "id_buy" = "Koop";
 "id_buy_bitcoin" = "Koop bitcoin";
 "id_buy_bitcoin_with_card_or_apple" = "Koop bitcoin met kaart of Apple Pay";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "Koop L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "Koop Liquid-bitcoin met kaart of Apple Pay";
 "id_cancel" = "Annuleer";
@@ -159,6 +161,8 @@
 "id_warning" = "Waarschuwing";
 "id_we_use_the_camera_to_scan_qr" = "We gebruiken de camera om QR-codes te scannen";
 "id_website" = "Website";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "Met AQUA ben je je eigen bank. Niemand anders dan jij hebt toegang tot je assets. Zelfs wij niet.";
 "id_with_great_power_comes_great" = "With great power comes great responsibility. Je hebt een back-up van je wallet nodig om ervoor te zorgen dat je altijd over je assets beschikt, zelfs als je je apparaat verliest of kapot gaat.";
 "id_without_your_recovery_phrase" = "Zonder je herstelzin is er geen manier om je assets terug te krijgen als je je apparaat verliest of kapot gaat.";

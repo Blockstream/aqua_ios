@@ -14,6 +14,7 @@
 "id_asset_id" = "Asset-ID";
 "id_assets_dont_match" = "Assets stimmen nicht überein";
 "id_authentication_failed" = "Authentifizierung fehlgeschlagen";
+"id_available_on" = "Available on";
 "id_back" = "Zurück";
 "id_back_up_now" = "Jetzt sichern";
 "id_back_up_your_wallet" = "Sicherungskopie der Wallet erstellen";
@@ -22,6 +23,7 @@
 "id_buy" = "Kaufen";
 "id_buy_bitcoin" = "Bitcoin kaufen";
 "id_buy_bitcoin_with_card_or_apple" = "Bitcoin mit Karte oder Apple Pay kaufen";
+"id_buy_btc" = "Buy BTC";
 "id_buy_lbtc" = "L-BTC kaufen";
 "id_buy_liquid_bitcoin_with_card_or" = "Liquid Bitcoin mit Karte oder Apple Pay kaufen";
 "id_cancel" = "Abbrechen";
@@ -159,6 +161,8 @@
 "id_warning" = "Warnung";
 "id_we_use_the_camera_to_scan_qr" = "Wir verwenden die Kamera zum Scannen von QR-Codes";
 "id_website" = "Webseite";
+"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
+"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "Mit AQUA bist du deine eigene Bank. Niemand ausser dir hat Zugriff auf dein Vermögen. Nicht einmal wir.";
 "id_with_great_power_comes_great" = "Mit großer Macht kommt große Verantwortung. Du benötigst eine Sicherungskopie deiner Wallet, um sicherzustellen, dass du deine Vermögenswerte immer abrufen kannst, selbst wenn du dein Gerät verlierst oder kaputt machst.";
 "id_without_your_recovery_phrase" = "Ohne deinen Wiederherstellungssatz gibt es keine Möglichkeit, dein Vermögen wiederzuerlangen, wenn du dein Gerät verlierst oder es kaputt geht.";
