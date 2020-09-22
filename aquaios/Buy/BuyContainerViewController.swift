@@ -22,11 +22,18 @@ class BuyContainerViewController: UIViewController {
     @IBOutlet weak var buyBtcButton: UIButton!
     @IBOutlet weak var buyLbtcButton: UIButton!
     @IBOutlet weak var comingSoonLabel: UILabel!
+    @IBOutlet weak var buyBtcLabel: UILabel!
+    @IBOutlet weak var buyLbtcLabel: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         buyBtcButton.round(radius: 16)
         buyLbtcButton.round(radius: 16)
+        comingSoonLabel.text = NSLocalizedString("id_more_options_coming_soon", comment: "")
+        buyBtcButton.setTitle(NSLocalizedString("id_buy_btc", comment: ""), for: .normal)
+        buyLbtcButton.setTitle(NSLocalizedString("id_buy_lbtc", comment: ""), for: .normal)
+        buyBtcLabel.text = NSLocalizedString("id_buy_bitcoin_with_card_or_apple", comment: "")
+        buyLbtcLabel.text = NSLocalizedString("id_buy_liquid_bitcoin_with_card_or", comment: "")
     }
 
     @IBAction func buyBtcTapped(_ sender: Any) {
@@ -59,7 +66,7 @@ class BuyContainerViewController: UIViewController {
                 UIApplication.shared.open(url!, options: [:])
                 return
             } else {
-                self.showError(NSLocalizedString("Error opening Wyre widget", comment: ""))
+                self.showError(NSLocalizedString("id_operation_failure", comment: ""))
             }
         }.catch { err in
             if let error = err as? WyreError {

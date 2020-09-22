@@ -50,7 +50,7 @@ class SendReviewViewController: BaseViewController {
         let addressee = tx.addressees.first!
         let info = Registry.shared.info(for: addressee.assetTag ?? "btc")
         let asset = Asset(info: info, tag: addressee.assetTag)
-        let amount = tx.sendAll ? "id_all" : asset.string(addressee.satoshi)
+        let amount = tx.sendAll ? NSLocalizedString("id_all", comment: "") : asset.string(addressee.satoshi)
         sendLabel.text = NSLocalizedString("id_send", comment: "")
         amountLabel.text = "\(amount ?? "") \(asset.ticker ?? "")"
         toLabel.text = NSLocalizedString("id_to", comment: "")

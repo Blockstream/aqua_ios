@@ -311,8 +311,10 @@
                     </view>
                     <connections>
                         <outlet property="buyBtcButton" destination="XB2-va-2uW" id="FuV-BI-gu5"/>
+                        <outlet property="buyBtcLabel" destination="AE7-mY-NJv" id="c31-H5-o04"/>
                         <outlet property="buyBtcView" destination="F8P-FF-bLf" id="I8x-Pg-SBs"/>
                         <outlet property="buyLbtcButton" destination="tIL-kx-jtR" id="xKb-SN-y8Y"/>
+                        <outlet property="buyLbtcLabel" destination="KdT-nY-cOt" id="K18-9x-8h0"/>
                         <outlet property="buyLbtcView" destination="ohL-22-ehY" id="vAg-Aj-IlD"/>
                         <outlet property="comingSoonLabel" destination="0QB-dm-Ffp" id="Tfd-Tk-1jV"/>
                     </connections>

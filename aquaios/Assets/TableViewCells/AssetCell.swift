@@ -12,7 +12,7 @@ class AssetCell: UITableViewCell {
     func configure(with asset: Asset) {
         backgroundColor = .aquaBackgroundBlue
         assetBackgroundView.round(radius: 18)
-        assetNameLabel.text = asset.name ?? "Unregistered asset"
+        assetNameLabel.text = asset.name ?? NSLocalizedString("id_unregistered_asset", comment: "")
         balanceLabel.text = asset.string()
         tickerLabel.text = asset.ticker ?? ""
         fiatValueLabel.text = ""

@@ -7,6 +7,7 @@ class TransactionFooterCell: UITableViewCell {
     private var url: String?
 
     func configure(with tx: Transaction) {
+        ExplorerButton.setTitle(NSLocalizedString("id_view_in_blockstream_explorer", comment: ""), for: .normal)
         let subpath = tx.networkName == Liquid.networkName ? "liquid/" : ""
         url = "https://blockstream.info/\(subpath)\(tx.hash)"
     }

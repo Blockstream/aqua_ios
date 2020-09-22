@@ -35,7 +35,7 @@ class ReceiveViewController: BaseViewController {
         if showCloseButton {
             showCloseButton(on: .left)
         }
-        title = String(format: "Receive")
+        title = NSLocalizedString("id_receive", comment: "")
         tabBarController?.tabBar.isHidden = !isModalPresenting
         feedbackView.alpha = 0.0
         feedbackView.round(radius: 17.5)

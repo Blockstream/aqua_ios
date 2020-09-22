@@ -108,7 +108,7 @@ extension UIViewController {
         case .generic(let desc), .invalidAmount(let desc), .invalidAddress(let desc):
             alert.message = NSLocalizedString(desc, comment: "")
         }
-        alert.addAction(UIAlertAction(title: "id_continue", style: .default, handler: { _ in }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("id_continue", comment: ""), style: .default, handler: { _ in }))
         self.present(alert, animated: true)
     }
 }
