@@ -4,6 +4,7 @@ import UIKit
 class LiquidBasicsView: UIView {
 
     var contentView: UIView?
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +37,7 @@ class LiquidBasicsView: UIView {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tap))
         contentView?.addGestureRecognizer(tapGestureRecognizer)
         contentView?.isUserInteractionEnabled = true
+        descriptionLabel.text = NSLocalizedString("id_what_is_liquid_and_how_does_it", comment: "")
     }
 
     @objc func tap() {

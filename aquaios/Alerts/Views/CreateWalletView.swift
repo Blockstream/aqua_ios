@@ -37,7 +37,7 @@ class CreateWalletView: UIView {
         createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
         restoreButton.addTarget(self, action: #selector(restoreButtonTapped), for: .touchUpInside)
         createButton.setTitle(NSLocalizedString("id_create_a_new_wallet", comment: ""), for: .normal)
-        restoreButton.setTitle(NSLocalizedString("id_restore_an_aqua_wallet", comment: ""), for: .normal)
+        restoreButton.setTitle(NSLocalizedString("id_restore", comment: ""), for: .normal)
         existingWalletLabel.text = NSLocalizedString("id_already_have_an_aqua_wallet", comment: "")
     }
 

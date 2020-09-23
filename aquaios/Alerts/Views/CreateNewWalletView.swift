@@ -11,6 +11,7 @@ class CreateNewWalletView: UIView {
     @IBOutlet weak var alreadyHaveAWalletLabel: UILabel!
     @IBOutlet weak var createNewWalletLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var restoreButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,6 +45,11 @@ class CreateNewWalletView: UIView {
         backgroundView.addGestureRecognizer(tapGestureRecognizer)
         backgroundView.isUserInteractionEnabled = true
         backgroundView.round(radius: 24)
+
+        createNewWalletLabel.text = NSLocalizedString("id_create_a_new_wallet", comment: "")
+        descriptionLabel.text = NSLocalizedString("id_your_wallet_will_support", comment: "")
+        alreadyHaveAWalletLabel.text = NSLocalizedString("id_already_have_an_aqua_wallet", comment: "")
+        restoreButton.setTitle(NSLocalizedString("id_restore", comment: ""), for: .normal)
     }
 
     @IBAction func restoreButtonTapped(_ sender: Any) {
