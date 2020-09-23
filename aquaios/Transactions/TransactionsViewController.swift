@@ -11,6 +11,10 @@ class TransactionsViewController: BaseViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var receiveLabel: UILabel!
+    @IBOutlet weak var buyLabel: UILabel!
+    @IBOutlet weak var receiveDescriptionLabel: UILabel!
+    @IBOutlet weak var buyDescriptionLabel: UILabel!
 
     private var transactions: [Transaction] = []
     private var transactionToken: NSObjectProtocol?
@@ -19,6 +23,12 @@ class TransactionsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        firstLabel.text = NSLocalizedString("id_new_to_aqua", comment: "")
+        secondLabel.text = NSLocalizedString("id_add_assets_to_get_started", comment: "")
+        receiveLabel.text = NSLocalizedString("id_receive", comment: "")
+        receiveDescriptionLabel.text = NSLocalizedString("id_from_other_wallets", comment: "")
+        buyLabel.text = NSLocalizedString("id_buy", comment: "")
+        buyDescriptionLabel.text = NSLocalizedString("id_debit_or_apple_pay", comment: "")
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -162,11 +162,15 @@
                     <tabBarItem key="tabBarItem" title="" image="tx_icon" id="obX-ab-dI3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buyDescriptionLabel" destination="x8R-wv-9cV" id="gaL-Er-bEx"/>
                         <outlet property="buyIconView" destination="g3n-j5-9YE" id="gL8-fE-OHq"/>
+                        <outlet property="buyLabel" destination="FmP-MZ-CrO" id="Yg0-au-FIx"/>
                         <outlet property="buyView" destination="1xs-iw-Ep0" id="aqU-wt-0ad"/>
                         <outlet property="emptyView" destination="mCf-9r-TFY" id="R9n-HW-WT4"/>
                         <outlet property="firstLabel" destination="MTm-ic-lHJ" id="CgS-qj-Eec"/>
+                        <outlet property="receiveDescriptionLabel" destination="xaZ-ha-SH6" id="kX5-39-Kje"/>
                         <outlet property="receiveIconView" destination="7XN-CM-UkY" id="Ao4-R5-L4P"/>
+                        <outlet property="receiveLabel" destination="WrL-uF-UDs" id="Tmm-62-XVm"/>
                         <outlet property="receiveView" destination="V47-va-Xaz" id="9Jz-Lq-eci"/>
                         <outlet property="secondLabel" destination="Hop-83-FIm" id="nWZ-Nx-Qkc"/>
                         <outlet property="tableView" destination="xlV-FQ-Haf" id="YlA-aw-Ush"/>
