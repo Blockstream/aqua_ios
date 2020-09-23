@@ -6,6 +6,8 @@ class SelectAssetViewController: BaseViewController {
     @IBOutlet weak var noAssetsView: UIView!
     @IBOutlet weak var genericAssetView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noResultsLabel: UILabel!
+    @IBOutlet weak var receiveAnyLiquidAssetLabel: UILabel!
 
     var flow: TxFlow!
     var addressee: Addressee?
@@ -22,6 +24,7 @@ class SelectAssetViewController: BaseViewController {
         if flow == .receive {
             showCloseButton(on: .left)
         }
+        receiveAnyLiquidAssetLabel.text = NSLocalizedString("id_receive_any_liquid_asset", comment: "")
         configureTableView()
         configureSearch()
         configureNoAssetView()
