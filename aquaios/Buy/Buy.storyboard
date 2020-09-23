@@ -141,7 +141,10 @@
                     <tabBarItem key="tabBarItem" title="" image="buy_icon" id="KmE-Hf-bcT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buyBitcoinLabel" destination="meS-GA-OS8" id="lDY-zH-Xtr"/>
+                        <outlet property="buyDirectlyLabel" destination="0yc-Ll-1AP" id="wGM-Sl-Uh4"/>
                         <outlet property="buyIconView" destination="m78-IZ-MwF" id="qYq-jx-gmX"/>
+                        <outlet property="buySupportedLabel" destination="25E-Xm-6dL" id="fbp-4i-9aK"/>
                         <outlet property="buyView" destination="Z5V-NZ-Huq" id="4dh-Ge-LAX"/>
                         <outlet property="containerAvailableView" destination="xnD-Rz-WVY" id="yHi-p3-RMU"/>
                         <outlet property="containerBuyView" destination="VQ3-4y-97g" id="MVA-ZS-xBG"/>

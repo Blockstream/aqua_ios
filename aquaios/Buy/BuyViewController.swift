@@ -10,6 +10,9 @@ class BuyViewController: BaseViewController {
     @IBOutlet weak var containerAvailableView: UIView!
     @IBOutlet weak var buyView: UIView!
     @IBOutlet weak var buyIconView: UIView!
+    @IBOutlet weak var buyBitcoinLabel: UILabel!
+    @IBOutlet weak var buyDirectlyLabel: UILabel!
+    @IBOutlet weak var buySupportedLabel: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,6 +22,9 @@ class BuyViewController: BaseViewController {
         UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
         segmentedControl.setTitle(NSLocalizedString("id_buy", comment: ""), forSegmentAt: 0)
         segmentedControl.setTitle(NSLocalizedString("id_available_on", comment: ""), forSegmentAt: 1)
+        buyBitcoinLabel.text = NSLocalizedString("id_buy_bitcoin", comment: "")
+        buyDirectlyLabel.text = NSLocalizedString("id_directly_in_the_app", comment: "")
+        buySupportedLabel.text = NSLocalizedString("id_20_countries_supportedaquaios/Alerts/Alerts.storyboard", comment: "")
         configurePreLogin()
         noWalletView.isHidden = hasWallet
         walletView.isHidden = !hasWallet
