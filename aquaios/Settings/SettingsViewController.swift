@@ -29,6 +29,7 @@ class SettingsViewController: BaseViewController {
 
         let footerView = Bundle.main.loadNibNamed("SettingsFooterCell", owner: self, options: nil)![0] as? SettingsFooterCell
         footerView?.delegate = self
+        footerView?.configure()
         tableView.tableFooterView = footerView
     }
 

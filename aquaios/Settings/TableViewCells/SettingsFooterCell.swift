@@ -10,8 +10,11 @@ class SettingsFooterCell: UITableViewCell {
     @IBOutlet weak var removeButton: UIButton!
     weak var delegate: SettingsFooterActions?
 
-    @IBAction func removeClick(_ sender: Any) {
+    func configure() {
         removeButton.setTitle(NSLocalizedString("id_remove_wallet", comment: ""), for: .normal)
+    }
+
+    @IBAction func removeClick(_ sender: Any) {
         delegate?.remove()
     }
 }
