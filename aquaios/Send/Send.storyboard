@@ -331,16 +331,6 @@
                                             <action selector="maxButtonTapped:" destination="ygw-8U-pDp" eventType="touchUpInside" id="tNn-Im-ETM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-YH-TXc">
-                                        <rect key="frame" x="232" y="8.0000000000000284" width="31" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="TKR">
-                                            <color key="titleColor" name="topaz"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tickerClick:" destination="ygw-8U-pDp" eventType="touchUpInside" id="q0I-C9-aXN"/>
-                                        </connections>
-                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00000000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-od-aBc" userLabel="Amount Text Field">
                                         <rect key="frame" x="20" y="14.666666666666659" width="150" height="18.666666666666671"/>
                                         <color key="backgroundColor" name="aquaShadowBlue"/>
@@ -351,12 +341,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-YH-TXc">
+                                        <rect key="frame" x="221" y="13.000000000000028" width="47" height="22"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="TKR" image="switch">
+                                            <color key="titleColor" name="topaz"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tickerClick:" destination="ygw-8U-pDp" eventType="touchUpInside" id="q0I-C9-aXN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="aquaShadowBlue"/>
                                 <constraints>
                                     <constraint firstItem="mrE-YH-TXc" firstAttribute="centerY" secondItem="bky-1i-2cg" secondAttribute="centerY" id="9qD-Lp-SP6"/>
                                     <constraint firstItem="8bs-od-aBc" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="KMl-rr-Kx3"/>
-                                    <constraint firstItem="bky-1i-2cg" firstAttribute="leading" secondItem="mrE-YH-TXc" secondAttribute="trailing" constant="20" id="f6W-Li-PIF"/>
+                                    <constraint firstItem="bky-1i-2cg" firstAttribute="leading" secondItem="mrE-YH-TXc" secondAttribute="trailing" constant="15" id="f6W-Li-PIF"/>
                                     <constraint firstAttribute="height" constant="48" id="oCP-56-OeS"/>
                                     <constraint firstAttribute="trailing" secondItem="bky-1i-2cg" secondAttribute="trailing" constant="20" id="sSw-SS-hDd"/>
                                     <constraint firstItem="bky-1i-2cg" firstAttribute="centerY" secondItem="8UP-Ou-dHX" secondAttribute="centerY" id="ysF-Cz-rFO"/>
@@ -941,6 +941,7 @@
         <image name="qrwhite" width="24" height="23"/>
         <image name="rocketship" width="200" height="162"/>
         <image name="separator1" width="340" height="1"/>
+        <image name="switch" width="13" height="13"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
