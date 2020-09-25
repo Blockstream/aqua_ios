@@ -159,7 +159,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vg3-Oa-BlT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tx_icon" id="obX-ab-dI3"/>
+                    <tabBarItem key="tabBarItem" title="" image="tx_icon" selectedImage="tx_icon_selected" id="obX-ab-dI3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buyDescriptionLabel" destination="x8R-wv-9cV" id="gaL-Er-bEx"/>
@@ -488,7 +488,8 @@
         <image name="receive_nowallet" width="48" height="48"/>
         <image name="separator1" width="340" height="1"/>
         <image name="separator2" width="374" height="8"/>
-        <image name="tx_icon" width="28" height="25"/>
+        <image name="tx_icon" width="48" height="48"/>
+        <image name="tx_icon_selected" width="48" height="48"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

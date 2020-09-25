@@ -130,7 +130,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xfc-v9-VBA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="wallet_icon" id="s92-bJ-oXx"/>
+                    <tabBarItem key="tabBarItem" title="" image="wallet_icon" selectedImage="wallet_icon_selected" id="s92-bJ-oXx"/>
                     <navigationItem key="navigationItem" title="Aqua" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="t5a-HI-Sa8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -526,10 +526,11 @@
         <image name="close" width="14" height="14"/>
         <image name="curlyarrow" width="23" height="43"/>
         <image name="homeqr" width="30" height="29"/>
-        <image name="logo" width="1100" height="306"/>
+        <image name="logo" width="120" height="35"/>
         <image name="nocoiners" width="375" height="362"/>
         <image name="qrcode_selected" width="24" height="24"/>
-        <image name="wallet_icon" width="28" height="24"/>
+        <image name="wallet_icon" width="48" height="48"/>
+        <image name="wallet_icon_selected" width="48" height="48"/>
         <namedColor name="aquaBackgroundBlue">
             <color red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

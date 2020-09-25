@@ -138,7 +138,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Boq-V6-JWe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="buy_icon" id="KmE-Hf-bcT"/>
+                    <tabBarItem key="tabBarItem" title="" image="buy_icon" selectedImage="buy_icon_selected" id="KmE-Hf-bcT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buyBitcoinLabel" destination="meS-GA-OS8" id="lDY-zH-Xtr"/>
@@ -391,7 +391,8 @@
     </scenes>
     <resources>
         <image name="btcBackground" width="340" height="140"/>
-        <image name="buy_icon" width="24" height="28"/>
+        <image name="buy_icon" width="48" height="48"/>
+        <image name="buy_icon_selected" width="48" height="48"/>
         <image name="buy_nowallet" width="48" height="48"/>
         <image name="lbtcBackground" width="340" height="140"/>
         <image name="wyrelogowhite" width="60" height="20"/>
