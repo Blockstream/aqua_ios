@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,8 +50,8 @@
                                                         <color key="textColor" name="paleLilac"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From other wallets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-ha-SH6">
-                                                        <rect key="frame" x="29" y="103.5" width="119.5" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From other wallets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-ha-SH6">
+                                                        <rect key="frame" x="4" y="103.5" width="169" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" name="auroMetalSaurus"/>
                                                         <nil key="highlightedColor"/>
@@ -59,10 +59,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" name="aquaShadowBlue"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="xaZ-ha-SH6" secondAttribute="trailing" constant="4" id="JBK-BI-8iZ"/>
                                                     <constraint firstItem="xaZ-ha-SH6" firstAttribute="centerX" secondItem="V47-va-Xaz" secondAttribute="centerX" id="Phh-KO-jlk"/>
                                                     <constraint firstItem="xaZ-ha-SH6" firstAttribute="top" secondItem="WrL-uF-UDs" secondAttribute="bottom" constant="5" id="jyV-El-4dz"/>
                                                     <constraint firstItem="7XN-CM-UkY" firstAttribute="centerX" secondItem="V47-va-Xaz" secondAttribute="centerX" id="rFz-R4-IHk"/>
                                                     <constraint firstItem="7XN-CM-UkY" firstAttribute="top" secondItem="V47-va-Xaz" secondAttribute="top" constant="15" id="txu-zv-yy6"/>
+                                                    <constraint firstItem="xaZ-ha-SH6" firstAttribute="leading" secondItem="V47-va-Xaz" secondAttribute="leading" constant="4" id="wC3-Zh-ylX"/>
                                                     <constraint firstItem="WrL-uF-UDs" firstAttribute="centerX" secondItem="V47-va-Xaz" secondAttribute="centerX" id="xRY-W5-P01"/>
                                                     <constraint firstItem="WrL-uF-UDs" firstAttribute="top" secondItem="7XN-CM-UkY" secondAttribute="bottom" constant="10" id="zkn-ha-hB1"/>
                                                 </constraints>
@@ -93,8 +95,8 @@
                                                         <color key="textColor" name="paleLilac"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debit or Apple pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-wv-9cV">
-                                                        <rect key="frame" x="28.5" y="103.5" width="120" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debit or Apple pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-wv-9cV">
+                                                        <rect key="frame" x="4" y="103.5" width="169" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" name="auroMetalSaurus"/>
                                                         <nil key="highlightedColor"/>
@@ -102,7 +104,9 @@
                                                 </subviews>
                                                 <color key="backgroundColor" name="aquaShadowBlue"/>
                                                 <constraints>
+                                                    <constraint firstItem="x8R-wv-9cV" firstAttribute="leading" secondItem="1xs-iw-Ep0" secondAttribute="leading" constant="4" id="JEI-Ye-NJv"/>
                                                     <constraint firstItem="x8R-wv-9cV" firstAttribute="centerX" secondItem="1xs-iw-Ep0" secondAttribute="centerX" id="JZP-u4-RyR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="x8R-wv-9cV" secondAttribute="trailing" constant="4" id="Nee-5f-Kn4"/>
                                                     <constraint firstItem="x8R-wv-9cV" firstAttribute="top" secondItem="FmP-MZ-CrO" secondAttribute="bottom" constant="5" id="UnX-Sz-KL3"/>
                                                     <constraint firstItem="FmP-MZ-CrO" firstAttribute="centerX" secondItem="1xs-iw-Ep0" secondAttribute="centerX" id="WIR-qr-hA3"/>
                                                     <constraint firstItem="g3n-j5-9YE" firstAttribute="centerX" secondItem="1xs-iw-Ep0" secondAttribute="centerX" id="s7N-tu-u9d"/>
