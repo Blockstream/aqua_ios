@@ -29,17 +29,9 @@ class BackupAlertViewController: UIViewController {
 
     func configureLabels() {
         titleLabel.text = "🤓" + NSLocalizedString("id_safety_first", comment: "")
-        firstLabel.text = "\u{2022} " + NSLocalizedString("id_its_important_to_back_up_your", comment: "")
-        secondLabel.text = "\u{2022} " + NSLocalizedString("id_without_your_recovery_phrase", comment: "")
-        let attributedString = NSMutableAttributedString(string: "\u{2022} " + NSLocalizedString("id_most_users_back_up_their_wallet", comment: ""), attributes: [
-            .font: UIFont.systemFont(ofSize: 15),
-            .foregroundColor: UIColor.paleLilac
-        ])
-        attributedString.addAttributes([
-            .font: UIFont.systemFont(ofSize: 15),
-            .foregroundColor: UIColor.topaz
-        ], range: NSRange(location: 2, length: 3))
-        thirdLabel.attributedText = attributedString
+        firstLabel.text = NSLocalizedString("id_its_important_to_back_up_your", comment: "")
+        secondLabel.text = NSLocalizedString("id_without_your_recovery_phrase", comment: "")
+        thirdLabel.text = NSLocalizedString("id_most_users_back_up_their_wallet", comment: "")
     }
 
     @IBAction func dismissButtonTapped(_ sender: Any) {
