@@ -24,7 +24,7 @@ class BuyViewController: BaseViewController {
         segmentedControl.setTitle(NSLocalizedString("id_available_on", comment: ""), forSegmentAt: 1)
         buyBitcoinLabel.text = NSLocalizedString("id_buy_bitcoin", comment: "")
         buyDirectlyLabel.text = NSLocalizedString("id_directly_in_the_app", comment: "")
-        buySupportedLabel.text = NSLocalizedString("id_20_countries_supportedaquaios/Alerts/Alerts.storyboard", comment: "")
+        buySupportedLabel.text = NSLocalizedString("id_20_countries_supported", comment: "")
         configurePreLogin()
         noWalletView.isHidden = hasWallet
         walletView.isHidden = !hasWallet
