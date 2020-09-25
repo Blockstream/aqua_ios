@@ -741,13 +741,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your wallet is now backed up" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-Tr-vpV">
-                                <rect key="frame" x="24" y="413" width="280" height="67"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <rect key="frame" x="24" y="413" width="320" height="62.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! You’ve just made the first step of be your own bank. Don’t show your recovery phrase to anyone!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oS3-14-Lgs">
-                                <rect key="frame" x="24" y="509.99999999999994" width="366" height="57.333333333333314"/>
+                                <rect key="frame" x="24" y="500.33333333333331" width="366" height="57.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
@@ -813,7 +813,7 @@
                         </subviews>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
-                            <constraint firstItem="oS3-14-Lgs" firstAttribute="top" secondItem="NQD-Tr-vpV" secondAttribute="bottom" constant="30" id="7qQ-Qf-dyw"/>
+                            <constraint firstItem="oS3-14-Lgs" firstAttribute="top" secondItem="NQD-Tr-vpV" secondAttribute="bottom" constant="25" id="7qQ-Qf-dyw"/>
                             <constraint firstItem="EjM-Iv-WHl" firstAttribute="leading" secondItem="Gp0-E3-1dr" secondAttribute="leading" constant="40" id="CmF-TT-vJ7"/>
                             <constraint firstItem="Gp0-E3-1dr" firstAttribute="bottom" secondItem="7ZK-1G-PXQ" secondAttribute="bottom" constant="24" id="IT5-VL-G8r"/>
                             <constraint firstItem="NQD-Tr-vpV" firstAttribute="top" secondItem="EjM-Iv-WHl" secondAttribute="bottom" constant="20" id="LVH-xR-mKa"/>
@@ -822,7 +822,7 @@
                             <constraint firstItem="Gp0-E3-1dr" firstAttribute="trailing" secondItem="7ZK-1G-PXQ" secondAttribute="trailing" constant="24" id="bNb-X9-NOc"/>
                             <constraint firstItem="NQD-Tr-vpV" firstAttribute="leading" secondItem="Gp0-E3-1dr" secondAttribute="leading" constant="24" id="eUN-T1-MzR"/>
                             <constraint firstItem="Gp0-E3-1dr" firstAttribute="trailing" secondItem="VeT-UP-BNt" secondAttribute="trailing" constant="87" id="euS-cU-YIx"/>
-                            <constraint firstItem="Gp0-E3-1dr" firstAttribute="trailing" secondItem="NQD-Tr-vpV" secondAttribute="trailing" constant="110" id="faU-48-OED"/>
+                            <constraint firstItem="Gp0-E3-1dr" firstAttribute="trailing" secondItem="NQD-Tr-vpV" secondAttribute="trailing" constant="70" id="faU-48-OED"/>
                             <constraint firstItem="oS3-14-Lgs" firstAttribute="leading" secondItem="Gp0-E3-1dr" secondAttribute="leading" constant="24" id="gpv-1K-gYr"/>
                             <constraint firstItem="NQD-Tr-vpV" firstAttribute="top" secondItem="VeT-UP-BNt" secondAttribute="bottom" constant="30" id="kSc-Ns-QxQ"/>
                             <constraint firstItem="EjM-Iv-WHl" firstAttribute="top" secondItem="Gp0-E3-1dr" secondAttribute="top" constant="30" id="kfe-Bv-wng"/>
