@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,8 +33,8 @@
                                 <constraint firstAttribute="width" constant="136" id="qGL-ZL-4ch"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-6k-YzO">
-                            <rect key="frame" x="136" y="27" width="248" height="25.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-6k-YzO">
+                            <rect key="frame" x="136" y="27" width="263" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                         <constraint firstAttribute="trailing" secondItem="hJk-O5-AUF" secondAttribute="trailing" constant="32" id="JGG-Sc-Wy2"/>
                         <constraint firstItem="hJk-O5-AUF" firstAttribute="leading" secondItem="joQ-wR-NZF" secondAttribute="trailing" id="SqO-b2-KOM"/>
                         <constraint firstAttribute="bottom" secondItem="joQ-wR-NZF" secondAttribute="bottom" id="VAs-jQ-HzS"/>
-                        <constraint firstAttribute="trailing" secondItem="8yi-6k-YzO" secondAttribute="trailing" constant="30" id="m1B-DH-ikl"/>
+                        <constraint firstAttribute="trailing" secondItem="8yi-6k-YzO" secondAttribute="trailing" constant="15" id="m1B-DH-ikl"/>
                         <constraint firstItem="8yi-6k-YzO" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" constant="27" id="oLY-Er-aRe"/>
                         <constraint firstItem="joQ-wR-NZF" firstAttribute="top" secondItem="RYQ-yK-PcA" secondAttribute="top" id="raL-UT-AN9"/>
                         <constraint firstAttribute="bottom" secondItem="hJk-O5-AUF" secondAttribute="bottom" priority="100" constant="16" id="tSg-mC-c1w"/>
@@ -69,6 +69,7 @@
                 <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-ae-vmF">
                     <rect key="frame" x="7" y="188.5" width="400" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Restore  " image="chevron-right">
                         <color key="titleColor" name="topaz"/>
                     </state>
