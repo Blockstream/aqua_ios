@@ -99,11 +99,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Y5-ks-ukI">
-                                <rect key="frame" x="18" y="332.33333333333331" width="378" height="191.99999999999994"/>
+                                <rect key="frame" x="18" y="322.33333333333331" width="378" height="191.99999999999994"/>
                                 <color key="backgroundColor" name="lighterBlueGray"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bFB-wq-bvG">
-                                <rect key="frame" x="18" y="332.33333333333331" width="378" height="191.99999999999994"/>
+                                <rect key="frame" x="18" y="322.33333333333331" width="378" height="191.99999999999994"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-nv-7sO">
                                         <rect key="frame" x="16" y="0.0" width="346" height="48"/>
@@ -329,13 +329,13 @@
                                     <action selector="completeButtonTapped:" destination="cdG-4N-BjS" eventType="touchUpInside" id="aCH-WH-eqj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write down your recovery phrase" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8N-0W-fPh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write down your recovery phrase" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8N-0W-fPh">
                                 <rect key="frame" x="24" y="118" width="280" height="67"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcK-sa-tt2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZcK-sa-tt2">
                                 <rect key="frame" x="24" y="215" width="366" height="57.333333333333314"/>
                                 <string key="text">Back up these 12 words using physical copy such as pen and paper. Digital copies, such as screenshot or email, are easy to get hacked.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -351,7 +351,8 @@
                             <constraint firstItem="bFB-wq-bvG" firstAttribute="leading" secondItem="SXu-gz-e5L" secondAttribute="leading" constant="18" id="IOb-qE-l6B"/>
                             <constraint firstItem="SXu-gz-e5L" firstAttribute="trailing" secondItem="B8N-0W-fPh" secondAttribute="trailing" constant="110" id="NNE-Pg-8od"/>
                             <constraint firstItem="SXu-gz-e5L" firstAttribute="trailing" secondItem="bFB-wq-bvG" secondAttribute="trailing" constant="18" id="U9w-Ss-AqX"/>
-                            <constraint firstItem="bFB-wq-bvG" firstAttribute="top" secondItem="ZcK-sa-tt2" secondAttribute="bottom" constant="60" id="W3u-Ys-5NK"/>
+                            <constraint firstItem="o4l-YO-ysY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bFB-wq-bvG" secondAttribute="bottom" constant="10" id="Vw1-AB-bTa"/>
+                            <constraint firstItem="bFB-wq-bvG" firstAttribute="top" secondItem="ZcK-sa-tt2" secondAttribute="bottom" constant="50" id="W3u-Ys-5NK"/>
                             <constraint firstItem="o4l-YO-ysY" firstAttribute="leading" secondItem="SXu-gz-e5L" secondAttribute="leading" constant="24" id="WDo-D8-lxk"/>
                             <constraint firstItem="3Y5-ks-ukI" firstAttribute="top" secondItem="bFB-wq-bvG" secondAttribute="top" id="boz-Oy-HBN"/>
                             <constraint firstItem="B8N-0W-fPh" firstAttribute="leading" secondItem="SXu-gz-e5L" secondAttribute="leading" constant="24" id="bse-BV-iSn"/>
@@ -680,6 +681,7 @@
                             <constraint firstItem="LDP-IO-Q0s" firstAttribute="bottom" secondItem="MTT-JS-ltT" secondAttribute="bottom" constant="24" id="cQR-xa-H9j"/>
                             <constraint firstItem="LDP-IO-Q0s" firstAttribute="trailing" secondItem="9iH-1y-hxu" secondAttribute="trailing" constant="24" id="hhU-8j-5Mb"/>
                             <constraint firstItem="LDP-IO-Q0s" firstAttribute="trailing" secondItem="MTT-JS-ltT" secondAttribute="trailing" constant="24" id="iby-vz-Zd2"/>
+                            <constraint firstItem="MTT-JS-ltT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9iH-1y-hxu" secondAttribute="bottom" constant="10" id="qKA-kh-Rjx"/>
                             <constraint firstItem="9iH-1y-hxu" firstAttribute="leading" secondItem="LDP-IO-Q0s" secondAttribute="leading" constant="24" id="wvJ-py-MRg"/>
                             <constraint firstItem="dcY-UC-6bF" firstAttribute="top" secondItem="LDP-IO-Q0s" secondAttribute="top" constant="30" id="xZW-u5-z7I"/>
                             <constraint firstItem="MTT-JS-ltT" firstAttribute="leading" secondItem="LDP-IO-Q0s" secondAttribute="leading" constant="24" id="xga-ee-oSp"/>
