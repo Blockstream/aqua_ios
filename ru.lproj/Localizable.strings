@@ -5,7 +5,7 @@
 "id_add_assets_to_get_started" = "Добавьте активы, чтобы начать.";
 "id_add_to_wallet" = "Добавить в кошелек";
 "id_address_generation_failed" = "Не удалось создать адрес";
-"id_all" = "All";
+"id_all" = "Все";
 "id_already_have_an_aqua_wallet" = "У вас уже есть кошелек AQUA?";
 "id_amount" = "Сумма";
 "id_app_version" = "Версия приложения:";
@@ -14,7 +14,7 @@
 "id_asset_id" = "ID актива";
 "id_assets_dont_match" = "Активы не совпадают";
 "id_authentication_failed" = "Ошибка авторизации";
-"id_available_on" = "Available on";
+"id_available_on" = "Доступно на";
 "id_back" = "Назад";
 "id_back_up_now" = "Произвести резервное копирование";
 "id_back_up_your_wallet" = "Создайте резервную копию вашего кошелька";
@@ -23,12 +23,12 @@
 "id_buy" = "Купить";
 "id_buy_bitcoin" = "Купить биткоины";
 "id_buy_bitcoin_with_card_or_apple" = "Купить биткоины с помощью карты или Apple Pay";
-"id_buy_btc" = "Buy BTC";
+"id_buy_btc" = "Купить BTC";
 "id_buy_lbtc" = "Купить  L-BTC";
 "id_buy_liquid_bitcoin_with_card_or" = "Купить Liquid-биткоины с помощью карты или Apple Pay";
 "id_cancel" = "Отменить";
 "id_check_updates" = "Проверить обновления";
-"id_choose_asset" = "Choose Asset";
+"id_choose_asset" = "Выбрать актив";
 "id_clipboard_content_is_not_a" = "Данные в буфере обмена не являются допустимым адресом\n";
 "id_complete" = "Завершить";
 "id_confirm" = "Подтвердить";
@@ -54,10 +54,10 @@
 "id_enable_passcode_in_ios_settings" = "Для продолжения подключите пароль в настройках iOS.";
 "id_enable_touch_id" = "Подключите Touch ID";
 "id_enter_recovery_phrase" = "Введите фразу восстановления";
-"id_error" = "Error";
-"id_error_creating_wallet" = "Error creating wallet";
-"id_error_logging_in" = "Error logging in";
-"id_error_opening_wyre_widget" = "Error opening Wyre widget";
+"id_error" = "Ошибка";
+"id_error_creating_wallet" = "Ошибка создания кошелька";
+"id_error_logging_in" = "Ошибка входа";
+"id_error_opening_wyre_widget" = "Ошибка открытия виджета Wyre";
 "id_error_restoring_your_wallet" = "Ошибка восстановления кошелька";
 "id_exchange" = "Обмен";
 "id_face_id" = "Face ID";
@@ -75,7 +75,7 @@
 "id_intro" = "Вступление";
 "id_invalid_address" = "Недействительный адрес";
 "id_invalid_amount" = "Недопустимая сумма";
-"id_invalid_recovery_phrase" = "Invalid recovery phrase";
+"id_invalid_recovery_phrase" = "Невалидная фраза восстановления";
 "id_ios_version" = "Версия iOS:";
 "id_issuer" = "Эмитент";
 "id_its_important_to_back_up_your" = "Важно сделать резервную копию своего кошелька, записав фразу восстановления.";
@@ -95,9 +95,9 @@
 "id_most_users_back_up_their_wallet" = "Большинство пользователей создают резервную копию кошелька уже при первом его использовании!";
 "id_my_notes" = "Мои заметки";
 "id_my_qr" = "Мой QR";
-"id_network_error" = "Network error";
-"id_network_error_creating_wallet" = "Network error creating wallet";
-"id_network_error_restoring_wallet" = "Network error restoring wallet";
+"id_network_error" = "Сетевая ошибка";
+"id_network_error_creating_wallet" = "Сетевая ошибка создания кошелька";
+"id_network_error_restoring_wallet" = "Сетевая ошибка при восстановлении кошелька";
 "id_network_fee" = "Комиссия сети";
 "id_new_to_aqua" = "Впервые в AQUA?";
 "id_not_a_valid_address_to_send" = "Невалидный адрес для отправки этого актива";
@@ -105,7 +105,7 @@
 "id_only_visible_to_you" = "Видно только вам";
 "id_oops_make_sure_you_have_written" = "Ой. Убедитесь, что вы правильно написали слова.";
 "id_oops_you_dont_have_enough_lbtc" = "Ой! У вас недостаточно L-BTC для покрытия комиссии за транзакцию.";
-"id_operation_failure" = "Operation Failure";
+"id_operation_failure" = "Операция не удалась";
 "id_passcode" = "Пароль";
 "id_paste_from_clipboard" = "Вставить из буфера обмена";
 "id_payment_sent" = "Платеж отправлен!";
@@ -129,7 +129,7 @@
 "id_scan_qr_code" = "Сканировать QR-код";
 "id_search_assets" = "Искать активы";
 "id_secure_your_aqua_wallet_with_a" = "Защитите свой кошелек AQUA простым нажатием большого пальца.";
-"id_select_asset" = "Select Asset";
+"id_select_asset" = "Выбрать актив";
 "id_select_word_d" = "Выбрать слово # %d";
 "id_send" = "Отправить";
 "id_sent" = "Отправлено";
@@ -148,7 +148,7 @@
 "id_tether_is_a_blockchainenabled" = "Tether - это платформа на блокчейне, предназначенная для облегчения использования фиатных валют в цифровом виде. Tether пытается разрушить традиционную финансовую систему за счет более современного подхода к деньгам.";
 "id_the_12word_recovery_phrase_is" = "Фраза восстановления из 12 слов - это резервная копия вашего кошелька. Запишите его ручкой на бумаге и храните в надежном месте. Не делайте цифровых копий, например, скриншотов - их легче взломать.";
 "id_the_fastest_way_to_secure_your" = "Самый быстрый способ обезопасить ваш кошелек AQUA.";
-"id_the_service_is_not_available_in" = "The service is not available in your country";
+"id_the_service_is_not_available_in" = "Услуга в вашей стране не предоставляется";
 "id_to" = "На";
 "id_touch_id" = "Touch ID";
 "id_transaction_id" = "ID транзакции";
@@ -161,8 +161,8 @@
 "id_warning" = "Предупреждение";
 "id_we_use_the_camera_to_scan_qr" = "Для сканирования QR-кода используется камера";
 "id_website" = "Веб-сайт";
-"id_what_is_liquid_and_how_does_it" = "What is Liquid and how does it work";
-"id_which_platforms_support_the" = "Which platforms support the Liquid Network?";
+"id_what_is_liquid_and_how_does_it" = "Что такое сеть Liquid и как она работает";
+"id_which_platforms_support_the" = "Какие платформы поддерживают сеть Liquid Network?";
 "id_with_aqua_you_are_your_own_bank" = "С AQUA вы - банк себе самим. Никто, кроме вас, не имеет доступа к вашим активам. Даже мы.";
 "id_with_great_power_comes_great" = "Чем больше сила, тем выше ответственность. Вам понадобится резервная копия вашего кошелька, чтобы вы всегда могли владеть своими активами, даже если ваше устройство будет потеряно или сломано.";
 "id_without_your_recovery_phrase" = "Без фразы восстановления невозможно восстановить ваши активы, если ваше устройство будет потеряно или сломано.";
@@ -170,6 +170,6 @@
 "id_you_can_restore_your_wallet" = "Вы можете восстановить свой кошелек, используя фразу восстановления из 12 слов, которую вы записали в процессе создания резервной копии кошелька. Поддерживаются только фразы восстановления, созданные в AQUA.";
 "id_youll_need_to_set_up_a_wallet" = "Вам необходимо настроить кошелек AQUA, прежде чем вы сможете покупать биткоины и Liquid-активы";
 "id_youll_need_to_set_up_an_aqua" = "Вам необходимо настроить кошелек AQUA, прежде чем вы сможете получать или покупать биткоины.";
-"id_your__transactions_will_show_up" = "Your %@ transactions will show up here";
+"id_your__transactions_will_show_up" = "Ваши %@ транзакции появятся здесь";
 "id_your_recovery_phrase_is_secret" = "Ваша фраза восстановления секретна, аутентифицируйтесь, чтобы увидеть ее и создать резервную копию.";
 "id_your_wallet_will_support" = "Ваш кошелек будет поддерживать биткоины,  Liquid-биткоины и другие Liquid-активы.";

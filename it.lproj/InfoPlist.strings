@@ -1,2 +1,2 @@
-NSFaceIDUsageDescription = "AQUA utilizza un'autenticazione biometrica al fine di agevolare l'accesso al wallet";
-NSCameraUsageDescription = "Utilizziamo la fotocamera per scannerizzare i codici QE";
+NSFaceIDUsageDescription = "AQUA utilizza l'autenticazione biometrica per agevolare l'accesso al wallet";
+NSCameraUsageDescription = "Utilizziamo la fotocamera per scannerizzare i codici QR";
