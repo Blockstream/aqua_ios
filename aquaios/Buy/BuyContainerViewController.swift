@@ -53,7 +53,7 @@ class BuyContainerViewController: UIViewController {
         }.then(on: bgq) {
             self.supportedCountries()
         }.map(on: bgq) { countries in
-            if !countries.contains(countryCode!) {
+            if !countries.contains(countryCode ?? "us") {
                 throw WyreError.unsupportedCountry
             }
         }.then(on: bgq) {
