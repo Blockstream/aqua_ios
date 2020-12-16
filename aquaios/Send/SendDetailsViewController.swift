@@ -97,7 +97,7 @@ class SendDetailsViewController: BaseViewController {
     }
 
     @IBAction func continueButtonTapped(_ sender: Any) {
-        addressee?.satoshi = showFiat ? Fiat.to(amount) : asset?.satoshi(amount) ?? 0
+        addressee?.satoshi = showFiat ? Fiat.to(amount) ?? 0 : asset?.satoshi(amount) ?? 0
         guard let addressee = self.addressee, addressee.satoshi > 0 else {
             return
         }
@@ -138,7 +138,7 @@ class SendDetailsViewController: BaseViewController {
             fiatLabel.text = "\(Fiat.currency() ?? "") \( fiat ?? "")"
         } else {
             let satoshi = Fiat.to(amount)
-            let value = sendAll ? asset.string() : asset.string(satoshi)
+            let value = sendAll ? asset.string() : asset.string(satoshi ?? 0)
             fiatLabel.text = "\(asset.info?.ticker ?? "") \( value ?? "")"
         }
     }
@@ -170,6 +170,13 @@ class SendDetailsViewController: BaseViewController {
     }
 
     @IBAction func tickerClick(_ sender: Any) {
+        // skip conversion in case fiat rate is not available
+        guard Fiat.rate() != nil else {
+            let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString("Conversion not available", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
+            self.present(alert, animated: true)
+            return
+        }
         showFiat = !showFiat
         tickerButton.setTitle(showFiat ? Fiat.currency() : asset?.info?.ticker ?? "", for: .normal)
         if sendAll {
