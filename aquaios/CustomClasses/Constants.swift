@@ -5,5 +5,6 @@ struct Constants {
         static var hasBackedUp = "has_backed_up"
         static var hasShownBackup = "has_shown_backup"
         static var pinnedAssets = "pinned_assets"
+        static var isWalletRestored = "is_wallet_restored"
     }
 }

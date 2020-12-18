@@ -21,6 +21,12 @@ extension UIViewController {
         }
     }
 
+    private var isWalletRestored: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Constants.Keys.isWalletRestored)
+        }
+    }
+
     var isModalPresenting: Bool {
         let modalPresenting = presentingViewController != nil
         let navigationPresenting = navigationController?.presentingViewController?.presentedViewController == navigationController
@@ -50,14 +56,15 @@ extension UIViewController {
     }
 
     func showBackupIfNeeded() {
-        if !hasBackedUp && !hasShownBackup {
+        // Show backup nag for newly created wallets that haven't been backed up during this session
+        if !hasBackedUp && !hasShownBackup && !isWalletRestored {
             UserDefaults.standard.set(true, forKey: Constants.Keys.hasShownBackup)
             showBackupAlert()
         }
     }
 
     func showBackupIfNotified() {
-        if !hasBackedUp {
+        if !hasBackedUp && !isWalletRestored {
                 showBackupAlert()
             }
         }

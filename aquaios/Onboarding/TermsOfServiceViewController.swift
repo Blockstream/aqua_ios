@@ -51,6 +51,7 @@ class TermsOfServiceViewController: BaseViewController {
         }.ensure {
             self.stopAnimating()
         }.done { _ in
+            UserDefaults.standard.set(false, forKey: Constants.Keys.isWalletRestored)
             self.performSegue(withIdentifier: "next", sender: nil)
         }.catch { error in
             let message: String

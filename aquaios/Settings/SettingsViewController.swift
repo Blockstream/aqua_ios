@@ -137,6 +137,7 @@ extension SettingsViewController: SettingsFooterActions {
     func removeWallet() {
         UserDefaults.standard.set(false, forKey: Constants.Keys.hasBackedUp)
         UserDefaults.standard.set(false, forKey: Constants.Keys.hasShownBackup)
+        UserDefaults.standard.set(false, forKey: Constants.Keys.isWalletRestored)
         UserDefaults.standard.set([String](), forKey: Constants.Keys.pinnedAssets)
         try? Mnemonic.delete()
         exit(0)
