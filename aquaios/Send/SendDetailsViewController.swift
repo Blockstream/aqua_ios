@@ -70,6 +70,7 @@ class SendDetailsViewController: BaseViewController {
         amounTextField.inputView = UIView()
         amounTextField.inputAccessoryView = UIView()
         amounTextField.tintColor = .topaz
+        // blink cursor
         amounTextField.becomeFirstResponder()
         // setup buttons and labels
         continueButton.round(radius: 26.5)
@@ -81,10 +82,16 @@ class SendDetailsViewController: BaseViewController {
         dotButton.setTitle(decimal, for: .normal)
     }
 
+    func disableMax() {
+        if self.sendAll {
+            self.sendAll = false
+            sendAllButton.isSelected = false
+            self.amounTextField.isEnabled = true
+        }
+    }
+
     @IBAction func maxButtonTapped(_ sender: Any) {
         self.sendAll = !self.sendAll
-        self.amounTextField.isEnabled = !self.amounTextField.isEnabled
-        if !self.sendAll { self.amounTextField.becomeFirstResponder() }
         sendAllButton.isSelected = self.sendAll
         if !sendAll {
             amount = ""
@@ -144,6 +151,7 @@ class SendDetailsViewController: BaseViewController {
     }
 
     @objc func click(sender: UIButton) {
+        disableMax()
         if sender == deleteButton {
             if amount.count > 0 {
                 amount.removeLast()
@@ -157,6 +165,7 @@ class SendDetailsViewController: BaseViewController {
     }
 
     @IBAction func dotClick(_ sender: UIButton) {
+        disableMax()
         if amount.contains(decimal) {
             return
         }
