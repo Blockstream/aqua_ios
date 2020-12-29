@@ -93,7 +93,7 @@ class SendReviewViewController: BaseViewController {
         }.ensure {
             self.stopAnimating()
         }.done { res in
-            if res.error != nil {
+            if res.error != nil && res.error != "" {
                 let alert = UIAlertController(title: NSLocalizedString("id_error", comment: ""), message: NSLocalizedString(res.error ?? "id_error", comment: ""), preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("id_cancel", comment: ""), style: .cancel) { _ in })
                 self.present(alert, animated: true)
