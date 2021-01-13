@@ -63,8 +63,8 @@ class SendReviewViewController: BaseViewController {
             let fiat = Fiat.from(fee)
             let fiatFees = "\(Fiat.currency() ?? "") \( fiat ?? "")"
             feeLabel.text = fiatFees
-            defaultFeeButton.setTitle(fiatFees, for: .normal)
-            rushFeeButton.setTitle(NSLocalizedString("id_its_urgent", comment: ""), for: .normal)
+            defaultFeeButton.setTitle(NSLocalizedString("id_slow", comment: ""), for: .normal)
+            rushFeeButton.setTitle(NSLocalizedString("id_urgent", comment: ""), for: .normal)
         }
         networkFeeButton.setTitle(NSLocalizedString("id_network_fee", comment: ""), for: .normal)
         // Disable fee buttons for liquid

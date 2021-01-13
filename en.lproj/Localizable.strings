@@ -80,7 +80,8 @@
 "id_issuer" = "Issuer";
 "id_its_important_to_back_up_your" = "It’s important to back up your wallet by writing down your recovery phrase.";
 "id_its_time_to_back_up_your_wallet" = "It’s time to back up your wallet.";
-"id_its_urgent" = "It's urgent!";
+"id_slow" = "Slow";
+"id_urgent" = "Urgent";
 "id_lbtc_has_no_issuer_and_is" = "L-BTC has no issuer and is instead created on the network via a peg-in.";
 "id_liquid_101__what_is_liquid_and" = "Liquid 101 - What is Liquid and how does it work";
 "id_liquid_101_what_is_liquid_and" = "Liquid 101, what is Liquid and how does it work?";

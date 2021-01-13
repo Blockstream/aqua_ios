@@ -65,6 +65,20 @@ class ReceiveViewController: BaseViewController {
         }
     }
 
+    func handleCopyEvent() {
+        feedbackView.fadeInOut()
+        UIPasteboard.general.string = addressLabel.text
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    }
+
+    @IBAction func onQrCodeImageTap(_ sender: Any) {
+        handleCopyEvent()
+    }
+
+    @IBAction func onAddressLabelTap(_ sender: Any) {
+        handleCopyEvent()
+    }
+
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         let uri = addressLabel.text
         let avc = UIActivityViewController(activityItems: [uri ?? ""], applicationActivities: nil)
@@ -73,8 +87,6 @@ class ReceiveViewController: BaseViewController {
     }
 
     @IBAction func copyButtonTapped(_ sender: Any) {
-        feedbackView.fadeInOut()
-        UIPasteboard.general.string = addressLabel.text
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        handleCopyEvent()
     }
 }

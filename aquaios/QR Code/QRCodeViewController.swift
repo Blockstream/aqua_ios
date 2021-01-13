@@ -25,6 +25,7 @@ class QRCodeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        scannerPreviewView.frame = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         qrScanner = QRScanner(with: scannerPreviewView, delegate: self)
         qrScreenshotReader = QRCodeScreenshotReader(delegate: self)
         setupBlurEffect()
