@@ -82,7 +82,7 @@ extension SendSuccessViewController: UITableViewDataSource, UITableViewDelegate 
             let cell = tableView.dequeueReusableCell(withIdentifier: "subCell")
             cell?.selectionStyle = .none
             cell?.backgroundColor = .darkBlueGray
-            cell?.textLabel?.text = NSLocalizedString("id_sent_from", comment: "")
+            cell?.textLabel?.text = NSLocalizedString("id_sent_to", comment: "")
             cell?.detailTextLabel?.text = "\(tx.addressees.first ?? "")"
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
             imageView.image = UIImage(named: "copy")

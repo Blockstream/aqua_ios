@@ -18,6 +18,7 @@ class SendReviewViewController: BaseViewController {
     @IBOutlet weak var defaultFeeButton: UIButton!
     @IBOutlet weak var rushFeeButton: UIButton!
 
+    @IBOutlet weak var addressLabelVisibilityButton: UIButton!
     var tx: RawTransaction!
 
     private var feeUpdateViewHidden = true
@@ -125,6 +126,14 @@ class SendReviewViewController: BaseViewController {
         updateTransaction(tx: newTx!)
     }
 
+    @IBAction func addressLabelVisibilityToggle(_ sender: Any) {
+        switch addressLabel.numberOfLines {
+        case 1:
+            addressLabel.numberOfLines = 0
+        default:
+            addressLabel.numberOfLines = 1
+        }
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

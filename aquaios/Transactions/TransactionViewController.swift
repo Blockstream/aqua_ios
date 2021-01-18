@@ -135,7 +135,7 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         case .sentFrom:
             let cell = tableView.dequeueReusableCell(withIdentifier: "subCell")
             cell?.selectionStyle = .none
-            cell?.textLabel?.text = NSLocalizedString("id_sent_from", comment: "")
+            cell?.textLabel?.text = NSLocalizedString("id_sent_to", comment: "")
             cell?.detailTextLabel?.text = "\(tx.addressees.first ?? "")"
             return cell ?? UITableViewCell()
         case .id:

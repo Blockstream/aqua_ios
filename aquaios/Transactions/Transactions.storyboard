@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,18 +124,19 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add assets to get started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hop-83-FIm">
-                                        <rect key="frame" x="110.5" y="305.5" width="193" height="20.5"/>
+                                        <rect key="frame" x="111" y="305.5" width="192" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="auroMetalSaurus"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to Aqua?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTm-ic-lHJ">
-                                        <rect key="frame" x="154" y="270" width="106" height="20.5"/>
+                                        <rect key="frame" x="154.5" y="270" width="105.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="auroMetalSaurus"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="25S-UB-fc8"/>
                                 <color key="backgroundColor" name="aquaBackgroundBlue"/>
                                 <constraints>
                                     <constraint firstItem="Peh-6m-zSh" firstAttribute="top" secondItem="Hop-83-FIm" secondAttribute="bottom" constant="35" id="3xb-nJ-b91"/>
@@ -146,7 +147,6 @@
                                     <constraint firstItem="MTm-ic-lHJ" firstAttribute="centerX" secondItem="25S-UB-fc8" secondAttribute="centerX" id="nCG-80-iEe"/>
                                     <constraint firstItem="Hop-83-FIm" firstAttribute="top" secondItem="MTm-ic-lHJ" secondAttribute="bottom" constant="15" id="wZ7-YS-66u"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="25S-UB-fc8"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-FQ-Haf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="106"/>
@@ -154,6 +154,7 @@
                                 <color key="tintColor" name="tiffanyBlue"/>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vg3-Oa-BlT"/>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="xlV-FQ-Haf" firstAttribute="leading" secondItem="Vg3-Oa-BlT" secondAttribute="leading" id="4sH-R8-kuP"/>
@@ -161,7 +162,6 @@
                             <constraint firstItem="xlV-FQ-Haf" firstAttribute="bottom" secondItem="Vg3-Oa-BlT" secondAttribute="bottom" id="qAg-xJ-aC9"/>
                             <constraint firstItem="xlV-FQ-Haf" firstAttribute="top" secondItem="Vg3-Oa-BlT" secondAttribute="top" id="yvs-SY-HXv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vg3-Oa-BlT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tx_icon" selectedImage="tx_icon_selected" id="obX-ab-dI3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -270,7 +270,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GoZ-mx-e0k">
-                                                    <rect key="frame" x="352.5" y="13" width="41.5" height="19.5"/>
+                                                    <rect key="frame" x="352" y="13" width="42" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -317,7 +317,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzE-pc-THA">
                                 <rect key="frame" x="0.0" y="56" width="414" height="104.5"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-Uu-GvR">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-Uu-GvR">
                                 <rect key="frame" x="63" y="756" width="288" height="32"/>
                                 <color key="backgroundColor" name="teal"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -348,6 +348,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="HJu-T2-n6p"/>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="HJu-T2-n6p" firstAttribute="bottom" secondItem="6EC-Uu-GvR" secondAttribute="bottom" constant="20" id="2hw-wf-EuT"/>
@@ -376,7 +377,6 @@
                             <constraint firstItem="CHA-4F-sqZ" firstAttribute="leading" secondItem="HJu-T2-n6p" secondAttribute="leading" id="yaP-tP-dXu"/>
                             <constraint firstItem="CHA-4F-sqZ" firstAttribute="top" secondItem="PzE-pc-THA" secondAttribute="bottom" id="zIj-SQ-Owm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="HJu-T2-n6p"/>
                     </view>
                     <navigationItem key="navigationItem" id="ied-4g-bno"/>
                     <connections>
@@ -416,7 +416,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E5-WC-haA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E5-WC-haA">
                                 <rect key="frame" x="360" y="71" width="34" height="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" name="topaz"/>
@@ -426,6 +426,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Df-Z7-CTb"/>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
                             <constraint firstItem="g2K-WO-z8f" firstAttribute="top" secondItem="6Df-Z7-CTb" secondAttribute="top" constant="20" id="1PM-lc-coh"/>
@@ -437,7 +438,6 @@
                             <constraint firstItem="6Df-Z7-CTb" firstAttribute="trailing" secondItem="4E5-WC-haA" secondAttribute="trailing" constant="20" id="sZs-Jy-Nih"/>
                             <constraint firstItem="4E5-WC-haA" firstAttribute="centerY" secondItem="g2K-WO-z8f" secondAttribute="centerY" id="uef-ku-h7K"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Df-Z7-CTb"/>
                     </view>
                     <navigationItem key="navigationItem" id="nmA-Yz-O9M"/>
                     <connections>

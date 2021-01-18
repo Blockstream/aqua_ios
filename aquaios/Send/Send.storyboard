@@ -545,11 +545,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip9-F8-tZa">
-                                        <rect key="frame" x="20.000000000000007" y="162.33333333333331" width="127.66666666666669" height="17"/>
+                                        <rect key="frame" x="20" y="162.33333333333331" width="147.66666666666666" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" name="paleLilac"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-Ze-Fuu">
+                                        <rect key="frame" x="20" y="162.33333333333331" width="147.66666666666666" height="30"/>
+                                        <connections>
+                                            <action selector="addressLabelVisibilityToggle:" destination="BLP-ef-qhX" eventType="touchUpInside" id="LeK-wg-fXn"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-q2-rse">
                                         <rect key="frame" x="20" y="214.33333333333331" width="111" height="20"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
@@ -572,23 +578,27 @@
                                     <constraint firstItem="VsW-Hg-0Be" firstAttribute="leading" secondItem="cuA-KG-0aZ" secondAttribute="leading" constant="20" id="2g3-I7-Yhs"/>
                                     <constraint firstAttribute="trailing" secondItem="VsW-Hg-0Be" secondAttribute="trailing" constant="20" id="4Gr-Nc-CpN"/>
                                     <constraint firstItem="DY3-BR-a0B" firstAttribute="leading" secondItem="cuA-KG-0aZ" secondAttribute="leading" constant="20" id="7J9-zd-zrf"/>
+                                    <constraint firstItem="LWO-Ze-Fuu" firstAttribute="trailing" secondItem="Ip9-F8-tZa" secondAttribute="trailing" id="7b5-gn-pga"/>
+                                    <constraint firstItem="LWO-Ze-Fuu" firstAttribute="top" secondItem="Ip9-F8-tZa" secondAttribute="top" id="9JK-ao-opK"/>
                                     <constraint firstItem="DY3-BR-a0B" firstAttribute="top" secondItem="cuA-KG-0aZ" secondAttribute="top" constant="20" id="9PI-n8-BeP"/>
                                     <constraint firstItem="Hr4-q2-rse" firstAttribute="leading" secondItem="cuA-KG-0aZ" secondAttribute="leading" constant="20" id="Afx-hf-zRC"/>
                                     <constraint firstAttribute="trailing" secondItem="tYs-f7-QvK" secondAttribute="trailing" constant="20" id="Atc-lz-oav"/>
                                     <constraint firstItem="Ip9-F8-tZa" firstAttribute="top" secondItem="fg6-W5-7vk" secondAttribute="bottom" constant="8" id="C0X-2v-iYz"/>
                                     <constraint firstItem="VsW-Hg-0Be" firstAttribute="top" secondItem="Hr4-q2-rse" secondAttribute="bottom" constant="8" id="CbG-OY-ntV"/>
-                                    <constraint firstAttribute="centerX" secondItem="Ip9-F8-tZa" secondAttribute="trailing" constant="20" id="ELc-DS-J7U"/>
+                                    <constraint firstAttribute="centerX" secondItem="Ip9-F8-tZa" secondAttribute="trailing" id="ELc-DS-J7U"/>
                                     <constraint firstAttribute="trailing" secondItem="fg6-W5-7vk" secondAttribute="trailing" constant="20" id="Ic8-AX-gpV"/>
                                     <constraint firstItem="fg6-W5-7vk" firstAttribute="top" secondItem="ew3-C8-S8T" secondAttribute="bottom" constant="30" id="KMQ-o1-8Xg"/>
+                                    <constraint firstItem="Hr4-q2-rse" firstAttribute="top" secondItem="fg6-W5-7vk" secondAttribute="bottom" constant="59.999999999999972" id="Qeh-hQ-aK5"/>
                                     <constraint firstItem="ew3-C8-S8T" firstAttribute="leading" secondItem="cuA-KG-0aZ" secondAttribute="leading" constant="23" id="S2t-ur-yxf"/>
                                     <constraint firstAttribute="height" constant="286" id="S8y-yi-kAj"/>
                                     <constraint firstAttribute="trailing" secondItem="ew3-C8-S8T" secondAttribute="trailing" constant="20" id="SVB-3Q-wFo"/>
                                     <constraint firstItem="ew3-C8-S8T" firstAttribute="top" secondItem="tYs-f7-QvK" secondAttribute="bottom" constant="4" id="Uv0-ep-pIa"/>
                                     <constraint firstItem="tYs-f7-QvK" firstAttribute="leading" secondItem="cuA-KG-0aZ" secondAttribute="leading" constant="20" id="X7q-l4-OuZ"/>
-                                    <constraint firstItem="Hr4-q2-rse" firstAttribute="top" secondItem="Ip9-F8-tZa" secondAttribute="bottom" constant="35" id="b5o-kb-RK4"/>
+                                    <constraint firstItem="LWO-Ze-Fuu" firstAttribute="bottom" secondItem="Ip9-F8-tZa" secondAttribute="bottom" id="eM2-ui-coD"/>
                                     <constraint firstAttribute="trailing" secondItem="DY3-BR-a0B" secondAttribute="trailing" constant="20" id="fdM-SW-WPa"/>
                                     <constraint firstItem="Ip9-F8-tZa" firstAttribute="leading" secondItem="cuA-KG-0aZ" secondAttribute="leading" constant="20" id="lIN-YS-MbI"/>
                                     <constraint firstItem="tYs-f7-QvK" firstAttribute="top" secondItem="DY3-BR-a0B" secondAttribute="bottom" constant="8" id="mmR-zC-YAG"/>
+                                    <constraint firstItem="LWO-Ze-Fuu" firstAttribute="leading" secondItem="Ip9-F8-tZa" secondAttribute="leading" id="u5Y-Lq-Bxk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -609,6 +619,7 @@
                     <navigationItem key="navigationItem" id="SjF-uh-2Df"/>
                     <connections>
                         <outlet property="addressLabel" destination="Ip9-F8-tZa" id="0PC-vS-xi6"/>
+                        <outlet property="addressLabelVisibilityButton" destination="LWO-Ze-Fuu" id="Iep-c9-PAa"/>
                         <outlet property="amountLabel" destination="tYs-f7-QvK" id="dd6-JA-W0I"/>
                         <outlet property="defaultFeeButton" destination="lU0-gR-lIK" id="VNn-xj-VOj"/>
                         <outlet property="feeLabel" destination="VsW-Hg-0Be" id="3d7-fV-xT1"/>

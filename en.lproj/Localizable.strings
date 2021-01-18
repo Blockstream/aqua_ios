@@ -135,6 +135,7 @@
 "id_send" = "Send";
 "id_sent" = "Sent";
 "id_sent_from" = "Sent from";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "Set Amount";
 "id_settings" = "Settings";
 "id_share" = "Share";
