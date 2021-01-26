@@ -66,6 +66,20 @@
                                     </constraints>
                                 </view>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9Y-Tf-df8" customClass="GradientView" customModule="Aqua" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="69" width="414" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="VUn-Da-7W6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="aquaBackgroundBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.050980392156862744" green="0.074509803921568626" blue="0.13725490196078433" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-0D-IsG" customClass="RadialGradientView" customModule="Aqua" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
                                 <constraints>
@@ -112,6 +126,7 @@
                         <viewLayoutGuide key="safeArea" id="xfc-v9-VBA"/>
                         <color key="backgroundColor" name="aquaBackgroundBlue"/>
                         <constraints>
+                            <constraint firstItem="5dz-kb-6zd" firstAttribute="top" secondItem="E9Y-Tf-df8" secondAttribute="bottom" constant="-88" id="24O-f9-aud"/>
                             <constraint firstItem="zxS-51-fpL" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" constant="135" id="6Gu-hQ-QZO"/>
                             <constraint firstItem="ir3-Qt-MJ8" firstAttribute="top" secondItem="2jC-Xc-MXi" secondAttribute="bottom" constant="50" id="9L9-He-gZV"/>
                             <constraint firstItem="ir3-Qt-MJ8" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" constant="18" id="H2x-3G-fRN"/>
@@ -126,8 +141,10 @@
                             <constraint firstItem="xfc-v9-VBA" firstAttribute="trailing" secondItem="ir3-Qt-MJ8" secondAttribute="trailing" constant="18" id="ami-rD-RtB"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="trailing" secondItem="xfc-v9-VBA" secondAttribute="trailing" id="cwX-k4-fOe"/>
                             <constraint firstItem="xfc-v9-VBA" firstAttribute="trailing" secondItem="2jC-Xc-MXi" secondAttribute="trailing" constant="18" id="gWD-MD-CPG"/>
+                            <constraint firstItem="xfc-v9-VBA" firstAttribute="trailing" secondItem="E9Y-Tf-df8" secondAttribute="trailing" id="kCv-nO-Axb"/>
                             <constraint firstItem="zxS-51-fpL" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" constant="24" id="uJr-22-iwl"/>
                             <constraint firstItem="2Nu-0D-IsG" firstAttribute="top" secondItem="yv6-ya-X0D" secondAttribute="top" id="w9A-YJ-bq3"/>
+                            <constraint firstItem="E9Y-Tf-df8" firstAttribute="leading" secondItem="xfc-v9-VBA" secondAttribute="leading" id="x8Q-77-L0L"/>
                             <constraint firstItem="oC3-wa-Ruu" firstAttribute="centerX" secondItem="2Nu-0D-IsG" secondAttribute="centerX" id="y8F-pZ-GLQ"/>
                         </constraints>
                     </view>

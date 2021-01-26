@@ -23,12 +23,25 @@ class SendReviewViewController: BaseViewController {
 
     private var feeUpdateViewHidden = true
 
+    @IBOutlet weak var myNotesLbl: UILabel!
+    @IBOutlet weak var memoField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         slidingButton.delegate = self
         slidingButton.buttonText = NSLocalizedString("id_slide_to_send", comment: "")
         slidingButton.buttonFont = UIFont.systemFont(ofSize: 16, weight: .medium)
         slidingButton.round(radius: 26.5)
+
+        myNotesLbl.text = NSLocalizedString("id_my_notes", comment: "")
+        memoField.delegate = self
+        memoField.layer.borderWidth = 3.0
+        memoField.layer.borderColor = UIColor.aquaShadowBlue.cgColor
+        memoField.layer.masksToBounds = true
+        memoField.layer.cornerRadius = 12.0
+        memoField.attributedPlaceholder =
+            NSAttributedString(string: NSLocalizedString("id_only_visible_to_you", comment: ""),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.auroMetalSaurus])
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +85,16 @@ class SendReviewViewController: BaseViewController {
         networkFeeButton.isEnabled = asset.isBTC
     }
 
+    func highLightFee() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.feeLabel.layer.backgroundColor = UIColor.teal.cgColor
+        }, completion: {_ in
+            UIView.animate(withDuration: 0.25) {
+                self.feeLabel.layer.backgroundColor = UIColor.clear.cgColor
+               }
+        })
+    }
+
     @IBAction func networkFeeButtonTapped(_ sender: Any) {
         let constant: CGFloat = feeUpdateViewHidden ? -22 : -126
         let image = feeUpdateViewHidden ? UIImage(named: "arrow_up") : UIImage(named: "arrow_down")
@@ -112,11 +135,18 @@ class SendReviewViewController: BaseViewController {
         }
     }
 
+    func memoTest() {
+        var newTx = self.tx
+        newTx!.memo = memoField.text ?? ""
+        updateTransaction(tx: newTx!)
+    }
+
     @IBAction func defaultFeeButtonTapped(_ sender: Any) {
         if defaultFeeButton.isSelected { return }
         var newTx = self.tx
         newTx!.feeRate = sharedNetwork.getDefaultFees()
         updateTransaction(tx: newTx!)
+        highLightFee()
     }
 
     @IBAction func rushFeeButtonTapped(_ sender: Any) {
@@ -124,6 +154,7 @@ class SendReviewViewController: BaseViewController {
         var newTx = self.tx
         newTx!.feeRate = sharedNetwork.getFastFees()
         updateTransaction(tx: newTx!)
+        highLightFee()
     }
 
     @IBAction func addressLabelVisibilityToggle(_ sender: Any) {
@@ -174,5 +205,14 @@ extension SendReviewViewController: SlidingButtonDelegate {
             }
             self.slidingButton.isHidden = false
         }
+    }
+}
+
+extension SendReviewViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        memoTest()
+      self.view.endEditing(true)
+      return false
     }
 }

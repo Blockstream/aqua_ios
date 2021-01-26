@@ -78,6 +78,7 @@ struct RawTransaction: Codable {
         case sendAll = "send_all"
         case addressees
         case error
+        case memo
     }
 
     let subaccount: UInt64 = 0
@@ -86,4 +87,5 @@ struct RawTransaction: Codable {
     let sendAll: Bool
     var addressees: [Addressee]
     var error: String?
+    var memo: String?
 }
