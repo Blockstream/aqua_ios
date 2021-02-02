@@ -19,6 +19,8 @@ class SendReviewViewController: BaseViewController {
     @IBOutlet weak var rushFeeButton: UIButton!
 
     @IBOutlet weak var addressLabelVisibilityButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+
     var tx: RawTransaction!
 
     private var feeUpdateViewHidden = true
@@ -42,6 +44,9 @@ class SendReviewViewController: BaseViewController {
         memoField.attributedPlaceholder =
             NSAttributedString(string: NSLocalizedString("id_only_visible_to_you", comment: ""),
                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.auroMetalSaurus])
+
+         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -135,10 +140,14 @@ class SendReviewViewController: BaseViewController {
         }
     }
 
-    func memoTest() {
+    func memoSet() {
         var newTx = self.tx
         newTx!.memo = memoField.text ?? ""
         updateTransaction(tx: newTx!)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func defaultFeeButtonTapped(_ sender: Any) {
@@ -211,8 +220,19 @@ extension SendReviewViewController: SlidingButtonDelegate {
 extension SendReviewViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
-        memoTest()
-      self.view.endEditing(true)
-      return false
+        memoSet()
+        self.view.endEditing(true)
+        return false
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInset.bottom)
+        scrollView.setContentOffset(bottomOffset, animated: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let bottomOffset = CGPoint(x: 0, y: 0)
+        scrollView.setContentOffset(bottomOffset, animated: true)
     }
 }

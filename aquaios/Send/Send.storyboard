@@ -700,6 +700,7 @@
                         <outlet property="networkFeeButton" destination="Hr4-q2-rse" id="A8A-ML-PCi"/>
                         <outlet property="reviewBackgroundView" destination="cuA-KG-0aZ" id="UXa-gQ-0dr"/>
                         <outlet property="rushFeeButton" destination="xAx-3t-3kO" id="B0O-zR-2NE"/>
+                        <outlet property="scrollView" destination="13q-jw-RCE" id="szp-qN-vEr"/>
                         <outlet property="sendLabel" destination="DY3-BR-a0B" id="i82-uk-RwA"/>
                         <outlet property="slidingButton" destination="pbB-H8-MeL" id="MrT-ts-y1O"/>
                         <outlet property="toLabel" destination="fg6-W5-7vk" id="Mlt-xd-veF"/>
