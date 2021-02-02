@@ -230,7 +230,7 @@ extension SendReviewViewController: UITextFieldDelegate {
         let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.height + scrollView.contentInset.bottom)
         scrollView.setContentOffset(bottomOffset, animated: true)
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         let bottomOffset = CGPoint(x: 0, y: 0)
         scrollView.setContentOffset(bottomOffset, animated: true)
