@@ -80,8 +80,7 @@
 "id_issuer" = "Issuer";
 "id_its_important_to_back_up_your" = "It’s important to back up your wallet by writing down your recovery phrase.";
 "id_its_time_to_back_up_your_wallet" = "It’s time to back up your wallet.";
-"id_slow" = "Slow";
-"id_urgent" = "Urgent";
+"id_its_urgent" = "It's urgent!";
 "id_lbtc_has_no_issuer_and_is" = "L-BTC has no issuer and is instead created on the network via a peg-in.";
 "id_liquid_101__what_is_liquid_and" = "Liquid 101 - What is Liquid and how does it work";
 "id_liquid_101_what_is_liquid_and" = "Liquid 101, what is Liquid and how does it work?";
@@ -141,6 +140,7 @@
 "id_share" = "Share";
 "id_skip" = "Skip";
 "id_slide_to_send" = "Slide to send";
+"id_slow" = "Slow";
 "id_start" = "Start";
 "id_success" = "Success";
 "id_support" = "Support";
@@ -157,6 +157,7 @@
 "id_transactions" = "Transactions";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "Unregistered Asset";
+"id_urgent" = "Urgent";
 "id_view" = "View";
 "id_view_in_blockstream_explorer" = "View in Blockstream Explorer";
 "id_view_my_recovery_phrase" = "View my recovery phrase";

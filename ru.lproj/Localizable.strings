@@ -88,7 +88,7 @@
 "id_liquid_asset" = "Liquid-актив";
 "id_liquid_bitcoin_lbtc_represents" = "Liquid-биткоин (L-BTC) представляет собой биткоин (BTC), который был перемещен в сеть Liquid Network посредством двусторонней привязки. Каждый L-BTC подкреплен равной суммой BTC, обеспеченной федерацией Liquid.";
 "id_login_with__enabled" = "Вход в систему с %@ подключен";
-"id_manage_your_bitcoin_and_liquid" = "Управляйте своими Биткоин- и Liquid-активами с помощью кошелька AQUA, предоставленного вам командой Blockstream.";
+"id_manage_your_bitcoin_and_liquid" = "Управляйте своими Биткоин- и Liquid-активами с помощью кошелька AQUA от компании Blockstream.";
 "id_max" = "Максимум";
 "id_maybe_later" = "Может быть позже";
 "id_more_options_coming_soon" = "Скоро появятся другие опции";
@@ -134,11 +134,13 @@
 "id_send" = "Отправить";
 "id_sent" = "Отправлено";
 "id_sent_from" = "Отправлено с";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "Установить сумму";
 "id_settings" = "Настройки";
 "id_share" = "Поделиться";
 "id_skip" = "Пропустить";
 "id_slide_to_send" = "Проскользите, чтобы отправить";
+"id_slow" = "Slow";
 "id_start" = "Начать";
 "id_success" = "Успех";
 "id_support" = "Поддержка";
@@ -155,6 +157,7 @@
 "id_transactions" = "Транзакции";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "Незарегистрированный актив";
+"id_urgent" = "Urgent";
 "id_view" = "Посмотреть";
 "id_view_in_blockstream_explorer" = "Посмотреть в обозревателе блоков Blockstream Explorer";
 "id_view_my_recovery_phrase" = "Посмотреть мою фразу восстановления";
@@ -168,8 +171,8 @@
 "id_without_your_recovery_phrase" = "Без фразы восстановления невозможно восстановить ваши активы, если ваше устройство будет потеряно или сломано.";
 "id_write_down_your_recovery_phrase" = "Запишите вашу фразу восстановления";
 "id_you_can_restore_your_wallet" = "Вы можете восстановить свой кошелек, используя фразу восстановления из 12 слов, которую вы записали в процессе создания резервной копии кошелька. Поддерживаются только фразы восстановления, созданные в AQUA.";
-"id_youll_need_to_set_up_a_wallet" = "Вам необходимо настроить кошелек AQUA, прежде чем вы сможете покупать биткоины и Liquid-активы";
-"id_youll_need_to_set_up_an_aqua" = "Вам необходимо настроить кошелек AQUA, прежде чем вы сможете получать или покупать биткоины.";
+"id_youll_need_to_set_up_a_wallet" = "Вам необходимо настроить кошелек AQUA прежде, чем вы сможете покупать биткоины и Liquid-активы";
+"id_youll_need_to_set_up_an_aqua" = "Вам необходимо настроить кошелек AQUA прежде, чем вы сможете получать или покупать биткоины.";
 "id_your__transactions_will_show_up" = "Ваши %@ транзакции появятся здесь";
 "id_your_recovery_phrase_is_secret" = "Ваша фраза восстановления секретна, аутентифицируйтесь, чтобы увидеть ее и создать резервную копию.";
 "id_your_wallet_will_support" = "Ваш кошелек будет поддерживать биткоины,  Liquid-биткоины и другие Liquid-активы.";

@@ -134,11 +134,13 @@
 "id_send" = "Відправити";
 "id_sent" = "Відправлено";
 "id_sent_from" = "Відправлено з";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "Встановити суму";
 "id_settings" = "Налаштування";
 "id_share" = "Поділитися";
 "id_skip" = "Пропустити";
 "id_slide_to_send" = "Проковзніть, щоб відправити";
+"id_slow" = "Slow";
 "id_start" = "Почати";
 "id_success" = "Успіх";
 "id_support" = "Підтримка";
@@ -155,6 +157,7 @@
 "id_transactions" = "Транзакції";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "Незареєстрований актив";
+"id_urgent" = "Urgent";
 "id_view" = "Переглянути";
 "id_view_in_blockstream_explorer" = "Переглянути в оглядачі блоків Blockstream Explorer";
 "id_view_my_recovery_phrase" = "Подивитись мою фразу відновлення";

@@ -134,11 +134,13 @@
 "id_send" = "Verstuur";
 "id_sent" = "Verzonden";
 "id_sent_from" = "Verstuurd vanaf";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "Kies bedrag";
 "id_settings" = "Instellingen";
 "id_share" = "Deel";
 "id_skip" = "Sla over";
 "id_slide_to_send" = "Schuif om te versturen";
+"id_slow" = "Slow";
 "id_start" = "Start";
 "id_success" = "Success";
 "id_support" = "Support";
@@ -155,6 +157,7 @@
 "id_transactions" = "Transacties";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "Niet-geregistreerde asset";
+"id_urgent" = "Urgent";
 "id_view" = "Bekijk";
 "id_view_in_blockstream_explorer" = "Bekijk in Blockstream Explorer";
 "id_view_my_recovery_phrase" = "Bekijk mijn herstelzin";

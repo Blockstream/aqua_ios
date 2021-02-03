@@ -134,11 +134,13 @@
 "id_send" = "보내기";
 "id_sent" = "보내기 완료";
 "id_sent_from" = "송금인";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "설정 금액";
 "id_settings" = "설정";
 "id_share" = "공유하기";
 "id_skip" = "건너뛰기";
 "id_slide_to_send" = "옆으로 밀어 보내기";
+"id_slow" = "Slow";
 "id_start" = "시작하기";
 "id_success" = "성공";
 "id_support" = "고객 지원";
@@ -155,6 +157,7 @@
 "id_transactions" = "거래 내역";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "미등록 자산";
+"id_urgent" = "Urgent";
 "id_view" = "조회";
 "id_view_in_blockstream_explorer" = "Blockstream Explorer에서 조회";
 "id_view_my_recovery_phrase" = "나의 복구 문구 보기";

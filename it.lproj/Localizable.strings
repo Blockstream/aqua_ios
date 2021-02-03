@@ -134,11 +134,13 @@
 "id_send" = "Invia";
 "id_sent" = "Inviato";
 "id_sent_from" = "Inviato da";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "Stabilisci importo/Importo stabilito";
 "id_settings" = "Impostazioni";
 "id_share" = "Condividi";
 "id_skip" = "Salta";
 "id_slide_to_send" = "Scorri per inviare";
+"id_slow" = "Slow";
 "id_start" = "Inizia";
 "id_success" = "Operazione andata a buon fine";
 "id_support" = "Supporto";
@@ -155,6 +157,7 @@
 "id_transactions" = "Transazioni";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "Asset non registrato";
+"id_urgent" = "Urgent";
 "id_view" = "Visualizza";
 "id_view_in_blockstream_explorer" = "Visualizza su Blockstream Explorer";
 "id_view_my_recovery_phrase" = "Visualizza recovery phrase";

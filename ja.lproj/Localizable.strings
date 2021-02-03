@@ -134,11 +134,13 @@
 "id_send" = "送る";
 "id_sent" = "送信済み";
 "id_sent_from" = "送信元";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "数量を指定する";
 "id_settings" = "設定";
 "id_share" = "共有する";
 "id_skip" = "スキップ";
 "id_slide_to_send" = "スライドして送る";
+"id_slow" = "Slow";
 "id_start" = "開始する";
 "id_success" = "成功";
 "id_support" = "サポート";
@@ -155,6 +157,7 @@
 "id_transactions" = "トランザクション一覧";
 "id_twitter" = "Twitter";
 "id_unregistered_asset" = "未登録のアセット";
+"id_urgent" = "Urgent";
 "id_view" = "確認";
 "id_view_in_blockstream_explorer" = "Blockstream Explorerで確認する";
 "id_view_my_recovery_phrase" = "リカバリーフレーズを閲覧する";

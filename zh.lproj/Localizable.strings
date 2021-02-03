@@ -134,11 +134,13 @@
 "id_send" = "发送";
 "id_sent" = "已发送";
 "id_sent_from" = "付款地址";
+"id_sent_to" = "Sent to";
 "id_set_amount" = "设置金额";
 "id_settings" = "设置";
 "id_share" = "分享";
 "id_skip" = "跳过";
 "id_slide_to_send" = "滑动发送";
+"id_slow" = "Slow";
 "id_start" = "开始";
 "id_success" = "成功";
 "id_support" = "支持";
@@ -155,6 +157,7 @@
 "id_transactions" = "转账列表";
 "id_twitter" = "推特";
 "id_unregistered_asset" = "未注册资产";
+"id_urgent" = "Urgent";
 "id_view" = "查看";
 "id_view_in_blockstream_explorer" = "在Blockstream区块链浏览器中查找";
 "id_view_my_recovery_phrase" = "导出助记词";
