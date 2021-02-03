@@ -220,7 +220,6 @@ extension SendReviewViewController: SlidingButtonDelegate {
 extension SendReviewViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
-        memoSet()
         self.view.endEditing(true)
         return false
     }
@@ -232,6 +231,8 @@ extension SendReviewViewController: UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
+
+        memoSet()
         let bottomOffset = CGPoint(x: 0, y: 0)
         scrollView.setContentOffset(bottomOffset, animated: true)
     }
