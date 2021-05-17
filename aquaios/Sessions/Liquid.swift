@@ -2,7 +2,7 @@ import Foundation
 
 class Liquid: NetworkSession {
     static let shared = Liquid()
-    static let networkName = "liquid-electrum-mainnet"
+    static let networkName = "electrum-liquid"
 
     var network: Network {
         let networks = try! getNetworks()
