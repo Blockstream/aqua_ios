@@ -111,11 +111,11 @@ class SendAddressViewController: BaseViewController {
                 throw TransactionError.generic(error)
             }
             var addressee = tx.addressees.first
-            let txTag = addressee?.assetTag
+            let txTag = addressee?.assetId
             let inputTag = self.asset?.tag ?? (network == Bitcoin.networkName ? "btc" : Liquid.shared.policyAsset)
             if network == Bitcoin.networkName {
                 if inputTag == "btc" && (txTag == nil || txTag == "btc") {
-                    addressee?.assetTag = inputTag
+                    addressee?.assetId = inputTag
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
                     self.showError(NSLocalizedString("id_liquid_addresses_are_invalid", comment: ""))
@@ -128,7 +128,7 @@ class SendAddressViewController: BaseViewController {
                         self.showError(NSLocalizedString("id_assets_dont_match", comment: ""))
                     }
                 } else if inputTag != "btc" && txTag == nil {
-                    addressee?.assetTag = inputTag
+                    addressee?.assetId = inputTag
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
                     self.showError(NSLocalizedString("id_bitcoin_addresses_are_invalid", comment: ""))

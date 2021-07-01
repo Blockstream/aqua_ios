@@ -4,16 +4,16 @@ struct Addressee: Codable {
     enum CodingKeys: String, CodingKey {
         case address
         case satoshi
-        case assetTag = "asset_tag"
+        case assetId = "asset_id"
     }
     var address: String = ""
     var satoshi: UInt64 = 0
-    var assetTag: String?
+    var assetId: String?
 
-    init(address: String, satoshi: UInt64, assetTag: String?) {
+    init(address: String, satoshi: UInt64, assetId: String?) {
         self.address = address
         self.satoshi = satoshi
-        self.assetTag = assetTag
+        self.assetId = assetId
     }
 }
 
@@ -62,7 +62,7 @@ struct Transaction: Codable {
         self.createdAt = ""
         self.fee = rawTx.fee ?? 0
         self.memo = ""
-        self.satoshi = [rawTx.addressees[0].assetTag ?? "": rawTx.addressees[0].satoshi]
+        self.satoshi = [rawTx.addressees[0].assetId ?? "": rawTx.addressees[0].satoshi]
         self.type = "outgoing"
         self.addressees = [rawTx.addressees[0].address]
         self.networkName = ""

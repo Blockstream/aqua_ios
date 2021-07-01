@@ -22,7 +22,7 @@ class SendDetailsViewController: BaseViewController {
     private var showFiat = false
 
     private var balance: UInt64 {
-        if let tag = addressee?.assetTag, tag != "btc" {
+        if let tag = addressee?.assetId, tag != "btc" {
             return Liquid.shared.balance?[tag] ?? 0
         } else {
             return Bitcoin.shared.balance?["btc"] ?? 0
@@ -30,7 +30,7 @@ class SendDetailsViewController: BaseViewController {
     }
 
     private var sharedNetwork: NetworkSession {
-        if let tag = addressee?.assetTag, tag != "btc" {
+        if let tag = addressee?.assetId, tag != "btc" {
             return Liquid.shared
         } else {
             return Bitcoin.shared
@@ -57,9 +57,9 @@ class SendDetailsViewController: BaseViewController {
     }
 
     func configureView() {
-        let icon = Registry.shared.image(for: addressee?.assetTag ?? "btc")
-        let info = Registry.shared.info(for: addressee?.assetTag ?? "btc")
-        asset = Asset(sats: balance, icon: icon, info: info, tag: addressee?.assetTag)
+        let icon = Registry.shared.image(for: addressee?.assetId ?? "btc")
+        let info = Registry.shared.info(for: addressee?.assetId ?? "btc")
+        asset = Asset(sats: balance, icon: icon, info: info, tag: addressee?.assetId)
         if let satoshi = addressee?.satoshi, satoshi > 0 {
             amount = asset?.string(satoshi) ?? ""
             reload()

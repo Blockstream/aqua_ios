@@ -83,7 +83,7 @@ class NetworkSession {
     }
 
     func createTransaction(_ address: String) throws -> RawTransaction {
-        let addressee = Addressee(address: address, satoshi: 0, assetTag: nil)
+        let addressee = Addressee(address: address, satoshi: 0, assetId: nil)
         return try createTransaction(addressee)
     }
 

@@ -122,12 +122,12 @@ class QRCodeViewController: BaseViewController {
                 throw TransactionError.generic(error)
             }
             var addressee = tx.addressees.first
-            let txTag = addressee?.assetTag
+            let txTag = addressee?.assetId
             let inputTag = self.asset?.tag
             if network == Bitcoin.networkName {
                 if (inputTag == nil || inputTag == "btc") &&
                     (txTag == nil || txTag == "btc") {
-                    addressee?.assetTag = inputTag ?? "btc"
+                    addressee?.assetId = inputTag ?? "btc"
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else {
                     self.showError(NSLocalizedString("id_bitcoin_addresses_are_invalid", comment: ""))
@@ -141,7 +141,7 @@ class QRCodeViewController: BaseViewController {
                         self.showError(NSLocalizedString("id_assets_dont_match", comment: ""))
                     }
                 } else if (inputTag != nil && inputTag != "btc") && txTag == nil {
-                    addressee?.assetTag = inputTag ?? "btc"
+                    addressee?.assetId = inputTag ?? "btc"
                     self.performSegue(withIdentifier: "send_details", sender: addressee)
                 } else if (txTag != nil && txTag != "btc") && inputTag == nil {
                     self.performSegue(withIdentifier: "send_details", sender: addressee)

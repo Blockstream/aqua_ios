@@ -114,7 +114,7 @@ class SelectAssetViewController: BaseViewController {
             dest.asset = sender as? Asset
         } else if let dest = segue.destination as? SendDetailsViewController {
             let asset = sender as? Asset
-            addressee?.assetTag = asset!.tag
+            addressee?.assetId = asset!.tag
             dest.addressee = addressee
         }
     }

@@ -67,8 +67,8 @@ class SendReviewViewController: BaseViewController {
 
         // Fill transaction data
         let addressee = tx.addressees.first!
-        let info = Registry.shared.info(for: addressee.assetTag ?? "btc")
-        let asset = Asset(info: info, tag: addressee.assetTag)
+        let info = Registry.shared.info(for: addressee.assetId ?? "btc")
+        let asset = Asset(info: info, tag: addressee.assetId)
         let amount = tx.sendAll ? NSLocalizedString("id_all", comment: "") : asset.string(addressee.satoshi)
         sendLabel.text = NSLocalizedString("id_send", comment: "")
         amountLabel.text = "\(amount ?? "") \(asset.ticker ?? "")"
@@ -186,7 +186,7 @@ class SendReviewViewController: BaseViewController {
 extension SendReviewViewController: SlidingButtonDelegate {
 
     private var sharedNetwork: NetworkSession {
-        if let tag = tx.addressees.first?.assetTag, tag != "btc" {
+        if let tag = tx.addressees.first?.assetId, tag != "btc" {
             return Liquid.shared
         } else {
             return Bitcoin.shared
