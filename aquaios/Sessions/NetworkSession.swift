@@ -102,7 +102,15 @@ class NetworkSession {
         }
         let defaultFee = getDefaultFees()
         let inputAddressee = try JSONSerialization.jsonObject(with: JSONEncoder().encode(addressee), options: .allowFragments) as? [String: Any]
-        let input = ["addressees": [inputAddressee], "fee_rate": defaultFee, "subaccount": 0, "send_all": max] as [String: Any]
+        let utxos = try s.getUnspentOutputs(details: ["subaccount": 0, "num_confs": 0])
+        let dataUtxos = try DummyResolve(call: utxos)
+        let resultUtxos = dataUtxos["result"] as? [String: Any]
+        let unspent = resultUtxos?["unspent_outputs"] as? [String: Any]
+        let input = ["addressees": [inputAddressee],
+                     "fee_rate": defaultFee,
+                     "subaccount": 0,
+                     "send_all": max,
+                     "utxos": unspent ?? [:]] as [String: Any]
         let call = try s.createTransaction(details: input)
         let data = try DummyResolve(call: call)
         let result = data["result"] as? [String: Any]
