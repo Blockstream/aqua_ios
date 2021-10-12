@@ -4,16 +4,16 @@ set -e
 
 # The version of gdk to fetch and its sha256 checksum for integrity checking
 NAME="gdk-iphone"
-SHA256="a47f787492135b1629d422706de02afde5887b76950c93dc4fe418e9479f0deb"
+SHA256="a9298ba6ace7ad1d5c2402fb2466f6a8712737ce5893aa4c0f1c8c4a53ec1487"
 
 if [[ $1 == "--simulator" ]]; then
     # Get version for iphone simulator
     NAME="gdk-iphone-sim"
-    SHA256="5d21373a51f6fc4646784f12224bd94bb1031f4e840a027b9f4ea8c30b246102"
+    SHA256="8d237eacaccb62d81166b7f3d54b5ef56764db9c5be3067008bed552565725b9"
 fi
 
 # Setup gdk version and url
-VERSION="release_0.0.43"
+VERSION="release_0.0.45.post1"
 TARBALL="${NAME}.tar.gz"
 URL="https://github.com/Blockstream/gdk/releases/download/${VERSION}/${TARBALL}"
 
