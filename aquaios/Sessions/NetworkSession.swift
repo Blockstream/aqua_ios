@@ -16,7 +16,7 @@ class NetworkSession {
     }
 
     func login(_ mnemonic: String) throws {
-        let call = try session?.login(mnemonic: mnemonic, password: "", hw_device: [:])
+        let call = try session?.loginUser(details: ["mnemonic": mnemonic, "password": ""], hw_device: [:])
         _ = try DummyResolve(call: call!)
     }
 
