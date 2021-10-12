@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -314,7 +314,7 @@
                                 <rect key="frame" x="20" y="252.66666666666663" width="335" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bky-1i-2cg">
-                                        <rect key="frame" x="284" y="5.0000000000000284" width="31" height="38"/>
+                                        <rect key="frame" x="283" y="5.0000000000000284" width="32" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="VYx-uo-3fq"/>
@@ -342,7 +342,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-YH-TXc">
-                                        <rect key="frame" x="222" y="13.000000000000028" width="47" height="22"/>
+                                        <rect key="frame" x="221" y="13.000000000000028" width="47" height="22"/>
                                         <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="TKR" image="switch">
                                             <color key="titleColor" name="topaz"/>
@@ -751,7 +751,7 @@
                                 <color key="backgroundColor" name="darkBlueGray"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCell" textLabel="OKh-7v-XCy" detailTextLabel="Ka0-dG-g3n" style="IBUITableViewCellStyleSubtitle" id="oAp-pG-jsI">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAp-pG-jsI" id="tWv-e2-iQN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
@@ -779,7 +779,7 @@
                                         <color key="backgroundColor" name="darkBlueGray"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rightCell" textLabel="Kxr-0b-qDa" detailTextLabel="M5T-yh-N0h" style="IBUITableViewCellStyleValue1" id="lnh-cO-lvU">
-                                        <rect key="frame" x="0.0" y="82" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="98.666666030883789" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnh-cO-lvU" id="xIk-tX-wbN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -807,7 +807,7 @@
                                         <color key="backgroundColor" name="darkBlueGray"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="middleSeparator" id="nB7-mu-Abx">
-                                        <rect key="frame" x="0.0" y="126" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="142.66666603088379" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nB7-mu-Abx" id="YFV-K7-N5y">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

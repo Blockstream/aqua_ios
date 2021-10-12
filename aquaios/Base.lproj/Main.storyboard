@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nPu-aT-PUf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nPu-aT-PUf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KY-WA-F3o">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashlogo" translatesAutoresizingMaskIntoConstraints="NO" id="2fp-D3-awF">
                                         <rect key="frame" x="7" y="363" width="400" height="170"/>
@@ -31,7 +32,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="6KY-WA-F3o" firstAttribute="leading" secondItem="gCI-nN-r6K" secondAttribute="leading" id="Ugv-rm-Dci"/>
                                     <constraint firstItem="2fp-D3-awF" firstAttribute="centerX" secondItem="gCI-nN-r6K" secondAttribute="centerX" id="hIL-6i-31E"/>
@@ -42,14 +43,14 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="BBn-Oy-kTU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gCI-nN-r6K" firstAttribute="leading" secondItem="BBn-Oy-kTU" secondAttribute="leading" id="MQT-ey-aX7"/>
                             <constraint firstAttribute="bottom" secondItem="gCI-nN-r6K" secondAttribute="bottom" id="Mn4-jp-BcU"/>
                             <constraint firstItem="gCI-nN-r6K" firstAttribute="top" secondItem="pM0-iy-ntT" secondAttribute="top" id="jUC-SS-RLJ"/>
                             <constraint firstItem="BBn-Oy-kTU" firstAttribute="trailing" secondItem="gCI-nN-r6K" secondAttribute="trailing" id="lkp-4m-agy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BBn-Oy-kTU"/>
                     </view>
                     <connections>
                         <outlet property="wallpaper" destination="6KY-WA-F3o" id="rZO-5G-lgq"/>
@@ -252,5 +253,8 @@
         <namedColor name="topaz">
             <color red="0.074509803921568626" green="0.80392156862745101" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

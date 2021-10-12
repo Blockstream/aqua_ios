@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -226,7 +226,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCell" textLabel="xy7-a9-i6U" detailTextLabel="jXB-po-zhj" style="IBUITableViewCellStyleSubtitle" id="XHC-Z1-tFr">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="54"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XHC-Z1-tFr" id="g6z-fD-nUm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
@@ -255,7 +255,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rightCell" textLabel="2WW-2U-ol8" detailTextLabel="GoZ-mx-e0k" style="IBUITableViewCellStyleValue1" id="1a2-xC-CkB">
-                                        <rect key="frame" x="0.0" y="82" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="98.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1a2-xC-CkB" id="8Dx-Lg-fqS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -283,7 +283,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="middleSeparator" id="fUQ-EQ-SPE">
-                                        <rect key="frame" x="0.0" y="126" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fUQ-EQ-SPE" id="p9X-GX-C7s">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -298,7 +298,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="finalSeparator" id="OdX-KJ-DO9">
-                                        <rect key="frame" x="0.0" y="170" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="186.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OdX-KJ-DO9" id="Q79-pU-tIp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -318,7 +318,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="104.5"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-Uu-GvR">
-                                <rect key="frame" x="63" y="756" width="288" height="32"/>
+                                <rect key="frame" x="63" y="790" width="288" height="32"/>
                                 <color key="backgroundColor" name="teal"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Copied to clipboard">
@@ -410,7 +410,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NR8-og-jQT">
-                                <rect key="frame" x="20" y="116" width="374" height="316"/>
+                                <rect key="frame" x="20" y="116" width="374" height="333"/>
                                 <color key="backgroundColor" name="aquaShadowBlue"/>
                                 <color key="textColor" name="paleLilac"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
